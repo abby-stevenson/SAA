@@ -18,5 +18,36 @@ public class SAAServer {
 
     JavalinConfig config = new JavalinConfig();
 
+    config.router.apiBuilder(() -> {
+      /**
+       * API endpoints to retrieve data.
+       */
+
+      // return universities by continent
+      app.get("/location/{continent}", ctx -> {
+        studyAbroadHandler.getUniByContinent(ctx, ctx.pathParam("continent"));
+      });
+
+      // return universities by country
+      app.get("/location/{country}", ctx -> {
+        studyAbroadHandler.getUniByCountry(ctx, ctx.pathParam("country"));
+      });
+
+      // return universities by city
+      app.get("/location/{city}", ctx -> {
+        studyAbroadHandler.getUniByCity(ctx, ctx.pathParam("city"));
+      });
+
+      // return universities by course
+      app.get("/course/{course}", ctx -> {
+        studyAbroadHandler.getUniByCourse(ctx, ctx.pathParam("course"));
+      });
+
+      // return a university by name
+      app.get("/university/{university}", ctx -> {
+        studyAbroadHandler.getUniByName(ctx, ctx.pathParam("university"));
+      });
+    }
+
   }
 }
