@@ -1,10 +1,10 @@
 import React from 'react';
+import SideBar from "../../components/sideBar";
 
 function Discover() {
     return (
-        <div>
-            <h1>Discover page with all the uni thumb nails</h1>
-        </div>
+        <SideBar accountName="John Doe"
+                 accountMajor="Computer Science" />
     );
 }
 export default Discover;

@@ -1,10 +1,10 @@
 import React from 'react';
+import SideBar from "../../components/sideBar";
 
 function Search() {
     return (
-        <div>
-            <h1>page for searching a specific course</h1>
-        </div>
+        <SideBar accountName="John Doe"
+                 accountMajor="Computer Science" />
     );
 }
 export default Search;

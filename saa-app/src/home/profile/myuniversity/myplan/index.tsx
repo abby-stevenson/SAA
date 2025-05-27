@@ -1,10 +1,10 @@
 import React from 'react';
+import SideBar from "../../../../components/sideBar";
 
 function MyPlan() {
     return (
-        <div>
-            <h1>plan with the courses to send to the advisor</h1>
-        </div>
+        <SideBar accountName="John Doe"
+                 accountMajor="Computer Science" />
     );
 }
 export default MyPlan;

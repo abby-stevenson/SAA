@@ -1,10 +1,12 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import SideBar from '../components/sideBar';
 
 function Home() {
     return (
         <div>
-            <Link to="/profile">Profile</Link>
+            <SideBar accountName="John Doe"
+                     accountMajor="Computer Science" />
         </div>
     );
 }
