@@ -8,9 +8,21 @@ services:
     ports:
       - 27017:27017
     volumes:
+      - ./database-files:/docker-entrypoint-initdb.d/:ro
       - ./database-files:/csvs
       - ./data-loader:/data-loader
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
       MONGO_INITDB_DATABASE: ${DB_NAME}
+    command: >
+      bash -c "
+        /usr/local/bin/docker-entrypoint.sh mongod & 
+        until mongosh --eval 'db.stats()' -u $DB_USER -p $DB_PASSWORD --authenticationDatabase admin > /dev/null 2>&1; do
+          echo '⏳ Waiting for MongoDB to start...';
+          sleep 2;
+        done;
+        echo '🚀 MongoDB is ready. Importing data...';
+        ./docker-entrypoint-initdb.d/import-csvs.sh;
+        wait
+      "
