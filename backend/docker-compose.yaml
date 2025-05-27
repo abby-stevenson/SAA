@@ -1,16 +1,16 @@
 services:
-
-    db:
-      env_file:
-        - .env
-      image: mongo:7
-      container_name: mongodb
-      hostname: db
-      volumes:
-        - ./database-files:/docker-entrypoint-initdb.d/:ro
-      ports:
-        - 27017:27018
-      environment:
-        MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
-        MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
-        MONGO_INITDB_DATABASE: ${DB_NAME}
+  db:
+    env_file:
+      - .env
+    image: mongo:7
+    container_name: mongodb
+    hostname: db
+    ports:
+      - 27017:27017
+    volumes:
+      - ./database-files:/csvs
+      - ./data-loader:/data-loader
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASSWORD}
+      MONGO_INITDB_DATABASE: ${DB_NAME}
