@@ -1,0 +1,105 @@
+.side-by-side {
+  display: flex;
+  flex-direction: row;
+}
+
+.side-bar {
+  width: 10%;            
+  background-color: #f0f0f0;
+  padding: 1rem;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.rest-of-page {
+  flex: 1;                 
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.photo-side-by-side {
+  display: flex;
+  gap: 2rem;
+}
+
+.photo {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.uni-image {
+    width:100%;
+}
+
+.text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text p {
+    margin: 0;
+}
+
+.link-and-location {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; 
+}
+
+.link-and-location a {
+  color: grey; 
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link-and-location a:hover {
+  text-decoration: underline;
+}
+
+.uni-name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: black;
+  margin-bottom: 8rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: grey;
+  font-size: 1.5rem;
+}
+
+.link {
+    color: grey;
+  font-size: 1.5rem;
+}
+
+.location-icon {
+  color: #553c9a; 
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 2rem; 
+}
+
+.bio,
+.popular-courses,
+.all-courses,
+.photo-side-by-side {
+  margin-bottom: 2.5rem; 
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}

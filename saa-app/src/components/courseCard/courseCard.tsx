@@ -11,7 +11,7 @@ interface CourseCardPopupProps {
 const CourseCardPopup = ({ courseNumber, courseDescription }: CourseCardPopupProps) => {
   return (
     <div className="course-card">
-      <h2 className="course-title">Course - {courseNumber}</h2>
+      <span className="course-title">Course - {courseNumber}</span>
       <p className="course-description">{courseDescription}</p>
       <button className="favorite-button">
         <FontAwesomeIcon icon={faStar} />

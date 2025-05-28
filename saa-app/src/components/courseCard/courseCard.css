@@ -11,9 +11,9 @@
 }
 
 .course-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #111827;
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
   margin-bottom: 0.5rem;
 }
 
@@ -24,7 +24,9 @@
 
 .favorite-button {
   display: flex;
+  width: 100%;
   align-items: center;
+  justify-content: center; 
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   background-color: #6750A4;
@@ -43,3 +45,4 @@
   background-color: 2px solid #a78bfa;
   outline-offset: 2px;
 }
+

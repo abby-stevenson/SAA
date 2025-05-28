@@ -4,7 +4,6 @@ import './index.css';
 import Nav from './Nav';
 import reportWebVitals from './reportWebVitals';
 import SavedUniversity from "./components/savedUniversity";
-import CourseCard from "./components/courseCard";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
