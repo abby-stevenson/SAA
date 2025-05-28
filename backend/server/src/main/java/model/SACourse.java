@@ -5,7 +5,7 @@ public class SACourse implements ICourse {
   private String hostCourseNumber;
   private String hostCourseName;
   private String hostCourseDescription;
-  private String nuCourseNumber;
+  private String neuCourseNumber;
   private String term;
   private int credits;
   private int taken;
@@ -17,7 +17,7 @@ public class SACourse implements ICourse {
     this.hostCourseNumber = hostCourseNumber;
     this.hostCourseName = hostCourseName;
     this.hostCourseDescription = hostCourseDescription;
-    this.nuCourseNumber = nuCourseNumber;
+    this.neuCourseNumber = nuCourseNumber;
     this.term = term;
     this.credits = credits;
     this.taken = taken;
@@ -25,7 +25,7 @@ public class SACourse implements ICourse {
 
   @Override
   public String getCourseNumber() {
-    return nuCourseNumber;
+    return neuCourseNumber;
   }
 
   @Override
