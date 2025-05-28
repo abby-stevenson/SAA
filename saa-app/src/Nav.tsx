@@ -14,7 +14,7 @@ function Nav() {
             <Route path="/"         element={<Navigate to="/Home"/>}/>
             <Route path="/Home/*"   element={<Home/>}/>
               <Route path="/Profile/*"   element={<Profile/>}/>
-              <Route path="/UniversityThumbnail/*"  element={<UniversityThumbnail/>}/>
+              <Route path="/UniversityThumbnail/*"  element={<UniversityThumbnail name={""} location={""} />}/>
           </Routes>
         </div>
       </HashRouter>
