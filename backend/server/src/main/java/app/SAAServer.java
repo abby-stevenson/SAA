@@ -1,3 +1,12 @@
+package app;
+import io.javalin.Javalin;
+import io.javalin.config.JavalinConfig;
+
+import studyabroad.SAADAO;
+import studyabroad.SAController;
+
+import java.util.ArrayList;
+
 /**
  * Server for Study Abroad.
  * This class should set up the Javalin server and configures the API endpoints.
@@ -9,12 +18,12 @@ public class SAAServer {
     var studyAbroad = new SAADAO();
 
     // API implementation
-    SAAController studyAbroadHandler = new StudyAbroadController(studyAbroad);
+    SAController studyAbroadHandler = new SAController(studyAbroad);
 
     // start Javalin on port 7070
     var app = Javalin.create()
-            .get("/", ctx -> ctx.result("Study Abroad Advisor server is running"))
-            .start(8080);
+        .get("/", ctx -> ctx.result("Study Abroad Advisor server is running"))
+        .start(8080);
 
     JavalinConfig config = new JavalinConfig();
 
