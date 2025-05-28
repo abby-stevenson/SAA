@@ -4,12 +4,12 @@ import {Routes, Route, Navigate} from "react-router";
 import './Nav.css';
 import Home from "./home";
 import Profile from "./home/profile";
-import UniversityThumbnail from './components/universityThumbnail';
 import Discover from "./home/discover";
 import Search from "./home/search";
 import MyPlan from "./home/profile/myuniversity/myplan";
 import UniPage from './home/discover/universitypage/unipage';
 import SavedUniversity from "./components/savedUniversity";
+import UniversityThumbnail from "./components/universityThumbnail/universityThumbnail";
 
 function Nav() {
   return (
@@ -19,7 +19,6 @@ function Nav() {
               <Route path="/"         element={<Navigate to="/SAA/Home"/>}/>
               <Route path="/SAA/Home/*"   element={<Home/>}/>
               <Route path="/SAA/Profile/*"   element={<Profile/>}/>
-              <Route path="/SAA/UniversityThumbnail/*"  element={<UniversityThumbnail location={"sydney"} name={"test"}/>}/>
               <Route path="/SAA/Discover/*"  element={<Discover/>}/>
               <Route path="/SAA/Search/*"  element={<Search/>}/>
               <Route path="/SAA/Plan/*"  element={<MyPlan/>}/>
