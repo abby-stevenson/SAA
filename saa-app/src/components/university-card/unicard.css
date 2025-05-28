@@ -1,0 +1,71 @@
+.uni-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    max-width: 400px;
+  }
+
+  .uni-course {
+    font-size: 1.25rem; 
+    font-weight: 700;    
+    color: #111827;
+    margin-bottom: 0.25rem;
+  }
+
+  .uni-image {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 1rem;
+  }
+  
+
+  .uni-card-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .uni-card-text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .secondLine {
+    font-size: 0.95rem;     
+    font-weight: 400;      
+    color: #4b5563;        
+     margin-bottom: 0.25rem;
+  }
+  
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.5rem;
+  }
+  
+  .favorite-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    background-color: #6750A4;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+  }
+  
+  .favorite-button:hover {
+    background-color: #553c9a;
+  }
