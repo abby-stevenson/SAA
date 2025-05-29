@@ -6,7 +6,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 
 
-function UniPage() {
+function Budapest() {
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -16,19 +16,19 @@ function UniPage() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="USyd-photo.jpg" alt="University of Sydney" className="uni-image" />
+                        <img src="AITBudapest.png" alt="AIT Budapest" className="uni-image" />
 
                     </div>
                     <div className = "text">
-                        <span className = "uni-name">University of Sydney</span>
+                        <span className = "uni-name">Aquincum Institute of Technology (AIT)</span>
                         <div className = "link-and-location">
                             <p className="location">
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className="location-icon" />
-                                Sydney, Australia
+                                Budapest, Hungary
                             </p>
                             <p className = "link">
-                                <a href="https://www.sydney.edu.au/" target="_blank" rel="noopener noreferrer">
-                                    https://www.sydney.edu.au/
+                                <a href="https://www.ait-budapest.com" target="_blank" rel="noopener noreferrer">
+                                    https://www.ait-budapest.com
                                 </a>
                             </p>
                         </div>
@@ -38,9 +38,11 @@ function UniPage() {
                 </div>
                 <div className = "bio">
                      <span className = "section-title">About</span>
-                     <p> The University of Sydney is a public research university located in Sydney, Australia. Founded in 
-                        1850 as Australia's first university, it is regarded as one of the world's leading universities. 
-                        The university is one of Australia's six sandstone universities.</p>
+                     <p> Aquincum Institute of Technology (AIT) offers semester-long English language programs
+                        tailored to the needs of North American computer science, data science, and software 
+                        engineering undergraduates in their sophomore through senior years. Classes are taught
+                        by eminent Hungarian professors, many of whom have teaching experience in North American
+                        universities.</p>
                 </div>
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
@@ -63,4 +65,4 @@ function UniPage() {
         </div>
     );
 }
-export default UniPage;
+export default Budapest;

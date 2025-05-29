@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Nav from './Nav';
 import reportWebVitals from './reportWebVitals';
-import SavedUniversity from "./components/savedUniversity";
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

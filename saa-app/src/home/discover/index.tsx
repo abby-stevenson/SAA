@@ -65,13 +65,15 @@ function Discover() {
                 <div className="filters">
 
                     <div className="dropdown">
-                        <button className="dropbtn"><span>Region  </span>
+                        <button className="dropbtn"><span>Country </span>
                             <FontAwesomeIcon icon={faCaretDown} />
                         </button>
                         <div className="dropdown-content">
-                            <a href="#">Link 1</a>
-                            <a href="#">Link 2</a>
-                            <a href="#">Link 3</a>
+                            <a href="#">Australia</a>
+                            <a href="#">France</a>
+                            <a href="#">Spain</a>
+                            <a href="#">United States of America</a>
+                            <a href="#">United Kingdom</a>
                         </div>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 
 
-function UniPage() {
+function Newcastle() {
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -16,19 +16,19 @@ function UniPage() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="USyd-photo.jpg" alt="University of Sydney" className="uni-image" />
+                        <img src="Newcastle.png" alt="University of Newcastle" className="uni-image" />
 
                     </div>
                     <div className = "text">
-                        <span className = "uni-name">University of Sydney</span>
+                        <span className = "uni-name">University of Newcastle</span>
                         <div className = "link-and-location">
                             <p className="location">
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className="location-icon" />
-                                Sydney, Australia
+                                Newcastle, Australia
                             </p>
                             <p className = "link">
-                                <a href="https://www.sydney.edu.au/" target="_blank" rel="noopener noreferrer">
-                                    https://www.sydney.edu.au/
+                                <a href="https://www.newcastle.edu.au" target="_blank" rel="noopener noreferrer">
+                                    https://www.newcastle.edu.au
                                 </a>
                             </p>
                         </div>
@@ -38,9 +38,9 @@ function UniPage() {
                 </div>
                 <div className = "bio">
                      <span className = "section-title">About</span>
-                     <p> The University of Sydney is a public research university located in Sydney, Australia. Founded in 
-                        1850 as Australia's first university, it is regarded as one of the world's leading universities. 
-                        The university is one of Australia's six sandstone universities.</p>
+                     <p> The University of Newcastle offers a wide variety of interesting, 
+                        exciting and relevant courses to our visiting Study Abroad and 
+                        Exchange students.</p>
                 </div>
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
@@ -63,4 +63,4 @@ function UniPage() {
         </div>
     );
 }
-export default UniPage;
+export default Newcastle;
