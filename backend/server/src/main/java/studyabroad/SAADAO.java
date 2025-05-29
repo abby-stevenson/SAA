@@ -21,7 +21,7 @@ import org.bson.Document;
 public class SAADAO {
   // Note: NEEDS TO BE CHANGED
 
-  private static final String DB_URI = "mongodb://";
+  private static final String DB_URI = "mongodb://localhost:27017";
   private static final String DB_NAME = "SADB";
 
 
