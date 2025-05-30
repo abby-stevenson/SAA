@@ -14,7 +14,7 @@ function SavedUniversity({ loc, universityName, coursesSaved }: UniversityInfo) 
             <img className={"circle-crop"} src={urlPath} alt="University Photo" />
             <h3 className={"university-header"}>{universityName}</h3>
             <div className="location-container">
-                <img src="Leading icon.png" />
+                <img src="Leading icon.png"  alt="picture"/>
                 <span>{loc}</span>
             </div>
             <p className={"courses-saved-text"}>{coursesSaved} Courses Saved</p>

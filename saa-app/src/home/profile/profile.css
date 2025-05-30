@@ -36,22 +36,11 @@
     margin-bottom: 2rem;
 }
 
+
 .university-div {
-    margin-bottom: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
-
-
-.universities-grid {
-    width: 50%
-}
-
-.university-row {
-    overflow-x: auto;
-    display: flex;
-    margin-top: 200px;
-}
-
-
 
 /*
     display: grid;

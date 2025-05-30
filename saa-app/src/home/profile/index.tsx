@@ -1,8 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import SideBar from "../../components/sideBar";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faMapMarkerAlt} from "@fortawesome/free-solid-svg-icons";
+import "./profile.css";
 import SimpleCourseCard from "../../components/simpleCourseCard/simpleCourseCard";
 import SavedUniversity from "../../components/savedUniversity";
 
@@ -14,19 +13,19 @@ function Profile() {
                          accountMajor="Computer Science" />
             </div>
             <div className = "rest-of-page">
-                <span className="section-title">My Universities</span>
-                <div className = "university-div">
-                    <div className="university-row">
-                        <SavedUniversity universityName={"University of Technology Sydney"}
-                                         coursesSaved={4} loc={"Sydney, AU"}/>
-                        <SavedUniversity universityName={"IES Barcelona"}
-                                         coursesSaved={2} loc={"Barcelona, ES"}/>
-                        <SavedUniversity universityName={"DIS Cophenhagen"}
-                                         coursesSaved={2} loc={"Cophenhagen, DE"}/>
-                        <SavedUniversity universityName={"DIS Cophenhagen"}
-                                         coursesSaved={2} loc={"Cophenhagen, DE"}/>
-                        <SavedUniversity universityName={"IES Barcelona"}
-                                         coursesSaved={2} loc={"Barcelona, ES"}/>
+                <div>
+                    <span className="section-title">My Universities</span>
+                    <div className = "university-div">
+                            <SavedUniversity universityName={"University of Technology Sydney"}
+                                             coursesSaved={4} loc={"Sydney, AU"}/>
+                            <SavedUniversity universityName={"IES Barcelona"}
+                                             coursesSaved={2} loc={"Barcelona, ES"}/>
+                            <SavedUniversity universityName={"DIS Cophenhagen"}
+                                             coursesSaved={2} loc={"Cophenhagen, DE"}/>
+                            <SavedUniversity universityName={"DIS Cophenhagen"}
+                                             coursesSaved={2} loc={"Cophenhagen, DE"}/>
+                            <SavedUniversity universityName={"IES Barcelona"}
+                                             coursesSaved={2} loc={"Barcelona, ES"}/>
                     </div>
                 </div>
                 <div className = "all-courses">
