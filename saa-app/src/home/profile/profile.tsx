@@ -20,10 +20,10 @@ function Profile() {
                                              coursesSaved={4} loc={"Sydney, AU"}/>
                             <SavedUniversity universityName={"IES Barcelona"}
                                              coursesSaved={2} loc={"Barcelona, ES"}/>
-                            <SavedUniversity universityName={"DIS Cophenhagen"}
-                                             coursesSaved={2} loc={"Cophenhagen, DE"}/>
-                            <SavedUniversity universityName={"DIS Cophenhagen"}
-                                             coursesSaved={2} loc={"Cophenhagen, DE"}/>
+                            <SavedUniversity universityName={"DIS Copenhagen"}
+                                             coursesSaved={2} loc={"Copenhagen, DE"}/>
+                            <SavedUniversity universityName={"DIS Copenhagen"}
+                                             coursesSaved={2} loc={"Copenhagen, DE"}/>
                             <SavedUniversity universityName={"IES Barcelona"}
                                              coursesSaved={2} loc={"Barcelona, ES"}/>
                     </div>
@@ -42,6 +42,3 @@ function Profile() {
     );
 }
 export default Profile;
-
-/*
-*/

@@ -107,15 +107,21 @@ function Discover() {
             <div className="rest-of-page">
                 <div className="filters">
                     <div className="dropdown">
-                        <button
-                            className="dropbtn"
-                            onClick={() => {
-                                const newValue = activeDropdown === 'region' ? null : 'region';
-                                setActiveDropdown(newValue);
-                            }}>
-                            <span>Region {selectedRegion && `(${selectedRegion})`}</span>
-                            <FontAwesomeIcon icon={faCaretDown} />
-                        </button>
+                        <button className="dropbtn"
+  onClick={() => {
+    const newValue = activeDropdown === 'region' ? null : 'region';
+    setActiveDropdown(newValue);
+  }}
+>
+<span>
+  {selectedRegion
+    ? selectedRegion
+    : "Region"}
+                            </span>
+
+                            <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: "8px" }}/>
+</button>
+
                         <div className={`dropdown-content ${activeDropdown === 'region' ? 'show' : ''}`}>
                             <a href="#" onClick={(e) => { e.preventDefault(); handleRegionSelect("North America"); }}>North America</a>
                             <a href="#" onClick={(e) => { e.preventDefault(); handleRegionSelect("South America"); }}>South America</a>
@@ -133,8 +139,9 @@ function Discover() {
                                 const newValue = activeDropdown === 'country' ? null : 'country';
                                 setActiveDropdown(newValue);
                             }}>
-                            <span>Country {selectedCountry && `(${selectedCountry})`}</span>
-                            <FontAwesomeIcon icon={faCaretDown} />
+                            <span>{selectedCountry || "Country"}</span>
+
+                            <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: "8px" }}/>
                         </button>
                         <div className={`dropdown-content ${activeDropdown === 'country' ? 'show' : ''}`}>
                             <a href="#" onClick={(e) => { e.preventDefault(); handleCountrySelect("United States of America"); }}>United States of America</a>

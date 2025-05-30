@@ -16,6 +16,7 @@ code {
 .card * {
   box-sizing: border-box;
 }
+
 .card {
   background: #ffffff;
   border-radius: var(--var-sds-size-radius-200, 8px);
@@ -32,6 +33,7 @@ code {
   height: 367px;
   position: relative;
 }
+
 .image {
   background: var(
     --image-placeholder,

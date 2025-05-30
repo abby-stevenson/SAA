@@ -57,7 +57,7 @@
     height: 40px;
     width: 40px;
     border-radius: 12px;
-    background-color: #6750A4;
+    background-color: #c9102e;
     color: white;
     border: none;
     cursor: pointer;
@@ -65,5 +65,5 @@
 }
 
 .favorite-button:hover {
-    background-color: #553c9a;
+    background-color: #ae0d28;
 }

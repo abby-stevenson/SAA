@@ -1,5 +1,5 @@
 .sidebar-base {
-    background-color: #F7F2FA;
+    background-color: #ffffff;
     list-style: none;
     padding: 0px;  margin: 0px;
     width: 10%;
@@ -18,11 +18,11 @@
 }
 
 .sidebar-base li.wd-active {
-    color: #6750A4;
+    color: #c9102e;
 }
 
 .sidebar-base li.wd-active a {
-    color: #6750A4;
+    color: #c9102e;
 }
 .sidebar-base a {
     color: black;
@@ -36,7 +36,7 @@
 .sidebar-base-hr {
     padding: 8px;
     margin-top: 10px;
-    color: #CAC4D0;
+    color: #ffffff;
 }
 
 .sidebar-account-info {
