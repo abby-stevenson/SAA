@@ -1,5 +1,5 @@
 .saved-university-card {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
     padding: 1.5rem;
@@ -7,8 +7,11 @@
     border-radius: 12px;
     background-color: #ffffff;
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    max-width: 320px;
-    min-height: 400px;
+    width: 250px;
+    height: 350px;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
 
 .university-header {

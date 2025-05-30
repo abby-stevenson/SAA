@@ -1,0 +1,62 @@
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+}
+
+.side-bar {
+    width: 10%;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.rest-of-page {
+    flex: 1;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text p {
+    margin: 0;
+}
+
+.section-title {
+    padding-left: 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 2rem;
+}
+
+.university-div {
+    margin-bottom: 2.5rem;
+}
+
+
+.universities-grid {
+    width: 50%
+}
+
+.university-row {
+    overflow-x: auto;
+    display: flex;
+    margin-top: 200px;
+}
+
+
+
+/*
+    display: grid;
+    grid-template-columns: repeat(10, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    overflow-x: auto;
+ */
