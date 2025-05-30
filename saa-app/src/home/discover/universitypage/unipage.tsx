@@ -6,7 +6,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 
 
-function UniPage() {
+function Sydney() {
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -63,4 +63,4 @@ function UniPage() {
         </div>
     );
 }
-export default UniPage;
+export default Sydney;

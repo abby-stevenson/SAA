@@ -6,7 +6,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 
 
-function Seoul() {
+function Capetown() {
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -16,19 +16,19 @@ function Seoul() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="=TEANSeoul.png" alt="TEAN Seoul" className="uni-image" />
+                        <img src="CIEECapetown.png" alt="CIEE Capetown" className="uni-image" />
 
                     </div>
                     <div className = "text">
-                        <span className = "uni-name">Korea University</span>
+                        <span className = "uni-name">University Of Cape Town</span>
                         <div className = "link-and-location">
                             <p className="location">
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className="location-icon" />
-                                Seoul, South Korea
+                                Capetown, South Africa
                             </p>
                             <p className = "link">
-                                <a href="https://goglobal.northeastern.edu/_portal/tds-program-brochure?programid=10574" target="_blank" rel="noopener noreferrer">
-                                    https://goglobal.northeastern.edu/_portal/
+                                <a href="https://www.iesabroad.org/programs/cape-town-university-cape-town?gad_source=1&gclid=Cj0KCQiA8fW9BhC8ARIsACwHqYpqz0PUBu8W6nhpTWmjXWu9nwZlhCvacLdFbFjqw4R-ntlMJqNKm2YaAvAgEALw_wcB" target="_blank" rel="noopener noreferrer">
+                                    https://www.iesabroad.org/programs/cape-town-university
                                 </a>
                             </p>
                         </div>
@@ -38,13 +38,15 @@ function Seoul() {
                 </div>
                 <div className = "bio">
                      <span className = "section-title">About</span>
-                     <p> Study in Seoul at one of Korea’s leading private universities that’s
-                        known for its stunning urban campus and on par with the Ivy League schools
-                        in the U.S. Here students will have the opportunity to live in a vibrant 
-                        capital city that blends high-tech modernity with ancient culture like no
-                        other. While studying a range of courses in English, students will also 
-                        discover more about life in Korea by pairing up with a Korean student over 
-                        the course of the semester for an even more immersive and local experience.</p>
+                     <p> When you study abroad in Cape Town, South Africa, you'll discover 
+                        a breathtaking city steeped in history and natural beauty. Experience 
+                        the vibrant culture, diverse communities, and rich heritage as you 
+                        explore landmarks like Robben Island and the District Six Museum. 
+                        Immerse yourself in academic pursuits such as environmental science 
+                        and social justice while embracing the city's multicultural atmosphere. 
+                        With its picturesque coastline and access to world-class attractions, 
+                        studying abroad in Cape Town on a CIEE program promises a life-changing 
+                        experience. It's easy to see that Cape Town will create lasting memories!</p>
                 </div>
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
@@ -67,4 +69,4 @@ function Seoul() {
         </div>
     );
 }
-export default Seoul;
+export default Capetown;

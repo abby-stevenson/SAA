@@ -28,7 +28,7 @@ function Madrid() {
                             </p>
                             <p className = "link">
                                 <a href="http://ciee.org/go-abroad/college-study-abroad/programs/spain/madrid/engineering-technology-sciences" target="_blank" rel="noopener noreferrer">
-                                    http://ciee.org/go-abroad/college-study-abroad/programs/spain/madrid/engineering-technology-sciences
+                                    http://ciee.org/go-abroad/college-study-abroad/programs/
                                 </a>
                             </p>
                         </div>
