@@ -1,10 +1,11 @@
 package studyabroad;
 
 import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoCursor;
+
+import org.bson.Document;
 
 import java.util.List;
-
-import javax.swing.text.Document;
 
 import io.javalin.http.Context;
 import model.University;
@@ -15,12 +16,12 @@ import model.NEUCourse;
  */
 public class SAController {
 
-  private SAADAO StudyAbroadDB;
+  private final SAADAO dao;
 
-  public SAController(SAADAO StudyAbroadDB) { this.StudyAbroadDB = StudyAbroadDB; }
+  public SAController(SAADAO dao) { this.dao = dao; }
 
   public void getUniByContinent(Context ctx, String continent) {
-    List<University> universities = StudyAbroadDB.getUniByContinent(continent);
+    List<University> universities = dao.getUniByContinent(continent);
     if (universities.isEmpty()) {
       ctx.result("No Universities Found");
       ctx.status(404);
@@ -31,7 +32,7 @@ public class SAController {
   }
 
   public void getUniByCountry(Context ctx, String country) {
-    List<University> universities = StudyAbroadDB.getUniByCountry(country);
+    List<University> universities = dao.getUniByCountry(country);
     if (universities.isEmpty()) {
       ctx.result("No Universities Found");
       ctx.status(404);
@@ -42,7 +43,7 @@ public class SAController {
   }
 
   public void getUniByCity(Context ctx, String city) {
-    List<University> universities = StudyAbroadDB.getUniByCity(city);
+    List<University> universities = dao.getUniByCity(city);
     if (universities.isEmpty()) {
       ctx.result("No Universities Found");
       ctx.status(404);
@@ -53,7 +54,7 @@ public class SAController {
   }
 
   public void getUniByNEUCourse(Context ctx, String course) {
-    List<University> universities = StudyAbroadDB.getUniByNEUCourse(course);
+    List<University> universities = dao.getUniByNEUCourse(course);
     if (universities.isEmpty()) {
       ctx.result("No Universities Found");
       ctx.status(404);
@@ -64,7 +65,7 @@ public class SAController {
   }
 
   public void getUniBySACourse(Context ctx, String course) {
-    List<University> universities = StudyAbroadDB.getUniByNEUCourse(course);
+    List<University> universities = dao.getUniByNEUCourse(course);
     if (universities.isEmpty()) {
       ctx.result("No Universities Found");
       ctx.status(404);
@@ -75,7 +76,7 @@ public class SAController {
   }
 
   public void getUniByName(Context ctx, String university) {
-    List<University> universities = StudyAbroadDB.getUniByName(university);
+    List<University> universities = dao.getUniByName(university);
     if (universities.isEmpty()) {
       ctx.result("No Universities Found");
       ctx.status(404);
@@ -86,7 +87,8 @@ public class SAController {
   }
 
   public void getAllUni(Context ctx) {
-    List<University> universities = StudyAbroadDB.getAllUni();
+
+    List<University> universities = this.dao.getAllUni();
     System.out.println("Universities found: " + universities.size());
     for (University u : universities) {
       System.out.println(u);

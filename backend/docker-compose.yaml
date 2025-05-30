@@ -6,7 +6,7 @@ services:
     container_name: mongodb
     hostname: db
     ports:
-      - 27017:27017
+      - 27018:27017
     volumes:
       - ./database-files:/docker-entrypoint-initdb.d/:ro
       - ./database-files:/csvs

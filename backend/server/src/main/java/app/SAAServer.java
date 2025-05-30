@@ -13,10 +13,10 @@ public class SAAServer {
 
   public static void main(String[] args) {
     // in memory test data store
-    var studyAbroad = new SAADAO();
+    var dao = new SAADAO();
 
     // API implementation
-    SAController studyAbroadHandler = new SAController(studyAbroad);
+    SAController studyAbroadHandler = new SAController(dao);
     // start Javalin on port 7070
     var app = Javalin.create()
             .get("/", ctx -> ctx.result("Study Abroad Advisor server is running"))

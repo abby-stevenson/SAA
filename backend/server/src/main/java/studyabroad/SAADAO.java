@@ -3,6 +3,7 @@ package studyabroad;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
@@ -21,7 +22,8 @@ import org.bson.Document;
 public class SAADAO {
   // Note: NEEDS TO BE CHANGED
 
-  private static final String DB_URI = "mongodb://localhost:27017";
+  private static final String DB_URI = "mongodb://root:123@localhost:27018/?authSource=admin";
+
   private static final String DB_NAME = "StudyAbroadDB";
 
 
@@ -40,9 +42,10 @@ public class SAADAO {
     this.database = client.getDatabase(DB_NAME);
 
     this.universities = database.getCollection("universities", Document.class);
-    this.saCourses = database.getCollection("host_courses");
-    this.neuCourses = database.getCollection("neu_courses");
+    this.saCourses = database.getCollection("host_courses", Document.class);
+    this.neuCourses = database.getCollection("neu_courses", Document.class);
   }
+
 
   /**
    * Returns a university by name.
@@ -143,11 +146,32 @@ public class SAADAO {
 
   public List<University> getAllUni() {
     List<University> results = new ArrayList<>();
-
     FindIterable<Document> first20 = universities
             .find()
             .limit(20);
 
+    long uniCount = universities.countDocuments();
+    System.out.println("Universities collection loaded with " + uniCount + " documents.");
+
+/*
+    try(MongoCursor<org.bson.Document> cursor = universities.find().iterator();) {
+      int count = 0;
+      System.out.println("Universities collection reference: " + database.getCollection("universities", Document.class));
+      long uniCount = universities.countDocuments();
+      System.out.println("Universities collection loaded with " + uniCount + " documents.");
+      if(!cursor.hasNext()) { System.out.println("Cursor has no next!"); }
+      else { System.out.println("Cursor has a next!"); }
+      while (cursor.hasNext()) {
+        Document doc = cursor.next();
+        System.out.println(doc.toJson()); // ✅ Print raw doc
+        count++;
+      }
+      System.out.println("Raw documents found: " + count);
+    }
+    catch(Exception e) {
+      throw new IllegalStateException("universities.find().iterator() doesnt work");
+    }
+*/
     for (Document doc : first20) {
       results.add(documentToUniversity(doc));
     }
@@ -164,19 +188,7 @@ public class SAADAO {
     String continent = doc.getString("Continent");
     String description = doc.getString("Description");
 
-    // Handle courseload as a string range like "12-19"
-    String courseloadStr = doc.getString("Courseload Credit");
-    int courseloadUpperLimit = 0;
-    if (courseloadStr != null && courseloadStr.contains("-")) {
-      try {
-        String[] parts = courseloadStr.split("-");
-        courseloadUpperLimit = Integer.parseInt(parts[1].trim()); // Use upper bound
-      } catch (NumberFormatException e) {
-        System.out.println("Invalid courseload format: " + courseloadStr);
-      }
-    }
-
-    return new University(id, name, city, country, continent, description, courseloadUpperLimit);
+    return new University(id, name, city, country, continent, description);
   }
 
 }
