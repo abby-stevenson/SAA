@@ -1,13 +1,15 @@
 .uni-card {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    padding: 1.5rem;
+    padding: 1rem;
     border: 1px solid #e5e7eb;
     border-radius: 12px;
     background-color: #ffffff;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    max-width: 400px;
+    width: 92%;
+    gap: 1rem;
+    padding-left: 7.5rem;
   }
 
   .uni-course {
@@ -18,24 +20,34 @@
   }
 
   .uni-image {
-    width: 64px;
-    height: 64px;
-    object-fit: cover;
+    width: 64px !important;  
+    height: 64px !important; 
+    max-width: 64px !important;
+    max-height: 64px !important;
+
+    object-fit: cover;       
     border-radius: 8px;
-    margin-right: 1rem;
+
+    flex-shrink: 0;          
+    flex-grow: 0;          
+    flex-basis: 64px;      
   }
   
 
   .uni-card-row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    
   }
   
   .uni-card-text {
+    flex: 1;          
     display: flex;
     flex-direction: column;
-    flex: 1;
+    justify-content: center;
+    min-width: 0; 
+    margin-left: 2rem;
   }
 
   .secondLine {
@@ -46,10 +58,11 @@
   }
   
   .button-wrapper {
+    width: 40px; 
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding-left: 1.5rem;
+    justify-content: flex-end;
+    margin-left: 1rem;
   }
   
   .favorite-button {

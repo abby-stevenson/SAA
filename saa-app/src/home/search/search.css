@@ -1,0 +1,33 @@
+.side-by-side {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .side-bar {
+    width: 10%;            
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  .rest-of-page {
+    flex: 1;                 
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center; /* centers horizontally */
+    margin-bottom: 1rem;     /* optional spacing */
+  }
+  
+  .search-bar {
+    width: 100%;
+    max-width: 500px;        /* controls how wide it can get */
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
