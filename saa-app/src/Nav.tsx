@@ -2,7 +2,7 @@ import React from 'react';
 import {HashRouter} from "react-router-dom";
 import {Routes, Route, Navigate} from "react-router";
 import './Nav.css';
-import Home from "./home";
+import Home from "./home/homePage"
 import Profile from "./home/profile";
 import Discover from "./home/discover/discover";
 import Search from "./home/search";
