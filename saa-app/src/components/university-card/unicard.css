@@ -1,71 +1,59 @@
 .uni-card {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
-    padding: 1rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
+    align-items: start;
     background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    width: 92%;
+    padding: 0.8rem;
+    width: 100%;
     gap: 1rem;
-    padding-left: 7.5rem;
-  }
+}
 
-  .uni-course {
-    font-size: 1.25rem; 
-    font-weight: 700;    
+.uni-course {
+    font-size: 1.25rem;
+    font-weight: 700;
     color: #111827;
     margin-bottom: 0.25rem;
-  }
+}
 
-  .uni-image {
-    width: 64px !important;  
-    height: 64px !important; 
+.uni-image {
+    width: 64px !important;
+    height: 64px !important;
     max-width: 64px !important;
     max-height: 64px !important;
 
-    object-fit: cover;       
+    object-fit: cover;
     border-radius: 8px;
+}
 
-    flex-shrink: 0;          
-    flex-grow: 0;          
-    flex-basis: 64px;      
-  }
-  
 
-  .uni-card-row {
+.uni-card-row {
     display: flex;
     align-items: center;
     width: 100%;
-    
-  }
-  
-  .uni-card-text {
-    flex: 1;          
+    justify-content: space-between
+}
+
+.uni-card-text {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 0; 
+    min-width: 0;
     margin-left: 2rem;
-  }
+}
 
-  .secondLine {
-    font-size: 0.95rem;     
-    font-weight: 400;      
-    color: #4b5563;        
-     margin-bottom: 0.25rem;
-  }
-  
-  .button-wrapper {
-    width: 40px; 
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-left: 1rem;
-  }
-  
-  .favorite-button {
+.secondLine {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+.button-wrapper {
+    width: 40px;
+}
+
+.favorite-button {
     height: 40px;
     width: 40px;
     border-radius: 12px;
@@ -73,12 +61,9 @@
     color: white;
     border: none;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     transition: background-color 0.3s;
-  }
-  
-  .favorite-button:hover {
+}
+
+.favorite-button:hover {
     background-color: #553c9a;
-  }
+}

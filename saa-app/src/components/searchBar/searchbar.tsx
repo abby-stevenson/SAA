@@ -12,7 +12,7 @@ function SearchBar() {
     };
 
     return (
-        <div>
+        <div className="big-container">
             <span className="search-icon">
                 <FontAwesomeIcon icon={faMagnifyingGlass} />
             </span>
