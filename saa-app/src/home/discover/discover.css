@@ -78,3 +78,16 @@
 .dropdown-content a:hover {
     background-color: #ddd;
 }
+
+
+.clear-filters {
+    font-size: 16px;
+    outline: none;
+    background-color: inherit;
+    font-family: inherit;
+    padding: 14px 16px;
+    margin: 0;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+}

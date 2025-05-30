@@ -4,7 +4,7 @@ import {Routes, Route, Navigate} from "react-router";
 import './Nav.css';
 import Home from "./home";
 import Profile from "./home/profile";
-import Discover from "./home/discover";
+import Discover from "./home/discover/discover";
 import Search from "./home/search";
 import MyPlan from "./home/profile/myuniversity/myplan";
 import UniPage from './home/discover/universitypage/unipage';
