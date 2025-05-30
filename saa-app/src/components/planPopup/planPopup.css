@@ -1,0 +1,18 @@
+.saved-courses-popup {
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e0e0e0;
+    width: 400px;
+}
+
+.university-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.4rem;
+    text-align: center;
+}

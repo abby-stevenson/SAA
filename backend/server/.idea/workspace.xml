@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5f2e8548-7d6d-4eea-98fe-3c3fb0a76292" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../saa-app/src/components/planPopup/planPopup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../saa-app/src/components/planPopup/planPopup.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../saa-app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../saa-app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../saa-app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../saa-app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../saa-app/src/components/savedUniversity/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../saa-app/src/components/savedUniversity/index.tsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2xnJajvKGWU2jTXAp7xEMq9LaZI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lpac/Documents/SAA/backend/server/pom.xml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5f2e8548-7d6d-4eea-98fe-3c3fb0a76292" name="Changes" comment="" />
+      <created>1748567969329</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1748567969329</updated>
+      <workItem from="1748567970409" duration="1018000" />
+      <workItem from="1748568995004" duration="577000" />
+      <workItem from="1748569981798" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
