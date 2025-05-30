@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import SideBar from "../../components/sideBar";
 import "./discover.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -53,6 +53,8 @@ function Discover() {
         }
     ];
 
+    const [activeDropdown, setActiveDropdown] = useState<"region" | "country" | null>(null);
+
     return (
         <div className="side-by-side">
             <div className="side-bar">
@@ -63,20 +65,51 @@ function Discover() {
             </div>
             <div className="rest-of-page">
                 <div className="filters">
-
                     <div className="dropdown">
-                        <button className="dropbtn"><span>Country </span>
+                        <button
+                            className="dropbtn"
+                            onClick={() => {
+                                const newValue = activeDropdown === 'region' ? null : 'region';
+                                setActiveDropdown(newValue);
+                            }}>
+                            <span>Region </span>
                             <FontAwesomeIcon icon={faCaretDown} />
                         </button>
-                        <div className="dropdown-content">
-                            <a href="#">Australia</a>
-                            <a href="#">France</a>
-                            <a href="#">Spain</a>
+                        <div className={`dropdown-content ${activeDropdown === 'region' ? 'show' : ''}`}>
+                            <a href="#">North America</a>
+                            <a href="#">South America</a>
+                            <a href="#">Asia</a>
+                            <a href="#">Europe</a>
+                            <a href="#">Oceania</a>
+                            <a href="#">Africa</a>
+                        </div>
+                    </div>
+
+                    <div className="dropdown">
+                        <button
+                            className="dropbtn"
+                            onClick={() => {
+                                const newValue = activeDropdown === 'country' ? null : 'country';
+                                setActiveDropdown(newValue);
+                            }}>
+                            <span>Country </span>
+                            <FontAwesomeIcon icon={faCaretDown} />
+                        </button>
+                        <div className={`dropdown-content ${activeDropdown === 'country' ? 'show' : ''}`}>
                             <a href="#">United States of America</a>
                             <a href="#">United Kingdom</a>
+                            <a href="#">Denmark</a>
+                            <a href="#">Sweden</a>
+                            <a href="#">Spain</a>
+                            <a href="#">South Korea</a>
+                            <a href="#">Australia</a>
+                            <a href="#">South Africa</a>
+                            <a href="#">Hungary</a>
                         </div>
                     </div>
                 </div>
+
+
                 <div className="universities-grid">
                     {universities.map((uni, index) => (
                         <UniversityThumbnail
