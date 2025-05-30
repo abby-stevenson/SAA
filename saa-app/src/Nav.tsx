@@ -15,6 +15,11 @@ import BudapestPage from './home/discover/universitypage/aitbudapest';
 import Budapest from './home/discover/universitypage/aitbudapest';
 import Madrid from './home/discover/universitypage/cieemadrid';
 import Seoul from './home/discover/universitypage/seoul';
+import Stockholm from './home/discover/universitypage/disstockholm';
+import Barcelona from './home/discover/universitypage/iesbarcelona';
+import Capetown from './home/discover/universitypage/cieecapetown';
+import Copenhagen from './home/discover/universitypage/discopenhagen';
+import Sydney from './home/discover/universitypage/unipage';
 
 function Nav() {
   return (
@@ -27,11 +32,15 @@ function Nav() {
               <Route path="/SAA/Discover/*"  element={<Discover/>}/>
               <Route path="/SAA/Search/*"  element={<Search/>}/>
               <Route path="/SAA/Plan/*"  element={<MyPlan/>}/>
-              <Route path="/SAA/University" element={<UniPage/>}/>
+              <Route path="/SAA/Sydney" element={<Sydney/>}/>
               <Route path="/SAA/Newcastle" element={<Newcastle/>}/>
               <Route path="/SAA/AITBudapest" element={<Budapest/>}/>
               <Route path="/SAA/CIEEMadrid" element={<Madrid/>}/>
               <Route path="/SAA/TEANSeoul" element={<Seoul/>}/>
+              <Route path="/SAA/DISStockholm" element={<Stockholm/>}/>
+              <Route path="/SAA/IESBarcelona" element={<Barcelona/>}/>
+              <Route path="/SAA/CIEECapetown" element={<Capetown/>}/>\
+              <Route path="/SAA/DISCopenhagen" element={<Copenhagen/>}/>
               <Route path="/SAA/SavedUniversity/*"  element={<SavedUniversity loc = {"Sydney, AU"} coursesSaved={4} universityName={"University of Technology Sydney"}/>}/>
           </Routes>
         </div>

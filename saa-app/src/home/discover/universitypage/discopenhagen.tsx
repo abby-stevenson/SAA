@@ -6,7 +6,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 
 
-function Seoul() {
+function Copenhagen() {
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -16,19 +16,19 @@ function Seoul() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="=TEANSeoul.png" alt="TEAN Seoul" className="uni-image" />
+                        <img src="DISCopenhagen.png" alt="DIS Copenhagen" className="uni-image" />
 
                     </div>
                     <div className = "text">
-                        <span className = "uni-name">Korea University</span>
+                        <span className = "uni-name">University of Copenhagen</span>
                         <div className = "link-and-location">
                             <p className="location">
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className="location-icon" />
-                                Seoul, South Korea
+                                Copenhagen, Denmark
                             </p>
                             <p className = "link">
-                                <a href="https://goglobal.northeastern.edu/_portal/tds-program-brochure?programid=10574" target="_blank" rel="noopener noreferrer">
-                                    https://goglobal.northeastern.edu/_portal/
+                                <a href="https://disabroad.org/copenhagen/" target="_blank" rel="noopener noreferrer">
+                                    https://disabroad.org/copenhagen/
                                 </a>
                             </p>
                         </div>
@@ -38,13 +38,10 @@ function Seoul() {
                 </div>
                 <div className = "bio">
                      <span className = "section-title">About</span>
-                     <p> Study in Seoul at one of Korea’s leading private universities that’s
-                        known for its stunning urban campus and on par with the Ivy League schools
-                        in the U.S. Here students will have the opportunity to live in a vibrant 
-                        capital city that blends high-tech modernity with ancient culture like no
-                        other. While studying a range of courses in English, students will also 
-                        discover more about life in Korea by pairing up with a Korean student over 
-                        the course of the semester for an even more immersive and local experience.</p>
+                     <p> We’re proud to have built a high-quality, innovative, 
+                        study abroad experience that combines high-level classroom 
+                        academics with learning in the field and hands-on development 
+                        of transferable skills.</p>
                 </div>
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
@@ -67,4 +64,4 @@ function Seoul() {
         </div>
     );
 }
-export default Seoul;
+export default Copenhagen;

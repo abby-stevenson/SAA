@@ -6,7 +6,7 @@ import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 
 
-function Seoul() {
+function Barcelona() {
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -16,19 +16,19 @@ function Seoul() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="=TEANSeoul.png" alt="TEAN Seoul" className="uni-image" />
+                        <img src="IESBarcelona.png" alt="IES Barcelona" className="uni-image" />
 
                     </div>
                     <div className = "text">
-                        <span className = "uni-name">Korea University</span>
+                        <span className = "uni-name">Universitat Ramon Llull</span>
                         <div className = "link-and-location">
                             <p className="location">
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className="location-icon" />
-                                Seoul, South Korea
+                                Barcelona, Spain
                             </p>
                             <p className = "link">
-                                <a href="https://goglobal.northeastern.edu/_portal/tds-program-brochure?programid=10574" target="_blank" rel="noopener noreferrer">
-                                    https://goglobal.northeastern.edu/_portal/
+                                <a href="https://www.iesabroad.org/programs/barcelona-engineering?gad_source=1&gclid=Cj0KCQiA8fW9BhC8ARIsACwHqYo8sDuFEVldoB1bKp0GeTs9o8MVYMJ4Lp-iShN9AE-LI-_a5z3MwjsaAsU2EALw_wcB#academics" target="_blank" rel="noopener noreferrer">
+                                    https://www.iesabroad.org/programs/barcelona-engineering
                                 </a>
                             </p>
                         </div>
@@ -38,13 +38,14 @@ function Seoul() {
                 </div>
                 <div className = "bio">
                      <span className = "section-title">About</span>
-                     <p> Study in Seoul at one of Korea’s leading private universities that’s
-                        known for its stunning urban campus and on par with the Ivy League schools
-                        in the U.S. Here students will have the opportunity to live in a vibrant 
-                        capital city that blends high-tech modernity with ancient culture like no
-                        other. While studying a range of courses in English, students will also 
-                        discover more about life in Korea by pairing up with a Korean student over 
-                        the course of the semester for an even more immersive and local experience.</p>
+                     <p> Our Barcelona Engineering program allows you to construct your
+                        expertise with an engaging program for Engineering and STEM students.
+                        Compiled with a partnership with the Universitat Ramon Llull's (URL)
+                        schools, the Chemical Institute of Sarrià (IQS) and La Salle Digital
+                        Engineering, this program enables Engineering students to study abroad 
+                        and maintain course progression in their field, becoming global leaders 
+                        and learners in the process! Meet your academic requirements and participate 
+                        in cultural events, city tours, cooking courses, and more.</p>
                 </div>
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
@@ -67,4 +68,4 @@ function Seoul() {
         </div>
     );
 }
-export default Seoul;
+export default Barcelona;
