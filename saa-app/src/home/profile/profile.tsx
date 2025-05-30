@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import SideBar from "../../components/sideBar";
 import "./profile.css";
 import SimpleCourseCard from "../../components/simpleCourseCard/simpleCourseCard";
-import SavedUniversity from "../../components/savedUniversity";
+import SavedUniversity from "../../components/savedUniversity/savedUniversity";
 
 function Profile() {
     return (

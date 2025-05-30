@@ -3,13 +3,12 @@ import {HashRouter} from "react-router-dom";
 import {Routes, Route, Navigate} from "react-router";
 import './Nav.css';
 import Home from "./home/homePage"
-import Profile from "./home/profile";
+import Profile from "./home/profile/profile";
 import Discover from "./home/discover/discover";
-import Search from "./home/search";
 import MyPlan from "./home/profile/myuniversity/myplan";
 import UniPage from './home/discover/universitypage/unipage';
 import Newcastle from './home/discover/universitypage/newcastle';
-import SavedUniversity from "./components/savedUniversity";
+import SavedUniversity from "./components/savedUniversity/savedUniversity";
 import UniversityThumbnail from "./components/universityThumbnail/universityThumbnail";
 import BudapestPage from './home/discover/universitypage/aitbudapest';
 import Budapest from './home/discover/universitypage/aitbudapest';
@@ -20,6 +19,7 @@ import Barcelona from './home/discover/universitypage/iesbarcelona';
 import Capetown from './home/discover/universitypage/cieecapetown';
 import Copenhagen from './home/discover/universitypage/discopenhagen';
 import Sydney from './home/discover/universitypage/unipage';
+import Search from "./home/search/search";
 
 function Nav() {
   return (
