@@ -55,7 +55,7 @@ public class SAADAO {
   public List<University> getUniByName(String name) {
     List<University> results = new ArrayList<>();
 
-    FindIterable<Document> docs = universities.find(Filters.eq("name", name));
+    FindIterable<Document> docs = universities.find(Filters.eq("Name", name));
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
@@ -68,14 +68,16 @@ public class SAADAO {
   /**
    *
    * @param continent represents the continent a student is searching through.
-   * @return a list of univerities on that continent.
+   * @return a list of universities on that continent.
    */
   public List<University> getUniByContinent(String continent) {
+    System.out.println("Continent string" + continent);
     List<University> results = new ArrayList<>();
 
     FindIterable<Document> docs = universities
-            .find(Filters.eq("continent", continent)); // Assumes 'location' is the city field
+            .find(Filters.eq("Continent", continent)); // Assumes 'location' is the city field
 
+    System.out.println("Tried to find docs");
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
     }
@@ -90,7 +92,7 @@ public class SAADAO {
     List<University> results = new ArrayList<>();
 
     FindIterable<Document> docs = universities
-            .find(Filters.eq("country", country)); // Assumes 'location' is the city field
+            .find(Filters.eq("Country", country)); // Assumes 'location' is the city field
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
@@ -104,7 +106,7 @@ public class SAADAO {
     List<University> results = new ArrayList<>();
 
     FindIterable<Document> docs = universities
-            .find(Filters.eq("city", city)); // Assumes 'location' is the city field
+            .find(Filters.eq("City", city)); // Assumes 'location' is the city field
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
@@ -120,7 +122,7 @@ public class SAADAO {
      */
 
     FindIterable<Document> docs = saCourses
-            .find(Filters.eq("neuCourse", course));
+            .find(Filters.eq("NU Course Number", course));
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));

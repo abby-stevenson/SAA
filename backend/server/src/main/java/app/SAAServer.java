@@ -1,4 +1,5 @@
 package app;
+
 import io.javalin.Javalin;
 import io.javalin.config.JavalinConfig;
 
@@ -23,8 +24,8 @@ public class SAAServer {
             .start(8080);
 
     // Define endpoints directly on the app
-    app.get("/location/continent/{continent}", ctx ->
-            studyAbroadHandler.getUniByContinent(ctx, ctx.pathParam("continent"))
+    app.get("/location/continent/{continent}", ctx -> {
+            studyAbroadHandler.getUniByContinent(ctx, ctx.pathParam("continent"));}
     );
 
     app.get("/location/country/{country}", ctx ->
@@ -47,8 +48,9 @@ public class SAAServer {
             studyAbroadHandler.getUniByName(ctx, ctx.pathParam("university"))
     );
 
-    app.get("/university", ctx ->
-            studyAbroadHandler.getAllUni(ctx)
+    app.get("/university", ctx -> {
+              studyAbroadHandler.getAllUni(ctx);
+    }
     );
   }
 }

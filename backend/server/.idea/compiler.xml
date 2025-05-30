@@ -9,5 +9,8 @@
         <module name="SAA-server" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SAA-server" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
