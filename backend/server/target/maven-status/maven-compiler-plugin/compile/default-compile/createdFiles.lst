@@ -1,0 +1,7 @@
+model/SACourse.class
+model/University.class
+model/ICourse.class
+app/SAAServer.class
+studyabroad/SAADAO.class
+model/NEUCourse.class
+studyabroad/SAController.class

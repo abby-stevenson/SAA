@@ -17,54 +17,38 @@ public class SAAServer {
 
     // API implementation
     SAController studyAbroadHandler = new SAController(studyAbroad);
-
-    JavalinConfig config = new JavalinConfig();
-
     // start Javalin on port 7070
     var app = Javalin.create()
-        .get("/", ctx -> ctx.result("Study Abroad Advisor server is running"))
-        .start(8080);
+            .get("/", ctx -> ctx.result("Study Abroad Advisor server is running"))
+            .start(8080);
 
-    /**
-     * API endpoints to retrieve data.
-     */
+    // Define endpoints directly on the app
+    app.get("/location/continent/{continent}", ctx ->
+            studyAbroadHandler.getUniByContinent(ctx, ctx.pathParam("continent"))
+    );
 
-    config.router.apiBuilder(() -> {
+    app.get("/location/country/{country}", ctx ->
+            studyAbroadHandler.getUniByCountry(ctx, ctx.pathParam("country"))
+    );
 
-      // return universities by continent
-      app.get("/location/continent/{continent}", ctx -> {
-        studyAbroadHandler.getUniByContinent(ctx, ctx.pathParam("continent"));
-      });
+    app.get("/location/city/{city}", ctx ->
+            studyAbroadHandler.getUniByCity(ctx, ctx.pathParam("city"))
+    );
 
-      // return universities by country
-      app.get("/location/country/{country}", ctx -> {
-        studyAbroadHandler.getUniByCountry(ctx, ctx.pathParam("country"));
-      });
+    app.get("/course/neu/{course}", ctx ->
+            studyAbroadHandler.getUniByNEUCourse(ctx, ctx.pathParam("course"))
+    );
 
-      // return universities by city
-      app.get("/location/city/{city}", ctx -> {
-        studyAbroadHandler.getUniByCity(ctx, ctx.pathParam("city"));
-      });
+    app.get("/course/host/{course}", ctx ->
+            studyAbroadHandler.getUniBySACourse(ctx, ctx.pathParam("course"))
+    );
 
-      // return universities by northeastern course code
-      app.get("/course/neu/{course}", ctx -> {
-        studyAbroadHandler.getUniByNEUCourse(ctx, ctx.pathParam("course"));
-      });
+    app.get("/university/{university}", ctx ->
+            studyAbroadHandler.getUniByName(ctx, ctx.pathParam("university"))
+    );
 
-      // return universities by course
-      app.get("/course/host/{course}", ctx -> {
-        studyAbroadHandler.getUniBySACourse(ctx, ctx.pathParam("course"));
-      });
-
-      // return a university by name
-      app.get("/university/{university}", ctx -> {
-        studyAbroadHandler.getUniByName(ctx, ctx.pathParam("university"));
-      });
-
-      // return universities
-      app.get("/university", ctx -> {
-        studyAbroadHandler.getAllUni(ctx);
-      });
-    });
+    app.get("/university", ctx ->
+            studyAbroadHandler.getAllUni(ctx)
+    );
   }
 }

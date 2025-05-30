@@ -22,7 +22,7 @@ public class SAADAO {
   // Note: NEEDS TO BE CHANGED
 
   private static final String DB_URI = "mongodb://localhost:27017";
-  private static final String DB_NAME = "SADB";
+  private static final String DB_NAME = "StudyAbroadDB";
 
 
   private MongoCollection<Document> universities;
@@ -39,7 +39,7 @@ public class SAADAO {
     this.client = MongoClients.create(DB_URI);
     this.database = client.getDatabase(DB_NAME);
 
-    this.universities = database.getCollection("universities");
+    this.universities = database.getCollection("universities", Document.class);
     this.saCourses = database.getCollection("host_courses");
     this.neuCourses = database.getCollection("neu_courses");
   }
@@ -52,12 +52,15 @@ public class SAADAO {
   public List<University> getUniByName(String name) {
     List<University> results = new ArrayList<>();
 
-    // db.collection('Universities').find({ name : 'name' });
+    FindIterable<Document> docs = universities.find(Filters.eq("name", name));
 
-    String mongoDB = "";
+    for (Document doc : docs) {
+      results.add(documentToUniversity(doc));
+    }
 
     return results;
   }
+
 
   /**
    *
@@ -154,15 +157,26 @@ public class SAADAO {
 
 
   private University documentToUniversity(Document doc) {
-    String id = doc.getString("id");
-    String name = doc.getString("name");
-    String city = doc.getString("city");
-    String country = doc.getString("country");
-    String continent = doc.getString("continent");
-    String description = doc.getString("description");
-    int courseloadUpperLimit = doc.getInteger("courseloadUpperLimit");
+    String id = doc.getObjectId("_id").toHexString(); // Correct handling for ObjectId
+    String name = doc.getString("Name");
+    String city = doc.getString("City");
+    String country = doc.getString("Country");
+    String continent = doc.getString("Continent");
+    String description = doc.getString("Description");
 
+    // Handle courseload as a string range like "12-19"
+    String courseloadStr = doc.getString("Courseload Credit");
+    int courseloadUpperLimit = 0;
+    if (courseloadStr != null && courseloadStr.contains("-")) {
+      try {
+        String[] parts = courseloadStr.split("-");
+        courseloadUpperLimit = Integer.parseInt(parts[1].trim()); // Use upper bound
+      } catch (NumberFormatException e) {
+        System.out.println("Invalid courseload format: " + courseloadStr);
+      }
+    }
 
     return new University(id, name, city, country, continent, description, courseloadUpperLimit);
   }
+
 }
