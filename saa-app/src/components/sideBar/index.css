@@ -1,0 +1,44 @@
+.sidebar-base {
+    background-color: #ffffff;
+    list-style: none;
+    padding: 0px;  margin: 0px;
+    width: 10%;
+
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+}
+
+.sidebar-base li {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.sidebar-base li.wd-active {
+    color: #c9102e;
+}
+
+.sidebar-base li.wd-active a {
+    color: #c9102e;
+}
+.sidebar-base a {
+    color: black;
+    text-decoration: none;
+}
+.sidebar-base a i {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.sidebar-base-hr {
+    padding: 8px;
+    margin-top: 10px;
+    color: #ffffff;
+}
+
+.sidebar-account-info {
+    margin-top: 10px;
+}

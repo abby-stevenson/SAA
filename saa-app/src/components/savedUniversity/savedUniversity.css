@@ -1,0 +1,45 @@
+.saved-university-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    width: 250px;
+    height: 350px;
+    margin-right: 2%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.university-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.4rem;
+    text-align: center;
+}
+
+.courses-saved-text {
+    font-size: 1.1rem;
+    color: #4b5563;
+    text-align: center;
+}
+
+.circle-crop {
+    width:60%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    /*clip-path: circle(40%);*/
+    object-fit: cover;
+    margin-bottom: 2rem
+}
+
+.location-container {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

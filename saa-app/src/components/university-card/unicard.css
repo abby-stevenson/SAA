@@ -1,0 +1,69 @@
+.uni-card {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    background-color: #ffffff;
+    padding: 0.8rem;
+    width: 100%;
+    gap: 1rem;
+}
+
+.uni-course {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.uni-image {
+    width: 64px !important;
+    height: 64px !important;
+    max-width: 64px !important;
+    max-height: 64px !important;
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.uni-card-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between
+}
+
+.uni-card-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    margin-left: 2rem;
+}
+
+.secondLine {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+.button-wrapper {
+    width: 40px;
+}
+
+.favorite-button {
+    height: 40px;
+    width: 40px;
+    border-radius: 12px;
+    background-color: #c9102e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.favorite-button:hover {
+    background-color: #ae0d28;
+}

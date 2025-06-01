@@ -1,0 +1,48 @@
+.saved-courses-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff;
+    width: 400px;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.university-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.4rem;
+    text-align: center;
+    width: 100%;
+}
+
+.max-credits {
+    text-align: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.courses-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.delete-button {
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: #6b7280;
+    transition: color 0.2s;
+}
+
+.delete-button:hover {
+    color: #ef4444;
+}
