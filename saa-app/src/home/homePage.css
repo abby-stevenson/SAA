@@ -54,12 +54,6 @@
 }
 
 
-.slide img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
 .spotlight-heading {
   font-size: 2rem;
   font-weight: bold;
@@ -131,3 +125,9 @@
   opacity: 0.3;
 }
 
+.testimonial-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: right;
+  margin: 40px;
+}
