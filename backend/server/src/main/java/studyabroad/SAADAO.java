@@ -183,7 +183,7 @@ public class SAADAO {
 
 
   private University documentToUniversity(Document doc) {
-    String id = doc.getObjectId("_id").toHexString(); // Correct handling for ObjectId
+    String id = doc.getObjectId("_id").toString(); // Correct handling for ObjectId
     String name = doc.getString("Name");
     String city = doc.getString("City");
     String country = doc.getString("Country");
