@@ -6,7 +6,7 @@ import {faCaretDown} from "@fortawesome/free-solid-svg-icons";
 import UniversityThumbnail from "../../components/universityThumbnail/universityThumbnail";
 
 
- type University = {
+ export type University = {
     universityId: string;
     name: string;
     city: string;

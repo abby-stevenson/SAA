@@ -88,6 +88,17 @@ public class SAController {
     }
   }
 
+  public void getUniByID(Context ctx, String id) {
+    List<University> universities = dao.getUniByID(id);
+    if (universities.isEmpty()) {
+      ctx.result("No Universities Found");
+      ctx.status(404);
+    } else {
+      ctx.json(universities);
+      ctx.status(200);
+    }
+  }
+
   public void getAllUni(Context ctx) {
 
     List<University> universities = this.dao.getAllUni();

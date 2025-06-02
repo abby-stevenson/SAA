@@ -1,18 +1,22 @@
 package studyabroad;
 
+import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.model.Filters;
+
+import org.bson.Document;
+import org.bson.types.ObjectId;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
 
 import model.SACourse;
 import model.University;
-
-import java.util.List;
-import java.util.ArrayList;
-import org.bson.Document;
 
 /**
  * SAADAO is a Data Access Object (DAO)
@@ -56,6 +60,24 @@ public class SAADAO {
     List<University> results = new ArrayList<>();
 
     FindIterable<Document> docs = universities.find(Filters.eq("Name", name));
+
+    for (Document doc : docs) {
+      results.add(documentToUniversity(doc));
+    }
+
+    return results;
+  }
+
+
+  /**
+   * Returns a university by id.
+   * @param id represents the university id.
+   * @return the university
+   */
+  public List<University> getUniByID(String id) {
+    List<University> results = new ArrayList<>();
+
+    FindIterable<Document> docs = universities.find(Filters.eq("University ID Code", Integer.valueOf(id)));
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
@@ -159,8 +181,7 @@ public class SAADAO {
   public List<SACourse> getAllSACourses() {
     List<SACourse> results = new ArrayList<>();
     FindIterable<Document> docs = saCourses
-        .find()
-        .limit(50);
+        .find();
     for (Document doc : docs) {
       results.add(documentToSACourse(doc));
     }
@@ -180,7 +201,7 @@ public class SAADAO {
   }
 
   private University documentToUniversity(Document doc) {
-    String id = doc.getObjectId("_id").toString(); // Correct handling for ObjectId
+    String id = doc.getInteger("University ID Code").toString(); // Correct handling for ObjectId
     String name = doc.getString("Name");
     String city = doc.getString("City");
     String country = doc.getString("Country");
@@ -191,15 +212,25 @@ public class SAADAO {
   }
 
   private SACourse documentToSACourse(Document doc) {
+    int ID = doc.getInteger("University ID");
+    System.out.println("ID" + doc.getInteger("University ID"));
+    University correspondingUni = getUniByID(Integer.toString(ID)).get(0);
+    System.out.println("Corresponding uni " + correspondingUni.getName());
     return new SACourse(
-        doc.getObjectId("_id").toString(),
+        Integer.toString(ID),
         castIntToString(doc),
         doc.getString("Host Course Name"),
         doc.getString("Host Course Description"),
         doc.getString("NU Course Number"),
         doc.getString("Term"),
-        doc.getInteger("Credits", 0),
-        doc.getInteger("Taken", 0));
+        Optional.ofNullable(doc.get("Credits"))
+            .filter(val -> val instanceof Number)
+            .map(val -> ((Number) val).doubleValue())
+            .orElse(0.0),
+        doc.getInteger("Taken", 0),
+        correspondingUni.getName(),
+            correspondingUni.getCity(),
+            correspondingUni.getCountry());
   }
 
   private String castIntToString(Document doc) {

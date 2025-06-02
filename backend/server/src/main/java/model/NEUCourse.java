@@ -4,10 +4,10 @@ public class NEUCourse implements ICourse {
   private String courseNumber;
   private String courseTitle;
   private String courseDescription;
-  private int credits;
+  private double credits;
 
   public NEUCourse(String courseNumber, String courseTitle,
-                   String courseDescription, int credits) {
+                   String courseDescription, double credits) {
     this.courseNumber = courseNumber;
     this.courseTitle = courseTitle;
     this.courseDescription = courseDescription;
@@ -25,7 +25,7 @@ public class NEUCourse implements ICourse {
   }
 
   @Override
-  public int getCredits() {
+  public double getCredits() {
     return credits;
   }
 

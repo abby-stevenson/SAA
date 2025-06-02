@@ -12,11 +12,11 @@ interface UniPopupProps {
 }
 
 const UniCardPopup = ({ courseName, uniName, location, creditAmount, nuCourse }: UniPopupProps) => {
+    const urlPath = uniName.replace(/ /g, "") + ".png"
     return (
         <div className="uni-card">
             <div className="uni-card-row">
-                <img src="uni.png" alt="University" className="uni-image" />
-
+                <img src={urlPath} alt="University" className="uni-image" />
                 {/* Text on the right */}
                 <div className="uni-card-text">
                     <div className="uni-course">{uniName} - {courseName}</div>

@@ -62,6 +62,10 @@ public class SAAServer {
     }
     );
 
+    app.get("/university/id/{id}", ctx ->
+            studyAbroadHandler.getUniByID(ctx, ctx.pathParam("id"))
+    );
+
     app.get("/course/sa/all", ctx -> {
       studyAbroadHandler.getAllSACourses(ctx);
     });

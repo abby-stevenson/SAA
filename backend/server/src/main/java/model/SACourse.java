@@ -7,12 +7,16 @@ public class SACourse implements ICourse {
   private String hostCourseDescription;
   private String neuCourseNumber;
   private String term;
-  private int credits;
+  private double credits;
   private int taken;
+  private String universityName;
+  private String universityCity;
+  private String universityCountry;
 
   public SACourse(String universityId, String hostCourseNumber, String hostCourseName,
                   String hostCourseDescription, String nuCourseNumber,
-                  String term, int credits, int taken) {
+                  String term, double credits, int taken, String universityName, String universityCity,
+                  String universityCountry) {
     this.universityId = universityId;
     this.hostCourseNumber = hostCourseNumber;
     this.hostCourseName = hostCourseName;
@@ -21,6 +25,9 @@ public class SACourse implements ICourse {
     this.term = term;
     this.credits = credits;
     this.taken = taken;
+    this.universityName = universityName;
+    this.universityCity = universityCity;
+    this.universityCountry = universityCountry;
   }
 
   @Override
@@ -34,7 +41,7 @@ public class SACourse implements ICourse {
   }
 
   @Override
-  public int getCredits() {
+  public double getCredits() {
     return credits;
   }
 
@@ -44,5 +51,8 @@ public class SACourse implements ICourse {
   public String getHostCourseDescription() { return hostCourseDescription; }
   public String getTerm() { return term; }
   public int getTaken() { return taken; }
+  public String getUniversityName() { return universityName; }
+  public String getUniversityCity() { return universityCity; }
+  public String getUniversityCountry() { return universityCountry; }
   public void incrementTaken() { this.taken++; }
 }

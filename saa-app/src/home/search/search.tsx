@@ -1,75 +1,48 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import SideBar from "../../components/sideBar";
 import UniCardPopup from "../../../src/components/university-card/unicard";
 import './search.css';
 import SearchBar from '../../components/searchBar/searchbar';
+import {University} from "../discover/discover";
+
+type StudyAbroadCourse = {
+    universityId: string;
+    hostCourseNumber: string;
+    hostCourseDescription: string;
+    term: string;
+    credits: string;
+    taken: string;
+    courseTitle: string;
+    courseNumber: string;
+    universityName: string;
+    universityCity: string;
+    universityCountry: string;
+};
 
 function Search() {
-    const courses = [
-        {
-            courseName: "ood",
-            uniName: 'Northeastern University',
-            location: 'Boston, MA',
-            creditAmount: '4',
-            nuCourse: 'cs3500'
-        },
-        {
-            courseName: "algo",
-            uniName: 'DIS Copenhagen',
-            location: 'Copenhagen, Denmark',
-            creditAmount: '4',
-            nuCourse: 'cs3000'
-        },
-        {
-            courseName: "fundies1",
-            uniName: 'DIS Stockholm',
-            location: 'Stockholm, Sweden',
-            creditAmount: '5',
-            nuCourse: 'cs2500'
-        },
-        {
-            courseName: "fundies1",
-            uniName: 'DIS Stockholm',
-            location: 'Stockholm, Sweden',
-            creditAmount: '5',
-            nuCourse: 'cs2500'
-        },
-        {
-            courseName: "fundies1",
-            uniName: 'DIS Stockholm',
-            location: 'Stockholm, Sweden',
-            creditAmount: '5',
-            nuCourse: 'cs2500'
-        },
-        {
-            courseName: "fundies1",
-            uniName: 'DIS Stockholm',
-            location: 'Stockholm, Sweden',
-            creditAmount: '5',
-            nuCourse: 'cs2500'
-        },
-        {
-            courseName: "fundies1",
-            uniName: 'DIS Stockholm',
-            location: 'Stockholm, Sweden',
-            creditAmount: '5',
-            nuCourse: 'cs2500'
-        },
-        {
-            courseName: "fundies1",
-            uniName: 'DIS Stockholm',
-            location: 'Stockholm, Sweden',
-            creditAmount: '5',
-            nuCourse: 'cs2500'
-        },
-        {
-            courseName: "fundamentals of cs 2",
-            uniName: 'AIT-Budapest',
-            location: 'Budapest, Hungary',
-            creditAmount: '4',
-            nuCourse: 'cs2510'
-        }
-    ];
+    const [courses, setCourses] = useState<StudyAbroadCourse[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    const [universities, setUniversities] = useState<Record<string, University>>({});
+
+    useEffect(() => {
+        fetch("http://localhost:8080/course/sa/all")
+            .then((res) => {
+                if (!res.ok) throw new Error("Failed to fetch courses");
+                return res.json();
+            })
+            .then((data) => {
+                setCourses(data);
+                setLoading(false);
+                console.log("Received data:", data);
+            })
+            .catch((err) => {
+                setError(err.message);
+                setLoading(false);
+            });
+    }, []);
+
 
     return (
         <div className="side-by-side">
@@ -88,11 +61,12 @@ function Search() {
                     {courses.map((course, index) => (
                         <React.Fragment key={index}>
                             <UniCardPopup
-                                courseName={course.courseName}
-                                uniName={course.uniName}
-                                location={course.location}
-                                creditAmount={course.creditAmount}
-                                nuCourse={course.nuCourse}
+                                courseName={course.courseTitle}
+                                uniName={course.universityName}
+                                location={course.universityCity + ", "
+                                    + course.universityCountry}
+                                creditAmount={course.credits}
+                                nuCourse={course.courseNumber}
                             />
                             {/* Add HR except after last item */}
                             {index < courses.length - 1 && <hr className="custom-hr" />}
