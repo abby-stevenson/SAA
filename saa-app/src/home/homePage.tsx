@@ -18,7 +18,6 @@ function Home() {
     }, []);
 
 
-
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -68,26 +67,26 @@ function Home() {
                 <div className = "photo-slideshow">
                     <div className={`slide ${currentSlide === 0 ? "active" : ""}`}>
                         <StudentTestimonials
-                            name = "Max"
-                            story = "For Max Coleman, a semester abroad in Sydney became a turning point in both his academic journey and personal growth. Originally drawn to the city for its tech innovation and vibrant culture, he found unexpected inspiration in the global perspectives shared by classmates from around the world. Majoring in computer science and business, Max used his time in Sydney to explore international entrepreneurship and user-centered design. Now back on campus, he's channeling his expanded worldview into new collaborative projects and future co-op plans."
-                            mainImage = "SydneyMainPhoto.jpeg"
-                            image1='Sydney1Photo.jpg'
-                            image2='Sydney2Photo.JPG'
-                            image3='Sydney3Photo.jpeg'
-                            image4='Sydney4Photo.jpeg'
-                            image5='Sydney5Photo.jpeg'
-                            image6='Sydney1Photo.jpg'/>
+                            name = "Morgan"
+                            story = "For Morgan Donahue, a semester abroad in Sydney became a turning point in both her academic journey and personal growth. Originally drawn to the city for its tech innovation and vibrant culture, she found unexpected inspiration in the global perspectives shared by classmates from around the world. Majoring in computer science and business, Morgan used her time in Sydney to explore international entrepreneurship and user-centered design. Now back on campus, she's channeling her expanded worldview into new collaborative projects and future co-op plans."
+                            mainImage = "maddy.jpg"
+                            image1='opera.jpg' 
+                            image2='Sydney2Photo.JPG' 
+                            image3='bondi.JPG'
+                            image4='Sydney4Photo.jpeg' 
+                            image6='Sydney5Photo.jpeg'
+                            image5='aqua.JPG'/>
                     </div>
                      <div className={`slide ${currentSlide === 1 ? "active" : ""}`}>
                         <StudentTestimonials 
-                        name = "John"
-                            story = "For Jasmine Donahue, London felt like a natural extension of her curiosity about media, culture, and connection. A communications and media studies major, Jasmine spent a semester immersed in the city’s fast-paced creative scene—studying at a world-renowned university and interning with a local PR firm. Whether navigating the Tube or attending live productions on the West End, she found herself constantly inspired by the stories around her. Her time in London didn’t just broaden her résumé—it expanded her worldview." 
-                            mainImage = "SydneyMainPhoto.jpeg"
-                            image1='Sydney1Photo.jpg'
-                            image2='Sydney2Photo.JPG'
-                            image3='Sydney3Photo.jpeg'
-                            image4='Sydney4Photo.jpeg'
-                            image5='Sydney5Photo.jpeg'
+                        name = "Max"
+                            story = "For Max Coleman, London felt like a natural extension of his curiosity about media, AI, and human connection. A computer science and media studies major, Max spent a semester immersed in the city’s fast-paced creative scene—studying at a world-renowned university and interning with a local PR firm. Whether navigating YouTube or attending live productions on the West End, he found herself constantly inspired by the stories around him. His time in London didn’t just broaden his résumé—it expanded his worldview."
+                            mainImage = "max.jpg"
+                            image1='london.jpg'
+                            image2='christmas.jpg'
+                            image3='castle.jpg'
+                            image4='scotland.jpg'
+                            image5='building.jpg'
                             image6='Sydney1Photo.jpg'/>
                     </div>
                 </div>    
