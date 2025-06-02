@@ -61,5 +61,13 @@ public class SAAServer {
               studyAbroadHandler.getAllUni(ctx);
     }
     );
+
+    app.get("/course/sa/all", ctx -> {
+      studyAbroadHandler.getAllSACourses(ctx);
+    });
+
+    app.get("/course/equivalent/{neuCourseNumber}", ctx -> {
+      studyAbroadHandler.getNEUEquivalent(ctx, ctx.pathParam("neuCourseNumber"));
+    });
   }
 }

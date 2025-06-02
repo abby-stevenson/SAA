@@ -3,6 +3,7 @@ package studyabroad;
 import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCursor;
 
+import model.SACourse;
 import org.bson.Document;
 
 import java.io.Console;
@@ -90,10 +91,6 @@ public class SAController {
   public void getAllUni(Context ctx) {
 
     List<University> universities = this.dao.getAllUni();
-    System.out.println("Universities found: " + universities.size());
-    for (University u : universities) {
-      System.out.println(u);
-    }
     if (universities.isEmpty()) {
       ctx.result("No Universities Found");
       ctx.status(404);
@@ -102,4 +99,28 @@ public class SAController {
       ctx.status(200);
     }
   }
+
+  public void getAllSACourses(Context ctx) {
+    List<SACourse> courses = dao.getAllSACourses();
+
+    if (courses.isEmpty()) {
+      ctx.result("No Study Abroad Courses Found");
+      ctx.status(404);
+    } else {
+      ctx.json(courses);
+      ctx.status(200);
+    }
+  }
+
+  public void getNEUEquivalent(Context ctx, String neuCourseNumber) {
+    List<SACourse> equivalents = dao.findSACoursesByNEUCourse(neuCourseNumber);
+    if (equivalents.isEmpty()) {
+      ctx.result("No equivalent study abroad courses found for NEU course: " + neuCourseNumber);
+      ctx.status(404);
+    } else {
+      ctx.json(equivalents);
+      ctx.status(200);
+    }
+  }
+
 }
