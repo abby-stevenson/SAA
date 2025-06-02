@@ -1,10 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import SideBar from "../../components/sideBar";
 import UniCardPopup from "../../../src/components/university-card/unicard";
 import './search.css';
 import SearchBar from '../../components/searchBar/searchbar';
+import CourseCardPopup from "../../components/courseCard/courseCard";
+
+
+interface Course {
+    courseName: string;
+    uniName: string;
+    location: string;
+    creditAmount: string;
+    nuCourse: string;
+}
 
 function Search() {
+
     const courses = [
         {
             courseName: "ood",
@@ -71,6 +82,16 @@ function Search() {
         }
     ];
 
+    const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+
+    const handleCourseClick = (course: Course) => {
+        setSelectedCourse(course);
+    };
+
+    const handleClosePopup = () => {
+        setSelectedCourse(null);
+    };
+
     return (
         <div className="side-by-side">
             <div className="side-bar">
@@ -87,19 +108,27 @@ function Search() {
                 <div className="university-rows">
                     {courses.map((course, index) => (
                         <React.Fragment key={index}>
-                            <UniCardPopup
-                                courseName={course.courseName}
-                                uniName={course.uniName}
-                                location={course.location}
-                                creditAmount={course.creditAmount}
-                                nuCourse={course.nuCourse}
-                            />
-                            {/* Add HR except after last item */}
+                            <div onClick={() => handleCourseClick(course)}>
+                                <UniCardPopup
+                                    courseName={course.courseName}
+                                    uniName={course.uniName}
+                                    location={course.location}
+                                    creditAmount={course.creditAmount}
+                                    nuCourse={course.nuCourse}
+                                />
+                            </div>
                             {index < courses.length - 1 && <hr className="custom-hr" />}
                         </React.Fragment>
                     ))}
                 </div>
             </div>
+            {selectedCourse && (
+                <CourseCardPopup
+                    courseNumber={selectedCourse.nuCourse}
+                    courseDescription={`${selectedCourse.courseName} at ${selectedCourse.uniName} (${selectedCourse.location}) - ${selectedCourse.creditAmount} credits`}
+                    onClose={handleClosePopup}
+                />
+            )}
         </div>
     );
 }

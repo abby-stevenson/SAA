@@ -5,7 +5,6 @@ import './Nav.css';
 import Home from "./home/homePage"
 import Profile from "./home/profile/profile";
 import Discover from "./home/discover/discover";
-import MyPlan from "./home/profile/myuniversity/myplan";
 import UniPage from './home/discover/universitypage/unipage';
 import Newcastle from './home/discover/universitypage/newcastle';
 import SavedUniversity from "./components/savedUniversity/savedUniversity";
@@ -31,7 +30,6 @@ function Nav() {
               <Route path="/SAA/Profile/*"   element={<Profile/>}/>
               <Route path="/SAA/Discover/*"  element={<Discover/>}/>
               <Route path="/SAA/Search/*"  element={<Search/>}/>
-              <Route path="/SAA/Plan/*"  element={<MyPlan/>}/>
               <Route path="/SAA/Sydney" element={<Sydney/>}/>
               <Route path="/SAA/Newcastle" element={<Newcastle/>}/>
               <Route path="/SAA/AITBudapest" element={<Budapest/>}/>

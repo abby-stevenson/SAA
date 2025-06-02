@@ -1,5 +1,6 @@
 import './popupUniSelect.css';
 import React, {useState} from 'react';
+import {RiCheckboxBlankFill, RiCheckboxFill} from "react-icons/ri";
 
 interface UniPopupProps {
     courseName: string;
@@ -27,7 +28,6 @@ const PopupUniSelect = ({ courseName, uniName, location, creditAmount, nuCourse 
                     <div className="secondLine-select">{location} • {nuCourse} • {creditAmount}</div>
                 </div>
 
-                {/* Star Button */}
                 <div>
                     <label>
                         <input

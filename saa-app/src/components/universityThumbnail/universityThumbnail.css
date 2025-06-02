@@ -29,12 +29,12 @@
     width: 230px;
     height: 150px;
     object-fit: cover;
-    border-radius: 12px; /* Now works because image fills space */
+    border-radius: 12px;
 }
 
 .image-thumbnail.large {
     width: 300px;
     height: 220px;
     object-fit: cover;
-    border-radius: 12px; /* Now works because image fills space */
+    border-radius: 12px;
 }

@@ -4,7 +4,6 @@
   align-items: flex-start;
   padding: 1.5rem;
   border: 1px solid #e5e7eb;
-  border-radius: 12px;
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   max-width: 400px;
@@ -20,9 +19,15 @@
 .course-description {
   color: #4b5563;
   margin-bottom: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 5px;
 }
 
-.favorite-button {
+.button-course {
   display: flex;
   width: 100%;
   align-items: center;
@@ -37,12 +42,15 @@
   transition: background-color 0.3s, outline 0.2s;
 }
 
-.favorite-button:hover {
+.button-course:hover {
   background-color: #553c9a;
 }
 
-.favorite-button:focus {
+.button-course:focus {
   background-color: 2px solid #a78bfa;
   outline-offset: 2px;
 }
 
+.close-button {
+  margin-top: 10px;
+}
