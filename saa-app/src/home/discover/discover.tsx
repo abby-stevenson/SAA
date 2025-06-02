@@ -1,74 +1,49 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import SideBar from "../../components/sideBar";
 import "./discover.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCaretDown} from "@fortawesome/free-solid-svg-icons";
 import UniversityThumbnail from "../../components/universityThumbnail/universityThumbnail";
 
+
+ type University = {
+    universityId: string;
+    name: string;
+    city: string;
+    country: string;
+    continent: string;
+    description: string;
+};
+
 function Discover() {
-    // Example university data
-    const universities = [
-        {
-            name: "University of Technology Sydney",
-            location: "Sydney, Australia",
-            description: "UTS is a leading public university known for its practice-based teaching and research excellence in technology and innovation.",
-            image: "Image.png",
-            country: "Australia",
-            region: "Oceania"
-        },
-        {
-            name: "University of Sydney",
-            location: "Sydney, Australia",
-            description: "Australia's first university, renowned for its research output and beautiful campus.",
-            image: "Image.png",
-            country: "Australia",
-            region: "Oceania"
-        },
-        {
-            name: "University of New South Wales",
-            location: "Sydney, Australia",
-            description: "A global leader in research and teaching with strong industry connections.",
-            image: "Image.png",
-            country: "Australia",
-            region: "Oceania"
-        },
-        {
-            name: "Australian National University",
-            location: "Canberra, Australia",
-            description: "Ranked #1 in Australia, ANU is known for its research-intensive programs.",
-            image: "Image.png",
-            country: "Australia",
-            region: "Oceania"
-        },
-        {
-            name: "University of Melbourne",
-            location: "Melbourne, Australia",
-            description: "Consistently ranked as Australia's top comprehensive research university.",
-            image: "Image.png",
-            country: "Australia",
-            region: "Oceania"
-        },
-        {
-            name: "Monash University",
-            location: "Melbourne, Australia",
-            description: "Australia's largest university with a strong international presence.",
-            image: "Image.png",
-            country: "Australia",
-            region: "Oceania"
-        },
-        {
-            name: "Northeastern University",
-            location: "Boston, USA",
-            description: "northeastern uni",
-            image: "Image.png",
-            country: "USA",
-            region: "North America"
-        }
-    ];
+  
+    const [universities, setUniversities] = useState<University[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
 
     const [activeDropdown, setActiveDropdown] = useState<"region" | "country" | null>(null);
     const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
+
+   
+
+    useEffect(() => {
+        fetch("http://localhost:8080/university")
+            .then((res) => {
+                if (!res.ok) throw new Error("Failed to fetch universities");
+                return res.json();
+            })
+            .then((data) => {
+                setUniversities(data);
+                setLoading(false);
+                console.log("Received data:", data); 
+            })
+            .catch((err) => {
+                setError(err.message);
+                setLoading(false);
+            });
+    }, []);
+
 
     // Filter universities based on selected filters
     const filteredUniversities = universities.filter(uni => {
@@ -76,7 +51,7 @@ function Discover() {
         if (!selectedRegion && !selectedCountry) return true;
 
         // Check region filter if selected
-        const regionMatch = selectedRegion ? uni.region === selectedRegion : true;
+        const regionMatch = selectedRegion ? uni.continent === selectedRegion : true;
 
         // Check country filter if selected
         const countryMatch = selectedCountry ? uni.country === selectedCountry : true;
@@ -175,9 +150,9 @@ function Discover() {
                         <UniversityThumbnail
                             key={index}
                             name={uni.name}
-                            location={uni.location}
+                            location={uni.city + ", " + uni.country}
                             description={uni.description}
-                            image={uni.image}
+                            image={uni.name.replace(/ /g, "") + ".png"}
                         />
                     ))}
 

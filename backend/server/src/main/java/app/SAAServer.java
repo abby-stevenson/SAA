@@ -2,6 +2,7 @@ package app;
 
 import io.javalin.Javalin;
 import io.javalin.config.JavalinConfig;
+import io.javalin.http.Context;
 
 import studyabroad.SAADAO;
 import studyabroad.SAController;
@@ -22,6 +23,14 @@ public class SAAServer {
     var app = Javalin.create()
             .get("/", ctx -> ctx.result("Study Abroad Advisor server is running"))
             .start(8080);
+
+        app.before(ctx -> {
+                ctx.header("Access-Control-Allow-Origin", "http://localhost:3000");
+                ctx.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
+                ctx.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+                ctx.contentType("application/json; charset=UTF-16");
+        });
+
 
     // Define endpoints directly on the app
     app.get("/location/continent/{continent}", ctx -> {

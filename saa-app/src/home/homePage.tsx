@@ -84,7 +84,7 @@ function Home() {
                             mainImage = "SydneyMainPhoto.jpeg"
                             image1='Sydney1Photo.jpg'
                             image2='Sydney2Photo.JPG'
-                            image3='Sydney3Photo.jpeg'
+                            image3='Sydney3Photo.jpe g'
                             image4='Sydney4Photo.jpeg'
                             image5='Sydney5Photo.jpeg'
                             image6='Sydney1Photo.jpg'/>
