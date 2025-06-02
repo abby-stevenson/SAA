@@ -34,7 +34,10 @@ function Discover() {
                 return res.json();
             })
             .then((data) => {
-                setUniversities(data);
+                const filteredData = data.filter(
+                (uni: any) => uni.name !== "Northeastern University"
+            );
+                setUniversities(filteredData);
                 setLoading(false);
                 console.log("Received data:", data); 
             })
