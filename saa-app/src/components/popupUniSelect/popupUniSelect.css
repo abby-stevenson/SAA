@@ -1,0 +1,53 @@
+.uni-card-select {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    background-color: #ffffff;
+    padding: 0.8rem;
+    width: 90%;
+    gap: 1rem;
+}
+
+.uni-course-select {
+    font-size: 1.25rem;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.uni-image-select {
+    width: 64px !important;
+    height: 64px !important;
+    max-width: 64px !important;
+    max-height: 64px !important;
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.uni-card-row-select {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between
+}
+
+.uni-card-text-select {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    margin-left: 2rem;
+}
+
+.secondLine-select {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: #4b5563;
+    margin-bottom: 0.25rem;
+}
+
+.checkbox {
+    transform: scale(2);
+}
