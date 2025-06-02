@@ -108,19 +108,13 @@ function Discover() {
                 <div className="filters">
                     <div className="dropdown">
                         <button className="dropbtn"
-  onClick={() => {
-    const newValue = activeDropdown === 'region' ? null : 'region';
-    setActiveDropdown(newValue);
-  }}
->
-<span>
-  {selectedRegion
-    ? selectedRegion
-    : "Region"}
-                            </span>
-
+                                onClick={() => {
+                                    const newValue = activeDropdown === 'region' ? null : 'region';
+                                    setActiveDropdown(newValue);
+                                }}>
+                            <span>{selectedRegion ? selectedRegion : "Region"}</span>
                             <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: "8px" }}/>
-</button>
+                        </button>
 
                         <div className={`dropdown-content ${activeDropdown === 'region' ? 'show' : ''}`}>
                             <a href="#" onClick={(e) => { e.preventDefault(); handleRegionSelect("North America"); }}>North America</a>
@@ -178,6 +172,7 @@ function Discover() {
                             location={uni.location}
                             description={uni.description}
                             image={uni.image}
+                            size="large"
                         />
                     ))}
 

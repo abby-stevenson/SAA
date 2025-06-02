@@ -6,12 +6,13 @@ interface UniversityThumbnailProps {
   location: string;
   description: string;
   image: string;
+  size: 'small' | 'large';
 }
 
-function UniversityThumbnail({ name, location, description, image}: UniversityThumbnailProps) {
+function UniversityThumbnail({ name, location, description, image, size}: UniversityThumbnailProps) {
   return (
     <div className="card-container">
-      <img className="image" src={image} />
+      <img className={`image-thumbnail ${size}`}  src={image} />
       <div>
         <h3>{name}</h3>
         <div className="location-container">

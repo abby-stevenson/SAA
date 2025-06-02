@@ -43,22 +43,26 @@ function Home() {
                             name = "University of Sydney"
                             location='Sydney, Australia'
                             description=''
-                            image='USyd-photo.jpg' />
+                            image='USyd-photo.jpg'
+                            size="small"/>
                         <UniCard 
                             name = "Newcastle University"
                             location='Newcastle, Australia'
                             description=''
-                            image='Newcastle.png' />
+                            image='Newcastle.png'
+                            size="small"/>
                         <UniCard 
                             name = "University of Barcelona"
                             location='Barcelona, Spain'
                             description=''
-                            image='IESBarcelona.png' />
+                            image='IESBarcelona.png'
+                            size="small"/>
                         <UniCard 
                             name = "University of Seoul"
                             location='Seoul, South Korea'
                             description=''
-                            image='TEANSeoul.png' />
+                            image='TEANSeoul.png'
+                            size="small"/>
                     </div>
                 <h2 className="testimonial-heading">Student Testimonials</h2>
                 <div className = "photo-slideshow">
