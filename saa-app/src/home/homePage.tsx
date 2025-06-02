@@ -27,16 +27,14 @@ function Home() {
             </div>
             <div className = "rest-of-page">
                 <div className="banner-card">
+                    <img src="leuven.jpg" alt="Banner" className="banner-image" />
                     <div className="banner-content">
-                        <h1 className="banner-title">Title</h1>
-                        <p className="banner-subtitle">Subtitle</p>
+                        <h1 className="banner-title">Data & Software in International Governance</h1>
+                        <p className="banner-subtitle">Discover our new Dialogue of Civilizations in Leuven, Belgium learning about global cultures and data policies.</p>
                         <button className="banner-button">
                         <img src="icon.png" alt="" className="button-icon" />
                         Learn More
                         </button>
-                    </div>
-                    <div className="banner-image-placeholder">
-                        <img src="placeholder-icon.png" alt="placeholder" />
                     </div>
                 </div>
                 <h2 className="spotlight-heading">Spotlight Universities</h2>
@@ -44,43 +42,42 @@ function Home() {
                         <UniCard 
                             name = "University of Sydney"
                             location='Sydney, Australia'
-                            description='Hello ello'
+                            description=''
                             image='USyd-photo.jpg' />
                         <UniCard 
                             name = "Newcastle University"
                             location='Newcastle, Australia'
-                            description='Hello ello'
+                            description=''
                             image='Newcastle.png' />
                         <UniCard 
                             name = "University of Barcelona"
                             location='Barcelona, Spain'
-                            description='Hello ello'
+                            description=''
                             image='IESBarcelona.png' />
                         <UniCard 
                             name = "University of Seoul"
                             location='Seoul, South Korea'
-                            description='Hello ello'
+                            description=''
                             image='TEANSeoul.png' />
                     </div>
                 <h2 className="testimonial-heading">Student Testimonials</h2>
                 <div className = "photo-slideshow">
                     <div className={`slide ${currentSlide === 0 ? "active" : ""}`}>
                         <StudentTestimonials
-                            name = "Timmy"
-                            story = "I loved my time in Sydney so much. We were there whilst Vivid was on which was amazing. We went to the blue mountains and went on lots of hikes" 
+                            name = "Max"
+                            story = "For Max Coleman, a semester abroad in Sydney became a turning point in both his academic journey and personal growth. Originally drawn to the city for its tech innovation and vibrant culture, he found unexpected inspiration in the global perspectives shared by classmates from around the world. Majoring in computer science and business, Max used his time in Sydney to explore international entrepreneurship and user-centered design. Now back on campus, he's channeling his expanded worldview into new collaborative projects and future co-op plans."
                             mainImage = "SydneyMainPhoto.jpeg"
                             image1='Sydney1Photo.jpg'
                             image2='Sydney2Photo.JPG'
                             image3='Sydney3Photo.jpeg'
                             image4='Sydney4Photo.jpeg'
                             image5='Sydney5Photo.jpeg'
-                            image6='Sydney1Photo.jpg'
-                            />
+                            image6='Sydney1Photo.jpg'/>
                     </div>
                      <div className={`slide ${currentSlide === 1 ? "active" : ""}`}>
                         <StudentTestimonials 
                         name = "John"
-                            story = "I loved my time in Sydney so much. We were there whilst Vivid was on which was amazing. We went to the blue mountains and went on lots of hikes" 
+                            story = "For Jasmine Donahue, London felt like a natural extension of her curiosity about media, culture, and connection. A communications and media studies major, Jasmine spent a semester immersed in the city’s fast-paced creative scene—studying at a world-renowned university and interning with a local PR firm. Whether navigating the Tube or attending live productions on the West End, she found herself constantly inspired by the stories around her. Her time in London didn’t just broaden her résumé—it expanded her worldview." 
                             mainImage = "SydneyMainPhoto.jpeg"
                             image1='Sydney1Photo.jpg'
                             image2='Sydney2Photo.JPG'
