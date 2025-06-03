@@ -16,7 +16,7 @@ function Copenhagen() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="DISCopenhagen.png" alt="DIS Copenhagen" className="uni-image" />
+                        <img src="DISCopenhagen.png" alt="DIS Copenhagen" className="university-image" />
 
                     </div>
                     <div className = "text">

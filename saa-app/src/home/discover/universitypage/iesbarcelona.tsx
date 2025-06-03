@@ -16,7 +16,7 @@ function Barcelona() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="IESBarcelona.png" alt="IES Barcelona" className="uni-image" />
+                        <img src="IESBarcelona.png" alt="IES Barcelona" className="university-image" />
 
                     </div>
                     <div className = "text">
