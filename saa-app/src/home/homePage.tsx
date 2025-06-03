@@ -12,7 +12,7 @@ function Home() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide(prev => (prev + 1) % 2); // 2 slides
-        }, 5000); // 5 sec interval
+        }, 20000); // 5 sec interval
 
         return () => clearInterval(interval);
     }, []);
