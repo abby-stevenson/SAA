@@ -6,7 +6,7 @@ import {faCaretDown} from "@fortawesome/free-solid-svg-icons";
 import UniversityThumbnail from "../../components/universityThumbnail/universityThumbnail";
 
 
- export type University = {
+export type University = {
     universityId: string;
     name: string;
     city: string;
@@ -16,7 +16,7 @@ import UniversityThumbnail from "../../components/universityThumbnail/university
 };
 
 function Discover() {
-  
+
     const [universities, setUniversities] = useState<University[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -25,7 +25,7 @@ function Discover() {
     const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
 
-   
+
 
     useEffect(() => {
         fetch("http://localhost:8080/university")
@@ -35,11 +35,11 @@ function Discover() {
             })
             .then((data) => {
                 const filteredData = data.filter(
-                (uni: any) => uni.name !== "Northeastern University"
-            );
+                    (uni: any) => uni.name !== "Northeastern University"
+                );
                 setUniversities(filteredData);
                 setLoading(false);
-                console.log("Received data:", data); 
+                console.log("Received data:", data);
             })
             .catch((err) => {
                 setError(err.message);
@@ -86,19 +86,19 @@ function Discover() {
                 <div className="filters">
                     <div className="dropdown">
                         <button className="dropbtn"
-  onClick={() => {
-    const newValue = activeDropdown === 'region' ? null : 'region';
-    setActiveDropdown(newValue);
-  }}
->
+                                onClick={() => {
+                                    const newValue = activeDropdown === 'region' ? null : 'region';
+                                    setActiveDropdown(newValue);
+                                }}
+                        >
 <span>
   {selectedRegion
-    ? selectedRegion
-    : "Region"}
+      ? selectedRegion
+      : "Region"}
                             </span>
 
                             <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: "8px" }}/>
-</button>
+                        </button>
 
                         <div className={`dropdown-content ${activeDropdown === 'region' ? 'show' : ''}`}>
                             <a href="#" onClick={(e) => { e.preventDefault(); handleRegionSelect("North America"); }}>North America</a>
@@ -156,6 +156,7 @@ function Discover() {
                             location={uni.city + ", " + uni.country}
                             description={uni.description}
                             image={uni.name.replace(/ /g, "") + ".png"}
+                            size="large"
                         />
                     ))}
 

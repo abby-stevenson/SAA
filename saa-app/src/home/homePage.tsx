@@ -18,7 +18,6 @@ function Home() {
     }, []);
 
 
-
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -27,16 +26,14 @@ function Home() {
             </div>
             <div className = "rest-of-page">
                 <div className="banner-card">
+                    <img src="leuven.jpg" alt="Banner" className="banner-image" />
                     <div className="banner-content">
-                        <h1 className="banner-title">Title</h1>
-                        <p className="banner-subtitle">Subtitle</p>
+                        <h1 className="banner-title">Data & Software in International Governance</h1>
+                        <p className="banner-subtitle">Discover our new Dialogue of Civilizations in Leuven, Belgium learning about global cultures and data policies.</p>
                         <button className="banner-button">
                         <img src="icon.png" alt="" className="button-icon" />
                         Learn More
                         </button>
-                    </div>
-                    <div className="banner-image-placeholder">
-                        <img src="placeholder-icon.png" alt="placeholder" />
                     </div>
                 </div>
                 <h2 className="spotlight-heading">Spotlight Universities</h2>
@@ -44,49 +41,52 @@ function Home() {
                         <UniCard 
                             name = "University of Sydney"
                             location='Sydney, Australia'
-                            description='Hello ello'
-                            image='USyd-photo.jpg' />
-                        <UniCard 
+                            description=''
+                            image='USyd-photo.jpg'
+                            size="small"/>
+                        <UniCard
                             name = "Newcastle University"
                             location='Newcastle, Australia'
-                            description='Hello ello'
-                            image='Newcastle.png' />
-                        <UniCard 
+                            description=''
+                            image='Newcastle.png'
+                            size="small"/>
+                        <UniCard
                             name = "University of Barcelona"
                             location='Barcelona, Spain'
-                            description='Hello ello'
-                            image='IESBarcelona.png' />
-                        <UniCard 
+                            description=''
+                            image='IESBarcelona.png'
+                            size="small"/>
+                        <UniCard
                             name = "University of Seoul"
                             location='Seoul, South Korea'
-                            description='Hello ello'
-                            image='TEANSeoul.png' />
+                            description=''
+                            image='TEANSeoul.png'
+                            size="small"/>
                     </div>
                 <h2 className="testimonial-heading">Student Testimonials</h2>
                 <div className = "photo-slideshow">
                     <div className={`slide ${currentSlide === 0 ? "active" : ""}`}>
                         <StudentTestimonials
-                            name = "Timmy"
-                            story = "I loved my time in Sydney so much. We were there whilst Vivid was on which was amazing. We went to the blue mountains and went on lots of hikes" 
-                            mainImage = "SydneyMainPhoto.jpeg"
-                            image1='Sydney1Photo.jpg'
+                            name = "Maddy"
+                            story = "For Maddy Engle, a semester abroad in Sydney became a turning point in both her academic journey and personal growth. Originally drawn to the city for its tech innovation and vibrant culture, she found unexpected inspiration in the global perspectives shared by classmates from around the world. Majoring in computer science and business, Morgan used her time in Sydney to explore international entrepreneurship and user-centered design. Now back on campus, she's channeling her expanded worldview into new collaborative projects and future co-op plans."
+                            mainImage = "maddy.jpg"
+                            image1='opera.jpg'
                             image2='Sydney2Photo.JPG'
-                            image3='Sydney3Photo.jpeg'
+                            image3='bondi.JPG'
                             image4='Sydney4Photo.jpeg'
-                            image5='Sydney5Photo.jpeg'
-                            image6='Sydney1Photo.jpg'
-                            />
+                            image6='Sydney5Photo.jpeg'
+                            image5='aqua.JPG'/>
                     </div>
                      <div className={`slide ${currentSlide === 1 ? "active" : ""}`}>
                         <StudentTestimonials 
-                        name = "John"
-                            story = "I loved my time in Sydney so much. We were there whilst Vivid was on which was amazing. We went to the blue mountains and went on lots of hikes" 
-                            mainImage = "SydneyMainPhoto.jpeg"
-                            image1='Sydney1Photo.jpg'
-                            image2='Sydney2Photo.JPG'
-                            image3='Sydney3Photo.jpe g'
-                            image4='Sydney4Photo.jpeg'
-                            image5='Sydney5Photo.jpeg'
+                        name = "Max"
+                            story = "For Max Coleman, London felt like a natural extension of his curiosity about media, AI, and human connection. A computer science and media studies major, Max spent a semester immersed in the city’s fast-paced creative scene—studying at a world-renowned university and interning with a local PR firm. Whether navigating YouTube or attending live productions on the West End, he found herself constantly inspired by the stories around him. His time in London didn’t just broaden his résumé—it expanded his worldview."
+                            mainImage = "max.jpg"
+                            image1='london.jpg'
+                            image2='christmas.jpg'
+                            image3='castle.jpg'
+                            image4='scotland.jpg'
+                            image5='building.jpg'
                             image6='Sydney1Photo.jpg'/>
                     </div>
                 </div>    

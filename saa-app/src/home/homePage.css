@@ -53,7 +53,6 @@
   pointer-events: auto;
 }
 
-
 .spotlight-heading {
   font-size: 2rem;
   font-weight: bold;
@@ -63,18 +62,18 @@
 }
 
 .uni-card-list {
-    display: flex;
-    flex-wrap: wrap;        
-    gap: 1.5rem;              
-    justify-content: flex-start;
-    margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  margin-left: 20px;
 }
 
 .banner-card {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #e4e4e4;
+  background-color: #c9102e;
   padding: 2rem;
   border-radius: 0.5rem;
   height: 20rem;
@@ -87,6 +86,11 @@
   justify-content: center;
   color: white;
   padding-top: 6rem;
+}
+
+.banner-image{
+  border-radius: 5px;
+  width: 350px;
 }
 
 .banner-title {
@@ -103,6 +107,7 @@
 
 .banner-button {
   display: flex;
+  width: 130px;
   align-items: center;
   background-color: white;
   color: #333;
@@ -118,11 +123,6 @@
   width: 1rem;
   height: 1rem;
   margin-right: 0.5rem;
-}
-
-.banner-image-placeholder img {
-  width: 8rem;
-  opacity: 0.3;
 }
 
 .testimonial-heading {

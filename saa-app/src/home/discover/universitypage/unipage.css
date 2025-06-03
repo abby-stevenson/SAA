@@ -93,9 +93,12 @@
 
 .bio,
 .popular-courses,
-.all-courses,
 .photo-side-by-side {
   margin-bottom: 2.5rem; 
+}
+
+.all-courses {
+  margin-top: 3rem;
 }
 
 .course-grid {

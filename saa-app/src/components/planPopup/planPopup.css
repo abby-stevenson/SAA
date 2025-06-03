@@ -7,15 +7,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #ffffff;
-    width: 400px;
+    width: 500px;
     padding: 50px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
 }
 
-.university-header {
+.university-header-popup {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 800;
     color: #111827;
     margin-bottom: 0.4rem;
     text-align: center;
@@ -26,6 +26,7 @@
     text-align: center;
     margin-bottom: 1rem;
     width: 100%;
+    font-weight: 600;
 }
 
 .courses-list {
@@ -36,13 +37,28 @@
 }
 
 .delete-button {
-    align-self: flex-end;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
     cursor: pointer;
-    margin-bottom: 10px;
-    color: #6b7280;
+    font-size: 1.2rem;
     transition: color 0.2s;
 }
 
 .delete-button:hover {
-    color: #ef4444;
+    color: red;
+}
+
+.include-in-plan {
+    align-self: flex-end;
+    font-weight: 600;
+}
+
+.course-divider {
+    margin: 8px 0;
+    border: none;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
 }
