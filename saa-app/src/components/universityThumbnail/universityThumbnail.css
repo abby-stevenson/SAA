@@ -38,3 +38,8 @@
     object-fit: cover;
     border-radius: 12px;
 }
+
+.link-no-style {
+  text-decoration: none;
+  color: inherit;
+}

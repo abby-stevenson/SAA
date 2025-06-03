@@ -39,25 +39,25 @@ function Home() {
                 <h2 className="spotlight-heading">Spotlight Universities</h2>
                     <div className = "uni-card-list">
                         <UniCard 
-                            name = "University of Sydney"
+                            name = "USydney"
                             location='Sydney, Australia'
                             description=''
                             image='USyd-photo.jpg'
                             size="small"/>
                         <UniCard
-                            name = "Newcastle University"
+                            name = "Newcastle"
                             location='Newcastle, Australia'
                             description=''
                             image='Newcastle.png'
                             size="small"/>
                         <UniCard
-                            name = "University of Barcelona"
+                            name = "IES Barcelona"
                             location='Barcelona, Spain'
                             description=''
                             image='IESBarcelona.png'
                             size="small"/>
                         <UniCard
-                            name = "University of Seoul"
+                            name = "TEAN Seoul"
                             location='Seoul, South Korea'
                             description=''
                             image='TEANSeoul.png'

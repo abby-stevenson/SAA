@@ -1,5 +1,6 @@
 import React from 'react';
 import './universityThumbnail.css';
+import { Link } from "react-router-dom";
 
 interface UniversityThumbnailProps {
   name: string;
@@ -10,11 +11,18 @@ interface UniversityThumbnailProps {
 }
 
 function UniversityThumbnail({ name, location, description, image, size}: UniversityThumbnailProps) {
+
+  const toRoutePath = (name: string): string => {
+  return name.replace(/\s+/g, '').replace(/[^a-zA-Z0-9]/g, '');
+};
+
   return (
     <div className="card-container">
       <img className={`image-thumbnail ${size}`}  src={image} />
       <div>
-        <h3>{name}</h3>
+        <Link to={`/SAA/${toRoutePath(name)}`} className="link-no-style">
+          <h3>{name}</h3>
+        </Link>
         <div className="location-container">
           <img src="Leading icon.png" />
           <span>{location}</span>

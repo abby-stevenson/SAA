@@ -27,7 +27,7 @@ function Nav() {
                     <Route path="/SAA/Profile/*"   element={<Profile/>}/>
                     <Route path="/SAA/Discover/*"  element={<Discover/>}/>
                     <Route path="/SAA/Search/*"  element={<Search/>}/>
-                    <Route path="/SAA/Sydney" element={<Sydney/>}/>
+                    <Route path="/SAA/USydney" element={<Sydney/>}/>
                     <Route path="/SAA/Newcastle" element={<Newcastle/>}/>
                     <Route path="/SAA/AITBudapest" element={<Budapest/>}/>
                     <Route path="/SAA/CIEEMadrid" element={<Madrid/>}/>
