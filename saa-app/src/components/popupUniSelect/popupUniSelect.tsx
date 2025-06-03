@@ -1,6 +1,5 @@
 import './popupUniSelect.css';
 import React, {useState} from 'react';
-import {RiCheckboxBlankFill, RiCheckboxFill} from "react-icons/ri";
 
 interface UniPopupProps {
     courseName: string;
