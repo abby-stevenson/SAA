@@ -27,6 +27,21 @@ function Search() {
 
     const [universities, setUniversities] = useState<Record<string, University>>({});
 
+    const filterCourses = (courses: StudyAbroadCourse[], query: string) => {
+        if (!query) {
+            return courses;
+        }
+
+        return courses.filter((course) => {
+            const courseCode = course.courseNumber.toLowerCase();
+            return courseCode.startsWith(query.toLowerCase());
+        })
+
+    }
+
+    const [searchQuery, setSearchQuery] = useState('');
+    const filteredCourses = filterCourses(courses, searchQuery);
+
     useEffect(() => {
         fetch("http://localhost:8080/course/sa/all")
             .then((res) => {
@@ -65,10 +80,10 @@ function Search() {
 
             <div className="rest-of-page">
                 <div className="search-bar">
-                    <SearchBar />
+                    <SearchBar  handleSearchChange={setSearchQuery} query={searchQuery}/>
                 </div>
                 <div className="university-rows">
-                    {courses.map((course, index) => (
+                    {filteredCourses.map((course, index) => (
                         <React.Fragment key={index}>
                             <div onClick={() => handleCourseClick(course)}>
                                 <UniCardPopup
