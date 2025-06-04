@@ -17,6 +17,8 @@ import Copenhagen from './home/discover/universitypage/discopenhagen';
 import Sydney from './home/discover/universitypage/unipage';
 import Search from "./home/search/search";
 
+
+
 function Nav() {
     return (
         <HashRouter>

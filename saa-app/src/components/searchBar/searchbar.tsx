@@ -7,6 +7,8 @@ import Select from 'react-select'
 import UniCardPopup from "../university-card/unicard";
 
 interface SearchBarArgs {
+    countries: string[],
+    cities: string[]
     query: string;
     handleSearchChange: (query: string) => void;
     handleRegionSelect: (query: string) => void;
@@ -16,8 +18,8 @@ interface SearchBarArgs {
 }
 
 
-
-function SearchBar({
+function SearchBar({   countries,
+                       cities,
                        query,
                        handleSearchChange,
                        handleRegionSelect,
@@ -34,8 +36,6 @@ function SearchBar({
     const [selectedCity, setSelectedCity] = useState<string>('');
     const [selectedCountry, setSelectedCountry] = useState<string>('');
     const [selectedDepartments, setSelectedDepartments] = useState<OptionType[]>([]);
-    const countries = ["United Kingdom", "Australia", "New Zealand", "Spain"]
-    const cities = ["Copenhagen", "Madrid"]
     const colleges = [  { value: 'CS', label: 'CS' },
                         { value: 'ARCH', label: 'ARCH' },
                         { value: 'BIOL', label: 'BIOL' }]
