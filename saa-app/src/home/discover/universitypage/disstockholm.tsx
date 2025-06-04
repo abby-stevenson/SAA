@@ -1,12 +1,38 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './unipage.css'; 
 import SideBar from '../../../components/sideBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 
+export type Course = {
+    courseNumber: string;
+    courseName: string;
+};
 
 function Stockholm() {
+
+    const [courses, setCourses] = useState<Course[]>([]);
+        const [loading, setLoading] = useState(true);
+        const [error, setError] = useState(null);
+    
+        useEffect(() => {
+                fetch("http://localhost:8080/university/courses/002")
+                    .then((res) => {
+                        if (!res.ok) throw new Error("Failed to fetch courses");
+                        return res.json();
+                    })
+                    .then((data) => {
+                        setCourses(data);
+                        setLoading(false);
+                    })
+                    .catch((err) => {
+                        setError(err.message);
+                        setLoading(false);
+                    });
+            }, []);
+            
+
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -38,7 +64,7 @@ function Stockholm() {
                 </div>
                 <div className = "bio">
                      <span className = "section-title">About</span>
-                     <p> We’re proud to have built a high-quality, innovative,
+                     <p className='bio-text'> We’re proud to have built a high-quality, innovative,
                         study abroad experience that combines high-level classroom
                         academics with learning in the field and hands-on development
                         of transferable skills.</p>
@@ -46,17 +72,23 @@ function Stockholm() {
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS3500' />
-                        <SimpleCourseCard courseNumber='CS3000' />
-                        <SimpleCourseCard courseNumber='CS3800' />
+                        <SimpleCourseCard courseNumber='CS4100' />
+                        <SimpleCourseCard courseNumber='CS4120' />
+                        <SimpleCourseCard courseNumber='CS4520' />
                     </div>
                 </div>
                  <div className = "all-courses">
                      <span className = "section-title">Available Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS3500' />
-                        <SimpleCourseCard courseNumber='CS3000' />
-                        <SimpleCourseCard courseNumber='CS3800' />
+                        {loading && <p>Loading courses...</p>}
+                        {error && <p>Error: {error}</p>}
+                        {!loading && !error &&
+                            Array.from(
+                                new Map(courses.map((course) => [course.courseNumber, course])).values()).map((course) => (
+                                    <SimpleCourseCard
+                                        key={course.courseNumber}
+                                        courseNumber={course.courseNumber}/>
+                                    ))}
                     </div>
                 </div>
 

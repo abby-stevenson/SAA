@@ -1,12 +1,38 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './unipage.css'; 
 import SideBar from '../../../components/sideBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 
+export type Course = {
+    courseNumber: string;
+    courseName: string;
+};
 
 function Newcastle() {
+
+    const [courses, setCourses] = useState<Course[]>([]);
+        const [loading, setLoading] = useState(true);
+        const [error, setError] = useState(null);
+    
+        useEffect(() => {
+                fetch("http://localhost:8080/university/courses/008")
+                    .then((res) => {
+                        if (!res.ok) throw new Error("Failed to fetch courses");
+                        return res.json();
+                    })
+                    .then((data) => {
+                        setCourses(data);
+                        setLoading(false);
+                    })
+                    .catch((err) => {
+                        setError(err.message);
+                        setLoading(false);
+                    });
+            }, []);
+            
+
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -38,24 +64,30 @@ function Newcastle() {
                 </div>
                 <div className = "bio">
                      <span className = "section-title">About</span>
-                     <p> The University of Newcastle offers a wide variety of interesting, 
+                     <p className='bio-text'> The University of Newcastle offers a wide variety of interesting, 
                         exciting and relevant courses to our visiting Study Abroad and 
                         Exchange students.</p>
                 </div>
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS3500' />
-                        <SimpleCourseCard courseNumber='CS3000' />
-                        <SimpleCourseCard courseNumber='CS3800' />
+                        <SimpleCourseCard courseNumber='CS4535' />
+                        <SimpleCourseCard courseNumber='CS4550' />
+                        <SimpleCourseCard courseNumber='CS4500' />
                     </div>
                 </div>
-                 <div className = "all-courses">
+                <div className = "all-courses">
                      <span className = "section-title">Available Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS3500' />
-                        <SimpleCourseCard courseNumber='CS3000' />
-                        <SimpleCourseCard courseNumber='CS3800' />
+                        {loading && <p>Loading courses...</p>}
+                        {error && <p>Error: {error}</p>}
+                        {!loading && !error &&
+                            Array.from(
+                                new Map(courses.map((course) => [course.courseNumber, course])).values()).map((course) => (
+                                    <SimpleCourseCard
+                                        key={course.courseNumber}
+                                        courseNumber={course.courseNumber}/>
+                                    ))}
                     </div>
                 </div>
 

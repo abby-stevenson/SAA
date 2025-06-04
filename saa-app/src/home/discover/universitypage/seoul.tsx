@@ -1,12 +1,38 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './unipage.css'; 
 import SideBar from '../../../components/sideBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 
+export type Course = {
+    courseNumber: string;
+    courseName: string;
+};
 
 function Seoul() {
+
+    const [courses, setCourses] = useState<Course[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+            fetch("http://localhost:8080/university/courses/004")
+                .then((res) => {
+                    if (!res.ok) throw new Error("Failed to fetch courses");
+                    return res.json();
+                })
+                .then((data) => {
+                    setCourses(data);
+                    setLoading(false);
+                })
+                .catch((err) => {
+                    setError(err.message);
+                    setLoading(false);
+                });
+        }, []);
+        
+
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -20,7 +46,7 @@ function Seoul() {
 
                     </div>
                     <div className = "text">
-                        <span className = "uni-name">Korea University</span>
+                        <span className = "uni-name">TEAN Seoul</span>
                         <div className = "link-and-location">
                             <p className="location">
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className="location-icon" />
@@ -38,7 +64,7 @@ function Seoul() {
                 </div>
                 <div className = "bio">
                      <span className = "section-title">About</span>
-                     <p> Study in Seoul at one of Korea’s leading private universities that’s
+                     <p className='bio-text'> Study in Seoul at one of Korea’s leading private universities that’s
                         known for its stunning urban campus and on par with the Ivy League schools
                         in the U.S. Here students will have the opportunity to live in a vibrant 
                         capital city that blends high-tech modernity with ancient culture like no
@@ -49,17 +75,23 @@ function Seoul() {
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS3500' />
-                        <SimpleCourseCard courseNumber='CS3000' />
-                        <SimpleCourseCard courseNumber='CS3800' />
+                        <SimpleCourseCard courseNumber='CS3990' />
+                        <SimpleCourseCard courseNumber='CS1800' />
+                        <SimpleCourseCard courseNumber='CS4973' />
                     </div>
                 </div>
                  <div className = "all-courses">
                      <span className = "section-title">Available Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS3500' />
-                        <SimpleCourseCard courseNumber='CS3000' />
-                        <SimpleCourseCard courseNumber='CS3800' />
+                        {loading && <p>Loading courses...</p>}
+                        {error && <p>Error: {error}</p>}
+                        {!loading && !error &&
+                            Array.from(
+                                new Map(courses.map((course) => [course.courseNumber, course])).values()).map((course) => (
+                                    <SimpleCourseCard
+                                        key={course.courseNumber}
+                                        courseNumber={course.courseNumber}/>
+                                    ))}
                     </div>
                 </div>
 

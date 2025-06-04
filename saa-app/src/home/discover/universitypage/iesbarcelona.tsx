@@ -1,12 +1,39 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import './unipage.css'; 
 import SideBar from '../../../components/sideBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 
+export type Course = {
+    courseNumber: string;
+    courseName: string;
+};
 
 function Barcelona() {
+
+    const [courses, setCourses] = useState<Course[]>([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+            fetch("http://localhost:8080/university/courses/005")
+                .then((res) => {
+                    if (!res.ok) throw new Error("Failed to fetch courses");
+                    return res.json();
+                })
+                .then((data) => {
+                    setCourses(data);
+                    setLoading(false);
+                })
+                .catch((err) => {
+                    setError(err.message);
+                    setLoading(false);
+                });
+        }, []);
+            
+
+
     return (
         <div className = "side-by-side">
             <div className = "side-bar">
@@ -20,7 +47,7 @@ function Barcelona() {
 
                     </div>
                     <div className = "text">
-                        <span className = "uni-name">Universitat Ramon Llull</span>
+                        <span className = "uni-name">IES Barcelona</span>
                         <div className = "link-and-location">
                             <p className="location">
                                 <FontAwesomeIcon icon={faMapMarkerAlt} className="location-icon" />
@@ -38,7 +65,7 @@ function Barcelona() {
                 </div>
                 <div className = "bio">
                      <span className = "section-title">About</span>
-                     <p> Our Barcelona Engineering program allows you to construct your
+                     <p className='bio-text'> Our Barcelona Engineering program allows you to construct your
                         expertise with an engaging program for Engineering and STEM students.
                         Compiled with a partnership with the Universitat Ramon Llull's (URL)
                         schools, the Chemical Institute of Sarrià (IQS) and La Salle Digital
@@ -50,20 +77,25 @@ function Barcelona() {
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS3500' />
-                        <SimpleCourseCard courseNumber='CS3000' />
-                        <SimpleCourseCard courseNumber='CS3800' />
+                        <SimpleCourseCard courseNumber='CS4300' />
+                        <SimpleCourseCard courseNumber='CS1990' />
+                        <SimpleCourseCard courseNumber='CS4400' />
                     </div>
                 </div>
                  <div className = "all-courses">
                      <span className = "section-title">Available Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS3500' />
-                        <SimpleCourseCard courseNumber='CS3000' />
-                        <SimpleCourseCard courseNumber='CS3800' />
+                        {loading && <p>Loading courses...</p>}
+                        {error && <p>Error: {error}</p>}
+                        {!loading && !error &&
+                            Array.from(
+                                new Map(courses.map((course) => [course.courseNumber, course])).values()).map((course) => (
+                                    <SimpleCourseCard
+                                        key={course.courseNumber}
+                                        courseNumber={course.courseNumber}/>
+                                    ))}
                     </div>
                 </div>
-
             </div>
         </div>
     );
