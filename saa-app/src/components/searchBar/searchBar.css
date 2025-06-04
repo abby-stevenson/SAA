@@ -23,3 +23,19 @@
     align-items: center;
     gap: 8px;
 }
+
+
+.advanced-search-button {
+    background-color: transparent;
+    color: #c9102e;
+    border: none;
+    font-weight: bold;
+    text-underline: #c9102e;
+    text-decoration: underline;
+}
+
+.multi-dropdown {
+    overflow: hidden;
+    padding: 20px;
+}
+
