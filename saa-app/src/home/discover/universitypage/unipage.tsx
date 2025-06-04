@@ -72,9 +72,9 @@ function Sydney() {
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS3500' />
+                        <SimpleCourseCard courseNumber='CS3200' />
                         <SimpleCourseCard courseNumber='CS3000' />
-                        <SimpleCourseCard courseNumber='CS3800' />
+                        <SimpleCourseCard courseNumber='CS3650' />
                     </div>
                 </div>
                  <div className = "all-courses">
