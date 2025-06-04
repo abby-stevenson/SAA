@@ -16,7 +16,7 @@ function Newcastle() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="Newcastle.png" alt="University of Newcastle" className="uni-image" />
+                        <img src="Newcastle.png" alt="University of Newcastle" className="university-image" />
 
                     </div>
                     <div className = "text">

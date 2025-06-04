@@ -1,0 +1,25 @@
+
+.SCPwrapper {
+    background-color: #ffffff;
+    width: 175px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+
+.successcourseimage {
+   margin-right: 1.5rem; 
+   width: 35px;
+   object-fit: contain;
+   
+}
+
+.successcoursetext {
+    font-weight: 400;
+    color: black;
+}
+

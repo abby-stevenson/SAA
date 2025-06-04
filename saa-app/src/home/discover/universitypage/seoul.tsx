@@ -16,7 +16,7 @@ function Seoul() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="=TEANSeoul.png" alt="TEAN Seoul" className="uni-image" />
+                        <img src="TEANSeoul.png" alt="TEAN Seoul" className = "university-image" />
 
                     </div>
                     <div className = "text">

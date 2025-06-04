@@ -4,19 +4,32 @@
 }
 
 .side-bar {
-    width: 10%;
+    width: 150px;
     background-color: #f0f0f0;
     padding: 1rem;
     border-right: 1px solid #ddd;
     box-sizing: border-box;
+    position: fixed;
+    height: 100%;
 }
 
 .rest-of-page {
     flex: 1;
-    padding: 2rem;
     box-sizing: border-box;
+    margin-left: 150px;
+    width: calc(100% - 150px);
 }
 
+@media (max-width: 768px) {
+    .side-bar {
+        display: none;
+    }
+
+    .rest-of-page {
+        margin-left: 0;
+        width: 100%;
+    }
+}
 .text {
     width: 50%;
     display: flex;

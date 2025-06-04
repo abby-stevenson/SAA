@@ -16,7 +16,7 @@ function Madrid() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="CIEEMadrid.png" alt="CIEE Madrid" className="uni-image" />
+                        <img src="CIEEMadrid.png" alt="CIEE Madrid" className="university-image"/>
 
                     </div>
                     <div className = "text">

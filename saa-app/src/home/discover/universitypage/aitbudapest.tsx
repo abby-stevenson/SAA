@@ -16,7 +16,7 @@ function Budapest() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="AITBudapest.png" alt="AIT Budapest" className="uni-image" />
+                        <img src="AITBudapest.png" alt="AIT Budapest" className="university-image" />
 
                     </div>
                     <div className = "text">

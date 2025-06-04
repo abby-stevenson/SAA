@@ -1,0 +1,25 @@
+
+.DCPwrapper {
+    background-color: #ffffff;
+    width: 275px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+
+.deniedcourseimage {
+   margin-right: 1.5rem; 
+   width: 35px;
+   object-fit: contain;
+   
+}
+
+.deniedcoursetext {
+    font-weight: 400;
+    color: black;
+}
+

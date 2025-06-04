@@ -16,7 +16,7 @@ function Sydney() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="USyd-photo.jpg" alt="University of Sydney" className="uni-image" />
+                        <img src="USyd-photo.jpg" alt="University of Sydney" className="university-image" />
 
                     </div>
                     <div className = "text">

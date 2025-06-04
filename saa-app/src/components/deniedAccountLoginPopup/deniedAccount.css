@@ -1,0 +1,25 @@
+
+.SLPdeniedwrapper {
+    background-color: #ffffff;
+    width: 300px;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+
+
+.deniedimage {
+   margin-right: 1.5rem; 
+   width: 35px;
+   object-fit: contain;
+   
+}
+
+.deniedtext {
+    font-weight: 400;
+    color: black;
+}
+

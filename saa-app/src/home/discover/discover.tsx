@@ -89,12 +89,11 @@ function Discover() {
                                 onClick={() => {
                                     const newValue = activeDropdown === 'region' ? null : 'region';
                                     setActiveDropdown(newValue);
-                                }}
-                        >
-<span>
-  {selectedRegion
-      ? selectedRegion
-      : "Region"}
+                                }}>
+                            <span>
+                              {selectedRegion
+                                  ? selectedRegion
+                                  : "Region"}
                             </span>
 
                             <FontAwesomeIcon icon={faCaretDown} style={{ marginLeft: "8px" }}/>

@@ -16,7 +16,7 @@ function Capetown() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="CIEECapetown.png" alt="CIEE Capetown" className="uni-image" />
+                        <img src="CIEECapetown.png" alt="CIEE Capetown" className="university-image" />
 
                     </div>
                     <div className = "text">

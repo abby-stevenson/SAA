@@ -16,7 +16,7 @@ function Stockholm() {
             <div className = "rest-of-page">
                 <div className = "photo-side-by-side">
                     <div className = "photo">
-                        <img src="DISStockholm.png" alt="DIS Stockholm" className="uni-image" />
+                        <img src="DISStockholm.png" alt="DIS Stockholm" className="university-image" />
 
                     </div>
                     <div className = "text">
