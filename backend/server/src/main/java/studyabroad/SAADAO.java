@@ -7,6 +7,8 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 
+import com.mongodb.client.model.Updates;
+import model.User;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
@@ -17,6 +19,8 @@ import java.util.Optional;
 
 import model.SACourse;
 import model.University;
+
+import static com.mongodb.client.model.Filters.eq;
 
 /**
  * SAADAO is a Data Access Object (DAO)
@@ -34,6 +38,7 @@ public class SAADAO {
   private MongoCollection<Document> universities;
   private MongoCollection<Document> saCourses;
   private MongoCollection<Document> neuCourses;
+  private MongoCollection<Document> users;
 
   private MongoDatabase database;
   private MongoClient client;
@@ -48,6 +53,8 @@ public class SAADAO {
     this.universities = database.getCollection("universities", Document.class);
     this.saCourses = database.getCollection("sacourses", Document.class);
     this.neuCourses = database.getCollection("neucourses", Document.class);
+    this.users = database.getCollection("users");
+
   }
 
 
@@ -59,7 +66,7 @@ public class SAADAO {
   public List<University> getUniByName(String name) {
     List<University> results = new ArrayList<>();
 
-    FindIterable<Document> docs = universities.find(Filters.eq("Name", name));
+    FindIterable<Document> docs = universities.find(eq("Name", name));
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
@@ -77,7 +84,7 @@ public class SAADAO {
   public List<University> getUniByID(String id) {
     List<University> results = new ArrayList<>();
 
-    FindIterable<Document> docs = universities.find(Filters.eq("University ID Code", Integer.valueOf(id)));
+    FindIterable<Document> docs = universities.find(eq("University ID Code", Integer.valueOf(id)));
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
@@ -97,7 +104,7 @@ public class SAADAO {
     List<University> results = new ArrayList<>();
 
     FindIterable<Document> docs = universities
-        .find(Filters.eq("Continent", continent)); // Assumes 'location' is the city field
+        .find(eq("Continent", continent)); // Assumes 'location' is the city field
 
     System.out.println("Tried to find docs");
     for (Document doc : docs) {
@@ -114,7 +121,7 @@ public class SAADAO {
     List<University> results = new ArrayList<>();
 
     FindIterable<Document> docs = universities
-        .find(Filters.eq("Country", country)); // Assumes 'location' is the city field
+        .find(eq("Country", country)); // Assumes 'location' is the city field
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
@@ -128,7 +135,7 @@ public class SAADAO {
     List<University> results = new ArrayList<>();
 
     FindIterable<Document> docs = universities
-        .find(Filters.eq("City", city)); // Assumes 'location' is the city field
+        .find(eq("City", city)); // Assumes 'location' is the city field
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
@@ -144,7 +151,7 @@ public class SAADAO {
      */
 
     FindIterable<Document> docs = saCourses
-        .find(Filters.eq("NU Course Number", course));
+        .find(eq("NU Course Number", course));
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
@@ -157,7 +164,7 @@ public class SAADAO {
     List<University> results = new ArrayList<>();
 
     FindIterable<Document> docs = saCourses
-        .find(Filters.eq("neuCourse", course));
+        .find(eq("neuCourse", course));
 
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
@@ -191,7 +198,7 @@ public class SAADAO {
 
   public List<SACourse> findSACoursesByNEUCourse(String neuCourseNumber) {
     List<SACourse> results = new ArrayList<>();
-    FindIterable<Document> docs = saCourses.find(Filters.eq("NU Course Number", neuCourseNumber));
+    FindIterable<Document> docs = saCourses.find(eq("NU Course Number", neuCourseNumber));
 
     for (Document doc : docs) {
       results.add(documentToSACourse(doc));
@@ -233,6 +240,139 @@ public class SAADAO {
             correspondingUni.getCountry());
   }
 
+  public List<User> getAllUsers() {
+    List<User> users = new ArrayList<>();
+    MongoCollection<Document> usersCollection = database.getCollection("users");
+    for (Document doc : usersCollection.find()) {
+      User user = new User();
+      user.setName(doc.getString("name"));
+      user.setEmail(doc.getString("email"));
+      user.setPassword(doc.getString("password"));
+      user.setYear(doc.getString("year"));
+      user.setMajor(doc.getString("major"));
+
+      // Parse savedCourses
+      List<SACourse> savedCourses = new ArrayList<>();
+      List<Document> courseDocs = (List<Document>) doc.get("savedCourses");
+      if (courseDocs != null) {
+        for (Document courseDoc : courseDocs) {
+          SACourse course = new SACourse(
+              String.valueOf(courseDoc.get("University ID")),
+              courseDoc.getString("Host Course Number"),
+              courseDoc.getString("Host Course Name"),
+              courseDoc.getString("Host Course Description"),
+              courseDoc.getString("NU Course Number"),
+              courseDoc.getString("Term"),
+              castCreditsToDouble(courseDoc),
+              courseDoc.getInteger("Taken"),
+              "", "", "" // if needed, or load from university lookup
+          );
+          savedCourses.add(course);
+        }
+      }
+      user.setSavedCourses(savedCourses);
+
+      users.add(user);
+    }
+    return users;
+  }
+
+
+  public void insertUser(User user) {
+    // Validate email format using a regex
+    if (!user.getEmail().matches("^[^@\\s]+@[a-zA-Z0-9]+\\.com$")) {
+      throw new IllegalArgumentException("Invalid email format.");
+    }
+
+    var usersCollection = database.getCollection("users");
+
+    // Check for duplicate email
+    Document existingUser = usersCollection.find(new Document("email", user.getEmail())).first();
+    if (existingUser != null) {
+      throw new IllegalArgumentException("A user with this email already exists.");
+    }
+
+    // Proceed with insertion
+    Document doc = new Document("name", user.getName())
+        .append("email", user.getEmail())
+        .append("password", user.getPassword())
+        .append("year", user.getYear())
+        .append("major", user.getMajor())
+        .append("savedCourses", new ArrayList<>())
+        .append("recentlyViewedCourses", new ArrayList<>());
+
+    usersCollection.insertOne(doc);
+  }
+
+
+
+  private User documentToUser(Document doc) {
+    User user = new User(
+        doc.getString("name"),
+        doc.getString("email"),
+        doc.getString("password")
+    );
+    user.setYear(doc.getString("year"));
+    user.setMajor(doc.getString("major"));
+    return user;
+  }
+
+  public void addCourseToUserFavorites(String userEmail, String hostCourseNumber) {
+    // 1. Find the course
+    Document courseDoc = saCourses.find(eq("Host Course Number", hostCourseNumber)).first();
+    if (courseDoc == null) {
+      throw new IllegalArgumentException("No course found with host course number: " + hostCourseNumber);
+    }
+
+    // 2. Find the user
+    Document userDoc = users.find(eq("email", userEmail)).first();
+    if (userDoc == null) {
+      throw new IllegalArgumentException("No user found with email: " + userEmail);
+    }
+
+    // 3. Check if the user already has this course in their savedCourses
+    List<Document> savedCourses = userDoc.getList("savedCourses", Document.class);
+    for (Document savedCourse : savedCourses) {
+      String savedHostCourseNumber = savedCourse.getString("Host Course Number");
+      if (hostCourseNumber.equals(savedHostCourseNumber)) {
+        throw new IllegalStateException("Course already exists in user's favorites: " + hostCourseNumber);
+      }
+    }
+
+    // 4. Add the course to savedCourses
+    users.updateOne(
+        eq("email", userEmail),
+        Updates.push("savedCourses", courseDoc)
+    );
+
+    System.out.println("Course \"" + hostCourseNumber + "\" added to favorites for user: " + userEmail);
+  }
+
+  public List<SACourse> getCoursesByUniversityId(String universityId) {
+    List<SACourse> courses = new ArrayList<>();
+    FindIterable<Document> docs = saCourses.find(eq("University ID", castStringToInt(universityId)));
+    for (Document doc : docs) {
+      String hostCourseNumber = castIntToString(doc);
+      String hostCourseName = doc.getString("Host Course Name");
+      String hostCourseDescription = doc.getString("Host Course Description");
+      String neuCourseNumber = doc.getString("NU Course Number");
+      String term = doc.getString("Term");
+      double credits = castCreditsToDouble(doc);
+      int taken = doc.getInteger("Taken", 0);
+      String universityName = doc.getString("University Name");
+      String universityCity = doc.getString("University City");
+      String universityCountry = doc.getString("University Country");
+
+      SACourse course = new SACourse(universityId, hostCourseNumber, hostCourseName,
+          hostCourseDescription, neuCourseNumber, term, credits, taken,
+          universityName, universityCity, universityCountry);
+
+      courses.add(course);
+    }
+
+    return courses;
+  }
+
   private String castIntToString(Document doc) {
     String result;
     try  {
@@ -241,6 +381,30 @@ public class SAADAO {
       result = doc.getInteger("Host Course Number").toString();
     }
     return result;
+  }
+
+  private double castCreditsToDouble(Document doc) {
+    Object creditsObj = doc.get("Credits");
+
+    if (creditsObj instanceof Double) {
+      return (Double) creditsObj;
+    } else if (creditsObj instanceof Integer) {
+      return ((Integer) creditsObj).doubleValue();
+    } else {
+      throw new IllegalArgumentException("Invalid type for 'Credits': " + creditsObj);
+    }
+  }
+
+  public int castStringToInt(String value) {
+    try {
+      int num = Integer.parseInt(value);
+      if (num < 1 || num > 100) {
+        throw new IllegalArgumentException("Value must be between 1 and 10.");
+      }
+      return num;
+    } catch (NumberFormatException e) {
+      throw new IllegalArgumentException("Invalid input: must be a number between 1 and 10.");
+    }
   }
 
 }

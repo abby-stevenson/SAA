@@ -4,6 +4,7 @@ import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCursor;
 
 import model.SACourse;
+import model.User;
 import org.bson.Document;
 
 import java.io.Console;
@@ -131,6 +132,51 @@ public class SAController {
     } else {
       ctx.json(equivalents);
       ctx.status(200);
+    }
+  }
+
+  public void getAllUsers(Context ctx) {
+    List<User> users = dao.getAllUsers();
+    ctx.json(users);
+  }
+
+  public void addUser(Context ctx) {
+    try {
+      User user = ctx.bodyAsClass(User.class);
+      dao.insertUser(user);
+      ctx.status(201).result("User created successfully");
+    } catch (IllegalArgumentException e) {
+      System.out.println("User creation failed: " + e.getMessage());
+      ctx.status(409).result("Error: " + e.getMessage()); // Conflict or bad input
+    } catch (Exception e) {
+      e.printStackTrace();
+      ctx.status(500).result("Internal server error");
+    }
+  }
+
+  public void addCourseToUserFavorites(Context ctx) {
+    String email = ctx.formParam("email");
+    String hostCourseNumber = ctx.formParam("hostCourseNumber");
+
+    try {
+      dao.addCourseToUserFavorites(email, hostCourseNumber);
+      ctx.status(201).result("Course added to favorites.");
+    } catch (IllegalArgumentException e) {
+      ctx.status(400).result("Bad request: " + e.getMessage());
+    } catch (IllegalStateException e) {
+      ctx.status(409).result("Conflict: " + e.getMessage()); // 409 Conflict is semantically correct here
+    } catch (Exception e) {
+      e.printStackTrace(); // Optional: log for debugging
+      ctx.status(500).result("Internal server error.");
+    }
+  }
+
+  public void getCoursesByUniversityId(Context ctx, String universityId) {
+    List<SACourse> courses = dao.getCoursesByUniversityId(universityId);
+    if (courses.isEmpty()) {
+      ctx.status(404).result("No courses found for University ID: " + universityId);
+    } else {
+      ctx.status(200).json(courses);
     }
   }
 
