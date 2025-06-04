@@ -40,8 +40,9 @@
   justify-content: space-between;
 }
 
-.text p {
+.bio-text {
     margin: 0;
+    padding: 1rem;
 }
 
 .link-and-location {
@@ -106,4 +107,5 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  padding-left: 1rem;
 }
