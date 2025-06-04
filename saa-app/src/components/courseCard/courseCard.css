@@ -43,11 +43,11 @@
 }
 
 .button-course:hover {
-  background-color: #553c9a;
+  background-color: #af2424;
 }
 
 .button-course:focus {
-  background-color: 2px solid #a78bfa;
+  background-color: 2px solid #af2424;
   outline-offset: 2px;
 }
 

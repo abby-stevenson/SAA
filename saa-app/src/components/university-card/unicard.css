@@ -11,7 +11,7 @@
 .uni-course {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #111827;
+    color: #af2424;
     margin-bottom: 0.25rem;
 }
 
@@ -45,7 +45,7 @@
 .secondLine {
     font-size: 0.95rem;
     font-weight: 400;
-    color: #4b5563;
+    color: #4b4b4b;
     margin-bottom: 0.25rem;
 }
 
@@ -65,5 +65,5 @@
 }
 
 .favorite-button:hover {
-    background-color: #ae0d28;
+    background-color: #af2424;
 }

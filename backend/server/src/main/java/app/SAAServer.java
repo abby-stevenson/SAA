@@ -75,3 +75,10 @@ public class SAAServer {
     });
   }
 }
+
+// account class
+// username
+// password
+// list of saved courses
+// list of recent searches
+// list of recently viewed courses
