@@ -2,7 +2,7 @@
     background-color: #ffffff;
     list-style: none;
     padding: 0px;  margin: 0px;
-    width: 10%;
+    width: 150px;
 
     height: 100%;
     left: 0px;
@@ -41,4 +41,10 @@
 
 .sidebar-account-info {
     margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .sidebar-base {
+        display: none;
+    }
 }
