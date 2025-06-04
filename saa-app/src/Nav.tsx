@@ -18,6 +18,8 @@ import Sydney from './home/discover/universitypage/unipage';
 import Search from "./home/search/search";
 import LoginPage from "./login/loginPage";
 
+
+
 function Nav() {
     return (
         <HashRouter>

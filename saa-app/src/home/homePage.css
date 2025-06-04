@@ -34,7 +34,7 @@
     position: relative;
     width: 100%;
     height: auto; /* Changed from fixed height */
-    min-height: 600px; /* Minimum height */
+    min-height: 800px; /* Minimum height */
     overflow: hidden;
 }
 

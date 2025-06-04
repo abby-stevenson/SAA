@@ -16,7 +16,7 @@
 .university-header-popup {
     font-size: 1.5rem;
     font-weight: 800;
-    color: #111827;
+    color: #af2424;
     margin-bottom: 0.4rem;
     text-align: center;
     width: 100%;
@@ -48,7 +48,7 @@
 }
 
 .delete-button:hover {
-    color: red;
+    color: #c9102e;
 }
 
 .include-in-plan {

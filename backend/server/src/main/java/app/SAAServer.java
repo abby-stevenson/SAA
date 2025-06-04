@@ -73,5 +73,26 @@ public class SAAServer {
     app.get("/course/equivalent/{neuCourseNumber}", ctx -> {
       studyAbroadHandler.getNEUEquivalent(ctx, ctx.pathParam("neuCourseNumber"));
     });
+
+    app.get("/users", studyAbroadHandler::getAllUsers);
+
+    app.post("/users", studyAbroadHandler::addUser);
+
+    app.post("/user/favorite", ctx -> {
+      studyAbroadHandler.addCourseToUserFavorites(ctx);
+    });
+
+    app.get("/university/courses/{universityId}", ctx -> {
+      studyAbroadHandler.getCoursesByUniversityId(ctx, ctx.pathParam("universityId"));
+    });
+
+
   }
 }
+
+// account class
+// username
+// password
+// list of saved courses
+// list of recent searches
+// list of recently viewed courses

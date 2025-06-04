@@ -14,12 +14,25 @@
 }
 
 .search-container.focused {
-    border-color: #6200ee;
-    box-shadow: 0 0 0 2px rgba(98, 0, 238, 0.2);
+    border-color: #c9102e;
+    box-shadow: 0 0 0 2px rgba(175, 36, 36, 1);
 }
 
 .big-container {
     display: flex;
     align-items: center;
     gap: 8px;
+}
+
+.advanced-search-button {
+    background-color: transparent;
+    color: #c9102e;
+    border: none;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.multi-dropdown {
+    overflow: hidden;
+    padding: 20px;
 }

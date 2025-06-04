@@ -5,6 +5,7 @@ import './search.css';
 import SearchBar from '../../components/searchBar/searchbar';
 import {University} from "../discover/discover";
 import CourseCardPopup from "../../components/courseCard/courseCard";
+import {Console} from "inspector";
 
 type StudyAbroadCourse = {
     universityId: string;
@@ -21,26 +22,55 @@ type StudyAbroadCourse = {
 };
 
 function Search() {
+
     const [courses, setCourses] = useState<StudyAbroadCourse[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
     const [universities, setUniversities] = useState<Record<string, University>>({});
+    const [activeDropdown, setActiveDropdown] = useState<"city" | "country" | null>(null);
+    const [selectedCity, setSelectedCity] = useState<string>('');
+    const [selectedCountry, setSelectedCountry] = useState<string>('');
+    const [selectedDepartments, setSelectedDepartments] = useState<String[]>([]);
+    const [cities, setCities] = useState<string[]>([]);
+    const [countries, setCountries] = useState<string[]>([]);
+    const countryCity = new Set<string>();
+
 
     const filterCourses = (courses: StudyAbroadCourse[], query: string) => {
-        if (!query) {
-            return courses;
-        }
+        console.log("City length" + selectedCity.length);
+        console.log("City is empty: " + selectedCity === ' ')
 
         return courses.filter((course) => {
             const courseCode = course.courseNumber.toLowerCase();
-            return courseCode.startsWith(query.toLowerCase());
+            return courseCode.startsWith(query.toLowerCase())
+                && (selectedCity === course.universityCity || selectedCity === '')
+                && (selectedCountry === course.universityCountry || selectedCountry === '')
+                && (selectedDepartments.length == 0 || selectedDepartments.some(d => courseCode.startsWith(d.toLowerCase())));
         })
 
     }
 
+
     const [searchQuery, setSearchQuery] = useState('');
     const filteredCourses = filterCourses(courses, searchQuery);
+
+    // Handle region selection
+    const handleCitySelect = (city: string) => {
+        setSelectedCity(city);
+        setActiveDropdown(null);
+    };
+
+    // Handle country selection
+    const handleCountrySelect = (country: string) => {
+        setSelectedCountry(country);
+        setActiveDropdown(null);
+    };
+
+    const handleDepartmentSelect = (departments: String[]) => {
+        setSelectedDepartments(departments)
+        console.log("Department selected " + departments);
+    }
 
     useEffect(() => {
         fetch("http://localhost:8080/course/sa/all")
@@ -48,10 +78,42 @@ function Search() {
                 if (!res.ok) throw new Error("Failed to fetch courses");
                 return res.json();
             })
-            .then((data) => {
-                setCourses(data);
+            .then((data) => {          setCourses(data);
+
+                const countryCity = new Set<string>();
+                const citiesArray: string[] = [];
+                const countriesArray: string[] = [];
+
+                // Collect unique country-city combinations
+                data.forEach((course: { universityCountry: string; universityCity: string; }) => {
+                    countryCity.add(`${course.universityCountry}|${course.universityCity}`);
+                });
+
+                // Parse the combinations correctly
+                Array.from(countryCity).forEach((s) => {
+                    const delimiterIndex = s.indexOf("|");
+                    const country = s.substring(0, delimiterIndex); // Country comes first
+                    const city = s.substring(delimiterIndex + 1); // City comes after, skip the "|"
+
+                    if (!countriesArray.includes(country)) {
+                        countriesArray.push(country);
+                    }
+                    if (!citiesArray.includes(city)) {
+                        citiesArray.push(city);
+                    }
+
+                    console.log("Country:", country);
+                    console.log("City:", city);
+                    console.log("\n");
+                });
+
+                // Update state with the parsed arrays
+                setCountries(countriesArray);
+                setCities(citiesArray);
+
+                console.log("Cities length:", citiesArray.length);
+                console.log("Countries length:", countriesArray.length);
                 setLoading(false);
-                console.log("Received data:", data);
             })
             .catch((err) => {
                 setError(err.message);
@@ -80,7 +142,12 @@ function Search() {
 
             <div className="rest-of-page">
                 <div className="search-bar">
-                    <SearchBar  handleSearchChange={setSearchQuery} query={searchQuery}/>
+                    <SearchBar  countries = {countries}
+                                cities = {cities}
+                                handleSearchChange={setSearchQuery} query={searchQuery}
+                                handleCountrySelect={handleCountrySelect}
+                                handleRegionSelect={handleCitySelect}
+                                handleDepartmentSelect={handleDepartmentSelect}/>
                 </div>
                 <div className="university-rows">
                     {filteredCourses.map((course, index) => (
