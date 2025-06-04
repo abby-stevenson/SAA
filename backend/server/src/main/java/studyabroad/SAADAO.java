@@ -12,10 +12,10 @@ import model.User;
 import org.bson.Document;
 import org.bson.types.ObjectId;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
 
 import model.SACourse;
 import model.University;
@@ -277,6 +277,21 @@ public class SAADAO {
     return users;
   }
 
+  public boolean verifyUser(String username, String password) {
+    if (username == null || password == null || username.trim().isEmpty() || password.trim().isEmpty()) {
+      return false;
+    }
+    // find user
+    try {
+      Query query = new Query(Criteria.where("email").is(email.toLowerCase())
+              .and("password").is(password));
+      return database.findOne(query, User.class);
+
+    } catch (Exception e) {
+      System.err.println("Error during user authentication: " + e.getMessage());
+      return false;
+    }
+  }
 
   public void insertUser(User user) {
     // Validate email format using a regex
