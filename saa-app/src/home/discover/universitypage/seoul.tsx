@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import './unipage.css'; 
-import ServerError from '../../../components/serverError/severError';
 import SideBar from '../../../components/sideBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
@@ -85,7 +84,7 @@ function Seoul() {
                      <span className = "section-title">Available Courses</span>
                      <div className="course-grid">
                         {loading && <p>Loading courses...</p>}
-                        {error && <ServerError/>}
+                        {error && <p>Error: {error}</p>}
                         {!loading && !error &&
                             Array.from(
                                 new Map(courses.map((course) => [course.courseNumber, course])).values()).map((course) => (

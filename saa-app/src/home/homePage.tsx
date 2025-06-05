@@ -67,7 +67,7 @@ function Home() {
                     <div className={`slide ${currentSlide === 0 ? "active" : ""}`}>
                         <StudentTestimonials
                             name = "Maddy"
-                            story = "For Maddy Engle, a semester abroad in Sydney became a turning point in both her academic journey and personal growth. Originally drawn to the city for its tech innovation and vibrant culture, she found unexpected inspiration in the global perspectives shared by classmates from around the world. Majoring in computer science and business, Maddy used her time in Sydney to explore international entrepreneurship and user-centered design. Now back on campus, she's channeling her expanded worldview into new collaborative projects and future co-op plans."
+                            story = "For Maddy Engle, a semester abroad in Sydney became a turning point in both her academic journey and personal growth. Originally drawn to the city for its tech innovation and vibrant culture, she found unexpected inspiration in the global perspectives shared by classmates from around the world. Majoring in computer science and business, Morgan used her time in Sydney to explore international entrepreneurship and user-centered design. Now back on campus, she's channeling her expanded worldview into new collaborative projects and future co-op plans."
                             mainImage = "maddy.jpg"
                             image1='opera.jpg'
                             image2='Sydney2Photo.JPG'
