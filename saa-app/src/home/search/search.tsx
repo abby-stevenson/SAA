@@ -32,6 +32,7 @@ function Search() {
     const [selectedCity, setSelectedCity] = useState<string>('');
     const [selectedCountry, setSelectedCountry] = useState<string>('');
     const [selectedDepartments, setSelectedDepartments] = useState<String[]>([]);
+    //const [searchType, setSearchType]
     const [cities, setCities] = useState<string[]>([]);
     const [countries, setCountries] = useState<string[]>([]);
     const countryCity = new Set<string>();
@@ -108,8 +109,8 @@ function Search() {
                 });
 
                 // Update state with the parsed arrays
-                setCountries(countriesArray);
-                setCities(citiesArray);
+                setCountries(countriesArray.sort());
+                setCities(citiesArray.sort());
 
                 console.log("Cities length:", citiesArray.length);
                 console.log("Countries length:", countriesArray.length);
@@ -147,7 +148,8 @@ function Search() {
                                 handleSearchChange={setSearchQuery} query={searchQuery}
                                 handleCountrySelect={handleCountrySelect}
                                 handleRegionSelect={handleCitySelect}
-                                handleDepartmentSelect={handleDepartmentSelect}/>
+                                handleDepartmentSelect={handleDepartmentSelect}
+                    handleSearchTypeSelect={(string) => {}}/>
                 </div>
                 <div className="university-rows">
                     {filteredCourses.map((course, index) => (

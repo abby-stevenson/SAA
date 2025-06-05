@@ -19,6 +19,7 @@ function SavedUniversity({ loc, universityName, coursesSaved }: UniversityInfo) 
         setIsOpen(false);
     };
 
+
     return (
         <>
             <div className="saved-university-card" onClick={openModal}>

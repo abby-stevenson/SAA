@@ -1,5 +1,6 @@
 import './popupUniSelect.css';
 import React, {useState} from 'react';
+import PlanPopup from "../planPopup/planPopup";
 
 interface UniPopupProps {
     courseName: string;
@@ -7,13 +8,16 @@ interface UniPopupProps {
     location: string;
     creditAmount: string;
     nuCourse: string;
+    checkedCallback: (course: string, isAdded: boolean) => void;
 }
 
-const PopupUniSelect = ({ courseName, uniName, location, creditAmount, nuCourse }: UniPopupProps) => {
+const PopupUniSelect = ({ courseName, uniName, location, creditAmount, nuCourse, checkedCallback }: UniPopupProps) => {
     const [isChecked, setIsChecked] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setIsChecked(e.target.checked);
+        const checked = e.target.checked;
+        setIsChecked(checked);
+        checkedCallback(`- ${courseName} (${nuCourse}) at ${uniName} in ${location} for ${creditAmount} credits.`, checked);
     };
 
     return (
@@ -38,6 +42,7 @@ const PopupUniSelect = ({ courseName, uniName, location, creditAmount, nuCourse 
                 </div>
             </div>
         </div>
+
     );
 };
 

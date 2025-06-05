@@ -62,3 +62,16 @@
     border-top: 1px solid #e0e0e0;
     width: 100%;
 }
+
+.email-button {
+    background-color: #c9102e;
+    color: white;
+    flex: 1;
+    padding: 15px 32px;
+    margin: 5 5px;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
