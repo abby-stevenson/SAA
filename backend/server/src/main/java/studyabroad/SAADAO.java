@@ -282,14 +282,15 @@ public class SAADAO {
       return false;
     }
     // find user
-    try {
-      Query query = new Query(Criteria.where("email").is(email.toLowerCase())
-              .and("password").is(password));
-      return database.findOne(query, User.class);
-
-    } catch (Exception e) {
-      System.err.println("Error during user authentication: " + e.getMessage());
+    MongoCollection<Document> usersCollection = database.getCollection("users");
+    Document user = usersCollection.find(eq("username", username)).first();
+    if (user == null)
       return false;
+    else {
+      if (user.getString((String) user.get("password")).equals(password))
+        return true;
+      else
+        return false;
     }
   }
 
