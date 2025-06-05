@@ -261,9 +261,6 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Photography_theory_and_pract,Photography: theory and pract,NA,ARTD2350,NA,4.5,0
 003,Digital_Post_production,Digital Post-production,NA,ARTD2380,NA,4.5,0
 003,Fiction_Videomaking,Fiction Videomaking,NA,ARTD2380,NA,4.5,0
-003,"
-","
-",NA,ARTD2381,NA,4.5,0
 003,Spanish_Art_History,Spanish Art History,NA,ARTE2501,NA,4.5,0
 003,Media_Technology,Media Technology,NA,ARTF2220,NA,4.5,0
 003,Art_History_I,Art History I,NA,ARTH1110,NA,4.5,0
@@ -272,64 +269,52 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Cultural_Dimension_of_Art,Cultural Dimension of Art,NA,ARTH1990,NA,4.5,0
 003,International_Trade_of_Works,International Trade of Works,NA,ARTH1990,NA,4.5,0
 003,The_Social_History_of_Art,The Social History of Art,NA,ARTH1990,NA,4.5,0
-003,Contemporary_Artistic_Movemen,Contemporary Artistic Movemen,NA,ARTH2210,NA,4.5,0
-003,Instrumentation_and_Multimoda,Instrumentation and Multimoda,NA,BIOE5235,NA,4.5,0
-003,Cell_culture_and_biotechnolog,Cell culture and biotechnolog,NA,BIOE5420,NA,4.5,0
-003,Fundamental_of_tissue_enginee,Fundamental of tissue enginee,NA,BIOE5430,NA,4.5,0
-003,Introduction_to_the_Design_of,Introduction to the Design of,NA,BIOE5810,NA,4.5,0
-003,Medical_Instrumentation_and_D,Medical Instrumentation and D,NA,BIOE5810,NA,4.5,0
-003,Advanced_Biomaterials_3D_Bio,"Advanced Biomaterials, 3D Bio",NA,BIOE5820,NA,4.5,0
+003,Contemporary_Artistic_Movemen,Contemporary Artistic Movement,NA,ARTH2210,NA,4.5,0
+003,Instrumentation_and_Multimodal_Structure,Instrumentation and Multimodal Structure,NA,BIOE5235,NA,4.5,0
+003,Cell_culture_and_biotechnology_methods,Cell culture and biotechnology methods,NA,BIOE5420,NA,4.5,0
+003,Fundamentals_of_tissue_engineering,Fundamentals of tissue engineering,NA,BIOE5430,NA,4.5,0
+003,Introduction_to_the_Design_of_the_Human_Body,Introduction to the Design of the Human Body,NA,BIOE5810,NA,4.5,0
+003,Medical_Instrumentation_and_Documentation,Medical Instrumentation and Documentation,NA,BIOE5810,NA,4.5,0
+003,Advanced_Biomaterials_3D_Biomaterials,"Advanced Biomaterials, 3D Biomaterials",NA,BIOE5820,NA,4.5,0
 003,Cell_and_Molecular_Biology,Cell and Molecular Biology,NA,BIOL1115,NA,4.5,0
-003,"
-","
-",NA,BIOL1116,NA,4.5,0
 003,Medical_Physiology_I,Medical Physiology I,NA,BIOL1147,NA,4.5,0
 003,Biochemistry,Biochemistry,NA,BIOL3611,NA,4.5,0
-003,"
-","
-",NA,BIOL3612,NA,4.5,0
-003,Introduction_to_Business_Admi,Introduction to Business Admi,NA,BUSN1101,NA,4.5,0
-003,Introduction_to_business_mana,Introduction to business mana,NA,BUSN1101,NA,4.5,0
-003,Big_Data_for_Business_Intelli,Big Data for Business Intelli,NA,BUSN1990,NA,4.5,0
+003,Introduction_to_Business_Administration,Introduction to Business Administration,NA,BUSN1101,NA,4.5,0
+003,Introduction_to_business_management,Introduction to business management,NA,BUSN1101,NA,4.5,0
+003,Big_Data_for_Business_Intelligence_Models,Big Data for Business Intelligence Models,NA,BUSN1990,NA,4.5,0
 003,Supply_Chain_Management_I,Supply Chain Management I,NA,BUSN1990,NA,4.5,0
-003,Accounting_for_Senior_Managem,Accounting for Senior Managem,NA,BUSN2990,NA,4.5,0
-003,Introduction_to_engineering_m,Introduction to engineering m,NA,BUSN2990,NA,4.5,0
-003,Optimization_and_simulation_f,Optimization and simulation f,NA,BUSN2990,NA,4.5,0
+003,Accounting_for_Senior_Management,Accounting for Senior Management,NA,BUSN2990,NA,4.5,0
+003,Introduction_to_engineering_mechanics,Introduction to engineering mechanics,NA,BUSN2990,NA,4.5,0
+003,Optimization_and_simulation_facilitation,Optimization and simulation facilitation,NA,BUSN2990,NA,4.5,0
 003,Chemistry,Chemistry,NA,CHEM1151,NA,4.5,0
-003,Engineering_materials_and_mat,Engineering materials and mat,NA,CHME4990,NA,4.5,0
-003,Test_of_materials_and_their_q,Test of materials and their q,NA,CHME4990,NA,4.5,0
+003,Engineering_materials_and_mathematics,Engineering materials and mathematics,NA,CHME4990,NA,4.5,0
+003,Test_of_materials_and_their_qualities,Test of materials and their qualities,NA,CHME4990,NA,4.5,0
 003,Introduction_to_Biomaterials,Introduction to Biomaterials,NA,CHME5699,NA,4.5,0
 003,Wind_Energy,Wind Energy,NA,CIVE4990,NA,4.5,0
-003,Latin_American_and_Transnatio,Latin American and Transnatio,NA,CLTR1240,NA,4.5,0
-003,Cultural_Studies_Spanish_cul,Cultural Studies: Spanish cul,NA,CLTR1504,NA,4.5,0
-003,Men_&_Women_of_the_Spanish_Ci,Men & Women of the Spanish Ci,NA,CLTR1504,NA,4.5,0
+003,Latin_American_and_Transnatio,Latin American and Transnation culture,NA,CLTR1240,NA,4.5,0
+003,Cultural_Studies_Spanish_Culture_and_Media,Cultural Studies: Spanish Culture and Media,NA,CLTR1504,NA,4.5,0
+003,Men_&_Women_of_the_Spanish_Ci,Men & Women of the Spanish Civilization,NA,CLTR1504,NA,4.5,0
 003,Spanish_Cultural_Studies,Spanish Cultural Studies,NA,CLTR1504,NA,4.5,0
 003,Cultural_Geography,Cultural Geography,NA,CLTR1990,NA,4.5,0
 003,Science_and_Culture,Science and Culture,NA,CLTR2990,NA,4.5,0
 003,The_Roots_of_Europa_culture,The Roots of Europa: culture,NA,CLTR2990,NA,4.5,0
-003,Culture_and_identity_in_globa,Culture and identity in globa,NA,CLTR3990,NA,4.5,0
-003,Environment_and_Society_in_Sp,Environment and Society in Sp,NA,CLTR4990,NA,4.5,0
+003,Culture_and_identity_in_global_settings,Culture and identity in global settings,NA,CLTR3990,NA,4.5,0
+003,Environment_and_Society_in_Spain,Environment and Society in Spain,NA,CLTR4990,NA,4.5,0
 003,Advertising_and_Communication,Advertising and Communication,NA,COMM1990,NA,4.5,0
-003,Advertising_promotion_and_pu,"Advertising, promotion and pu",NA,COMM1990,NA,4.5,0
-003,Communication_and_Cultural_Co,Communication and Cultural Co,NA,COMM1990,NA,4.5,0
-003,Communication_and_participati,Communication and participati,NA,COMM1990,NA,4.5,0
-003,Communication_in_the_professi,Communication in the professi,NA,COMM1990,NA,4.5,0
-003,Fundamentals_of_Film_and_Tele,Fundamentals of Film and Tele,NA,COMM1990,NA,4.5,0
-003,Politics_and_Comunication_(13,Politics and Comunication (13,NA,COMM1990,NA,4.5,0
-003,Retoric_Culture_and_Mass_Me,"Retoric, Culture, and Mass Me",NA,COMM1990,NA,4.5,0
-003,"
-","
-",NA,COMM1990,NA,4.5,0
-003,Theory_of_Information_and_Com,Theory of Information and Com,NA,COMM1990,NA,4.5,0
-003,Offenses_against_persons_and,Offenses against persons and,NA,CRIM2990,NA,4.5,0
+003,Advertising_promotion_and_publishing,"Advertising, promotion and publishing",NA,COMM1990,NA,4.5,0
+003,Communication_and_Cultural_Comparison,Communication and Cultural Comparison,NA,COMM1990,NA,4.5,0
+003,Communication_and_participation,Communication and participation,NA,COMM1990,NA,4.5,0
+003,Communication_in_the_professional_setting,Communication in the professional setting,NA,COMM1990,NA,4.5,0
+003,Fundamentals_of_Film_and_Television,Fundamentals of Film and Television,NA,COMM1990,NA,4.5,0
+003,Politics_and_Comunication,Politics and Comunication,NA,COMM1990,NA,4.5,0
+003,Retoric_Culture_and_Mass_Media,"Retoric, Culture, and Mass Media",NA,COMM1990,NA,4.5,0
+003,Theory_of_Information_and_Communication,Theory of Information and Communication,NA,COMM1990,NA,4.5,0
+003,Offenses_against_persons_and_places,Offenses against persons and places,NA,CRIM2990,NA,4.5,0
 003,Corruption_and_Accountability,Corruption and Accountability,NA,CRIM3990,NA,4.5,0
 003,Discrete_Mathematics,Discrete Mathematics,NA,CS1800,NA,4.5,0
-003,"
-","
-",NA,CS1802,NA,4.5,0
 003,Development_of_IT_Application,Development of IT Application,NA,CS1990,NA,4.5,0
 003,Algorithms_and_data_structure,Algorithms and data structure,NA,CS2510,NA,4.5,0
-003,Computer_programming_of_appli,Computer programming of appli,NA,CS2990,NA,4.5,0
+003,Computer_programming_of_applications,Computer programming of applications,NA,CS2990,NA,4.5,0
 003,Computer_Structure,Computer Structure,NA,CS2990,NA,4.5,0
 003,Massive_computing,Massive computing,NA,CS2990,NA,4.5,0
 003,Programming,Programming,NA,CS2990,NA,4.5,0
@@ -337,51 +322,51 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Basic_Principles_of_Databases,Basic Principles of Databases,NA,CS3200,NA,4.5,0
 003,Data_Base,Data Base,NA,CS3200,NA,4.5,0
 003,Data_Bases_&_Data_Modelling,Data Bases & Data Modelling,NA,CS3200,NA,4.5,0
-003,Database_Design_and_Administr,Database Design and Administr,NA,CS2990,NA,4.5,0
+003,Database_Design_and_Administration,Database Design and Administration,NA,CS2990,NA,4.5,0
 003,Files_and_data_bases,Files and data bases,NA,CS3200,NA,4.5,0
 003,Computer_Organization,Computer Organization,NA,CS3650,NA,4.5,0
 003,Operating_Systems,Operating Systems,NA,CS3650,NA,4.5,0
 003,Computer_Networks,Computer Networks,NA,CS3700,NA,4.5,0
-003,Advanced_Theory_of_Computatio,Advanced Theory of Computatio,NA,CS3800,NA,4.5,0
+003,Advanced_Theory_of_Computation,Advanced Theory of Computation,NA,CS3800,NA,4.5,0
 003,Automata_and_Formal_Language,Automata and Formal Language,NA,CS3800,NA,4.5,0
 003,Computer_Architecture,Computer Architecture,NA,CS3990,NA,4.5,0
 003,Data_Analysis,Data Analysis,NA,CS3990,NA,4.5,0
 003,Heuristics_and_Optimization,Heuristics and Optimization,NA,CS3990,NA,4.5,0
-003,Internet_Networking_Technolog,Internet Networking Technolog,NA,CS3990,NA,4.5,0
+003,Internet_Networking_Technologies,Internet Networking Technologies,NA,CS3990,NA,4.5,0
 003,Operating_Systems_Design,Operating Systems Design,NA,CS3990,NA,4.5,0
 003,Software_System_Development,Software System Development,NA,CS3990,NA,4.5,0
 003,Systems_Architecture,Systems Architecture,NA,CS3990,NA,4.5,0
 003,Artificial_Intelligence,Artificial Intelligence,NA,CS4100,NA,4.5,0
 003,Artificial_Intelligence_Tutor,Artificial Intelligence Tutor,NA,CS4100,NA,4.5,0
-003,Artificial_Intelligence_in_th,Artificial Intelligence in th,NA,CS4150,NA,4.5,0
+003,Artificial_Intelligence_in_the_21st_century,Artificial Intelligence in the 21st century,NA,CS4150,NA,4.5,0
 003,Computer_Graphics,Computer Graphics,NA,CS4300,NA,4.5,0
 003,Compilers,Compilers,NA,CS4410,NA,4.5,0
 003,Language_Processors,Language Processors,NA,CS4410,NA,4.5,0
-003,Principles_of_Software_Develo,Principles of Software Develo,NA,CS4500,NA,4.5,0
+003,Principles_of_Software_Development,Principles of Software Development,NA,CS4500,NA,4.5,0
 003,Mobile_Applications,Mobile Applications,NA,CS4520,NA,4.5,0
-003,Fundamentals_of_software_prod,Fundamentals of software prod,NA,CS4530,NA,4.5,0
+003,Fundamentals_of_software_production,Fundamentals of software production,NA,CS4530,NA,4.5,0
 003,Software_development_projects,Software development projects,NA,CS4530,NA,4.5,0
-003,Computing_Technologies_for_th,Computing Technologies for th,NA,CS4550,NA,4.5,0
+003,Computing_Technologies_for_the_public,Computing Technologies for the public,NA,CS4550,NA,4.5,0
 003,Distributed_Systems,Distributed Systems,NA,CS4990,NA,4.5,0
 003,Intelligent_Control,Intelligent Control,NA,CS4990,NA,4.5,0
 003,Machine_Learning_II,Machine Learning II,NA,CS4990,NA,4.5,0
 003,Real_Time_Systems,Real Time Systems,NA,CS4990,NA,4.5,0
 003,Ubiquitous_Computing,Ubiquitous Computing,NA,CS4990,NA,4.5,0
-003,Data_Protection_&_Cybersecuri,Data Protection & Cybersecuri,NA,CY2550,NA,4.5,0
-003,Cryptography_and_Computer_Sec,Cryptography and Computer Sec,NA,CY4770,NA,4.5,0
+003,Data_Protection_&_Cybersecurity,Data Protection & Cybersecurity,NA,CY2550,NA,4.5,0
+003,Cryptography_and_Computer_Security,Cryptography and Computer Security,NA,CY4770,NA,4.5,0
 003,Computer_Programming,Computer Programming,NA,DS2990,NA,4.5,0
-003,Data_integration_and_visualiz,Data integration and visualiz,NA,DS2990,NA,4.5,0
+003,Data_integration_and_visualization,Data integration and visualization,NA,DS2990,NA,4.5,0
 003,Introduction_to_Data_Science,Introduction to Data Science,NA,DS3000,NA,4.5,0
 003,Educational_Data_Analytics,Educational Data Analytics,NA,DS3990,NA,4.5,0
-003,Introduction_to_Data_Mining_f,Introduction to Data Mining f,NA,DS3990,NA,4.5,0
+003,Introduction_to_Data_Mining,Introduction to Data Mining,NA,DS3990,NA,4.5,0
 003,Machine_learning_applications,Machine learning applications,NA,DS3990,NA,4.5,0
-003,Machine_Learning_in_Data_Mini,Machine Learning in Data Mini,NA,DS3990,NA,4.5,0
+003,Machine_Learning_in_Data_Mining,Machine Learning in Data Mining,NA,DS3990,NA,4.5,0
 003,Artificial_neural_networks,Artificial neural networks,NA,DS4990,NA,4.5,0
 003,Functional_Data_Analysis,Functional Data Analysis,NA,DS4990,NA,4.5,0
 003,Economics_II_(Macroeconomics),Economics II (Macroeconomics),NA,ECON1115,NA,4.5,0
 003,Principles_of_Economics,Principles of Economics,NA,ECON1115,NA,4.5,0
 003,Microeconomics,Microeconomics,NA,ECON1116,NA,4.5,0
-003,Dynamic_Forces_in_Economic_Gr,Dynamic Forces in Economic Gr,NA,ECON1990,NA,4.5,0
+003,Dynamic_Forces_in_Economic_Growth,Dynamic Forces in Economic Growth,NA,ECON1990,NA,4.5,0
 003,Economic_History,Economic History,NA,ECON1990,NA,4.5,0
 003,Economics_of_Law,Economics of Law,NA,ECON1990,NA,4.5,0
 003,History_of_the_world_economy,History of the world economy,NA,ECON1990,NA,4.5,0
@@ -393,12 +378,12 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Econometric_Techniques,Econometric Techniques,NA,ECON2990,NA,4.5,0
 003,Econometrics,Econometrics,NA,ECON2990,NA,4.5,0
 003,Economic_progress_in_Spain_1,"Economic progress in Spain, 1",NA,ECON2990,NA,4.5,0
-003,Economics_of_European_Integra,Economics of European Integra,NA,ECON2990,NA,4.5,0
-003,Monetary_and_Financial_Econom,Monetary and Financial Econom,NA,ECON2990,NA,4.5,0
-003,The_Economy_in_Spain_in_Europ,The Economy in Spain in Europ,NA,ECON2990,NA,4.5,0
-003,The_Process_of_European_Econo,The Process of European Econo,NA,ECON2990,NA,4.5,0
+003,Economics_of_European_Integration,Economics of European Integration,NA,ECON2990,NA,4.5,0
+003,Monetary_and_Financial_Economic_decisions,Monetary and Financial Economic decisions,NA,ECON2990,NA,4.5,0
+003,The_Economy_in_Spain_in_European_society,The Economy in Spain in European society,NA,ECON2990,NA,4.5,0
+003,The_Process_of_European_Economy,The Process of European Economy,NA,ECON2990,NA,4.5,0
 003,Labor_Economics,Labor Economics,NA,ECON3410,NA,4.5,0
-003,Education_and_Growth_in_Compa,Education and Growth in Compa,NA,ECON3414,NA,4.5,0
+003,Education_and_Growth_in_Companies,Education and Growth in Companies,NA,ECON3414,NA,4.5,0
 003,Regional_and_urban_economics,Regional and urban economics,NA,ECON3420,NA,4.5,0
 003,Markets_and_Environment,Markets and Environment,NA,ECON3423,NA,4.5,0
 003,Regulation_of_Energy_Markets,Regulation of Energy Markets,NA,ECON3425,NA,4.5,0
@@ -408,19 +393,19 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Dynamic_Macroeconomics,Dynamic Macroeconomics,NA,ECON3990,NA,4.5,0
 003,Economic_Growth,Economic Growth,NA,ECON3990,NA,4.5,0
 003,Health_Economics,Health Economics,NA,ECON3990,NA,4.5,0
-003,Time_Series_Econometrics_in_E,Time Series Econometrics in E,NA,ECON3990,NA,4.5,0
-003,International_Economics_Econ,International Economics: Econ,NA,ECON4635,NA,4.5,0
+003,Time_Series_Econometrics_in_Europe,Time Series Econometrics in Europe,NA,ECON3990,NA,4.5,0
+003,International_Economics,International Economics,NA,ECON4635,NA,4.5,0
 003,International_Macroeconomics,International Macroeconomics,NA,ECON4635,NA,4.5,0
 003,International_Trade,International Trade,NA,ECON4635,NA,4.5,0
 003,Financial_Economics,Financial Economics,NA,ECON4640,NA,4.5,0
 003,Mathematics_for_Economics_II,Mathematics for Economics II,NA,ECON4653,NA,4.5,0
-003,COOPERATION_COLLECTIVE_ACTIO,"COOPERATION, COLLECTIVE ACTIO",NA,ECON4681,NA,4.5,0
+003,COOPERATION_COLLECTIVE_ACTION,"COOPERATION, COLLECTIVE ACTION",NA,ECON4681,NA,4.5,0
 003,Quantitative_Macroeconomics,Quantitative Macroeconomics,NA,ECON4915,NA,4.5,0
 003,Electrical_power_engineering,Electrical power engineering,NA,EECE2150,NA,4.5,0
 003,Systems_and_Circuits,Systems and Circuits,NA,EECE2150,NA,4.5,0
-003,Industrial_Electronics_Labora,Industrial Electronics Labora,NA,EECE2210,NA,4.5,0
+003,Industrial_Electronics_Laboratories,Industrial Electronics Laboratories,NA,EECE2210,NA,4.5,0
 003,Digital_electronic_systems,Digital electronic systems,NA,EECE2322,NA,4.5,0
-003,Electronic_Technology_in_Biom,Electronic Technology in Biom,NA,EECE2412,NA,4.5,0
+003,Electronic_Technology_in_Biometrics,Electronic Technology in Biometrics,NA,EECE2412,NA,4.5,0
 003,Linear_Systems,Linear Systems,NA,EECE2520,NA,4.5,0
 003,Electromagnetic_Fields,Electromagnetic Fields,NA,EECE2530,NA,4.5,0
 003,Analog_Electronics,Analog Electronics,NA,EECE3410,NA,4.5,0
@@ -428,113 +413,112 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Internet_of_Things,Internet of Things,NA,EECE3990,NA,4.5,0
 003,Software_Engineering,Software Engineering,NA,EECE4520,NA,4.5,0
 003,Microprocessor_based_digital,Microprocessor based digital,NA,EECE4534,NA,4.5,0
-003,Devices_and_optic_transmissio,Devices and optic transmissio,NA,EECE4646,NA,4.5,0
+003,Devices_and_optic_transmission,Devices and optic transmission,NA,EECE4646,NA,4.5,0
 003,Stochastic_Dynamical_Systems,Stochastic Dynamical Systems,NA,EECE4688,NA,4.5,0
-003,Image_Processing_and_Reconstr,Image Processing and Reconstr,NA,EECE4694,NA,4.5,0
-003,Audio_processing_Video_proce,"Audio processing, Video proce",NA,EECE4990,NA,4.5,0
+003,Image_Processing_and_Reconstruction,Image Processing and Reconstruction,NA,EECE4694,NA,4.5,0
+003,Audio_processing_Video_processes,"Audio processing, Video processes",NA,EECE4990,NA,4.5,0
 003,Cybersecurity_Engineering,Cybersecurity Engineering,NA,EECE4990,NA,4.5,0
 003,Electrical_Technology,Electrical Technology,NA,EECE4990,NA,4.5,0
-003,Electronics_for_industrial_co,Electronics for industrial co,NA,EECE4990,NA,4.5,0
-003,Integrated_circuits_and_micro,Integrated circuits and micro,NA,EECE4990,NA,4.5,0
+003,Electronics_for_industrial_companies,Electronics for industrial companies,NA,EECE4990,NA,4.5,0
+003,Integrated_circuits_and_microprocessors,Integrated circuits and microprocessors,NA,EECE4990,NA,4.5,0
 003,Perception_Systems,Perception Systems,NA,EECE5639,NA,4.5,0
 003,Machine_Learning_I,Machine Learning I,NA,EECE5644,NA,4.5,0
 003,High_frequency_techniques,High frequency techniques,NA,EECE5652,NA,4.5,0
 003,Transmission_and_distribution,Transmission and distribution,NA,EECE5682,NA,4.5,0
 003,Power_Electronics,Power Electronics,NA,EECE5684,NA,4.5,0
-003,Power_electronics_in_energeti,Power electronics in energeti,NA,EECE5684,NA,4.5,0
+003,Power_electronics_in_energetic_systems,Power electronics in energetic systems,NA,EECE5684,NA,4.5,0
 003,Electric_Rotating_Machines,Electric Rotating Machines,NA,EECE5686,NA,4.5,0
 003,Biological_Systems,Biological Systems,NA,EEMB4990,NA,4.5,0
 003,American_Expression,American Expression,NA,ENGL1990,NA,4.5,0
-003,Cervantes_and_his_World_Exem,Cervantes and his World: Exem,NA,ENGL1990,NA,4.5,0
+003,Cervantes_and_his_World,Cervantes and his World,NA,ENGL1990,NA,4.5,0
 003,Classics_Culture,Classics Culture,NA,ENGL1990,NA,4.5,0
 003,Comparative_Literature,Comparative Literature,NA,ENGL1990,NA,4.5,0
 003,Digital_Communications,Digital Communications,NA,ENGW1110,NA,4.5,0
-003,Writing_and_communication_ski,Writing and communication ski,NA,ENGW1110,NA,4.5,0
-003,Business_model_and_design_thi,Business model and design thi,NA,ENTR1990,NA,4.5,0
-003,Entrepreneurship_and_Small_Bu,Entrepreneurship and Small Bu,NA,ENTR1990,NA,4.5,0
+003,Writing_and_communication_skills,Writing and communication skills,NA,ENGW1110,NA,4.5,0
+003,Business_model_and_design_thinking,Business model and design thinking,NA,ENTR1990,NA,4.5,0
+003,Entrepreneurship_and_Small_Business,Entrepreneurship and Small Business,NA,ENTR1990,NA,4.5,0
 003,Innovation_Management,Innovation Management,NA,ENTR2301,NA,4.5,0
 003,Digital_Business,Digital Business,NA,ENTR2990,NA,4.5,0
 003,Digital_Enterpreneurship,Digital Enterpreneurship,NA,ENTR2990,NA,4.5,0
-003,Innovation_&_Continuous_Impro,Innovation & Continuous Impro,NA,ENTR2990,NA,4.5,0
+003,Innovation_&_Continuous_Improvement,Innovation & Continuous Improvement,NA,ENTR2990,NA,4.5,0
 003,Family_business_management,Family business management,NA,ENTR3990,NA,4.5,0
-003,Understanding_the_universe_a,Understanding the universe: a,NA,ENVR1990,NA,4.5,0
+003,Understanding_the_universe,Understanding the universe,NA,ENVR1990,NA,4.5,0
 003,Environmental_Technology,Environmental Technology,NA,ENVR4504,NA,4.5,0
-003,Computer_Applications_in_Fina,Computer Applications in Fina,NA,FINA1990,NA,4.5,0
+003,Computer_Applications_in_Finance,Computer Applications in Finance,NA,FINA1990,NA,4.5,0
 003,Financial_Management,Financial Management,NA,FINA2201,NA,4.5,0
 003,Business_Finance_Law,Business Finance Law,NA,FINA2990,NA,4.5,0
 003,Corporate_financial_strategy,Corporate financial strategy,NA,FINA2990,NA,4.5,0
 003,Financial_statement_analysis,Financial statement analysis,NA,FINA2990,NA,4.5,0
-003,Statistical_Methods_for_Finan,Statistical Methods for Finan,NA,FINA2990,NA,4.5,0
+003,Statistical_Methods_for_Finance,Statistical Methods for Finance,NA,FINA2990,NA,4.5,0
 003,Financial_Derivatives,Financial Derivatives,NA,FINA3990,NA,4.5,0
 003,Fixed_Income_and_Derivatives,Fixed Income and Derivatives,NA,FINA3990,NA,4.5,0
-003,Corporative_Governance_and_So,Corporative Governance and So,NA,FINA4312,NA,4.5,0
+003,Corporative_Governance_and_Society,Corporative Governance and Society,NA,FINA4312,NA,4.5,0
 003,International_Finance,International Finance,NA,FINA4320,NA,4.5,0
 003,International_Financing,International Financing,NA,FINA4320,NA,4.5,0
 003,Advanced_Financial_Derivative,Advanced Financial Derivative,NA,FINA4512,NA,4.5,0
 003,Financial_Risk_Management,Financial Risk Management,NA,FINA4512,NA,4.5,0
-003,Appropriate_Technologies_for,Appropriate Technologies for,NA,GE1990,NA,4.5,0
+003,Appropriate_Technologies_for_Engineering,Appropriate Technologies for Engineering,NA,GE1990,NA,4.5,0
 003,Chemical_basis_of_engineering,Chemical basis of engineering,NA,GE1990,NA,4.5,0
 003,Simulation_of_dynamic_systems,Simulation of dynamic systems,NA,GE1990,NA,4.5,0
 003,Communication_Theory,Communication Theory,NA,GE2990,NA,4.5,0
 003,Engineering_Graphics,Engineering Graphics,NA,GE2990,NA,4.5,0
-003,Machine_Learning_in_Healthcar,Machine Learning in Healthcar,NA,GE2990,NA,4.5,0
-003,Historical_Foundations_of_the,Historical Foundations of the,NA,HIST1100,NA,4.5,0
-003,Asia_and_Africa_politics_and,Asia and Africa politics and,NA,HIST1990,NA,4.5,0
+003,Machine_Learning_in_Healthcare,Machine Learning in Healthcare,NA,GE2990,NA,4.5,0
+003,Historical_Foundations_of_the_world,Historical Foundations of the World,NA,HIST1100,NA,4.5,0
+003,Asia_and_Africa_politics_and_government,Asia and Africa politics and government,NA,HIST1990,NA,4.5,0
 003,Contemporary_History_of_Spain,Contemporary History of Spain,NA,HIST1990,NA,4.5,0
 003,Daily_Life_and_Norms_in_Rome,Daily Life and Norms in Rome,NA,HIST1990,NA,4.5,0
 003,History_of_Spain,History of Spain,NA,HIST1990,NA,4.5,0
 003,History_of_Spain_(1808_1939),History of Spain (1808-1939),NA,HIST1990,NA,4.5,0
-003,Latin_America_in_a_Post_colon,Latin America in a Post-colon,NA,HIST1990,NA,4.5,0
+003,Latin_America_in_a_Post_colonial_world,Latin America in a Post-colonial world,NA,HIST1990,NA,4.5,0
 003,Medieval_History,Medieval History,NA,HIST1990,NA,4.5,0
-003,Origins_of_the_State_and_of_P,Origins of the State and of P,NA,HIST1990,NA,4.5,0
+003,Origins_of_the_State_and_of_Politics,Origins of the State and of Politics,NA,HIST1990,NA,4.5,0
 003,Political_and_Social_History,Political and Social History,NA,HIST1990,NA,4.5,0
-003,Prehistory_and_Ancient_Histor,Prehistory and Ancient Histor,NA,HIST1990,NA,4.5,0
+003,Prehistory_and_Ancient_History,Prehistory and Ancient History,NA,HIST1990,NA,4.5,0
 003,Republic_in_Spain_(1931_1939),Republic in Spain (1931-1939),NA,HIST1990,NA,4.5,0
 003,Spanish_Civil_War,Spanish Civil War,NA,HIST1990,NA,4.5,0
 003,Spanish_History_20th_Century,Spanish History: 20th Century,NA,HIST1990,NA,4.5,0
 003,The_modern_history_of_Spain,The modern history of Spain,NA,HIST1990,NA,4.5,0
-003,Travels_Explorations_and_Di,"Travels, Explorations, and Di",NA,HIST1990,NA,4.5,0
-003,Introduction_to_programme_and,Introduction to programme and,NA,HUSV3990,NA,4.5,0
+003,Travels_Explorations_and_Directions,"Travels, Explorations, and Directions",NA,HIST1990,NA,4.5,0
+003,Introduction_to_programme,Introduction to programme,NA,HUSV3990,NA,4.5,0
 003,Industrial_Informatics,Industrial Informatics,NA,IE3990,NA,4.5,0
-003,Manufacturing_Systems_and_Pro,Manufacturing Systems and Pro,NA,IE4530,NA,4.5,0
+003,Manufacturing_Systems_and_Processes,Manufacturing Systems and Processes,NA,IE4530,NA,4.5,0
 003,Computer_Aided_Manufacturing,Computer Aided Manufacturing,NA,IE4990,NA,4.5,0
-003,Decision_Analysis_in_Industri,Decision Analysis in Industri,NA,IE4990,NA,4.5,0
+003,Decision_Analysis_in_Industrial_Processing,Decision Analysis in Industrial Processing,NA,IE4990,NA,4.5,0
 003,Engineering_Management_I,Engineering Management I,NA,IE4990,NA,4.5,0
 003,Industrial_Automation,Industrial Automation,NA,IE4990,NA,4.5,0
-003,Kinematics_and_Dynamics_of_Ma,Kinematics and Dynamics of Ma,NA,IE4990,NA,4.5,0
-003,Modern_theory_of_detection_an,Modern theory of detection an,NA,IE4990,NA,4.5,0
-003,Production_and_logistics_syst,Production and logistics syst,NA,IE4990,NA,4.5,0
+003,Kinematics_and_Dynamics_of_Machines,Kinematics and Dynamics of Machines,NA,IE4990,NA,4.5,0
+003,Modern_theory_of_detection,Modern theory of detection,NA,IE4990,NA,4.5,0
+003,Production_and_logistics_systems,Production and logistics systems,NA,IE4990,NA,4.5,0
 003,Vehicle_Automation,Vehicle Automation,NA,IE4990,NA,4.5,0
 003,Medical_Image_processing,Medical Image processing,NA,INSC1990,NA,4.5,0
-003,History_and_Archaeology_of_Po,History and Archaeology of Po,NA,INSH1990,NA,4.5,0
+003,History_and_Archaeology_of_Political_Systems,History and Archaeology of Political Systems,NA,INSH1990,NA,4.5,0
 003,Financial_institution_systems,Financial institution systems,NA,INTB1990,NA,4.5,0
 003,Global_Business_Management,Global Business Management,NA,INTB2990,NA,4.5,0
 003,Emerging_Countries,Emerging Countries,NA,INTL1990,NA,4.5,0
-003,The_Process_of_European_Integ,The Process of European Integ,NA,INTL1990,NA,4.5,0
-003,International_Aid_and_Develop,International Aid and Develop,NA,INTL2240,NA,4.5,0
+003,The_Process_of_European_Integration,The Process of European Integration,NA,INTL1990,NA,4.5,0
+003,International_Aid_and_Development,International Aid and Development,NA,INTL2240,NA,4.5,0
 003,Population_Theory,Population Theory,NA,INTL2240,NA,4.5,0
 003,Spanish_Political_System,Spanish Political System,NA,INTL2990,NA,4.5,0
-003,Terrorism_and_its_Victims_in,Terrorism and its Victims in,NA,INTL2990,NA,4.5,0
+003,Terrorism_and_its_Victims,Terrorism and its Victims,NA,INTL2990,NA,4.5,0
 003,Country_Report_and_Risk_Asses,Country Report and Risk Asses,NA,INTL3990,NA,4.5,0
-003,Politics_and_Literature_in_La,Politics and Literature in La,NA,INTL3990,NA,4.5,0
+003,Politics_and_Literature_in_Latin_America,Politics and Literature in Latin America,NA,INTL3990,NA,4.5,0
 003,Design_of_Interactive_Design,Design of Interactive Design,NA,IS4300,NA,4.5,0
 003,User_Interfaces,User Interfaces,NA,IS4300,NA,4.5,0
-003,Journalistic_Information_Abou,Journalistic Information Abou,NA,JRNL1150,NA,4.5,0
+003,Journalistic_Information_About_Todays_News,Journalistic Information About Today's News,NA,JRNL1150,NA,4.5,0
 003,News_Reporting,News Reporting,NA,JRNL1150,NA,4.5,0
 003,International_Journalism_II,International Journalism II,NA,JRNL1990,NA,4.5,0
-003,International_Journalism_II,International Journalism II:,NA,JRNL1990,NA,4.5,0
 003,Journalistic_Communication,Journalistic Communication,NA,JRNL1990,NA,4.5,0
 003,Local_Journalism,Local Journalism,NA,JRNL1990,NA,4.5,0
-003,Political_and_Parliamentary_J,Political and Parliamentary J,NA,JRNL1990,NA,4.5,0
+003,Political_and_Parliamentary_Journalism,Political and Parliamentary Journalism,NA,JRNL1990,NA,4.5,0
 003,Scientific_and_Environmental,Scientific and Environmental,NA,JRNL1990,NA,4.5,0
-003,Structure_and_information_eff,Structure and information eff,NA,JRNL1990,NA,4.5,0
+003,Structure_and_information_eff,Structure and information effects,NA,JRNL1990,NA,4.5,0
 003,Information_and_Conflict,Information and Conflict,NA,JRNL3300,NA,4.5,0
-003,Information_and_conflict_I_m,Information and conflict I: m,NA,JRNL3300,NA,4.5,0
-003,International_Journalism_I_G,International Journalism I: G,NA,JRNL3300,NA,4.5,0
+003,Information_and_conflict_I,Information and conflict I,NA,JRNL3300,NA,4.5,0
+003,International_Journalism_I,International Journalism I,NA,JRNL3300,NA,4.5,0
 003,Online_Journalism,Online Journalism,NA,JRNL3610,NA,4.5,0
 003,Data_Journalism,Data Journalism,NA,JRNL3700,NA,4.5,0
 003,Television_Journalism,Television Journalism,NA,JRNL5314,NA,4.5,0
-003,Administrative_Action_in_Spec,Administrative Action in Spec,NA,LPSC2990,NA,4.5,0
+003,Administrative_Action_in_Special_Circumstances,Administrative Action in Special Circumstances,NA,LPSC2990,NA,4.5,0
 003,European_Law_and_Institutions,European Law and Institutions,NA,LPSC2990,NA,4.5,0
 003,European_Union_Law,European Union Law,NA,LPSC2990,NA,4.5,0
 003,Financial_Market_Law,Financial Market Law,NA,LPSC2990,NA,4.5,0
@@ -543,26 +527,26 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,International_Public_Law,International Public Law,NA,LPSC2990,NA,4.5,0
 003,Law_and_poetry,Law and poetry,NA,LPSC2990,NA,4.5,0
 003,Logic_and_Legal_Argumentation,Logic and Legal Argumentation,NA,LPSC2990,NA,4.5,0
-003,The_Consumer_Facing_Big_Corpo,The Consumer Facing Big Corpo,NA,LPSC2990,NA,4.5,0
+003,The_Consumer_Facing_Big_Corporations,The Consumer Facing Big Corporations,NA,LPSC2990,NA,4.5,0
 003,The_Spanish_Legal_System,The Spanish Legal System,NA,LPSC2990,NA,4.5,0
 003,Theories_of_Labour_Relations,Theories of Labour Relations,NA,LPSC2990,NA,4.5,0
 003,Theory_of_Law,Theory of Law,NA,LPSC2990,NA,4.5,0
 003,Work_in_the_post_crisis,Work in the post-crisis,NA,LPSC2990,NA,4.5,0
 003,Administrative_Law,Administrative Law,NA,LPSC3990,NA,4.5,0
-003,Artificial_Intelligence_for_H,Artificial Intelligence for H,NA,LPSC3990,NA,4.5,0
-003,International_development_and,International development and,NA,LPSC3990,NA,4.5,0
-003,Introduction_to_Patrimonial_L,Introduction to Patrimonial L,NA,LPSC3990,NA,4.5,0
+003,Artificial_Intelligence_for_Humanities,Artificial Intelligence for Humanties,NA,LPSC3990,NA,4.5,0
+003,International_development,International development,NA,LPSC3990,NA,4.5,0
+003,Introduction_to_Patrimonial_Lineage,Introduction to Patrimonial Lineage,NA,LPSC3990,NA,4.5,0
 003,Mathematics_for_Economics_I,Mathematics for Economics I,NA,MATH1231,NA,4.5,0
 003,Basics_of_Statistics,Basics of Statistics,NA,MATH2280,NA,4.5,0
-003,Statistics_Applied_to_Journal,Statistics Applied to Journal,NA,MATH2280,NA,4.5,0
+003,Statistics_Applied_to_Journalism,Statistics Applied to Journalism,NA,MATH2280,NA,4.5,0
 003,Statistics_for_Social_Science,Statistics for Social Science,NA,MATH2280,NA,4.5,0
-003,Advanced_mathematics_for_econ,Advanced mathematics for econ,NA,MATH2331,NA,4.5,0
+003,Advanced_mathematics_for_economics,Advanced mathematics for economists,NA,MATH2331,NA,4.5,0
 003,Linear_Algebra,Linear Algebra,NA,MATH2331,NA,4.5,0
 003,Linear_Geometry,Linear Geometry,NA,MATH2331,NA,4.5,0
 003,Applied_Differential_Calculus,Applied Differential Calculus,NA,MATH2341,NA,4.5,0
 003,Differential_Equations,Differential Equations,NA,MATH2990,NA,4.5,0
 003,Logic,Logic,NA,MATH2990,NA,4.5,0
-003,Ordinary_Differential_Equatio,Ordinary Differential Equatio,NA,MATH2990,NA,4.5,0
+003,Ordinary_Differential_Equations,Ordinary Differential Equations,NA,MATH2990,NA,4.5,0
 003,Quality_Control,Quality Control,NA,MATH2990,NA,4.5,0
 003,Probability_and_Data_Analysis,Probability and Data Analysis,NA,MATH3081,NA,4.5,0
 003,Statistics,Statistics,NA,MATH3081,NA,4.5,0
@@ -570,28 +554,27 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Calculus_IV,Calculus IV,NA,MATH3341,NA,4.5,0
 003,Dynamic_Systems,Dynamic Systems,NA,MATH3341,NA,4.5,0
 003,Numerical_Methods,Numerical Methods,NA,MATH3530,NA,4.5,0
-003,Numerical_Methods,Numerical_Methods,NA,MATH3530,NA,4.5,0
 003,Calculus_III,Calculus III,NA,MATH3990,NA,4.5,0
 003,Industrial_Statistics,Industrial Statistics,NA,MATH3990,NA,4.5,0
-003,Introduction_to_Statistical_M,Introduction to Statistical M,NA,MATH3990,NA,4.5,0
+003,Introduction_to_Statistical_Methods,Introduction to Statistical Methods,NA,MATH3990,NA,4.5,0
 003,Multivariate_Analysis,Multivariate Analysis,NA,MATH3990,NA,4.5,0
-003,Multivariate_techniqueds_for,Multivariate techniqueds for,NA,MATH3990,NA,4.5,0
+003,Multivariate_techniques,Multivariate techniques,NA,MATH3990,NA,4.5,0
 003,Operational_Research,Operational Research,NA,MATH3990,NA,4.5,0
 003,Optimization_and_Analytics,Optimization and Analytics,NA,MATH3990,NA,4.5,0
-003,Quantitative_methods_for_mana,Quantitative methods for mana,NA,MATH3990,NA,4.5,0
+003,Quantitative_methods_for_managerial_roles,Quantitative methods for managerial roles,NA,MATH3990,NA,4.5,0
 003,Statistical_Learning,Statistical Learning,NA,MATH3990,NA,4.5,0
 003,Statistics_II,Statistics II,NA,MATH3990,NA,4.5,0
 003,Advanced_Mathematics,Advanced Mathematics,NA,MATH4545,NA,4.5,0
 003,Complex_Analysis,Complex Analysis,NA,MATH4555,NA,4.5,0
 003,Stochastic_Processes,Stochastic Processes,NA,MATH4581,NA,4.5,0
 003,Bayesian_Data_Analysis,Bayesian Data Analysis,NA,MATH4990,NA,4.5,0
-003,Further_Topics_in_Numerical_M,Further Topics in Numerical M,NA,MATH4990,NA,4.5,0
-003,Linear_and_Stochastic_Modelin,Linear and Stochastic Modelin,NA,MATH4990,NA,4.5,0
+003,Further_Topics_in_Numerical_Mangement,Further Topics in Numerical Management,NA,MATH4990,NA,4.5,0
+003,Linear_and_Stochastic_Modeling,Linear and Stochastic Modeling,NA,MATH4990,NA,4.5,0
 003,Machine_Theory,Machine Theory,NA,ME1990,NA,4.5,0
-003,Materials_Science_and_Enginee,Materials Science and Enginee,NA,ME2340,NA,4.5,0
+003,Materials_Science_and_Engineering,Materials Science and Engineering,NA,ME2340,NA,4.5,0
 003,Materials_Technology,Materials Technology,NA,ME2340,NA,4.5,0
 003,Machine_Mechanics,Machine Mechanics,NA,ME2350,NA,4.5,0
-003,Introduction_to_Structural_An,Introduction to Structural An,NA,ME2355,NA,4.5,0
+003,Introduction_to_Structural_Analysis,Introduction to Structural Analysis,NA,ME2355,NA,4.5,0
 003,Mechanics_of_Structures,Mechanics of Structures,NA,ME2355,NA,4.5,0
 003,Strength_of_Materials,Strength of Materials,NA,ME2355,NA,4.5,0
 003,Thermal_Engineering,Thermal Engineering,NA,ME2380,NA,4.5,0
@@ -600,7 +583,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Engineering_Fluid_Mechanics,Engineering Fluid Mechanics,NA,ME3475,NA,4.5,0
 003,Fluid_Mechanics,Fluid Mechanics,NA,ME3475,NA,4.5,0
 003,Fluid_Mechanics_I_(14164),Fluid Mechanics I (14164),NA,ME3475,NA,4.5,0
-003,Introduction_to_Fluid_Mechani,Introduction to Fluid Mechani,NA,ME3475,NA,4.5,0
+003,Introduction_to_Fluid_Mechanics,Introduction to Fluid Mechanics,NA,ME3475,NA,4.5,0
 003,Aerospace_Materials,Aerospace Materials,NA,ME3990,NA,4.5,0
 003,Aerospace_Materials_I,Aerospace Materials I,NA,ME3990,NA,4.5,0
 003,Aerospace_Propulsion,Aerospace Propulsion,NA,ME3990,NA,4.5,0
@@ -611,37 +594,37 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Control_Engineering_(13999),Control Engineering (13999),NA,ME4555,NA,4.5,0
 003,Control_Engineering_I,Control Engineering I,NA,ME4555,NA,4.5,0
 003,Heat_Transfer_(14203),Heat Transfer (14203),NA,ME4570,NA,4.5,0
-003,Aerial_navigation_air_transp,"Aerial navigation, air transp",NA,ME4990,NA,4.5,0
+003,Aerial_navigation_air_transportation,"Aerial navigation, air transportation",NA,ME4990,NA,4.5,0
 003,Control_Engineering_II,Control Engineering II,NA,ME4990,NA,4.5,0
-003,Fluid_transport_and_hydraulic,Fluid transport and hydraulic,NA,ME4990,NA,4.5,0
+003,Fluid_transport_and_hydraulic_mechanics,Fluid transport and hydraulic mechanics,NA,ME4990,NA,4.5,0
 003,Mechanical_Technology,Mechanical Technology,NA,ME4990,NA,4.5,0
 003,Mechanics_of_Flight,Mechanics of Flight,NA,ME4990,NA,4.5,0
-003,Microprocessors_and_Microcont,Microprocessors and Microcont,NA,ME4990,NA,4.5,0
+003,Microprocessors_and_Microcontrollers,Microprocessors and Microcontrollers,NA,ME4990,NA,4.5,0
 003,Modelling_in_Aerospace_Engine,Modelling in Aerospace Engine,NA,ME4990,NA,4.5,0
-003,Production_Systems_and_Manufa,Production Systems and Manufa,NA,ME4990,NA,4.5,0
+003,Production_Systems_and_Manufacturing,Production Systems and Manufacturing,NA,ME4990,NA,4.5,0
 003,Solar_Energy,Solar Energy,NA,ME4990,NA,4.5,0
 003,Solid_Mechanics,Solid Mechanics,NA,ME4990,NA,4.5,0
 003,Conflict_Management,Conflict Management,NA,MGMT2990,NA,4.5,0
-003,Human_resources_in_the_new_ec,Human resources in the new ec,NA,MGMT2990,NA,4.5,0
+003,Human_resources_in_the_new_economic_age,Human resources in the new economic age,NA,MGMT2990,NA,4.5,0
 003,Management_and_Organization,Management and Organization,NA,MGMT2990,NA,4.5,0
 003,Negotiation,Negotiation,NA,MGMT3302,NA,4.5,0
 003,Project_Management,Project Management,NA,MGMT3530,NA,4.5,0
 003,Human_Resource_Management,Human Resource Management,NA,MGMT3990,NA,4.5,0
-003,Quantitative_models_and_metho,Quantitative models and metho,NA,MGSC2990,NA,4.5,0
+003,Quantitative_models_and_methods,Quantitative models and methods,NA,MGSC2990,NA,4.5,0
 003,Methods_for_Quality_Control,Methods for Quality Control,NA,MGSC3990,NA,4.5,0
 003,Research_Techniques,Research Techniques,NA,MGSC3990,NA,4.5,0
-003,Basics_of_Information_Technol,Basics of Information Technol,NA,MISM2301,NA,4.5,0
+003,Basics_of_Information_Technology,Basics of Information Technology,NA,MISM2301,NA,4.5,0
 003,Integrated_Information_System,Integrated Information System,NA,MISM2301,NA,4.5,0
-003,Data_Analytical_Techniques_fo,Data Analytical Techniques fo,NA,MISM2510,NA,4.5,0
-003,Artificial_Intelligence_in_Bu,Artificial Intelligence in Bu,NA,MISM2990,NA,4.5,0
-003,BIG_DATA_AND_BUSINESS_ANALYTI,BIG DATA AND BUSINESS ANALYTI,NA,MISM2990,NA,4.5,0
+003,Data_Analytical_Techniques_for_Management,Data Analytical Techniques for Managament,NA,MISM2510,NA,4.5,0
+003,Artificial_Intelligence_in_Business,Artificial Intelligence in Business,NA,MISM2990,NA,4.5,0
+003,BIG_DATA_AND_BUSINESS_ANALYTICS,Big Data and Business Analytics,NA,MISM2990,NA,4.5,0
 003,Marketing,Marketing,NA,MKTG2201,NA,4.5,0
 003,Markets_Research,Markets Research,NA,MKTG3401,NA,4.5,0
 003,Marketing_Management,Marketing Management,NA,MKTG3990,NA,4.5,0
 003,Consumer_Behavior,Consumer Behavior,NA,MKTG4506,NA,4.5,0
 003,Digital_Marketing,Digital Marketing,NA,MKTG4508,NA,4.5,0
 003,Media_Theory,Media Theory,NA,MSCR1220,NA,4.5,0
-003,Artificial_Intelligence_in_Sc,Artificial Intelligence in Sc,NA,MSCR1990,NA,4.5,0
+003,Artificial_Intelligence_in_Science,Artificial Intelligence in Science,NA,MSCR1990,NA,4.5,0
 003,Documentary_and_Report,Documentary and Report,NA,MSCR1990,NA,4.5,0
 003,European_Cinema,European Cinema,NA,MSCR1990,NA,4.5,0
 003,Film_and_television_in_Spain,Film and television in Spain,NA,MSCR1990,NA,4.5,0
@@ -651,51 +634,51 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Moving_image_history,Moving image history,NA,MSCR1990,NA,4.5,0
 003,Non_Narrative_Cinema,Non-Narrative Cinema,NA,MSCR1990,NA,4.5,0
 003,Television_Studies,Television Studies,NA,MSCR1990,NA,4.5,0
-003,Theory_and_Analysis_of_the_Do,Theory and Analysis of the Do,NA,MSCR1990,NA,4.5,0
+003,Theory_and_Analysis_of_the_Documentary Process,Theory and Analysis of the Documentary Process,NA,MSCR1990,NA,4.5,0
 003,Film_criticism,Film criticism,NA,MSCR2895,NA,4.5,0
 003,Learning_and_Communication,Learning and Communication,NA,MSCR3210,NA,4.5,0
 003,New_trends_in_media,New trends in media,NA,MSCR3210,NA,4.5,0
 003,Radio_Workshop,Radio Workshop,NA,MUSI1990,NA,4.5,0
 003,Ethics_and_Culture,Ethics and Culture,NA,PHIL1102,NA,4.5,0
-003,Examining_Life._Philosophy_fo,Examining Life. Philosophy fo,NA,PHIL1990,NA,4.5,0
+003,Examining_Life,Examining Life,NA,PHIL1990,NA,4.5,0
 003,Logic_and_Argumentation,Logic and Argumentation,NA,PHIL1990,NA,4.5,0
-003,Philosophical_Basis_of_the_Po,Philosophical Basis of the Po,NA,PHIL2303,NA,4.5,0
+003,Philosophical_Basis_of_the_Political_System,Philosophical Basis of the Political System,NA,PHIL2303,NA,4.5,0
 003,Political_Philosophy,Political Philosophy,NA,PHIL2303,NA,4.5,0
 003,Physics_I,Physics I,NA,PHYS1151,NA,4.5,0
 003,Physics_II,Physics II,NA,PHYS1155,NA,4.5,0
 003,Biophysics_1_Molecular_Cell,"Biophysics 1: Molecular, Cell",NA,PHYS4621,NA,4.5,0
 003,Comparative_Politics,Comparative Politics,NA,POLS1155,NA,4.5,0
-003,History_of_Contemporary_Inter,History of Contemporary Inter,NA,POLS1160,NA,4.5,0
-003,International_relations_and_o,International relations and o,NA,POLS1160,NA,4.5,0
+003,History_of_Contemporary_International_Relations,History of Contemporary International Relations,NA,POLS1160,NA,4.5,0
+003,International_relations_and_organizations,International relations and organizations,NA,POLS1160,NA,4.5,0
 003,World_Politics,World Politics,NA,POLS1160,NA,4.5,0
 003,Geopolitics,Geopolitics,NA,POLS1990,NA,4.5,0
 003,Geopolitics_of_great_powers,Geopolitics of great powers,NA,POLS1990,NA,4.5,0
 003,Introduction_to_Politics,Introduction to Politics,NA,POLS1990,NA,4.5,0
 003,Political_Analysis_II,Political Analysis II,NA,POLS2399,NA,4.5,0
-003,Advanced_Research_Methods_in,Advanced Research Methods in,NA,POLS2400,NA,4.5,0
+003,Advanced_Research_Methods_in_Politics,Advanced Research Methods in Politics,NA,POLS2400,NA,4.5,0
 003,Evaluation_of_Public_Policy,Evaluation of Public Policy,NA,POLS2990,NA,4.5,0
-003,The_Welfare_State_in_Comparat,The Welfare State in Comparat,NA,POLS2990,NA,4.5,0
-003,Topics_in_international_polit,Topics in international polit,NA,POLS2990,NA,4.5,0
+003,The_Welfare_State_in_Comparative_Politics,The Welfare State in Comparative Politics,NA,POLS2990,NA,4.5,0
+003,Topics_in_international_politics,Topics in international politics,NA,POLS2990,NA,4.5,0
 003,Varieties_of_Capitalism,Varieties of Capitalism,NA,POLS2990,NA,4.5,0
-003,Analysis_and_evaluation_of_pu,Analysis and evaluation of pu,NA,POLS3307,NA,4.5,0
-003,Public_Administration_Organis,Public Administration Organis,NA,POLS3307,NA,4.5,0
+003,Analysis_and_evaluation_of_public_policy,Analysis and evaluation of public policy,NA,POLS3307,NA,4.5,0
+003,Public_Administration_Organisation,Public Administration Organisation,NA,POLS3307,NA,4.5,0
 003,Public_Policy_and_Governance,Public Policy and Governance,NA,POLS3307,NA,4.5,0
 003,Political_Actors,Political Actors,NA,POLS3310,NA,4.5,0
 003,Political_Behavior,Political Behavior,NA,POLS3310,NA,4.5,0
-003,Political_Representation_and,Political Representation and,NA,POLS3310,NA,4.5,0
+003,Political_Representation_and_Democracy,Political Representation and Democracy,NA,POLS3310,NA,4.5,0
 003,Globalization_and_Society,Globalization and Society,NA,POLS3405,NA,4.5,0
-003,International_political_econo,International political econo,NA,POLS3405,NA,4.5,0
+003,International_political_economics,International political economics,NA,POLS3405,NA,4.5,0
 003,Public_International_Law,Public International Law,NA,POLS3406,NA,4.5,0
 003,Security_Peace_and_Conflict,"Security, Peace, and Conflict",NA,POLS3408,NA,4.5,0
 003,Nationalisms_and_imperialisms,Nationalisms and imperialisms,NA,POLS3418,NA,4.5,0
-003,Political_Violence_in_Spain_(,Political Violence in Spain (,NA,POLS3430,NA,4.5,0
+003,Political_Violence_in_Spain,Political Violence in Spain,NA,POLS3430,NA,4.5,0
 003,European_Politics,European Politics,NA,POLS3435,NA,4.5,0
-003,Spain_and_the_European_Union,Spain and the European Union:,NA,POLS3435,NA,4.5,0
-003,Spanish_and_European_Institut,Spanish and European Institut,NA,POLS3435,NA,4.5,0
-003,Supranational_integration_pro,Supranational integration pro,NA,POLS3435,NA,4.5,0
+003,Spain_and_the_European_Union,Spain and the European Union,NA,POLS3435,NA,4.5,0
+003,Spanish_and_European_Institutions,Spanish and European Institutions,NA,POLS3435,NA,4.5,0
+003,Supranational_integration_processes,Supranational integration processes,NA,POLS3435,NA,4.5,0
 003,Emerging_countries_(16651),Emerging countries (16651),NA,POLS3487,NA,4.5,0
-003,Politics_and_Society_in_Conte,Politics and Society in Conte,NA,POLS3990,NA,4.5,0
-003,Happiness_Science_and_Educa,"Happiness, Science, and Educa",NA,PSYC1990,NA,4.5,0
+003,Politics_and_Society_in_Context,Politics and Society in Context,NA,POLS3990,NA,4.5,0
+003,Happiness_Science_and_Education,"Happiness, Science, and Education",NA,PSYC1990,NA,4.5,0
 003,Human_Resources_Psychology,Human Resources Psychology,NA,PSYC1990,NA,4.5,0
 003,Media_Psychology,Media Psychology,NA,PSYC1990,NA,4.5,0
 003,Rudiments_of_Psychology,Rudiments of Psychology,NA,PSYC1990,NA,4.5,0
@@ -706,21 +689,21 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Digital_supply_chain,Digital supply chain,NA,SCHM2990,NA,4.5,0
 003,Introduction_to_Sociology,Introduction to Sociology,NA,SOCL1101,NA,4.5,0
 003,Sociology,Sociology,NA,SOCL1101,NA,4.5,0
-003,Social_Problems_II_Family_an,Social Problems II: Family an,NA,SOCL1255,NA,4.5,0
+003,Social_Problems_II_Family_and_Friendship,Social Problems II: Family and Friendship,NA,SOCL1255,NA,4.5,0
 003,Sociology_of_Gender_in_Spain,Sociology of Gender in Spain,NA,SOCL1260,NA,4.5,0
-003,Social_problems_III_new_type,Social problems III: new type,NA,SOCL1280,NA,4.5,0
+003,Social_problems_III,Social problems III,NA,SOCL1280,NA,4.5,0
 003,Demographic_Analysis,Demographic Analysis,NA,SOCL1990,NA,4.5,0
 003,Demography,Demography,NA,SOCL1990,NA,4.5,0
 003,Development_Sociology,Development Sociology,NA,SOCL1990,NA,4.5,0
 003,Historical_Sociology,Historical Sociology,NA,SOCL1990,NA,4.5,0
 003,New_movements_and_transnation,New movements and transnation,NA,SOCL1990,NA,4.5,0
 003,Policies_of_Diversity,Policies of Diversity,NA,SOCL1990,NA,4.5,0
-003,Sociology_of_Migrations_in_a,Sociology of Migrations in a,NA,SOCL1990,NA,4.5,0
-003,The_engines_of_growth_innova,The engines of growth: innova,NA,SOCL1990,NA,4.5,0
-003,The_Sociology_of_Migrations,The Sociology of Migrations:,NA,SOCL1990,NA,4.5,0
+003,Sociology_of_Migrations_in_a_Recession,Sociology of Migrations in a Recession,NA,SOCL1990,NA,4.5,0
+003,The_engines_of_growth_innova,The engines of growth: innovation,NA,SOCL1990,NA,4.5,0
+003,The_Sociology_of_Migrations,The Sociology of Migrations,NA,SOCL1990,NA,4.5,0
 003,The_Sociology_of_Spain,The Sociology of Spain,NA,SOCL1990,NA,4.5,0
-003,Multidisciplinary_Research_De,Multidisciplinary Research De,NA,SOCL2321,NA,4.5,0
-003,Qualitative_Social_Research_M,Qualitative Social Research M,NA,SOCL2321,NA,4.5,0
+003,Multidisciplinary_Research_De,Multidisciplinary Research Development,NA,SOCL2321,NA,4.5,0
+003,Qualitative_Social_Research_M,Qualitative Social Research Methods,NA,SOCL2321,NA,4.5,0
 003,Social_Research_Methods,Social Research Methods,NA,SOCL2321,NA,4.5,0
 003,Social_problems_V_sociology,Social problems V: sociology,NA,SOCL2990,NA,4.5,0
 003,The_Information_Society,The Information Society,NA,SOCL4528,NA,4.5,0
@@ -732,8 +715,8 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 003,Feminisms,Feminisms,NA,WMNS1990,NA,4.5,0
 003,Gender_and_labor_market,Gender and labor market,NA,WMNS1990,NA,4.5,0
 003,Media_Culture_and_Gender,Media Culture and Gender,NA,WMNS1990,NA,4.5,0
-003,Men_and_women_in_the_spanish,Men and women in the spanish,NA,WMNS1990,NA,4.5,0
-003,Women_and_mobilization_in_the,Women and mobilization in the,NA,WMNS1990,NA,4.5,0
+003,Men_and_women_in_the_spanish,Men and women in the spanish modern day,NA,WMNS1990,NA,4.5,0
+003,Women_and_mobilization_in_the,Women and mobilization in the Modern Day,NA,WMNS1990,NA,4.5,0
 003,Women_in_Science,Women in Science,NA,WMNS1990,NA,4.5,0
 003,Gender_equality_policies,Gender equality policies,NA,WMNS2990,NA,4.5,0
 003,Gender_Studies,Gender Studies,NA,WMNS2990,NA,4.5,0
@@ -773,14 +756,14 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 004,POLI221,INTERNATIONAL POLITICS IN NORTHEAST ASIA,NA,POLS3482,NA,3,0
 004,POLI317,South East Asian Politics,NA,POLS3482,NA,3,0
 004,POLI338,INTERNATIONAL POLITICAL ECONOMY,NA,ECON3990,NA,3,0
-005,Computer_Programming_(Fall/Spring),Computer Programming (Fall/Spring),NA,CS1990 Elective,NA,6,0
-005,3D_Computer_Graphics_(Fall),3D Computer Graphics (Fall),NA,CS4300 Computer Graphics,NA,5,0
-005,Operating_Systems_(Fall),Operating Systems (Fall),NA,CS3650 Computer Systems,NA,5,0
-005,Web_Projects_II_(Spring),Web Projects II (Spring),NA,CS4550 WedbDevelopment,NA,5,0
-005,Programming_Languages_(Spring),Programming Languages (Spring),NA,CS4400 Programming Languages,NA,5,0
-005,Data_Mining_(Fall),Data Mining (Fall),NA,DS3990 Elective,NA,5,0
-005,System_Design_and_Administration_(Fall),System Design and Administration (Fall),NA,CS3990 Elective,NA,5,0
-005,Computer_Architecture_(Fall),Computer Architecture (Fall),NA,CS3990 Elective,NA,5,0
+005,Computer_Programming,Computer Programming,NA,CS1990,"Fall, Spring",6,0
+005,3D_Computer_Graphics,3D Computer Graphics,NA,CS4300,Fall,5,0
+005,Operating_Systems,Operating Systems,NA,CS3650,Fall,5,0
+005,Web_Projects_II,Web Projects II,NA,CS4550,Spring,5,0
+005,Programming_Languages,Programming Languages,NA,CS4400,Spring,5,0
+005,Data_Mining,Data Mining,NA,DS3990,Fall,5,0
+005,System_Design_and_Administration,System Design and Administration,NA,CS3990,Fall,5,0
+005,Computer_Architecture,Computer Architecture,NA,CS3990,Fall,5,0
 007,DECO_1012,Design Programming,NA,ARTG2260,NA,3,0
 007,GRMN_3005,German 5,NA,GRMN2102,NA,3,0
 007,GOVT_2941,Making Policy in Political Context,NA,POLS2334,NA,3,0
@@ -792,31 +775,31 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,ENGL_3706,African American Literature,NA,AFAM3990,NA,3,0
 007,ANTH_1001,Cultural Difference: An Intro,NA,ANTH1101,NA,3,0
 007,ANTH_2621,Initiation Rituals,NA,ANTH1990,NA,3,0
-007,ANTH_2630,Indigenous Australians and Mo,NA,ANTH1990,NA,3,0
+007,ANTH_2630,Indigenous Australians and Movements,NA,ANTH1990,NA,3,0
 007,ANTH_2665,South Asian Popular Culture,NA,ANTH1990,NA,3,0
 007,ANTH3602,Reading Ethnography,NA,ANTH1990,NA,3,0
-007,ANTH_1002,Anthropology and the Global,NA,ANTH2300,NA,3,0
+007,ANTH_1002,Anthropology and the Global Market,NA,ANTH2300,NA,3,0
 007,ANTH2623,Gender: Anthropological Studies,NA,ANTH2302,NA,3,0
 007,ANTH2653,Economy and Culture,NA,ANTH2305,NA,3,0
-007,GCST_2609,CULTURES OF MASCULINITIES/Mas,NA,ANTH2312,NA,3,0
-007,EDUH_4058,Sport and Learning in Austral,NA,ANTH2365,NA,3,3
+007,GCST_2609,CULTURES OF MASCULINITIES,NA,ANTH2312,NA,3,0
+007,EDUH_4058,Sport and Learning in Australia,NA,ANTH2365,NA,3,3
 007,ANTH_1102,Anthropology of the Mind and Experience,NA,ANTH2990,NA,3,0
 007,ANTH_2603,Melanesian Worlds: Old and New,NA,ANTH2990,NA,3,0
 007,ANTH_2632,Anthropology of the Body,NA,ANTH2990,NA,3,0
-007,ANTH2606_-_Culture_and_the_Unc,Culture and the Unconscious,NA,ANTH2990,NA,3,0
+007,ANTH2606,Culture and the Unconscious,NA,ANTH2990,NA,3,0
 007,ANTH2628,Migration and Migrant Cultures,NA,ANTH2990,NA,3,0
 007,ARCO_2101,Fundamentals of Archaeological Practice,NA,ANTH2990,NA,3,0
 007,AMST_1202,"Hashtag America: Media, Technology, Industry",NA,ANTH3418,NA,3,0
 007,ANTH_2627,Medical Anthropology,NA,ANTH3990,NA,3,0
 007,ANTH2625,Culture and Development,NA,ANTH3990,NA,3,0
 007,INDG_2001,Indigenous Land and Culture,NA,ANTH3990,NA,3,0
-007,ANTH_2620,China: Contemporary Ethnograp,NA,ANTH4350,NA,3,0
+007,ANTH_2620,China: Contemporary Ethnography,NA,ANTH4350,NA,3,0
 007,SPAN_2615_,Indigenous Movements in Latin America,NA,ANTH4500,NA,3,0
 007,ANTH_2601,The Ethnography of Southeast,NA,ANTH4515,NA,3,0
 007,ANTH2666,History of Anthropological Thought,NA,ANTH4580,NA,3,0
 007,ANTH3601,Contemporary Theory and Anthropology,NA,ANTH4580,NA,3,0
 007,ANTH2655,The Social Production of Space,NA,ANTH4990,NA,3,0
-007,ANTH_2605,Aboriginal Australia: Cultura,NA,ANTH4993,NA,3,0
+007,ANTH_2605,Aboriginal Australia: Cultural Comparison,NA,ANTH4993,NA,3,0
 007,ARBC_1611,Introductory Arabic 1A,NA,ARAB1101,NA,3,0
 007,ARBC_1612,Introductory Arabic 1B,NA,ARAB1990,NA,3,0
 007,ARBC_2614,Intermediate Arabic 2B,NA,ARAB2990,NA,3,0
@@ -846,7 +829,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,CAEL_2042_,Photography and the Dark Room,NA,ARTD4661,NA,3,0
 007,ARHT_1002,Modern Times: Art and Film,NA,ARTH2211,NA,3,2
 007,ARHT_2614,Pollock to Psychedelia,NA,ARTH2211,NA,3,0
-007,CATE_1001,Contemporary Art: An Introduc,NA,ARTH2211,NA,3,0
+007,CATE_1001,Contemporary Art: An Introduction,NA,ARTH2211,NA,3,0
 007,CATE_2018,Global Art,NA,ARTH2211,NA,3,0
 007,ARHT_2618,French Art salone to Cezanne,NA,ARTH2213,NA,3,0
 007,ARIN_3630,Digital Arts,NA,ARTH2990,NA,3,0
@@ -865,7 +848,8 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,CAEL_2094,Painting: Transacultural Collaborations,NA,ARTS2340,NA,3,0
 007,CADR_1005,Contemporary Drawing (Life),NA,ARTS2341,NA,3,0
 007,CAEL_1002,Contemporary Drawing Life,NA,ARTS2341,NA,3,0
-007,AWSS_2013,Digital Video,NA,ARTS2380/ARTD2381,NA,3,0
+007,AWSS_2013,Digital Video,NA,ARTS2380,NA,3,0
+007,AWSS_2013,Digital Video,NA,ARTD2381,NA,3,0
 007,AWSS_2027_,Sculpture,NA,ARTS2990,NA,3,0
 007,CAEL_2014_,Digital Photo Editing,NA,ARTS2990,NA,3,0
 007,CAEL_2017_,Studio Lighting Elective Introductory,NA,ARTS2990,NA,3,0
@@ -902,21 +886,30 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,BMET_3971,Tissue Engineering,NA,BIOE5430,NA,3,0
 007,BIOS_1167,Foundations of Biomedical Science,NA,BIOL1111,NA,3,0
 007,BIOL_1002_,Living Systems,NA,BIOL1113,NA,3,0
-007,BIOL_2021_,Zoology,NA,BIOL1113/BIOL1114,NA,3,0
+007,BIOL_2021_,Zoology,NA,BIOL1113,NA,3,0
+007,BIOL_2021_,Zoology,NA,BIOL1114,NA,3,0
 007,BIOL_1008,Human Biology,NA,BIOL1147,NA,3,0
 007,BIOL_1003_,Human Biology,NA,BIOL1147,NA,3,0
 007,BIOS_1170,Body Systems: Structure and Function,NA,BIOL1147,NA,3,0
 007,BMET_2901,Anatomy and Physiology for Engineers,NA,BIOL1147,NA,3,0
 007,BCHM_2072,Human Biochemistry,NA,BIOL1990,NA,3,0
-007,MIMI_2002,"Microbes, Infection and Immunity",NA,BIOL2221/BIOL2222,NA,3,0
-007,GEGE_2001,Genetics and Genomics,NA,BIOL2301/BIOL2302,NA,3,0
-007,MBLG_2071,Molecular Biology and Genetic,NA,BIOL2301/BIOL2302,NA,3,0
-007,MBLG_2072,GENETICS AND GENOMICS,NA,BIOL2301/BIOL2302,NA,3,0
-007,MBLG_2971,Molecular Biology and Genetic,NA,BIOL2301/BIOL2302,NA,3,0
+007,MIMI_2002,"Microbes, Infection and Immunity",NA,BIOL2221,NA,3,0
+007,MIMI_2002,"Microbes, Infection and Immunity",NA,BIOL2222,NA,3,0
+007,GEGE_2001,Genetics and Genomics,NA,BIOL2301,NA,3,0
+007,GEGE_2001,Genetics and Genomics,NA,BIOL2302,NA,3,0
+007,MBLG_2071,Molecular Biology and Genetic,NA,BIOL2301,NA,3,0
+007,MBLG_2071,Molecular Biology and Genetic,NA,BIOL2302,NA,3,0
+007,MBLG_2072,GENETICS AND GENOMICS,NA,BIOL2301,NA,3,0
+007,MBLG_2072,GENETICS AND GENOMICS,NA,BIOL2302,NA,3,0
+007,MBLG_2971,Molecular Biology and Genetic,NA,BIOL2301,NA,3,0
+007,MBLG_2971,Molecular Biology and Genetic,NA,BIOL2302,NA,3,0
 007,BCMB_3004,Beyond the Genome,NA,BIOL2309,NA,3,0
-007,MICR_2021_,Microbial Life,NA,BIOL2321/BIOL2322,NA,3,0
-007,MICR_2022_,Microbes in Society,NA,BIOL2321/BIOL2322,NA,3,0
-007,MICR_2024_,Microbes in the Environment,NA,BIOL2321/BIOL2322,NA,3,0
+007,MICR_2021_,Microbial Life,NA,BIOL2321,NA,3,0
+007,MICR_2021_,Microbial Life,NA,BIOL2322,NA,3,0
+007,MICR_2022_,Microbes in Society,NA,BIOL2321,NA,3,0
+007,MICR_2022_,Microbes in Society,NA,BIOL2322,NA,3,0
+007,MICR_2024_,Microbes in the Environment,NA,BIOL2321,NA,3,0
+007,MICR_2024_,Microbes in the Environment,NA,BIOL2322,NA,3,0
 007,ANAT_2009_,Comparative Primate Anatomy,NA,BIOL2990,NA,3,0
 007,ANSC_2004_,Animal Conservation Biology,NA,BIOL2990,NA,3,0
 007,AVBS_1002_,Concepts of Animal Management,NA,BIOL2990,NA,3,0
@@ -927,24 +920,26 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,BIOL_3012_,Animal Physiology,NA,BIOL2990,NA,3,0
 007,BIOL_3027,Bioinformatics and Genomics,NA,BIOL2990,NA,3,0
 007,BIOS_2166,Neuroscience of Hearing,NA,BIOL2990,NA,3,0
-007,ENVI_2111,Conservation Biology and Appl,NA,BIOL2990,NA,3,0
+007,ENVI_2111,Conservation Biology and Applications,NA,BIOL2990,NA,3,0
 007,BIOL_3046_,Animal Behaviour,NA,BIOL3403,NA,3,0
 007,NEUR_3002_,Motor Systems and Behaviour,NA,BIOL3405,NA,3,0
 007,ANAT_2010,Concepts of Neuroanatomy,NA,BIOL3415,NA,3,0
-007,BIOS_2062,Neuroscience II: Communicatio,NA,BIOL3415,NA,3,0
+007,BIOS_2062,Neuroscience II: Communication,NA,BIOL3415,NA,3,0
 007,MICR_2931,Microbiology (Advanced),NA,BIOL3421,NA,3,0
-007,NEUR_3003,Cellular and Developmental Ne,NA,BIOL3605,NA,3,0
+007,NEUR_3003,Cellular and Developmental Neuroscience,NA,BIOL3605,NA,3,0
 007,BIOS2115,Embryology,NA,BIOL3609,NA,3,0
 007,BCMB_2901,Biochemistry and Molecular Biology (Advanced),NA,BIOL3611,NA,3,0
-007,BCHM_2972,Human Biochemistry - Advanced,NA,BIOL3611/BIOL3612,NA,3,0
-007,MICR_2031,Microbiology,NA,BIOL3611/BIOL3612,NA,3,0
+007,BCHM_2972,Human Biochemistry - Advanced,NA,BIOL3611,NA,3,0
+007,BCHM_2972,Human Biochemistry - Advanced,NA,BIOL3612,NA,3,0
+007,MICR_2031,Microbiology,NA,BIOL3611,NA,3,0
+007,MICR_2031,Microbiology,NA,BIOL3612,NA,3,0
 007,BCMB_2902,Proteins in Cells (Advanced),NA,BIOL3990,NA,3,0
 007,BIOL_3011_,Ecophysiology,NA,BIOL3990,NA,3,0
 007,BIOL_3026,Developmental Genetics,NA,BIOL3990,NA,3,0
 007,CPAT_3202,PATHOGENESIS OF HUMAN DISEASE,NA,BIOL3990,NA,3,0
 007,QBIO_2001,Molecular Systems Biology,NA,BIOL3990,NA,3,0
-007,BCHM_3971,Molecular Biology & Biochem-,NA,BIOL4707,NA,3,0
-007,BCHM_3981,Molecular Biology & Biochemis,NA,BIOL4707,NA,3,0
+007,BCHM_3971,Molecular Biology & Biochem,NA,BIOL4707,NA,3,0
+007,BCHM_3981,Molecular Biology & Biochemistry,NA,BIOL4707,NA,3,0
 007,BIOL_2029,Cells,NA,BIOL4707,NA,3,0
 007,PHSI_3009,Cellular Physiology,NA,BIOL4707,NA,3,0
 007,BIOL_3013,Marine Biology,NA,BIOL4990,NA,3,0
@@ -952,41 +947,47 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,BIOL_2009_,Introduction to Terrestrial Field Ecology,NA,BIOL4991,NA,3,0
 007,INFD_3012,Infectious Diseases,NA,BIOL5573,NA,3,0
 007,IMMU_2011,Immunobiology,NA,BIOL5583,NA,3,0
-007,CISS_2001,Business in the Global Enviro,NA,BUSN1990,NA,3,0
+007,CISS_2001,Business in the Global Enviroment,NA,BUSN1990,NA,3,0
 007,CLAW_2207_,"Business, Ethics and the Law",NA,BUSN1990,NA,3,0
 007,CLAW_2209_,Intellectual Property for Business,NA,BUSN1990,NA,3,0
 007,ECMT_3130,Forecasting for Economics and Business,NA,BUSN1990,NA,3,0
-007,ECOS_2201,Economics of Compe,NA,BUSN1990,NA,3,0
+007,ECOS_2201,Economics of Competition,NA,BUSN1990,NA,3,0
 007,IBUS_3104_,Ethical International Business Decisions,NA,BUSN1990,NA,3,0
 007,INFS_1000,Digital Business Innovation,NA,BUSN1990,NA,3,0
 007,ITLS_6008,Production and Operations Management,NA,BUSN1990,NA,3,0
 007,QBUS_3330,Methods of Decision Analysis,NA,BUSN1990,NA,3,0
 007,WORK_2217_,International Human Resource Management,NA,BUSN1990,NA,3,0
-007,ARTS_2600,Internship 1 - Industry Strea,NA,BUSN2990,NA,3,2
+007,ARTS_2600,Internship 1 - Industry Stream,NA,BUSN2990,NA,3,2
 007,BUSS_1040,Economics for Business Decision Making,NA,BUSN2990,NA,3,0
 007,CLAW_2211,COMMERCIAL PRACTICE IN CHINA,NA,BUSN2990,NA,3,0
 007,INFS_3070,Business Analysis in Practice,NA,BUSN2990,NA,3,0
-007,LAWS_3413,BANKING AND FINANCIAL INSTRUM,NA,BUSN2990,NA,3,0
+007,LAWS_3413,BANKING AND FINANCIAL INSTRUMENTS,NA,BUSN2990,NA,3,0
 007,QBUS_2310_,Management Science,NA,BUSN3990,NA,3,1
 007,SIEN_3204,Managing Organisational Sustainability,NA,BUSN3990,NA,3,0
 007,BACH_2143,Counselling and Behaviour Management for CD,NA,CAEP3480,NA,3,0
 007,FOOD_3002,Chemistry and Biochemistry of Foods,NA,CHEM1109,NA,3,0
-007,CHEM_1111,,NA,CHEM1161/CHEM1162,NA,3,0
-007,CHEM_1011,Fundamentals of Chemistry 1A,NA,CHEM1211/CHEM1212,NA,3,0
-007,CHEM_1101_,Chemistry 1A,NA,CHEM1211/CHEM1212,NA,3,0
-007,CHEM_1901,Chemistry 1A (Advanced),NA,CHEM1211/CHEM1212,NA,3,0
-007,CHEM_1911,Chemistry 1A (Advanced),NA,CHEM1211/CHEM1212,NA,3,0
-007,CHEM_1112,Chemistry 1B,NA,CHEM1214/CHEM1215,NA,3,0
-007,CHEM_2404,Forensic and Environmental Ch,NA,CHEM1990,NA,3,0
+007,CHEM_1111,Chemistry 1A,NA,CHEM1161,NA,3,0
+007,CHEM_1111,Chemistry 1A,NA,CHEM1162,NA,3,0
+007,CHEM_1011,Fundamentals of Chemistry 1A,NA,CHEM1212,NA,3,0
+007,CHEM_1011,Fundamentals of Chemistry 1A,NA,CHEM1211,NA,3,0
+007,CHEM_1101_,Chemistry 1A,NA,CHEM1211,NA,3,0
+007,CHEM_1101_,Chemistry 1A,NA,CHEM1212,NA,3,0
+007,CHEM_1901,Chemistry 1A (Advanced),NA,CHEM1211,NA,3,0
+007,CHEM_1901,Chemistry 1A (Advanced),NA,CHEM1212,NA,3,0
+007,CHEM_1911,Chemistry 1A (Advanced),NA,CHEM1211,NA,3,0
+007,CHEM_1911,Chemistry 1A (Advanced),NA,CHEM1212,NA,3,0
+007,CHEM_1112,Chemistry 1B,NA,CHEM1214,NA,3,0
+007,CHEM_1112,Chemistry 1B,NA,CHEM1215,NA,3,0
+007,CHEM_2404,Forensic and Environmental Chemistry,NA,CHEM1990,NA,3,0
 007,AGCH_2003,Rural Environmental Chemistry,NA,CHEM2990,NA,3,0
-007,ARCH_3025,Chemistry and Biochemistry of,NA,CHEM2990,NA,3,0
-007,CHEM_2401,Molecular Reactivity and Spec,NA,CHEM2990,NA,3,0
-007,CHEM_2402,Chemical Structure and Stabil,NA,CHEM2990,NA,3,0
+007,ARCH_3025,Chemistry and Biochemistry of Archeology,NA,CHEM2990,NA,3,0
+007,CHEM_2401,Molecular Reactivity and Spectrum,NA,CHEM2990,NA,3,0
+007,CHEM_2402,Chemical Structure and Stability,NA,CHEM2990,NA,3,0
 007,CHEM_2522,Sustainable Chemical Manufacture,NA,CHEM2990,NA,3,0
-007,CHEM_2911,Molecular Reactivity & Spectr,NA,CHEM2990,NA,3,0
+007,CHEM_2911,Molecular Reactivity & Spectrum,NA,CHEM2990,NA,3,0
 007,CHEM_2915,Molecular Reactivity and Spectroscopy,NA,CHEM2990,NA,3,0
 007,CHEM_2921,Molecular Stability and Reactivity (Advanced),NA,CHEM2990,NA,3,0
-007,CHEM_3111,Organic Structure and Reactiv,NA,CHEM2990,NA,3,0
+007,CHEM_3111,Organic Structure and Reactivity,NA,CHEM2990,NA,3,0
 007,CHEM_3117,Molecular Spectroscopy and Qu,NA,CHEM3403,NA,3,0
 007,CHEM_2523,Chemistry of Biological Molecules,NA,CHEM3990,NA,3,0
 007,CHEM_2533,Concepts in Chemistry of Biological Molecules,NA,CHEM3990,NA,3,0
@@ -994,7 +995,8 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,CHEM_3122,Molecular Self Assembly,NA,CHEM3990,NA,3,0
 007,CHEM_3920,Environmental and Analytical Chemistry (Adv),NA,CHEM3990,NA,3,0
 007,CHEM_3118,Synthetic Chemistry,NA,CHEM4456,NA,3,0
-007,CHEM_2403,Chemistry of Biological Mater,NA,CHEM4621/CHEM4622,NA,3,0
+007,CHEM_2403,Chemistry of Biological Mater,NA,CHEM4621,NA,3,0
+007,CHEM_2403,Chemistry of Biological Mater,NA,CHEM4622,NA,3,0
 007,CHNG_1103,Material and Energy Transform,NA,CHME2308,NA,3,0
 007,CHNG_2803_,Energy and Fluid Systems Practice,NA,CHME3312,NA,3,0
 007,CHNG_2804_,Chemical and Biological Systems Behaviour,NA,CHME3312,NA,3,0
@@ -1006,7 +1008,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,CHNG_3801_,Process Design,NA,CHME4990,NA,3,0
 007,CHNG_3805_,Product Formulation and Design,NA,CHME4990,NA,3,0
 007,CHNG_3808_,Polymer Engineering,NA,CHME4990,NA,3,0
-007,CHNG_4003,Nanotechnology in Chemical En,NA,CHME4990,NA,3,0
+007,CHNG_4003,Nanotechnology in Chemical Engineering,NA,CHME4990,NA,3,0
 007,CHNS_1201,Chinese 1C (For Advanced Beginners),NA,CHNS1502,NA,3,0
 007,CHNS_1202,Chinese 1D (For Beginners),NA,CHNS1502,NA,3,0
 007,CHNS_2001,Chinese 2C (Advanced Beginners),NA,CHNS1502,NA,3,0
@@ -1016,7 +1018,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,CHNS_2602,Chinese 2B (Lower Intermediate),NA,CHNS2990,NA,3,0
 007,CHNS_3601,Chinese 3A (Upper Intermediate),NA,CHNS3102,NA,3,0
 007,CHNS_2611,Classical Chinese A,NA,CHNS3990,NA,3,0
-007,CHNS_3602,Chinese 3B (Upper Intermediat,NA,CHNS3990,NA,3,0
+007,CHNS_3602,Chinese 3B (Upper Intermediatiate),NA,CHNS3990,NA,3,0
 007,CHNS_3603,Chinese 4A (Advanced),NA,CHNS4101,NA,3,0
 007,CHNS_3604,Chinese 4B (Advanced),NA,CHNS4102,NA,3,0
 007,CHNS_3000,Chinese for Native Speakers 1,NA,CHNS4990,NA,3,0
@@ -1028,16 +1030,19 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,ARHT_2655,Cinema and Spectatorship,NA,CINE3920,NA,3,0
 007,CAEL_2024_,Video Editing using Final Cut Pro,NA,CINE3920,NA,3,0
 007,FILM_2660_,Cinema and the Digital Aesthetic,NA,CINE3920,NA,3,0
-007,CIVL_2110,MATERIALS,NA,CIVE2260/CIVE2261,NA,3,0
-007,ENSC_2001,Environmental Monitoring,NA,CIVE2300/CIVE2301,NA,3,0
-007,CIVL_2611,,NA,CIVE2331,NA,3,0
-007,CIVL_2410,,NA,CIVE2340/CIVE2341,NA,3,0
+007,CIVL_2110,MATERIALS,NA,CIVE2260,NA,3,0
+007,CIVL_2110,MATERIALS,NA,CIVE2261,NA,3,0
+007,ENSC_2001,Environmental Monitoring,NA,CIVE2300,NA,3,0
+007,ENSC_2001,Environmental Monitoring,NA,CIVE2301,NA,3,0
+007,CIVL_2611,Introductory Fluid Mechanics,NA,CIVE2331,NA,3,0
+007,CIVL_2410,Soil Mechanics 1,NA,CIVE2340,NA,3,0
+007,CIVL_2410,Soil Mechanics 1,NA,CIVE2341,NA,3,0
 007,CIVL_3206,Steel Structures 1,NA,CIVE3425,NA,3,0
 007,CIVL_2700,Transport Systems,NA,CIVE3990,NA,3,0
 007,CIVL_3310,Humanitarian Engineering,NA,CIVE3990,NA,3,0
 007,CIVL_3411,Geotechnical Engineering,NA,CIVE4542,NA,3,0
 007,CIVL_3805,"Project Scope, Time and Cost",NA,CIVE4575,NA,3,0
-007,CIVL_3811,,NA,CIVE4575,NA,3,0
+007,CIVL_3811,Engineering Design and Construction,NA,CIVE4575,NA,3,0
 007,CIVL_2230_,Intro to Structural Concepts and Design,NA,CIVE4990,NA,3,0
 007,CIVL_3511,Engineering Design and Construction,NA,CIVE4990,NA,3,0
 007,CIVL_3704,Transport Informatics,NA,CIVE4990,NA,3,0
@@ -1046,11 +1051,11 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,CIVL_3612_,Fluid Mechanics,NA,CIVE4990,NA,3,0
 007,PGMT_3856,Sustainable Project Management,NA,CIVE4990,NA,3,0
 007,CIVL_4814,Project Procurement and Tendering,NA,CIVE5221,NA,3,0
-007,CIVL_3235,,NA,CIVE5522,NA,3,0
+007,CIVL_3235,Structural Analysis,NA,CIVE5522,NA,3,0
 007,CIVL_3614,Hydrology,NA,CIVE5536,NA,3,0
 007,GCST_1601,Introduction to Cultural Studies,NA,CLTR1120,NA,3,0
 007,ASNS_2677_,Beyond the Geisha/Samurai Binary,NA,CLTR1260,NA,3,0
-007,CHNS_2614,Understanding News About Chin,NA,CLTR1500,NA,3,0
+007,CHNS_2614,Understanding News About China,NA,CLTR1500,NA,3,0
 007,ARBC_1651,Introduction to Arab Cultures,NA,CLTR1502,NA,3,0
 007,SPAN_2631,Cultural and Social Change in Spain,NA,CLTR1504,NA,3,0
 007,SPAN_3624,Spain: A Nation of Nations?,NA,CLTR1504,NA,3,0
@@ -1061,7 +1066,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,ARBC_3691,"Modern Egypt: History, Culture, Society",NA,CLTR2990,NA,3,0
 007,FRNC_2627_,French Contemporary History and Culture,NA,CLTR2990,NA,3,0
 007,ARHT_2652,From Silent to Sound Cinema,NA,CLTR3930,NA,3,0
-007,ARHT_2656,National and Transnational Ci,NA,CLTR3930,NA,3,0
+007,ARHT_2656,National and Transnational Civilizations,NA,CLTR3930,NA,3,0
 007,CHNS_3639_,Chinese Cinema,NA,CLTR3930,NA,3,0
 007,SPAN_2621_,Spanish Culture 1,NA,CLTR3990,NA,3,0
 007,SPAN_3621_,Latin American Film and Literature,NA,CLTR3990,NA,3,0
@@ -1072,7 +1077,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,MECO_3673,Research Practices,NA,COMM1990,NA,3,0
 007,WORK_3205,Organisational Communication,NA,COMM1990,NA,3,0
 007,ASNS_2670,Mass Media in East Asia,NA,COMM2990,NA,3,0
-007,ASNS_3670,,NA,COMM2990,NA,3,0
+007,ASNS_3670,Mass Media in East Asia,NA,COMM2990,NA,3,0
 007,MECO_2601,Radio Broadcasting,NA,COMM2990,NA,3,0
 007,MECO_1001,Australian Media Studies,NA,COMM3306,NA,3,0
 007,MECO_3601,Video Production,NA,COMM3550,NA,3,0
@@ -1103,8 +1108,10 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,INFO_1910,INFO1910: Introduction to Programming (Advanced),NA,CS2990,NA,3,0
 007,INFO_2120,DATABASE SYSTEMS 1,NA,CS2990,NA,3,0
 007,INFO_2315,Introduction to IT Security,NA,CS2990,NA,3,0
-007,COMP_2123,Data Structures and Algorithms,NA,CS3000/CS3001,NA,3,0
-007,COMP_3027,COMP3027: Algorithm Design,NA,CS3000/CS3001,NA,3,0
+007,COMP_2123,Data Structures and Algorithms,NA,CS3000,NA,3,0
+007,COMP_2123,Data Structures and Algorithms,NA,CS3001,NA,3,0
+007,COMP_3027,COMP3027: Algorithm Design,NA,CS3000,NA,3,0
+007,COMP_3027,COMP3027: Algorithm Design,NA,CS3001,NA,3,0
 007,COMP_9120,Database Management Systems,NA,CS3200,NA,3,0
 007,INFO_2820,Database Systems 1 (Advanced),NA,CS3200,NA,3,1
 007,ISYS_2120,Data and Information Management,NA,CS3200,NA,3,0
@@ -1119,28 +1126,31 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,INFO_3404_,Database Systems 2,NA,CS4990,NA,3,0
 007,COMP_5216,Mobile Computing,NA,CS4520,NA,3,0
 007,DECO_2017,Advanced Web Design,NA,CS4550,NA,3,0
-007,ELEC_3506,Data Communications and the I,NA,CS4700,NA,3,1
+007,ELEC_3506,Data Communications and the Industry,NA,CS4700,NA,3,1
 007,SOFT_2412,Agile Software Development Practices,NA,CS4990,NA,3,1
 007,DATA_2002,Data Analytics: Learning from Data,NA,DS1990,NA,3,0
 007,ISYS_3401,Analytical Methods and Information Systems,NA,DS1990,NA,3,0
-007,DATA_1002,Informatics: Data and Computation,NA,DS2000/DS2001,NA,3,1
-007,DATA_2001,Data Science: Big Data and Data Diversity,NA,DS2000/DS2001,NA,3,0
+007,DATA_1002,Informatics: Data and Computation,NA,DS2000,NA,3,1
+007,DATA_1002,Informatics: Data and Computation,NA,DS2001,NA,3,1
+007,DATA_2001,Data Science: Big Data and Data Diversity,NA,DS2000,NA,3,0
+007,DATA_2001,Data Science: Big Data and Data Diversity,NA,DS2001,NA,3,0
 007,DATA_1001,Foundations of Data Science,NA,DS2990,NA,3,0
 007,DATA_3404,Scalable Data Management,NA,DS4330,NA,3,0
 007,DATA_3406,Human-in-the-Loop Data Analytics,NA,DS2990,NA,3,0
-007,LNGS_2613,Computer Applications in Ling,NA,DS2990,NA,3,0
+007,LNGS_2613,Computer Applications in Linguistics,NA,DS2990,NA,3,0
 007,DATA_2901,Big Data and Data Diversity (Advanced),NA,DS3990,NA,3,0
 007,MATH_1115,Interrogating Data,NA,DS3990,NA,3,0
 007,COMP_4318,Machine Learning and Data Mining,NA,DS4400,NA,3,0
 007,ECON_1002,Introductory Macroeconomics,NA,ECON1115,NA,3,1
-007,ECON_1040,Principles of Economics,NA,ECON1115/ECON1116,NA,3,0
+007,ECON_1040,Principles of Economics,NA,ECON1115,NA,3,0
+007,ECON_1040,Principles of Economics,NA,ECON1116,NA,3,0
 007,ECON_1001,Introductory Microeconomics,NA,ECON1116,NA,3,1
 007,ECOS_3026,Economics of Crime,NA,ECON1240,NA,3,0
 007,ECOP_3012,GLOBAL POLITICAL ECONOMY,NA,ECON1290,NA,3,0
 007,ECOP_3014_,Political Economy of Development,NA,ECON1291,NA,3,0
 007,ECON_1005,The Australian Economy,NA,ECON1990,NA,3,0
 007,ECON_1006,THE ECONOMICS OF EVERYTHING,NA,ECON1990,NA,3,0
-007,ECOP_1003,International Economy and Fin,NA,ECON1990,NA,3,0
+007,ECOP_1003,International Economy and Finance,NA,ECON1990,NA,3,0
 007,ECOP_2011,Economics of Modern Capitalis,NA,ECON1990,NA,3,0
 007,ECOP_2012,Social Foundations of Modern Capitalism,NA,ECON1990,NA,3,0
 007,ECOP_2617,Globalisation and Labour,NA,ECON1990,NA,3,0
@@ -1150,7 +1160,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,ECOS_2002_,Intermediate Macroeconomics,NA,ECON2315,NA,3,0
 007,ECON_2001,Intermediate Microeconomics,NA,ECON2316,NA,3,0
 007,ECOS_2001,Intermediate Microeconomics,NA,ECON2316,NA,3,0
-007,ECMT_1010,Business and Economic Statist,NA,ECON2350,NA,3,0
+007,ECMT_1010,Business and Economic Statistics,NA,ECON2350,NA,3,0
 007,ECMT_3160,Statistical Modelling,NA,ECON2350,NA,3,0
 007,ECOS_2020,Economic Data Analysis,NA,ECON2350,NA,3,0
 007,ECMT_3110,Econometric Models,NA,ECON2560,NA,3,0
@@ -1173,7 +1183,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,ECMT_2160,ECONOMETRIC ANALYSIS,NA,ECON3560,NA,3,0
 007,ECMT_3170,Computational Econometrics,NA,ECON3560,NA,3,0
 007,ECMT_2150,Intermediate Econometrics,NA,ECON3990,NA,3,0
-007,ECOP_2619,,NA,ECON3990,NA,3,0
+007,ECOP_2619,Global Development,NA,ECON3990,NA,3,0
 007,ECOP_3911,Theories in Political Economy,NA,ECON3990,NA,3,0
 007,ECOS_3006,International Trade,NA,ECON3990,NA,3,0
 007,ECOS_3007,International Macroeconomics,NA,ECON3990,NA,3,0
@@ -1193,36 +1203,46 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,INDG_3006,De/Colonizing Indigenous Education,NA,EDUC2990,NA,3,0
 007,EDUF_3026,Global Poverty and Education,NA,EDUC3990,NA,3,0
 007,EDUF_2006,Educational Psychology,NA,EDUC4504,NA,3,0
-007,EDUF_3031,,NA,EDUC4570,NA,3,0
-007,ELEC_2004,Electrical Engineering: Found,NA,EECE2210/EECE2211,NA,3,0
-007,ELEC_2103,Simulation and Numerical Solutions in Eng,NA,EECE2990,NA,3,0
+007,EDUF_3031,"Global Perspectives, Poverty, and Education",NA,EDUC4570,NA,3,0
+007,ELEC_2004,Electrical Engineering: Found,NA,EECE2210,NA,3,0
+007,ELEC_2004,Electrical Engineering: Found,NA,EECE2211,NA,3,0
+007,ELEC_2103,Simulation and Numerical Solutions in Enginerring,NA,EECE2990,NA,3,0
 007,ELEC_3609,Internet Software Platforms,NA,EECE2990,NA,3,0
 007,ELEC_3608,Computer Architecture,NA,EECE3324,NA,3,0
 007,ELEC_3802_,Fundamentals of Biomedical Engineering,NA,EECE3990,NA,3,0
 007,BMET_3802,Fundamentals of Biomedical Engineering (Recoded from ELEC3802 to BMET3802),NA,EECE4512,NA,3,0
-007,ELEC_5402,Digital Integrated Circuit Design,NA,EECE4524/EECE4525,NA,3,0
-007,ELEC_3607,Embedded Systems,NA,EECE4534/EECE4535,NA,3,0
+007,ELEC_5402,Digital Integrated Circuit Design,NA,EECE4524,NA,3,0
+007,ELEC_5402,Digital Integrated Circuit Design,NA,EECE4525,NA,3,0
+007,ELEC_3607,Embedded Systems,NA,EECE4534,NA,3,0
+007,ELEC_3607,Embedded Systems,NA,EECE4535,NA,3,0
 007,COSC_2002,Computational Modelling,NA,EECE4990,NA,3,0
 007,ELEC_5207,Advanced Power Conversion Technologies,NA,EECE4990,NA,3,0
 007,ELEC_5507,Error Control Coding,NA,EECE4990,NA,3,0
 007,ELEC_5509,Mobile Networks,NA,EECE4990,NA,3,0
-007,ELEC_3304,Controls,NA,EECE5580/EECE5581,NA,3,0
+007,ELEC_3304,Controls,NA,EECE5580,NA,3,0
+007,ELEC_3304,Controls,NA,EECE5581,NA,3,0
 007,ELEC_3305_,Digital Signal Processing,NA,EECE5666,NA,3,0
-007,ELEC_3203,Electricity Networks,NA,EECE5682/EECE5683,NA,3,0
+007,ELEC_3203,Electricity Networks,NA,EECE5682,NA,3,0
+007,ELEC_3203,Electricity Networks,NA,EECE5683,NA,3,0
 007,ELEC_3204_,Power Electronics,NA,EECE5684,NA,3,0
 007,ELEC_3206,Electrical Energy Conversion Systems,NA,EECE5686,NA,3,0
 007,AVBS_1003,Animals and Us,NA,EEMB1990,NA,3,0
 007,BIOL_1007,From Molecules to Ecosystems,NA,EEMB1990,NA,3,0
-007,BIOL_2024_,Ecology and Conservation,NA,EEMB2302/EEMB2303,NA,3,0
+007,BIOL_2024_,Ecology and Conservation,NA,EEMB2302,NA,3,0
+007,BIOL_2024_,Ecology and Conservation,NA,EEMB2303,NA,3,0
 007,BIOL_1006,Life and Evolution,NA,EEMB2400,NA,3,0
 007,BIOL_1906,Life and Evolution (Advanced),NA,EEMB2400,NA,3,0
 007,BIOL_3005,Evolutionary Biology,NA,EEMB2400,NA,3,0
 007,BIOL_3044_,Evolution and Biodiversity,NA,EEMB2400,NA,3,0
 007,PLNT_2002,Aust Flora: Ecology and Conse,NA,EEMB2610,NA,3,0
-007,BIOL_2023_,Botany,NA,EEMB2610/EEMB2611,NA,3,0
-007,PLNT_3001_,"Plant, Cell, and the Environment",NA,EEMB2610/EEMB2611,NA,3,0
-007,BIOL_2011,INVERTEBRATE ZOOLOGY,NA,EEMB2616/EEMB2617,NA,3,0
-007,BIOL_2012,Vertebrates and their Origins,NA,EEMB2618/EEMB2619,NA,3,0
+007,BIOL_2023_,Botany,NA,EEMB2610,NA,3,0
+007,BIOL_2023_,Botany,NA,EEMB2611,NA,3,0
+007,PLNT_3001_,"Plant, Cell, and the Environment",NA,EEMB2610,NA,3,0
+007,PLNT_3001_,"Plant, Cell, and the Environment",NA,EEMB2611,NA,3,0
+007,BIOL_2011,INVERTEBRATE ZOOLOGY,NA,EEMB2616,NA,3,0
+007,BIOL_2011,INVERTEBRATE ZOOLOGY,NA,EEMB2617,NA,3,0
+007,BIOL_2012,Vertebrates and their Origins,NA,EEMB2618,NA,3,0
+007,BIOL_2012,Vertebrates and their Origins,NA,EEMB2619,NA,3,0
 007,GEGE_3004,Applied Genomics,NA,EEMB3465,NA,3,0
 007,ABVS_3001,Agents of Disease,NA,EEMB3466,NA,3,0
 007,AVBS_3004,Wildlife Conservation,NA,EEMB3475,NA,3,0
@@ -1234,17 +1254,18 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,BIOL_3016,Coral Reef Biology,NA,EEMB4990,NA,3,0
 007,BIOL_2020_,Introduction to Coral Reef Biology,NA,EEMB5504,NA,3,0
 007,BIOL_2022_,Biology Experimental Design and Analysis,NA,EEMB5522,NA,3,0
-007,BIOL_3025,Evolutionary Genetics and Ani,NA,EEMB5548,NA,3,0
-007,ENTO_2001_,Introductory Entomology,NA,EEMB5560/EEMB5561,NA,3,0
+007,BIOL_3025,Evolutionary Genetics and Animals,NA,EEMB5548,NA,3,0
+007,ENTO_2001_,Introductory Entomology,NA,EEMB5560,NA,3,0
+007,ENTO_2001_,Introductory Entomology,NA,EEMB5561,NA,3,0
 007,ENGG_3854,Negotiating and Contracting,NA,EMGT4990,NA,3,0
-007,ENGG_1850_,Introduction to Project Managemen,NA,EMGT5220,NA,3,0
+007,ENGG_1850_,Introduction to Project Management,NA,EMGT5220,NA,3,0
 007,ENGG_2850_,INTRODUCTION TO PROJECT FINANCE,NA,EMGT5220,NA,3,0
 007,ENGG_5820_,Applied Project Management,NA,EMGT5220,NA,3,0
 007,PMGT_3858_,Complex Project Coordination,NA,EMGT5220,NA,3,0
 007,WRIT_3002,Rhetorical Traditions,NA,ENGL1160,NA,3,0
 007,ENGL_2640,Shakespeare,NA,ENGL1600,NA,3,0
 007,ANHS2617,"Love, Sex and Poetry in Ancient Rome",NA,ENGL1990,NA,3,0
-007,ASLT_2609,Australian Lit 1988 to Presen,NA,ENGL1990,NA,3,0
+007,ASLT_2609,Australian Lit 1988 to Present,NA,ENGL1990,NA,3,0
 007,ENGL_1026,Constructing the Fictive Self,NA,ENGL1990,NA,3,0
 007,ENGL_3658_,Narrating Trauma,NA,ENGL1990,NA,3,0
 007,ICLS_2624,Great Books 1: The Human Condition,NA,ENGL1990,NA,3,0
@@ -1252,8 +1273,8 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,ENGL_3697,Imagining Jerusalem,NA,ENGL2610,NA,3,0
 007,CAEL_2060,Experimental Writing Studio,NA,ENGL2700,NA,3,0
 007,ENGL_1014,Creative Writing,NA,ENGL2700,NA,3,0
-007,ENGL_2666,Creative Writing: Theory and,NA,ENGL2700,NA,3,0
-007,ENGL_2605,Literary Theory: An Introduct,NA,ENGL2830,NA,3,0
+007,ENGL_2666,Creative Writing: Theory and practice,NA,ENGL2700,NA,3,0
+007,ENGL_2605,Literary Theory: An Introduction,NA,ENGL2830,NA,3,0
 007,ENGL_1012,The Gothic Imagination,NA,ENGL2990,NA,3,0
 007,ENGL_2613,"Literature, Politics and Modernity",NA,ENGL2990,NA,3,0
 007,ENGL_2665,The Victorian Novel,NA,ENGL2990,NA,3,0
@@ -1263,34 +1284,37 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,ENGL_3707,"Text, Action and Ideology",NA,ENGL2990,NA,3,0
 007,ENGL_4115,Approaches to Global English Literatures,NA,ENGL2990,NA,3,0
 007,WRIT_2002,Advanced writing and research,NA,ENGL2990,NA,3,0
-007,ENGL_1002,Narratives of Romance and Adv,NA,ENGL3398,NA,3,0
+007,ENGL_1002,Narratives of Romance and Adventure,NA,ENGL3398,NA,3,0
 007,ENGL_4118,Modern Australian Poetry and Poetics,NA,ENGL4070,NA,3,0
 007,ENGL_2671,Australian Writing in the Postmodern Age,NA,ENGL4684,NA,3,0
 007,ENGL_2672,Postcolonial Modernisms/Modernities,NA,ENGL4684,NA,3,0
 007,ELEC_5206,Sustainable Energy Systems,NA,ENGR5670,NA,3,0
-007,WRIT_1001,,NA,ENGW1111,NA,3,0
+007,WRIT_1001,Writing and Rhetoric: Academic Essays,NA,ENGW1111,NA,3,0
 007,WRIT_1002_,Writing English: Argumentation,NA,ENGW1111,NA,3,0
 007,IBUS3103,GLOBAL ENTREPRENEURSHIP AND ENTERPRISE,NA,ENTR1201,NA,3,0
-007,IBUS_2104,,NA,ENTR2301,NA,3,0
+007,IBUS_2104,Entrepeneurship and Innovation,NA,ENTR2301,NA,3,0
 007,IBUS_3108_,Social Entrepreneurship,NA,ENTR2990,NA,3,0
 007,SIEN_2001,Validating Ideas and Building Ventures,NA,ENTR2990,NA,3,0
 007,ELEC_3610_,E-Business Analysis and Design,NA,ENTR3330,NA,3,0
-007,GEOS_2111,,NA,ENVR1104,NA,3,0
-007,GEOS_1001,"Earth, Environment and Societ",NA,ENVR1140,NA,3,0
-007,GEOS_1003,Introduction to Geology,NA,ENVR1200/ENVR1201,NA,3,0
-007,ENVX_3002,Statistics in the Natural Sciences,NA,ENVR2500/ENVR2501,NA,3,0
+007,GEOS_2111,"Hazards, Climate Change and Disasters",NA,ENVR1104,NA,3,0
+007,GEOS_1001,"Earth, Environment and Society Advanced",NA,ENVR1140,NA,3,0
+007,GEOS_1003,Introduction to Geology,NA,ENVR1200,NA,3,0
+007,GEOS_1003,Introduction to Geology,NA,ENVR1201,NA,3,0
+007,ENVX_3002,Statistics in the Natural Sciences,NA,ENVR2500,NA,3,0
+007,ENVX_3002,Statistics in the Natural Sciences,NA,ENVR2501,NA,3,0
 007,GEOS_3520_,Urban Citizenship and Sustainability,NA,ENVR2515,NA,3,0
 007,GEOS_3513_,Regional Development and Environment,NA,ENVR2515,NA,3,0
 007,BIOL_3019,Plant Protection,NA,ENVR2900,NA,3,0
 007,ENVI_3112_,Environmental Assessment,NA,ENVR2900,NA,3,0
-007,ENVI_1003,"Challenges Food, Water, Clima",NA,ENVR2990,NA,3,0
+007,ENVI_1003,"Challenges Food, Water, Climate Change",NA,ENVR2990,NA,3,0
 007,GEOS_1901,"Earth, Environment and Society Advanced",NA,ENVR2990,NA,3,0
 007,GEOS_2114_,"Volcanoes, Hot Rocks and Minerals",NA,ENVR2990,NA,3,0
 007,GEOS_3102_,Global Energy and Resources,NA,ENVR2990,NA,3,0
 007,GEOS_2115_,"Oceans, Coasts and Climate Change",NA,ENVR3125,NA,3,0
 007,EDGU_1007,"Food, Sustainability and Planetary Health",NA,ENVR3150,NA,3,0
 007,GEOS3018,"Rivers: Science, Policy and Management",NA,ENVR3200,NA,3,0
-007,ENVX_3001_,Environmental GIS,NA,ENVR3300/ENVR3301,NA,3,0
+007,ENVX_3001_,Environmental GIS,NA,ENVR3300,NA,3,0
+007,ENVX_3001_,Environmental GIS,NA,ENVR3301,NA,3,0
 007,ENVI_5708,Introduction to Environmental Chemistry,NA,ENVR3410,NA,3,0
 007,BIOL_3043_,Plant Science,NA,ENVR3990,NA,3,0
 007,FOOD_4002,Future Foods,NA,ENVR3990,NA,3,0
@@ -1303,14 +1327,15 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,AFNR_5511,"Soil Processes, Assessment and Management",NA,ENVR5190,NA,3,0
 007,PPAT_4005_,Soil Biology,NA,ENVR5190,NA,3,0
 007,SOIL_2005,Soil and Water: Earths Life Support Systems,NA,ENVR5190,NA,3,0
-007,GEOS_3103_,Environmental and Sedimentary Geology,NA,ENVR5244/ENVR5245,NA,3,0
+007,GEOS_3103_,Environmental and Sedimentary Geology,NA,ENVR5244,NA,3,0
+007,GEOS_3103_,Environmental and Sedimentary Geology,NA,ENVR5245,NA,3,0
 007,GEOG_5001,Geographic Information Science A,NA,ENVR5260,NA,3,0
 007,ENVX_4001,"GIS, Remote Sensing and Land Management",NA,ENVR5563,NA,3,0
 007,SOIL_4000,"GIS, Remote Sensing and Land Management",NA,ENVR5563,NA,3,0
 007,GEOS_3909,GEOS3909: Coastal Environments and Processes (Adv),NA,ENVR5600,NA,3,0
 007,MARS_5001,Coastal Processes and Systems,NA,ENVR5600,NA,3,0
 007,AFNR_5502,Remote Sensing GIS and Land Management,NA,ENVS3990,NA,3,0
-007,ECOP_3015,POLITICAL ECONOMY OF THE ENVI,NA,ENVS3990,NA,3,0
+007,ECOP_3015,POLITICAL ECONOMY OF THE ENVIRONMENT,NA,ENVS3990,NA,3,0
 007,EXSS_1032,Fundamentals of Exercise Science,NA,EXSC4990,NA,3,0
 007,HSBH_2008,Physical Activity and Population Health,NA,EXSC4990,NA,3,0
 007,EXSS_3027,Exercise and Rehabilitation,NA,EXSC5230,NA,3,0
@@ -1319,7 +1344,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,CLAW_2203,Regulation of Securities Markets,NA,FINA2990,NA,3,0
 007,ECOS_2004,Money and Banking,NA,FINA2990,NA,3,0
 007,FINC_3023,Behavioural Finance,NA,FINA2990,NA,3,0
-007,FINC_3017,Investments and Portfolio Man,NA,FINA3303,NA,3,1
+007,FINC_3017,Investments and Portfolio Management,NA,FINA3303,NA,3,1
 007,FINC_3017_,Investments and Portfolio Management,NA,FINA3303,NA,3,0
 007,AREC_3005,Agricultural Finance and Risk,NA,FINA3990,NA,3,0
 007,BANK_2011,Banking and the Financial System,NA,FINA3990,NA,3,0
@@ -1378,15 +1403,15 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,HBRW_3612,Advanced Hebrew Modern 9,NA,HBRW3990,NA,3,0
 007,HBRW_3613,Advanced Hebrew Modern 10,NA,HBRW3990,NA,3,0
 007,CRIM_2604,"Race, Law and Justice",NA,HIST1100,NA,3,0
-007,ARIS_1671,"Arabs, Islam & Middle East: I",NA,HIST1185,NA,3,0
-007,ARIS_2673,Islam and Muslims in World Hi,NA,HIST1185,NA,3,0
+007,ARIS_1671,"Arabs, Islam & Middle East",NA,HIST1185,NA,3,0
+007,ARIS_2673,Islam and Muslims in World History,NA,HIST1185,NA,3,0
 007,SPAN_3625,New Latin American Geopolitics of Power,NA,HIST1187,NA,3,0
-007,GOVT_2119,Southeast Asia: Dilemmas of D,NA,HIST1251,NA,3,0
+007,GOVT_2119,Southeast Asia: Dilemmas of Dialogue,NA,HIST1251,NA,3,0
 007,ANHS_1600,Foundations of Ancient Greece,NA,HIST1270,NA,3,0
 007,ANHS_1601,Foundations for Ancient Rome,NA,HIST1271,NA,3,0
 007,ANHS_2635,AUGUSTUS AND THE ROMAN REVOLUTION,NA,HIST1271,NA,3,0
 007,ANHS2610,ANHS2610 - SPQR: The Senate and the People of Rome,NA,HIST1271,NA,3,0
-007,AMST_1001,,NA,HIST1990,NA,3,0
+007,AMST_1001,Global America,NA,HIST1990,NA,3,0
 007,ANHS_2614,The Emperor in the Roman World 14-117 AD,NA,HIST1990,NA,3,0
 007,ASLT_2622,Australian Modernism,NA,HIST1990,NA,3,0
 007,ASNS_2661,History of Modern Indonesia,NA,HIST1990,NA,3,1
@@ -1397,7 +1422,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,HSTY_1002,Age of Empires,NA,HIST1990,NA,3,0
 007,HSTY_1003,Birth of the Present: The world since 1750,NA,HIST1990,NA,3,0
 007,HSTY_1025,The Middle Ages (500-1500),NA,HIST1990,NA,3,0
-007,HSTY_1089,Australia: Conflict and Trans,NA,HIST1990,NA,3,0
+007,HSTY_1089,Australia: Conflict and Transition,NA,HIST1990,NA,3,0
 007,HSTY_1090_,History of Chinese Civilisation,NA,HIST1990,NA,3,0
 007,HSTY_2611_,America in World Affairs: A History,NA,HIST1990,NA,3,0
 007,HSTY_2614_,Australian Social History,NA,HIST1990,NA,3,0
@@ -1408,7 +1433,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,HSTY_2674,Pilgrim to Backpacker: Travel,NA,HIST1990,NA,3,0
 007,HSTY_2677,Australia: Politics and Nation,NA,HIST1990,NA,3,0
 007,HSTY_2681,Colonialism in Modern Asia,NA,HIST1990,NA,3,0
-007,HSTY_2687,Alliance: Australia-USA Relat,NA,HIST1990,NA,3,0
+007,HSTY_2687,Alliance: Australia-USA Relations,NA,HIST1990,NA,3,0
 007,HSTY_2689,Civility and Squalor: 18 C. British Isles,NA,HIST1990,NA,3,0
 007,HSTY_2690,Australia,NA,HIST1990,NA,3,0
 007,HSTY_2691_,Writing History,NA,HIST1990,NA,3,0
@@ -1416,9 +1441,9 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,HSTY_2710,Renaissance and Reformation,NA,HIST1990,NA,3,0
 007,HSTY_2711,"Revolutionary Europe, 1780-1920",NA,HIST1990,NA,3,0
 007,HSTY_2662_,Atlantic World in the Age of Empire,NA,HIST1990,NA,3,0
-007,INDG_1002,Introduction to Indigenous Hi,NA,HIST1990,NA,3,0
+007,INDG_1002,Introduction to Indigenous History,NA,HIST1990,NA,3,0
 007,JCTC_3001,Israel in the Modern Middle East,NA,HIST1990,NA,3,0
-007,PACS_2002,History and Politics of War a,NA,HIST2211,NA,3,0
+007,PACS_2002,History and Politics of War and Strife,NA,HIST2211,NA,3,0
 007,HSTY_2628,BOOM! THE HISTORY OF WAR,NA,HIST2214,NA,3,0
 007,JCTC_2606_,The Holocaust: History and Aftermath,NA,HIST2280,NA,3,0
 007,HSTY_2304,Imperialism 1815-2000,NA,HIST2311,NA,3,0
@@ -1429,9 +1454,9 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,ANHS_2601,Ancient Imperialism,NA,HIST2990,NA,3,0
 007,ASTR_2601,Australia: Land and Nation,NA,HIST2990,NA,3,0
 007,HSTY_2676,Australia and the World,NA,HIST2990,NA,3,0
-007,HSTY_2699,GLOBAL EPIDEMICS: FROM BLACK,NA,HIST2990,NA,3,0
+007,HSTY_2699,GLOBAL EPIDEMICS: FROM BLACK PLAGUE TO COVID,NA,HIST2990,NA,3,0
 007,HYSY_3801,Asian History,NA,HIST3990,NA,3,0
-007,HSTY_1044,TWENTIETH CENTURY POLITICS &,NA,HIST4670,NA,3,0
+007,HSTY_1044,TWENTIETH CENTURY POLITICS ,NA,HIST4670,NA,3,0
 007,HSBH_1007,Health Science and Research,NA,HLTH5450,NA,3,0
 007,HSBH_2007,Research Methods in Health,NA,HLTH5450,NA,3,0
 007,EDGU_1003_,Diet and Nutrition for Health and Sport,NA,HSCI1105,NA,3,1
@@ -1442,14 +1467,15 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,HSBH_1012,Introduction to Health and Healthcare,NA,HSCI1990,NA,3,0
 007,HSBH_3004,"Health, Ethics and the Law",NA,HSCI1990,NA,3,0
 007,HSBH_1009_,Health Care Resources and Systems,NA,HSCI1990,NA,3,0
-007,KOCR_2603,Indigenous Health and Communi,NA,HSCI1990,NA,3,0
+007,KOCR_2603,Indigenous Health and Communities,NA,HSCI1990,NA,3,0
 007,SCWK_2006,Research Skills for Social Change,NA,HUSV2970,NA,3,0
 007,SCWK_2005,PSYCHOLOGY FOR SOCIAL WORK 20,NA,HUSV2990,NA,3,0
 007,SCPL_2604,Comparative Social Policy,NA,HUSV3900,NA,3,0
 007,DESP_2001_,Planning for the Public Domain,NA,IE3990,NA,3,0
 007,CIVL_2812,Project Appraisal,NA,IE4512,NA,3,0
 007,CIVL_3812_,PROJECT APPRAISAL,NA,IE4512,NA,3,0
-007,MECH_3660_,Manufacturing Engineering,NA,IE4530/IE4531,NA,3,0
+007,MECH_3660_,Manufacturing Engineering,NA,IE4530,NA,3,0
+007,MECH_3660_,Manufacturing Engineering,NA,IE4531,NA,3,0
 007,BMET_2925,"AI, Data, and Society in Health",NA,IE4990,NA,3,0
 007,CIVL_4810_,"Mgmnt of People, Quality and Risk in PE",NA,IE4990,NA,3,0
 007,ENGG_2851_,Data Analytics for Project Management,NA,IE4990,NA,3,0
@@ -1468,10 +1494,10 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,IBUS_3101,International Business Alliances,NA,INTB2990,NA,3,0
 007,IBUS2101,International Business Strategy,NA,INTB2990,NA,3,0
 007,PMGT_3857,International Project Management,NA,INTB2990,NA,3,0
-007,IBUS_1102,,NA,INTB3310,NA,3,0
+007,IBUS_1102,Cross-cultural Management,NA,INTB3310,NA,3,0
 007,SCLG_2616,Global Transformations,NA,INTL1101,NA,3,0
 007,GOVT_1661,Popular Culture and Politics,NA,INTL1990,NA,3,0
-007,ARIS_3675,SOCIETY AND POLITICS IN THE M,NA,INTL2990,NA,3,0
+007,ARIS_3675,SOCIETY AND POLITICS IN THE MEDIA,NA,INTL2990,NA,3,0
 007,GOVT_2120,New Zealand and Pacific Politics,NA,INTL2990,NA,3,0
 007,GOVT_2617,Introduction to Non-Traditional Security,NA,INTL2990,NA,3,0
 007,GOVT_3993,Power,NA,INTL2990,NA,3,0
@@ -1518,7 +1544,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,ICLS_2111,Essentials of Language Learning,NA,LANG4800,NA,3,0
 007,LNGS_1001,Structure of Language,NA,LING1150,NA,3,0
 007,LNGS_1005,Structure of English,NA,LING1150,NA,3,0
-007,CSCD_1034,"Linguistics, Phonetics and Ar",NA,LING1990,NA,3,0
+007,CSCD_1034,"Linguistics, Phonetics and Articles",NA,LING1990,NA,3,0
 007,LNGS_2603,Functional Grammar,NA,LING2990,NA,3,0
 007,LNGS_2620,Phonetics,NA,LING2990,NA,3,0
 007,LNGS2620,Phonetics,NA,LING2990,NA,3,0
@@ -1537,8 +1563,8 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,LNGS_3604,Field Methods,NA,LING3990,NA,3,0
 007,LNGS_3605,Describing a Language,NA,LING3990,NA,3,0
 007,LNGS_3609,Text and Context,NA,LING3990,NA,3,0
-007,LNGS_3613,Advanced Morphology and Synta,NA,LING3990,NA,3,0
-007,LNGS_3690,Issues in Theoretical Linguis,NA,LING3990,NA,3,0
+007,LNGS_3613,Advanced Morphology and Syntax,NA,LING3990,NA,3,0
+007,LNGS_3690,Issues in Theoretical Linguistics,NA,LING3990,NA,3,0
 007,LNGS_3700,Language Diversity and Universals,NA,LING3990,NA,3,0
 007,LNGS2611,Australia,NA,LING3990,NA,3,0
 007,LNGS3607,Genre and Register,NA,LING3990,NA,3,0
@@ -1548,9 +1574,9 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,ICLS_1001,World Literatures in Translation,NA,LITR3500,NA,3,0
 007,SPAN_3671,The Stories of Spain: Texts and Contexts,NA,LITR4560,NA,3,0
 007,LAWS_3496_,United States Constitutional Law,NA,LPSC1101,NA,3,0
-007,SLSS_1001,Introduction to Socio-Legal S,NA,LPSC2301,NA,3,0
+007,SLSS_1001,Introduction to Socio-Legal Society,NA,LPSC2301,NA,3,0
 007,SLSS_1003_,Law and Contemporary Society,NA,LPSC2301,NA,3,0
-007,SCLG_2624,Human Rights and Social Prote,NA,LPSC2990,NA,3,0
+007,SCLG_2624,Human Rights and Social Protest,NA,LPSC2990,NA,3,0
 007,SCLG_2624_,Human Rights and Social Protest,NA,LPSC2990,NA,3,0
 007,SCPL_3604,Making Social Policy,NA,LPSC2990,NA,3,0
 007,SLSS_3603,"Social Justice, Law and Society",NA,LPSC2990,NA,3,0
@@ -1558,7 +1584,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,LAWS_3483_,War Law: Use of Force & Humanitarian Law,NA,LPSC3303,NA,3,0
 007,CLAW_1001,Foundations of Business Law,NA,LPSC3990,NA,3,0
 007,CLAW_2201,Corporations Law,NA,LPSC3990,NA,3,0
-007,LASS_2018,PRIVATE INTERNATIONAL LAW A,NA,LPSC3990,NA,3,0
+007,LASS_2018,PRIVATE INTERNATIONAL LAW APPLICATIONS,NA,LPSC3990,NA,3,0
 007,MATH_1011_,Applications of Calculus,NA,MATH1241,NA,3,0
 007,MATH_1001_,Differential Calculus,NA,MATH1341,NA,3,0
 007,MATH_1003_,Integral Calculus,NA,MATH1342,NA,3,0
@@ -1572,7 +1598,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,MATH_1013_,Mathematical Modeling,NA,MATH2990,NA,3,0
 007,STAT_2012_,Statistical Tests,NA,MATH2990,NA,3,0
 007,ENVX_1002,Introduction to Statistical Methods,NA,MATH3081,NA,3,0
-007,STAT_2911,PROBABILITY AND STATISTICAL M,NA,MATH3081,NA,3,0
+007,STAT_2911,PROBABILITY AND STATISTICAL MATHEMATICS,NA,MATH3081,NA,3,0
 007,MATH_2023,Analysis,NA,MATH3150,NA,3,0
 007,MATH_2962_,Real and Complex Analysis (Advanced),NA,MATH3150,NA,3,0
 007,MATH_3068_,Analysis,NA,MATH3150,NA,3,0
@@ -1580,14 +1606,14 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,MATH_3968,Differential Geometry (Advanced),NA,MATH3331,NA,3,0
 007,MATH_4063,Dynamical Systems and Applications,NA,MATH3341,NA,3,0
 007,MATH_2068_,Number Theory and Cryptography,NA,MATH3527,NA,3,0
-007,MATH_2088,,NA,MATH3527,NA,3,0
+007,MATH_2088,Number Theory and Cryptography,NA,MATH3527,NA,3,0
 007,MATH_3076,Mathematical computing,NA,MATH3530,NA,3,0
 007,MATH_3976,Mathematical Computing (Advanced),NA,MATH3530,NA,3,0
 007,MATH_2069_,Discrete Mathematics and Graph Theory,NA,MATH3533,NA,3,0
 007,ENVX_2001,Applied Statistical Methods,NA,MATH3990,NA,3,1
 007,MATH_2070_,Optimization and Financial Mathmatics,NA,MATH3990,NA,3,0
-007,MATH_2961_,Linear Mathematics & Vector Calculus Adv,NA,MATH3990,NA,3,0
-007,MATH_3063,Differential Equations and Bi,NA,MATH3990,NA,3,0
+007,MATH_2961_,Linear Mathematics & Vector Calculus Advantages,NA,MATH3990,NA,3,0
+007,MATH_3063,Differential Equations and Bifurcations,NA,MATH3990,NA,3,0
 007,MATH_3066,Algebra and Logic,NA,MATH3990,NA,3,0
 007,STAT_3013,STATISTICAL INFERENCE,NA,MATH3990,NA,3,0
 007,MATH_2061_,Linear Mathematics and Vector Calculus,NA,MATH4541,NA,3,0
@@ -1598,17 +1624,18 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,MATH_3975,Financial Mathematics (Advanced),NA,MATH4683,NA,3,0
 007,MATH_1015,Biostatistics,NA,MATH4990,NA,3,0
 007,MATH_3963_,Differential Equations & Biomaths (Adv),NA,MATH4990,NA,3,0
-007,MATH_3977,Lagrangian & Hamiltonian Dyna,NA,MATH4990,NA,3,0
+007,MATH_3977,Lagrangian & Hamiltonian Dynamics,NA,MATH4990,NA,3,0
 007,MATH_4076,Computational Mathematics,NA,MATH4990,NA,3,0
 007,STAT_2011_,Statistical Models,NA,MATH4990,NA,3,0
-007,STAT_3911_,Stochastic Processes and Time Series Adv,NA,MATH4990,NA,3,0
+007,STAT_3911_,Stochastic Processes and Time Series Advantages,NA,MATH4990,NA,3,0
 007,MTRX_1701_,Mechatronics Engineering Introductory,NA,ME1990,NA,3,0
 007,AMME_1362_,MATERIALS 1,NA,ME2340,NA,3,0
 007,ENGG_1802_,Engineering Mechanics,NA,ME2350,NA,3,0
 007,AMME_2301_,Mechanics of Solids,NA,ME2355,NA,3,0
 007,AMME_2200_,Thermodynamics and Fluids,NA,ME2380,NA,3,0
 007,AMME_2262_,Thermal Engineering 1,NA,ME2380,NA,3,0
-007,AMME_2500,Engineering Dynamics,NA,ME3455 and ME3456,NA,3,0
+007,AMME_2500,Engineering Dynamics,NA,ME3455,NA,3,0
+007,AMME_2500,Engineering Dynamics,NA,ME3456,NA,3,0
 007,AMME_2261,Fluid Mechanics 1,NA,ME3475,NA,3,0
 007,CHNG_2801_,Conservation and Transport Processes,NA,ME3475,NA,3,0
 007,MECH_3261,Fluid Mechanics,NA,ME3475,NA,3,0
@@ -1640,8 +1667,8 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,SIEN_2210,Strategic Management SIEN2210,NA,MGMT3990,NA,3,0
 007,WORK_3210,Climate Change and Work,NA,MGMT3990,NA,3,0
 007,WORK_3921_,Theories of Work and Organisations,NA,MGMT3990,NA,3,0
-007,WORK_3202,,NA,MGMT4603,NA,3,0
-007,QBUS_2810,Statistical Modeling for Busi,NA,MGSC2301,NA,3,0
+007,WORK_3202,Leadership,NA,MGMT4603,NA,3,0
+007,QBUS_2810,Statistical Modeling for Business,NA,MGSC2301,NA,3,0
 007,ECMT_2630,Managerial Decision Making,NA,MGSC2990,NA,3,0
 007,QBUS_3340,Operations Management,NA,MGSC2990,NA,3,0
 007,INFS_2010_,"People, Information and Knowledge",NA,MISM1990,NA,3,0
@@ -1669,15 +1696,15 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,MKTG3116,International Marketing,NA,MKTG4512,NA,3,0
 007,MECO_3609,Critical Practice in Media,NA,MSCR1220,NA,3,0
 007,SCLG_2606,Media in Contemporary Society,NA,MSCR1220,NA,3,0
-007,CAEL_2039,,NA,MSCR1230,NA,3,0
+007,CAEL_2039,Screen Arts: an Introduction,NA,MSCR1230,NA,3,0
 007,ARHT_2653,Memory of the World: Key Films,NA,MSCR1990,NA,3,0
 007,ARIN_3610,Technology and Cultures,NA,MSCR1990,NA,3,0
 007,CAEL_2069,Screenwriting and Directing,NA,MSCR1990,NA,3,0
 007,DECO_1014,Digital Media Production,NA,MSCR1990,NA,3,0
-007,EDUF_3034,"Australian Theare, Film and L",NA,MSCR1990,NA,3,0
+007,EDUF_3034,"Australian Theare, Film and Language",NA,MSCR1990,NA,3,0
 007,ENGL_1011,Introduction to Film Study,NA,MSCR1990,NA,3,0
-007,FILM_1001,,NA,MSCR1990,NA,3,0
-007,GCST_1603,Screen Cultures and Gender: F,NA,MSCR1990,NA,3,0
+007,FILM_1001,"Hollywood: Art, Industry, Entertainment",NA,MSCR1990,NA,3,0
+007,GCST_1603,Screen Cultures and Gender,NA,MSCR1990,NA,3,0
 007,HSTY_2608,European Film and History,NA,MSCR1990,NA,3,0
 007,JPNS_2672,Japanese Media and Popular Culture,NA,MSCR1990,NA,3,0
 007,MECO_1002_,Media and Communication Landscapes,NA,MSCR1990,NA,3,0
@@ -1722,7 +1749,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,PHIL_2642_,Critical Thinking,NA,PHIL1114,NA,3,0
 007,PHIL_1012,Introductory Logic,NA,PHIL1115,NA,3,0
 007,PHIL_2663_,Justice,NA,PHIL1160,NA,3,0
-007,PHIL_3663,,NA,PHIL1160,NA,3,0
+007,PHIL_3663,Justice,NA,PHIL1160,NA,3,0
 007,HPSC_1000,Bioethics,NA,PHIL1165,NA,3,0
 007,PHIL_2640_,Environmental Philosophy,NA,PHIL1180,NA,3,0
 007,RLST_3605,"Sex, Desire and the Sacred",NA,PHIL1271,NA,3,0
@@ -1734,7 +1761,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,PHIL_2621,"Truth, Meaning and Language",NA,PHIL1990,NA,3,0
 007,PHIL_2647,The Philosophy of Happiness,NA,PHIL1990,NA,3,0
 007,PHIL_2627_,Philosophy and Psychiatry,NA,PHIL1990,NA,3,0
-007,RLST_1005,"Atheism, Fundamentalism & New",NA,PHIL1990,NA,3,0
+007,RLST_1005,"Atheism, Fundamentalism & New worlds",NA,PHIL1990,NA,3,0
 007,RLST_2640,Contemporary Australian Religion,NA,PHIL1990,NA,3,0
 007,RLST_3607,Secular Religion: Faith in Modernity,NA,PHIL1990,NA,3,0
 007,RLST_3611,Secular Religion: Faith in Modernity,NA,PHIL1990,NA,3,0
@@ -1764,13 +1791,21 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,PHYS_1002,Physics 1 (Fundamentals),NA,PHYS1121,NA,3,0
 007,ENVI_3114_,Energy and the Environment,NA,PHYS1132,NA,3,0
 007,EUST_3003,Europe: Energy and the Environment,NA,PHYS1132,NA,3,0
-007,PHYS_1004,Physics 1: Environmental & Li,NA,PHYS1145/PHYS1146,NA,3,0
-007,PHYS_1901,Physics 1A (Advanced),NA,PHYS1145/PHYS1146,NA,3,0
-007,PHYS_1001,PHYSICS 1,NA,PHYS1151/PHYS1152,NA,3,0
-007,PHYS_2911,Physics 2A (Advanced),NA,PHYS1151/PHYS1152/PHYS1153,NA,3,0
-007,PHYS_1003_,Physics 1,NA,PHYS1155/PHYS1156,NA,3,0
-007,PHYS_1902_,Physics 1B (Advanced),NA,PHYS1155/PHYS1156,NA,3,0
-007,PHYS_2012,Physics 2B,NA,PHYS1155/PHYS1157,NA,3,0
+007,PHYS_1004,Physics 1: Environmental & Living beings,NA,PHYS1145,NA,3,0
+007,PHYS_1004,Physics 1: Environmental & Living beings,NA,PHYS1146,NA,3,0
+007,PHYS_1901,Physics 1A (Advanced),NA,PHYS1145,NA,3,0
+007,PHYS_1901,Physics 1A (Advanced),NA,PHYS1146,NA,3,0
+007,PHYS_1001,Physics 1,NA,PHYS1151,NA,3,0
+007,PHYS_1001,Physics 1,NA,PHYS1152,NA,3,0
+007,PHYS_2911,Physics 2A (Advanced),NA,PHYS1151,NA,3,0
+007,PHYS_2911,Physics 2A (Advanced),NA,PHYS1152,NA,3,0
+007,PHYS_2911,Physics 2A (Advanced),NA,PHYS1153,NA,3,0
+007,PHYS_1003_,Physics 1,NA,PHYS1155,NA,3,0
+007,PHYS_1003_,Physics 1,NA,PHYS1156,NA,3,0
+007,PHYS_1902_,Physics 1B (Advanced),NA,PHYS1155,NA,3,0
+007,PHYS_1902_,Physics 1B (Advanced),NA,PHYS1156,NA,3,0
+007,PHYS_2012,Physics 2B,NA,PHYS1155,NA,3,0
+007,PHYS_2012,Physics 2B,NA,PHYS1157,NA,3,0
 007,PHYS_3035,Electrodynamics and Optics,NA,PHYS2990,NA,3,0
 007,PHYS_2011,Physics 2A (Normal),NA,PHYS3603,NA,3,0
 007,PHYS_3034,"Quantum, Statistical and Comp Physics",NA,PHYS4990,NA,3,0
@@ -1789,7 +1824,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,GOVT_2228,Environmental Politics,NA,POLS2395,NA,3,0
 007,GOVT_3652,Environmental Politics in Australia,NA,POLS2395,NA,3,0
 007,GOVT_2991,Political Analysis,NA,POLS2399,NA,3,0
-007,ECOP_2612,Economic Policy in Global Con,NA,POLS2990,NA,3,0
+007,ECOP_2612,Economic Policy in Global Connection,NA,POLS2990,NA,3,0
 007,EUST_2010,Migrations and Asylum in the,NA,POLS2990,NA,3,0
 007,GEOS_3524_,Global Development and Livelihoods,NA,POLS2990,NA,3,0
 007,GOVT_3651,Politics of China,NA,POLS2990,NA,3,0
@@ -1800,11 +1835,11 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,USSC_1201,America and Australia: The Issues Compared,NA,POLS2990,NA,3,0
 007,USSC_2601,US in the World,NA,POLS2990,NA,3,0
 007,GOVT2552,Policy Analysis,NA,POLS3307,NA,3,0
-007,ECOP_2613,Political Economy of Global C,NA,POLS3405,NA,3,0
-007,GOVT_2221,Politics of International Eco,NA,POLS3405,NA,3,0
+007,ECOP_2613,Political Economy of Global Climate,NA,POLS3405,NA,3,0
+007,GOVT_2221,Politics of International Economics,NA,POLS3405,NA,3,0
 007,LAWS_1023_,Public International Law,NA,POLS3406,NA,3,0
 007,GOVT_2226,INTERNATIONAL ORGANISATIONS,NA,POLS3407,NA,3,0
-007,GOVT_2225,International Security in the,NA,POLS3408,NA,3,0
+007,GOVT_2225,International Security in the law,NA,POLS3408,NA,3,0
 007,GOVT_3989,Divided Societies,NA,POLS3415,NA,3,0
 007,GOVT2445,American Politics and Foreign Policy,NA,POLS3425,NA,3,0
 007,EUST_2005,Institutions of the European Union,NA,POLS3435,NA,3,0
@@ -1822,13 +1857,13 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,BACH_3146_,Cyberpsychology and e-Health,NA,PSYC1990,NA,3,0
 007,BIOS_1166,Neuroscience 1: Communication Disorders,NA,PSYC1990,NA,3,0
 007,BIOS_2171,Human Neuroscience in Health and Disease,NA,PSYC1990,NA,3,0
-007,HPSC_3023,PSYCHOLOGY & PSYCHIATRY: HIST,NA,PSYC1990,NA,3,0
+007,HPSC_3023,PSYCHOLOGY & PSYCHIATRY: HISTORY,NA,PSYC1990,NA,3,0
 007,MUSC_2645,PSYCHOLOGY OF MUSIC,NA,PSYC1990,NA,3,0
 007,NEUR_3004,Integrative Neurosciece,NA,PSYC1990,NA,3,0
 007,NEUR_3005,Functional Neuroanatomy,NA,PSYC1990,NA,3,0
 007,NEUR_3006,Neural Information Processing,NA,PSYC1990,NA,3,0
 007,PSYC_1002_,Psychology 1002,NA,PSYC1990,NA,3,0
-007,PSYC_2013,Cognitive and Social Psycholo,NA,PSYC1990,NA,3,0
+007,PSYC_2013,Cognitive and Social Psychology,NA,PSYC1990,NA,3,0
 007,PSYC_2014,Personality and Differential,NA,PSYC1990,NA,3,0
 007,PSYC_3016,Developmental Psychlogy,NA,PSYC1990,NA,3,0
 007,PSYC_2012_,Statistics & Research Methods for Psychology,NA,PSYC1990,NA,3,0
@@ -1850,7 +1885,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,PSYC_3011,Learning and Behaviour,NA,PSYC3450,NA,3,0
 007,BIOS_1171,Neuroscience,NA,PSYC3458,NA,3,0
 007,LNGS_2615,"Language, Brain and Mind",NA,PSYC3464,NA,3,0
-007,PSYC_3012,"Cognition, Language and Thoug",NA,PSYC3466,NA,3,0
+007,PSYC_3012,"Cognition, Language and Thought",NA,PSYC3466,NA,3,0
 007,EXSS_2037,Advanced Strength and Conditioning,NA,PT2990,NA,3,0
 007,RLST_2623_,Meditation and Self Transformation,NA,RELS1990,NA,3,0
 007,RLST1002,The History of God,NA,RELS1990,NA,3,0
@@ -1869,7 +1904,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,HSBH_1003,"Health, Behavior and Society",NA,SOCL1120,NA,3,0
 007,SCLG_2625,Sociology of Friendship,NA,SOCL1235,NA,3,0
 007,SCLG2612,Self and Society,NA,SOCL1235,NA,3,0
-007,SCLG_2618,"Violence, Imaginaries and Sym",NA,SOCL1241,NA,3,0
+007,SCLG_2618,"Violence, Imaginaries and Symbolism",NA,SOCL1241,NA,3,0
 007,SCLG2623,Sociology of Terror,NA,SOCL1241,NA,3,0
 007,SCLG3605,Urban Transformations: Society and Space,NA,SOCL1247,NA,3,0
 007,GCST_3601,"Gender, Race and Australian I",NA,SOCL1260,NA,3,0
@@ -1881,8 +1916,8 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,DAAE_2012,Urbanism and the Global South,NA,SOCL1990,NA,3,0
 007,ECOP_3011,"Race, Gender, and Class",NA,SOCL1990,NA,3,0
 007,EDUG_1004,"Young People, Sex, and Sexual Health",NA,SOCL1990,NA,3,0
-007,GCST_2613,Everyday Life: Theories and P,NA,SOCL1990,NA,3,0
-007,INDG_1001,Indigenous Australia: An Intr,NA,SOCL1990,NA,3,0
+007,GCST_2613,Everyday Life: Theories and Policies,NA,SOCL1990,NA,3,0
+007,INDG_1001,Indigenous Australia: An Introduction to the land,NA,SOCL1990,NA,3,0
 007,KOCR_2600,Australia: An Introduction,NA,SOCL1990,NA,3,0
 007,SCLG_2637,Society and Identity,NA,SOCL1990,NA,3,0
 007,SCLG_2638,Sociology of the Other,NA,SOCL1990,NA,3,0
@@ -1904,7 +1939,7 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,SCLG_2621_,"Power, Politics and Society",NA,SOCL2990,NA,3,0
 007,SCLG_2631,Sociology of the Environment,NA,SOCL2990,NA,3,0
 007,SCLG_2601,Sociological Theory,NA,SOCL3300,NA,3,0
-007,SCLG_2613,Sociology of Childhood and Yo,NA,SOCL3437,NA,3,0
+007,SCLG_2613,Sociology of Childhood and Youth,NA,SOCL3437,NA,3,0
 007,SCLG2613,Sociology of Childhood and Youth,NA,SOCL3437,NA,3,0
 007,SCLG_2603_,Sociology of Health and Illness,NA,SOCL3441,NA,3,0
 007,SCPL_2602,The Principles of Social Poli,NA,SOCL3990,NA,3,0
@@ -1938,29 +1973,29 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 007,WORK_3203,"Gender, Diversity and Inclusion at Work",NA,WMNS2990,NA,3,0
 007,GCST_2610,"Intimacy, Love and Friendship",NA,WMNS3990,NA,3,0
 007,GCST_3636,"Sex, Violence and Transgressions",NA,WMNS3990,NA,3,0
-006,AFST 3002 CTSL,NA,NA,NOTRANSFER,NA,3,0
-006,AGI3000F,NA,NA,NOTRANSFER,NA,3,0
-006,AXL2101S,NA,NA,NOTRANSFER,NA,3,0
-006,BIO2011,NA,NA,NOTRANSFER,NA,3,0
-006,BIO2012,NA,NA,NOTRANSFER,NA,3,0
-006,CAS4005F,NA,NA,NOTRANSFER,NA,3,0
-006,CEM2013S,NA,NA,NOTRANSFER,NA,3,0
-006,EEE3044S,NA,NA,NOTRANSFER,NA,3,0
-006,EEE3057S,NA,NA,NOTRANSFER,NA,3,0
-006,EGS3021,NA,NA,NOTRANSFER,NA,3,0
-006,FAM3005F,NA,NA,NOTRANSFER,NA,3,0
-006,INF1002F,NA,NA,NOTRANSFER,NA,3,0
-006,MCB2014F,NA,NA,NOTRANSFER,NA,3,0
-006,MCB2021F,NA,NA,NOTRANSFER,NA,3,0
-006,MUZ1322,NA,NA,NOTRANSFER,NA,3,0
-006,PBL2800F,NA,NA,NOTRANSFER,NA,3,0
-006,PHI1025F,NA,NA,NOTRANSFER,NA,3,0
-006,POL2041,NA,NA,NOTRANSFER,NA,3,0
-006,REL2045S,NA,NA,NOTRANSFER,NA,3,0
-006,SLL1042F/S,NA,NA,NOTRANSFER,NA,3,0
-006,SLL1101F,NA,NA,NOTRANSFER,NA,3,0
-006,SOC2019F,NA,NA,NOTRANSFER,NA,3,0
-006,SWK4032S,NA,NA,NOTRANSFER,NA,3,0
+006,AFST 3002 CTSL,NA,NA,NA,NA,3,0
+006,AGI3000F,NA,NA,NA,NA,3,0
+006,AXL2101S,NA,NA,NA,NA,3,0
+006,BIO2011,NA,NA,NA,NA,3,0
+006,BIO2012,NA,NA,NA,NA,3,0
+006,CAS4005F,NA,NA,NA,NA,3,0
+006,CEM2013S,NA,NA,NA,NA,3,0
+006,EEE3044S,NA,NA,NA,NA,3,0
+006,EEE3057S,NA,NA,NA,NA,3,0
+006,EGS3021,NA,NA,NA,NA,3,0
+006,FAM3005F,NA,NA,NA,NA,3,0
+006,INF1002F,NA,NA,NA,NA,3,0
+006,MCB2014F,NA,NA,NA,NA,3,0
+006,MCB2021F,NA,NA,NA,NA,3,0
+006,MUZ1322,NA,NA,NA,NA,3,0
+006,PBL2800F,NA,NA,NA,NA,3,0
+006,PHI1025F,NA,NA,NA,NA,3,0
+006,POL2041,NA,NA,NA,NA,3,0
+006,REL2045S,NA,NA,NA,NA,3,0
+006,SLL1042F/S,NA,NA,NA,NA,3,0
+006,SLL1101F,NA,NA,NA,NA,3,0
+006,SOC2019F,NA,NA,NA,NA,3,0
+006,SWK4032S,NA,NA,NA,NA,3,0
 006,ACC2022FS,NA,NA,ACCT2301,NA,3,0
 006,HST2031S,NA,NA,AFRS1990,NA,3,0
 006,HST2033F,NA,NA,AFRS1990,NA,3,0
@@ -1982,7 +2017,8 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 006,FIN1002F,NA,NA,ARTH1990,NA,3,0
 006,FIN1006F,NA,NA,ARTH1990,NA,3,0
 006,CEM1008F,NA,NA,CHEM1151,NA,3,0
-006,CEM2007F,NA,NA,CHEM3431 & CHEM3432,NA,3,0
+006,CEM2007F,NA,NA,CHEM3431,NA,3,0
+006,CEM2007F,NA,NA,CHEM3432,NA,3,0
 006,CHE4058Z,NA,NA,CIVE5275,NA,3,0
 006,CSC3022F,NA,NA,CS2990,NA,3,1
 006,CSC3023F,NA,NA,CS2990,NA,3,0
@@ -2155,34 +2191,23 @@ University ID,Host Course Number,Host Course Name,Host Course Description,NU Cou
 008,STAT1300,Fundamentals of Statistics,NA,MATH3801,Spring,10,0
 008,MATH2340,Linearity and Continuity 1,NA,MATH2990,Spring,10,0
 008,MATH2350,Linearity and Continuity 2,NA,MATH2990,Spring,10,0
-009,N/A,Algorithms and Data Structures,Old Course Number/Title,CS3000,NA,4,0
-009,N/A,Theory of Computing,"
-",CS3800,NA,4,0
-009,N/A,Data Science,"
-",DS3000,NA,4,0
-009,N/A,Graph Theory,Currently marked equiv to MATH3533-Combinatorial Mathematics. I think this is wrong,MATH3545,NA,4,0
-009,N/A,Combinatorial Optimization,"
-",CS3990,NA,4,0
-009,N/A,Deep Learning,DS4440 Practical Neural Networks,CS2990,NA,4,0
-009,N/A,Structure and Dynamics of Complex Networks,NETS2990 Elective,CS3990,NA,4,0
-009,N/A,Computer Graphics,"
-",CS4300,NA,4,0
-009,N/A,Semantic and Declarative Technologies,CS4990 Elective,CS2990,NA,4,0
-009,N/A,Quantum Probability and Quantum Logic,"
-",MATH4990,NA,4,0
-009,N/A,Mobile Software Development,"
-",CS4520,NA,4,0
-009,N/A,Applied Cryptography,CY4770 Cryptography,CS3990,NA,4,0
-009,N/A,Scalable Systems and Development Processes,Currently equiv to EECE3990. Content focuses on scalable software engineering and I believe CS4500 would be a good equivalence,EECE3990,NA,4,0
-009,N/A,Design Workshop,"
-",ARTF1124,NA,4,0
-009,N/A,User Experience Design,This is marked equiv to IS4991 in TC database. it should be changed to CS2484,IS4991,NA,4,0
-009,N/A,Leadership and Entrepreneurship Studies,"No eval, but similar course is pegged to Innovation!",ENTR2301,NA,4,0
-009,N/A,Introduction to Hungarian Language and Culture I,"
-",LANG1990,NA,4,0
-009,N/A,Introduction to Hungarian Language and Culture II,"
-",LANG1990,NA,4,0
-009,N/A,Hungarian Music in a Central European Context,"
-",MUSC1990,NA,4,0
-009,N/A,Budapest Studies – life and culture of a city and its dwellers,"
-",CLTR1990,NA,4,0
+009,Algorithms_and_Data_Structures,Algorithms and Data Structures,Old Course Number/Title,CS3000,NA,4,0
+009,Theory_of_Computing,Theory of Computing,NA,CS3800,NA,4,0
+009,Data_Science,Data Science,NA,DS3000,NA,4,0
+009,Graph_Theory,Graph Theory,Currently marked equiv to MATH3533-Combinatorial Mathematics. I think this is wrong,MATH3545,NA,4,0
+009,Combinatorial_Optimization,Combinatorial Optimization,NA,CS3990,NA,4,0
+009,Deep_Learning,Deep Learning,DS4440 Practical Neural Networks,CS2990,NA,4,0
+009,Structure_and_Dynamics_of_Complex_Networks,Structure and Dynamics of Complex Networks,NETS2990 Elective,CS3990,NA,4,0
+009,Computer_Graphics,Computer Graphics,NA,CS4300,NA,4,0
+009,Semantic_and_Declarative_Technologies,Semantic and Declarative Technologies,CS4990 Elective,CS2990,NA,4,0
+009,Quantum_Probability_and_Quantum_Logic,Quantum Probability and Quantum Logic,NA,MATH4990,NA,4,0
+009,Mobile_Software_Development,Mobile Software Development,NA,CS4520,NA,4,0
+009,Applied_Cryptography,Applied Cryptography,CY4770 Cryptography,CS3990,NA,4,0
+009,Scalable_Systems_and_Development_Processes,Scalable Systems and Development Processes,Currently equiv to EECE3990. Content focuses on scalable software engineering and I believe CS4500 would be a good equivalence,EECE3990,NA,4,0
+009,Design_Workshop,Design Workshop,NA,ARTF1124,NA,4,0
+009,User_Experience_Design,User Experience Design,This is marked equiv to IS4991 in TC database. it should be changed to CS2484,IS4991,NA,4,0
+009,Leadership_and_Entrepreneurship_Studies,Leadership and Entrepreneurship Studies,"No eval, but similar course is pegged to Innovation!",ENTR2301,NA,4,0
+009,Introduction_to_Hungarian_Language_and_Culture_I,Introduction to Hungarian Language and Culture I,NA,LANG1990,NA,4,0
+009,Introduction_to_Hungarian_Language_and_Culture_II,Introduction to Hungarian Language and Culture II,NA,LANG1990,NA,4,0
+009,Hungarian_Music_in_a_Central_European_Context,Hungarian Music in a Central European Context,NA,MUSC1990,NA,4,0
+009,Budapest_Studies_life_and_culture_of_a_city_and_its_dwellers,Budapest Studies – life and culture of a city and its dwellers,NA,CLTR1990,NA,4,0
