@@ -23,23 +23,37 @@ function LoginPage() {
     ];
 
     const handleLogin = () => {
-        setError(''); // Reset error message
+    setError(''); // Reset error message
+    setShowIncorrectPassword(false);
 
-        const user = dummyUsers.find(user => user.email === email);
+    console.log("Sending login request with:", { email, password });
 
-        if (!user) {
-            setError('Email not found');
-            return;
+    fetch('http://localhost:8080/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            if (response.status === 401) {
+                setShowIncorrectPassword(true); // incorrect password or user not found
+            } else {
+                setError('Login failed. Please try again.');
+            }
+            throw new Error('Login failed');
         }
-
-        if (user.password !== password) {
-            setShowIncorrectPassword(true)
-            return;
-        }
-
-        setUserEmail(email); 
+        return response.json(); // or `response.text()` depending on backend
+    })
+    .then(data => {
+        setUserEmail(email); // Save logged-in user's email to context/state
         navigate('/SAA/Home');
-    };
+    })
+    .catch(error => {
+        console.error('Error during login:', error);
+    });
+};
 
     return (
         <div className="login-side-by-side">

@@ -11,6 +11,7 @@ import org.bson.Document;
 
 import java.io.Console;
 import java.util.List;
+import java.util.Map;
 
 import io.javalin.http.Context;
 import model.University;
@@ -182,9 +183,15 @@ public class SAController {
     }
   }
 
+  public static class LoginRequest {
+    public String email;
+    public String password;
+}
+
   public void login(Context ctx) {
-    String email = ctx.formParam("email");
-    String password = ctx.formParam("password");
+    LoginRequest loginReq = ctx.bodyAsClass(LoginRequest.class);
+    String email = loginReq.email;
+    String password = loginReq.password;
 
     try {
       User user = dao.findUserByEmail(email);
@@ -200,7 +207,10 @@ public class SAController {
       System.out.println("Logged in " + ctx.sessionAttribute("userEmail"));
 
 
-      ctx.status(200).result("Login successful. Session started.");
+      ctx.status(200).json(Map.of(
+        "message", "Login successful",
+        "email", user.getEmail()
+      ));
     } catch (Exception e) {
       ctx.status(500).result("Internal server error.");
     }
