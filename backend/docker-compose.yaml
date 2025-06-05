@@ -8,6 +8,7 @@ services:
     ports:
       - 27018:27017
     volumes:
+      - mongo-data:/data/db                  # ✅ Persist MongoDB data here
       - ./database-files:/docker-entrypoint-initdb.d/:ro
       - ./database-files:/csvs
       - ./data-loader:/data-loader
@@ -26,3 +27,6 @@ services:
         ./docker-entrypoint-initdb.d/import-csvs.sh;
         wait
       "
+
+volumes:
+  mongo-data:  # 👈 This declares the named volume to persist data
