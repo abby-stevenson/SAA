@@ -374,10 +374,11 @@ public class SAADAO {
 
     // 4. Check if the courses are under the university's courseload limit
     // Get the university name from the course
+    System.out.println(courseDoc);
     String universityName = courseDoc.getString("University");
-    if (universityName == null) {
-      throw new IllegalArgumentException("Course does not have an associated university");
-    }
+    //if (universityName == null) {
+      //throw new IllegalArgumentException("Course does not have an associated university");
+    //}
 
     // Find the university document
     Document universityDoc = universities.find(eq("name", universityName)).first();
@@ -386,35 +387,35 @@ public class SAADAO {
     }
 
     // Get the course load limit from the university
-    Integer courseLoadLimit = universityDoc.getInteger("CourseLoadLimit");
-    if (courseLoadLimit == null) {
-      throw new IllegalArgumentException("University does not have a CourseLoadLimit defined");
-    }
+    //Integer courseLoadLimit = universityDoc.getInteger("CourseLoadLimit");
+    //if (courseLoadLimit == null) {
+      //throw new IllegalArgumentException("University does not have a CourseLoadLimit defined");
+    //}
 
     // Calculate current total credits for the user
-    int currentTotalCredits = 0;
-    if (savedCourses != null) {
-      for (Document savedCourse : savedCourses) {
-        Integer credits = savedCourse.getInteger("Credits");
-        if (credits != null) {
-          currentTotalCredits += credits;
-        }
-      }
-    }
+    // int currentTotalCredits = 0;
+    // if (savedCourses != null) {
+    //   for (Document savedCourse : savedCourses) {
+    //     Integer credits = savedCourse.getInteger("Credits");
+    //     if (credits != null) {
+    //       currentTotalCredits += credits;
+    //     }
+    //   }
+    // }
 
-    // Get credits for the course being added
-    Integer newCourseCredits = courseDoc.getInteger("Credits");
-    if (newCourseCredits == null) {
-      throw new IllegalArgumentException("Course does not have credits defined");
-    }
+    // // Get credits for the course being added
+    // Integer newCourseCredits = courseDoc.getInteger("Credits");
+    // if (newCourseCredits == null) {
+    //   throw new IllegalArgumentException("Course does not have credits defined");
+    // }
 
-    // Check if adding this course would exceed the limit
-    if (currentTotalCredits + newCourseCredits > courseLoadLimit) {
-      throw new IllegalStateException("Adding this course would exceed the university's course load limit. " +
-              "Current credits: " + currentTotalCredits +
-              ", Course credits: " + newCourseCredits +
-              ", University limit: " + courseLoadLimit);
-    }
+    // // Check if adding this course would exceed the limit
+    // if (currentTotalCredits + newCourseCredits > courseLoadLimit) {
+    //   throw new IllegalStateException("Adding this course would exceed the university's course load limit. " +
+    //           "Current credits: " + currentTotalCredits +
+    //           ", Course credits: " + newCourseCredits +
+    //           ", University limit: " + courseLoadLimit);
+    // }
 
     // 5. Add the course to savedCourses
     users.updateOne(

@@ -88,7 +88,7 @@ public class SAAServer {
 
     app.post("/users", studyAbroadHandler::addUser);
 
-    app.post("/user/favorite", ctx -> {
+    app.put("/user/favorite", ctx -> {
       studyAbroadHandler.addCourseToUserFavorites(ctx);
     });
 

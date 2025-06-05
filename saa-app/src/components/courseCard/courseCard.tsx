@@ -8,22 +8,30 @@ interface CourseCardPopupProps {
     courseNumber: string;
     courseDescription: string;
     uniId: string;
+    hostCourseNumber: string
     onClose: () => void;
 }
 
 
-const CourseCardPopup = ({courseNumber, courseDescription, uniId, onClose}: CourseCardPopupProps) => {
+const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumber, onClose}: CourseCardPopupProps) => {
 
     const { email } = useUser(); 
     const [isFavorited, setIsFavorited] = useState(false);
 
+    console.log(email);
+
     const handleFavorite = () => {
         fetch("http://localhost:8080/user/favorite", {
-            method: "POST",
+            method: "PUT",
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ email, courseNumber, courseDescription, uniId }),
+            body: JSON.stringify({ 
+                email: email, 
+                courseDescription: courseDescription, 
+                universityId: uniId,
+                courseNumber: hostCourseNumber,
+                nuCourseNumber: courseNumber}),
         })
         .then((res) => {
             if (!res.ok) throw new Error("Failed to favorite course");
