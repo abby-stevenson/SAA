@@ -1,10 +1,10 @@
 
 import React from 'react';
-import './successAccount.css';
+import './SuccessCreatedPopup.css';
 
 
 
-const SuccessLoginPopup = () => {
+const SuccessCreatedPopup = () => {
     return (
         <div className = "SLPwrapper">
                 <div className='successimage'>
@@ -18,4 +18,4 @@ const SuccessLoginPopup = () => {
     );
 };
 
-export default SuccessLoginPopup;
+export default SuccessCreatedPopup;

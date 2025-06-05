@@ -28,6 +28,10 @@ interface PasswordArgs {
     handleSearchChange: (query: string) => void;
 }
 
+interface RegisterProps {
+    onClose: () => void;
+}
+
 function TextBar({ query, handleSearchChange }: TextArgs) {
     const queryCallback = (e: React.ChangeEvent<HTMLInputElement>) => {
         handleSearchChange(e.target.value);
@@ -119,7 +123,7 @@ function PasswordTextBar({ query, handleSearchChange }: PasswordArgs) {
     );
 }
 
-function Register() {
+function Register({ onClose }: RegisterProps) {
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [major, setMajor] = useState('');
@@ -128,6 +132,7 @@ function Register() {
 
     const handleSubmit = () => {
         alert(`Registered:\nName: ${firstName} ${lastName}\nMajor: ${major}\nEmail: ${email}`);
+        onClose(); // Close the register form after submission
     };
 
     return (
@@ -143,8 +148,10 @@ function Register() {
             <span className="course-message-text">Password</span>
             <PasswordTextBar query={password} handleSearchChange={setPassword} />
 
-            <button className="register-button" onClick={handleSubmit}>Submit</button>
-
+            <div>
+                <button className="register-button" onClick={onClose}>Cancel</button>
+                <button className="register-button" onClick={handleSubmit}>Submit</button>
+            </div>
         </div>
     );
 };

@@ -6,6 +6,10 @@ interface TextArgs {
     handleSearchChange: (query: string) => void;
 }
 
+interface ForgotPasswordProps {
+    onClose: () => void;
+}
+
 function TextBar({ query, handleSearchChange }: TextArgs) {
     const queryCallback = (e: React.ChangeEvent<HTMLInputElement>) => {
         handleSearchChange(e.target.value);
@@ -23,15 +27,12 @@ function TextBar({ query, handleSearchChange }: TextArgs) {
     );
 }
 
-function ForgotPassword() {
+function ForgotPassword({ onClose }: ForgotPasswordProps) {
     const [query, setQuery] = useState('');
-
-    const handleCancel = () => {
-        setQuery('');
-    };
 
     const handleReset = () => {
         alert(`Reset link sent to: ${query}`);
+        onClose(); // Close popup after sending
     };
 
     return (
@@ -39,7 +40,7 @@ function ForgotPassword() {
             <span className="course-message-text">Verify Email and Reset Password</span>
             <TextBar query={query} handleSearchChange={setQuery} />
             <div className="button-group">
-                <button className="cancel-button" onClick={handleCancel}>Cancel</button>
+                <button className="cancel-button" onClick={onClose}>Cancel</button>
                 <button className="reset-button" onClick={handleReset}>Reset Password</button>
             </div>
         </div>

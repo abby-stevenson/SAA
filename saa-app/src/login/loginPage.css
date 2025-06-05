@@ -73,7 +73,7 @@
 }
 
 .login-button:hover {
-    background-color: #553c9a;
+    background-color: #af2424;
 }
 
 .login-button:focus {
@@ -81,13 +81,6 @@
     outline-offset: 2px;
 }
 
-.forgot-pass {
-    color: black;
-}
-
-.forgot-pass:hover {
-    color: #333; /* Slightly lighter black on hover */
-}
 
 .or-separator {
     display: flex;
@@ -106,7 +99,7 @@
     margin-right: 15px;
 }
 
-.register-button {
+.register-button-login {
     margin-left: 8rem;
     margin-top: 1.3rem;
     display: flex;
@@ -121,4 +114,32 @@
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s, outline 0.2s;
+}
+
+.register-button-login:hover {
+    background-color: #af2424;
+}
+
+.forgot-password-link {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.forgot-password-link:hover {
+    color: #004499;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }

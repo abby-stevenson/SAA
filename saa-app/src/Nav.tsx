@@ -17,6 +17,7 @@ import Copenhagen from './home/discover/universitypage/discopenhagen';
 import Sydney from './home/discover/universitypage/unipage';
 import Search from "./home/search/search";
 import LoginPage from "./login/loginPage";
+import ForgotPassword from "./components/forgotPassword/forgotPassword";
 
 
 
@@ -25,7 +26,7 @@ function Nav() {
         <HashRouter>
             <div>
                 <Routes>
-                    <Route path="/"         element={<Navigate to="/SAA/Home"/>}/>
+                    <Route path="/"         element={<Navigate to="/SAA/Login"/>}/>
                     <Route path="/SAA/Home/*"   element={<Home/>}/>
                     <Route path="/SAA/Profile/*"   element={<Profile/>}/>
                     <Route path="/SAA/Discover/*"  element={<Discover/>}/>
