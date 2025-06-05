@@ -30,9 +30,8 @@ function Home() {
                     <div className="banner-content">
                         <h1 className="banner-title">Data & Software in International Governance</h1>
                         <p className="banner-subtitle">Discover our new Dialogue of Civilizations in Leuven, Belgium learning about global cultures and data policies.</p>
-                        <button className="banner-button">
-                        <img src="icon.png" alt="" className="button-icon" />
-                        Learn More
+                        <button className="banner-button" onClick={() => window.open('https://goglobal.northeastern.edu/_portal/tds-program-brochure?programid=10592', '_blank')}>
+                            <img src="icon.png" alt="" className="button-icon" />Learn More
                         </button>
                     </div>
                 </div>
