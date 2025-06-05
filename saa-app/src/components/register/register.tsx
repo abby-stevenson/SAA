@@ -1,5 +1,7 @@
 import './register.css'; 
 import React, { useState } from 'react';
+import SuccessCreatedPopup from "../SuccessCreatedPopup/SuccessCreatedPopup";
+import DeniedLoginPopup from "../deniedAccountLoginPopup/deniedAccount";
 
 interface TextArgs {
     query: string;
@@ -129,14 +131,36 @@ function Register({ onClose }: RegisterProps) {
     const [major, setMajor] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [showSuccessPopup, setShowSuccessPopup] = useState(false);
+    const [showDeniedPopup, setShowDeniedPopup] = useState(false);
 
     const handleSubmit = () => {
-        alert(`Registered:\nName: ${firstName} ${lastName}\nMajor: ${major}\nEmail: ${email}`);
-        onClose(); // Close the register form after submission
+        if (firstName && lastName && major && email && password) {
+            setShowSuccessPopup(true);
+
+            // Close both popup and form after 2 seconds
+            setTimeout(() => {
+                setShowSuccessPopup(false);
+                onClose();
+                alert(`Registered:\nName: ${firstName} ${lastName}\nMajor: ${major}\nEmail: ${email}`);
+            }, 2000);
+        } else {
+            // Show denied popup if any field is empty
+            setShowDeniedPopup(true);
+
+            // Close popup after 2 seconds
+            setTimeout(() => {
+                setShowDeniedPopup(false);
+            }, 2000);
+        }
     };
+
 
     return (
         <div className="register-popup">
+            {showSuccessPopup && <SuccessCreatedPopup />}
+            {showDeniedPopup && <DeniedLoginPopup />}
+
             <span className="course-message-text">First Name</span>
             <TextBar query={firstName} handleSearchChange={setFirstName} />
             <span className="course-message-text">Last Name</span>
@@ -148,9 +172,9 @@ function Register({ onClose }: RegisterProps) {
             <span className="course-message-text">Password</span>
             <PasswordTextBar query={password} handleSearchChange={setPassword} />
 
-            <div>
-                <button className="register-button" onClick={onClose}>Cancel</button>
-                <button className="register-button" onClick={handleSubmit}>Submit</button>
+            <div className="register-buttons-container">
+                <button className="register-button cancel-button" onClick={onClose}>Cancel</button>
+                <button className="register-button submit-button" onClick={handleSubmit}>Submit</button>
             </div>
         </div>
     );
