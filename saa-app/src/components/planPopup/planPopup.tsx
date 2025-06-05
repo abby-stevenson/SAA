@@ -20,7 +20,7 @@ interface SavedCoursesInfo {
 }
 
 function PlanPopup({ credits, universityName, savedCourses, onClose }: SavedCoursesInfo) {
-    const [selectedCourses, setSelectedCourses] = useState<string[]>([]);
+    const [selectedCourses, setSelectedCourses] = useState<Course[]>([]);
 
 
     const handleClose = () => {
@@ -34,37 +34,35 @@ function PlanPopup({ credits, universityName, savedCourses, onClose }: SavedCour
 
 
     const openEmail = () => {
-        const recipient = "pascarelli.l@northeastern.edu";
-        const subject = encodeURIComponent("User's plan for study abroad");
-        const body = encodeURIComponent(
-            "Below are all courses I am interested in taking at " + universityName + "\n" +
-            selectedCourses.join('\n')
+    const recipient = "pascarelli.l@northeastern.edu";
+    const subject = encodeURIComponent("User's plan for study abroad");
+
+    const courseDetails = selectedCourses.map(course =>
+        `• ${course.nuCourse} (${course.creditAmount} credits) - NU Equivalent: ${course.nuCourse}, Location: ${course.location}`
+    ).join('\n');
+
+    const body = encodeURIComponent(
+        `Below are all the courses I am interested in taking at ${universityName}:\n\n${courseDetails}`
+    );
+
+    try {
+        window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+    } catch (e) {
+        window.open(
+            `https://outlook.office.com/mail/deeplink/compose?to=${recipient}&subject=${subject}&body=${body}`,
+            '_blank'
         );
+    }
+};
 
-        // Check if default email client exists (mailto)
-        try {
-            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
-        } catch (e) {
-            // Fallback to Outlook Web App
-            window.open(
-                `https://outlook.office.com/mail/deeplink/compose?to=${recipient}&subject=${subject}&body=${body}`,
-                '_blank'
-            );
-        }
-    };
-
-    const handleCheck = (course: string, isAdded: boolean) => {
+    const handleCheck = (course: Course, isAdded: boolean) => {
         if (isAdded) {
-            setSelectedCourses(selectedCourses.concat(course))
+            setSelectedCourses(selectedCourses.concat(course));
         }
         else {
-            setSelectedCourses(selectedCourses.filter((item) => item !== course));
+            setSelectedCourses(selectedCourses.filter((item) => item.nuCourse !== course.nuCourse));
         }
         console.log("selected courses " + selectedCourses.length)
-    }
-
-    function handleSubmit() {
-
     }
 
     return (
@@ -91,7 +89,7 @@ function PlanPopup({ credits, universityName, savedCourses, onClose }: SavedCour
                             location={course.location}
                             nuCourse={course.nuCourse}
                             uniName={course.uniName}
-                            checkedCallback={handleCheck}
+                            checkedCallback={(courseName: string, isAdded: boolean) => handleCheck(course, isAdded)}
                         />
                         {index < savedCourses.length - 1 && <hr className="course-divider" />}
                     </div>

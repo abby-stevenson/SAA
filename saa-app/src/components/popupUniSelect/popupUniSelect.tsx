@@ -36,7 +36,8 @@ const PopupUniSelect = ({ courseName, uniName, location, creditAmount, nuCourse,
                         <input
                             type="checkbox"
                             className="checkbox"
-                            onChange={handleChange}
+                            onChange={(e) => checkedCallback(nuCourse, e.target.checked)}
+
                         />
                     </label>
                 </div>
