@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import Nav from './Nav';
 import reportWebVitals from './reportWebVitals';
+import { UserProvider } from './context/UserContext'
 
 
 const root = ReactDOM.createRoot(
@@ -10,7 +11,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-      <Nav />
+      <UserProvider>
+          <Nav />
+      </UserProvider>
   </React.StrictMode>
 );
 

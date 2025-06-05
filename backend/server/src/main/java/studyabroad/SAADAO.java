@@ -11,6 +11,7 @@ import com.mongodb.client.model.Updates;
 import model.User;
 import org.bson.Document;
 import org.bson.types.ObjectId;
+import org.mindrot.jbcrypt.BCrypt;
 
 
 import java.util.ArrayList;
@@ -276,7 +277,7 @@ public class SAADAO {
     }
     return users;
   }
-
+/*
   public boolean verifyUser(String username, String password) {
     if (username == null || password == null || username.trim().isEmpty() || password.trim().isEmpty()) {
       return false;
@@ -293,7 +294,7 @@ public class SAADAO {
         return false;
     }
   }
-
+*/
   public void insertUser(User user) {
     // Validate email format using a regex
     if (!user.getEmail().matches("^[^@\\s]+@[a-zA-Z0-9]+\\.com$")) {
@@ -308,10 +309,13 @@ public class SAADAO {
       throw new IllegalArgumentException("A user with this email already exists.");
     }
 
+    String hashedPassword = BCrypt.hashpw(user.getPassword(), BCrypt.gensalt());
+
+
     // Proceed with insertion
     Document doc = new Document("name", user.getName())
         .append("email", user.getEmail())
-        .append("password", user.getPassword())
+        .append("password", hashedPassword)
         .append("year", user.getYear())
         .append("major", user.getMajor())
         .append("savedCourses", new ArrayList<>())
@@ -421,6 +425,17 @@ public class SAADAO {
     } catch (NumberFormatException e) {
       throw new IllegalArgumentException("Invalid input: must be a number between 1 and 10.");
     }
+  }
+
+  public User findUserByEmail(String email) {
+    Document userDoc = users.find(eq("email", email)).first();
+    if (userDoc == null) return null;
+
+    User user = new User();
+    user.setEmail(userDoc.getString("email"));
+    user.setPassword(userDoc.getString("password"));  // hashed
+    // You can set other fields if needed
+    return user;
   }
 
 }

@@ -86,6 +86,20 @@ public class SAAServer {
       studyAbroadHandler.getCoursesByUniversityId(ctx, ctx.pathParam("universityId"));
     });
 
+    app.post("/login", ctx -> {
+      studyAbroadHandler.login(ctx);
+    });
+
+    app.post("/logout", ctx -> studyAbroadHandler.logout(ctx));
+
+    app.get("/current-user", ctx -> {
+      studyAbroadHandler.getCurrentUser(ctx);
+    });
+
+    app.get("/user/loggedin", ctx -> {
+      studyAbroadHandler.getLoggedInUser(ctx);
+    });
+
 
   }
 }
