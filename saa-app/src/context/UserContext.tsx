@@ -1,27 +1,24 @@
-// src/context/UserContext.tsx
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-type UserContextType = {
-    userEmail: string;
-    setUserEmail: (email: string) => void;
-};
+interface UserContextType {
+  email: string;
+  setEmail: (email: string) => void;
+}
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
-    const [userEmail, setUserEmail] = useState('');
+  const [email, setEmail] = useState('');
 
-    return (
-        <UserContext.Provider value={{ userEmail, setUserEmail }}>
-            {children}
-        </UserContext.Provider>
-    );
+  return (
+    <UserContext.Provider value={{ email, setEmail }}>
+      {children}
+    </UserContext.Provider>
+  );
 };
 
-export const useUser = () => {
-    const context = useContext(UserContext);
-    if (!context) {
-        throw new Error('useUser must be used within a UserProvider');
-    }
-    return context;
+export const useUser = (): UserContextType => {
+  const context = useContext(UserContext);
+  if (!context) throw new Error('useUser must be used within a UserProvider');
+  return context;
 };
