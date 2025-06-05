@@ -7,6 +7,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 
+import com.mongodb.client.model.Sorts;
 import com.mongodb.client.model.Updates;
 import model.User;
 import org.bson.Document;
@@ -186,6 +187,18 @@ public class SAADAO {
     return results;
   }
 
+  public List<String> sortUniByCreditLimit(List<String> universityIds) {
+    ArrayList<String> results = new ArrayList<>();
+    FindIterable<Document> matchingUnis = universities
+            .find(Filters.in("_id", universityIds))  // Find documents with IDs in the provided list
+            .sort(Sorts.ascending("Courseload Credit"));  // Sort by Courseload Credit ascending
+    for (Document doc : matchingUnis) {
+      results.add(doc.getString("_id"));  // Extract and add the University ID
+    }
+
+    return results;
+  }
+
   public List<SACourse> getAllSACourses() {
     List<SACourse> results = new ArrayList<>();
     FindIterable<Document> docs = saCourses
@@ -359,7 +372,51 @@ public class SAADAO {
       }
     }
 
-    // 4. Add the course to savedCourses
+    // 4. Check if the courses are under the university's courseload limit
+    // Get the university name from the course
+    String universityName = courseDoc.getString("University");
+    if (universityName == null) {
+      throw new IllegalArgumentException("Course does not have an associated university");
+    }
+
+    // Find the university document
+    Document universityDoc = universities.find(eq("name", universityName)).first();
+    if (universityDoc == null) {
+      throw new IllegalArgumentException("No university found with name: " + universityName);
+    }
+
+    // Get the course load limit from the university
+    Integer courseLoadLimit = universityDoc.getInteger("CourseLoadLimit");
+    if (courseLoadLimit == null) {
+      throw new IllegalArgumentException("University does not have a CourseLoadLimit defined");
+    }
+
+    // Calculate current total credits for the user
+    int currentTotalCredits = 0;
+    if (savedCourses != null) {
+      for (Document savedCourse : savedCourses) {
+        Integer credits = savedCourse.getInteger("Credits");
+        if (credits != null) {
+          currentTotalCredits += credits;
+        }
+      }
+    }
+
+    // Get credits for the course being added
+    Integer newCourseCredits = courseDoc.getInteger("Credits");
+    if (newCourseCredits == null) {
+      throw new IllegalArgumentException("Course does not have credits defined");
+    }
+
+    // Check if adding this course would exceed the limit
+    if (currentTotalCredits + newCourseCredits > courseLoadLimit) {
+      throw new IllegalStateException("Adding this course would exceed the university's course load limit. " +
+              "Current credits: " + currentTotalCredits +
+              ", Course credits: " + newCourseCredits +
+              ", University limit: " + courseLoadLimit);
+    }
+
+    // 5. Add the course to savedCourses
     users.updateOne(
         eq("email", userEmail),
         Updates.push("savedCourses", courseDoc)
