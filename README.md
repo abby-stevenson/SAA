@@ -28,8 +28,8 @@ Location: /backend/data-loader, /backend/database-files -> csvs to import
 3. docker-compose up --build
 4. cd server
 5. mvn clean install
-6. mvn exec:java -Dexec.mainClass-app.SAAServer"
-7. cd ../../saa-app
+6. mvn exec:java -Dexec.mainClass="app.SAAServer"
+7. cd saa-app
 8. npm install
 9. npm start react
 10. click on link
