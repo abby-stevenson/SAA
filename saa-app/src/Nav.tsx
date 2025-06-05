@@ -16,6 +16,7 @@ import Capetown from './home/discover/universitypage/cieecapetown';
 import Copenhagen from './home/discover/universitypage/discopenhagen';
 import Sydney from './home/discover/universitypage/unipage';
 import Search from "./home/search/search";
+import LoginPage from "./login/loginPage";
 
 
 
@@ -29,6 +30,7 @@ function Nav() {
                     <Route path="/SAA/Profile/*"   element={<Profile/>}/>
                     <Route path="/SAA/Discover/*"  element={<Discover/>}/>
                     <Route path="/SAA/Search/*"  element={<Search/>}/>
+                    <Route path="/SAA/Login/*"  element={<LoginPage/>}/>
                     <Route path="/SAA/USydney" element={<Sydney/>}/>
                     <Route path="/SAA/Newcastle" element={<Newcastle/>}/>
                     <Route path="/SAA/AITBudapest" element={<Budapest/>}/>
