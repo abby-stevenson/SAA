@@ -5,6 +5,8 @@ import com.mongodb.client.MongoCursor;
 
 import model.SACourse;
 import model.User;
+import org.mindrot.jbcrypt.BCrypt;
+
 import org.bson.Document;
 
 import java.io.Console;
@@ -179,5 +181,58 @@ public class SAController {
       ctx.status(200).json(courses);
     }
   }
+
+  public void login(Context ctx) {
+    String email = ctx.formParam("email");
+    String password = ctx.formParam("password");
+
+    try {
+      User user = dao.findUserByEmail(email);
+      if (user == null || !BCrypt.checkpw(password, user.getPassword())) {
+        ctx.status(401).result("Invalid email or password.");
+        return;
+      }
+
+      // ✅ Store user email (or ID) in session
+      ctx.sessionAttribute("userEmail", user.getEmail());
+      ctx.cookie("userEmail", user.getEmail(), 3600); // expires in 1 hour
+      ctx.result("Login successful");
+      System.out.println("Logged in " + ctx.sessionAttribute("userEmail"));
+
+
+      ctx.status(200).result("Login successful. Session started.");
+    } catch (Exception e) {
+      ctx.status(500).result("Internal server error.");
+    }
+  }
+
+  public void getCurrentUser(Context ctx) {
+    String email = ctx.cookie("userEmail");
+    if (email != null) {
+      ctx.result("Logged in as: " + email);
+    } else {
+      ctx.status(401).result("No user logged in.");
+    }
+  }
+
+  public void logout(Context ctx) {
+    ctx.removeCookie("userEmail");
+    ctx.result("Logged out");
+  }
+
+  public void getLoggedInUser(Context ctx) {
+    String userEmail = ctx.sessionAttribute("userEmail");
+    System.out.println(userEmail);
+
+    if (userEmail != null) {
+      System.out.println("Session contains user: " + userEmail); // ✅ Console debug
+      ctx.status(200).result("Logged in user: " + userEmail);
+    } else {
+      System.out.println("No user found in session.");
+      ctx.status(401).result("No user is currently logged in.");
+    }
+  }
+
+
 
 }
