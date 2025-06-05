@@ -4,6 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'; // Added useNavigate
 import ForgotPassword from "../components/forgotPassword/forgotPassword";
 import Register from "../components/register/register";
 import IncorrectPasswordPopup from "../components/incorrectPasswordPopup/incorrectPassword";
+import { useUser } from '../context/UserContext';
 
 function LoginPage() {
     const [showForgotPassword, setShowForgotPassword] = useState(false);
@@ -13,6 +14,7 @@ function LoginPage() {
     const [error, setError] = useState('');
     const [showIncorrectPassword, setShowIncorrectPassword] = useState(false);
     const navigate = useNavigate();
+    const {setEmail: setUserEmail } = useUser();
 
     // Dummy user data
     const dummyUsers = [
@@ -35,6 +37,7 @@ function LoginPage() {
             return;
         }
 
+        setUserEmail(email); 
         navigate('/SAA/Home');
     };
 

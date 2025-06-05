@@ -1,8 +1,13 @@
 package app;
 
+import java.util.List;
+import java.util.Set;
+
 import io.javalin.Javalin;
 import io.javalin.config.JavalinConfig;
 import io.javalin.http.Context;
+import io.javalin.plugin.bundled.CorsPluginConfig;
+import io.javalin.plugin.bundled.CorsPlugin;
 
 import studyabroad.SAADAO;
 import studyabroad.SAController;
@@ -20,6 +25,7 @@ public class SAAServer {
     // API implementation
     SAController studyAbroadHandler = new SAController(dao);
     // start Javalin on port 7070
+
     var app = Javalin.create()
             .get("/", ctx -> ctx.result("Study Abroad Advisor server is running"))
             .start(8080);
@@ -29,8 +35,12 @@ public class SAAServer {
                 ctx.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
                 ctx.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
                 ctx.contentType("application/json; charset=UTF-16");
-        });
 
+       });
+        app.options("/*", ctx -> {
+          ctx.status(200);
+        });
+       
 
     // Define endpoints directly on the app
     app.get("/location/continent/{continent}", ctx -> {

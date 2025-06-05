@@ -134,27 +134,57 @@ function Register({ onClose }: RegisterProps) {
     const [showSuccessPopup, setShowSuccessPopup] = useState(false);
     const [showDeniedPopup, setShowDeniedPopup] = useState(false);
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (firstName && lastName && major && email && password) {
-            setShowSuccessPopup(true);
+            // Prepare data payload
+            const userData = {
+                name: firstName + " " + lastName,
+                password: password,
+                //major: major,
+                email: email
+                //password,
+            };
 
-            // Close both popup and form after 2 seconds
-            setTimeout(() => {
-                setShowSuccessPopup(false);
-                onClose();
-                alert(`Registered:\nName: ${firstName} ${lastName}\nMajor: ${major}\nEmail: ${email}`);
-            }, 2000);
+            try {
+                const response = await fetch('http://localhost:8080/users', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(userData),
+                });
+
+                if (response.ok) {
+                    setShowSuccessPopup(true);
+
+                    // Close both popup and form after 2 seconds
+                    setTimeout(() => {
+                        setShowSuccessPopup(false);
+                        onClose();
+                    }, 2000);
+                } else {
+                    // Handle error response from server
+                    setShowDeniedPopup(true);
+                    setTimeout(() => {
+                        setShowDeniedPopup(false);
+                    }, 2000);
+                }
+            } catch (error) {
+                // Handle network or other errors
+                console.error('Error adding user:', error);
+                setShowDeniedPopup(true);
+                setTimeout(() => {
+                    setShowDeniedPopup(false);
+                }, 2000);
+            }
         } else {
             // Show denied popup if any field is empty
             setShowDeniedPopup(true);
-
-            // Close popup after 2 seconds
             setTimeout(() => {
                 setShowDeniedPopup(false);
             }, 2000);
         }
     };
-
 
     return (
         <div className="register-popup">

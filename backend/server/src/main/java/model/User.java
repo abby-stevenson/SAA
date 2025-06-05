@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
+import studyabroad.SAADAO;
+
 public class User {
 
   private String name;
@@ -54,8 +56,17 @@ public class User {
   public String getMajor() { return major; }
   public void setMajor(String major) { this.major = major; }
 
+  public double getCreditHours(List<SACourse> savedCourses) {
+    double hours = 0;
+    for (SACourse savedCourse : savedCourses) {
+      hours += savedCourse.getCredits();
+    }
+    return hours;
+  }
+
   public List<SACourse> getSavedCourses() { return savedCourses; }
   public void setSavedCourses(List<SACourse> savedCourses) { this.savedCourses = savedCourses; }
+  public void saveCourse(SACourse course) { this.savedCourses.add(course); }
 
   public List<String> getSavedUniversities() {
     HashSet<String> nonDuplicateUniversities = new HashSet<>();
@@ -66,6 +77,7 @@ public class User {
   }
 
   public List<SACourse> getRecentlyViewedCourses() { return recentlyViewedCourses; }
+
   public void setRecentlyViewedCourses(List<SACourse> recentlyViewedCourses) { this.recentlyViewedCourses = recentlyViewedCourses; }
 
   @Override
