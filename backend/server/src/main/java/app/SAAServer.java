@@ -110,6 +110,10 @@ public class SAAServer {
       studyAbroadHandler.getLoggedInUser(ctx);
     });
 
+    app.get("/user/favorites/grouped", ctx -> {
+      studyAbroadHandler.getUserFavoritesByUniversity(ctx);
+    });
+
 
   }
 }

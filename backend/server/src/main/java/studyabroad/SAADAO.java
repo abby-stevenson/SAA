@@ -15,9 +15,7 @@ import org.bson.types.ObjectId;
 import org.mindrot.jbcrypt.BCrypt;
 
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import model.SACourse;
 import model.University;
@@ -44,6 +42,7 @@ public class SAADAO {
 
   private MongoDatabase database;
   private MongoClient client;
+
 
   /**
    * Initializes the SAADAO and loads the MongoDB.
@@ -310,8 +309,8 @@ public class SAADAO {
 */
   public void insertUser(User user) {
     // Validate email format using a regex
-    if (!user.getEmail().matches("^[^@\\s]+@[a-zA-Z0-9]+\\.com$")) {
-      throw new IllegalArgumentException("Invalid email format.");
+    if (!user.getEmail().matches("^[^@\\s]+@[a-zA-Z0-9]+\\.(com|edu)$")) {
+      throw new IllegalArgumentException("Invalid email format. Only .com or .edu emails are allowed.");
     }
 
     var usersCollection = database.getCollection("users");
@@ -450,6 +449,44 @@ public class SAADAO {
 
     return courses;
   }
+
+  public Map<University, List<SACourse>> getFavoriteCoursesGroupedByUniversity(String email) {
+    Document userDoc = users.find(eq("email", email)).first();
+
+    if (userDoc == null) {
+      throw new IllegalArgumentException("User not found.");
+    }
+
+    List<Document> savedCoursesDocs = userDoc.getList("savedCourses", Document.class);
+    Map<University, List<SACourse>> groupedByUniversity = new HashMap<>();
+
+    for (Document doc : savedCoursesDocs) {
+      int universityId = doc.getInteger("University ID");
+      List<University> uniList = getUniByID(String.valueOf(universityId));
+      University uni = uniList.isEmpty() ? null : uniList.get(0);
+
+      if (uni == null) continue; // Skip if university can't be found
+
+      SACourse course = new SACourse(
+          String.valueOf(universityId),
+          castIntToString(doc),
+          doc.getString("Host Course Name"),
+          doc.getString("Host Course Description"),
+          doc.getString("NU Course Number"),
+          doc.getString("Term"),
+          castCreditsToDouble(doc),
+          doc.getInteger("Taken", 0),
+          uni.getName(),
+          uni.getCity(),
+          uni.getCountry()
+      );
+
+      groupedByUniversity.computeIfAbsent(uni, k -> new ArrayList<>()).add(course);
+    }
+
+    return groupedByUniversity;
+  }
+
 
   private String castIntToString(Document doc) {
     String result;
