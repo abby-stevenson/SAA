@@ -297,7 +297,7 @@ public class SAController {
 }
 
   public void getUserFavoritesByUniversity(Context ctx) {
-    String email = ctx.cookie("userEmail");
+    String email = ctx.queryParam("email");
     if (email == null) {
       ctx.status(401).result("User not logged in.");
       return;

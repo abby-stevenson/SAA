@@ -45,8 +45,6 @@ function SideBar() {
             fetchUser(email).catch(error => {
                 console.error('Failed to fetch user in sidebar:', error);
             });
-            console.log(email);
-            console.log(user);
         }
     }, [email, user, fetchUser]);
 
