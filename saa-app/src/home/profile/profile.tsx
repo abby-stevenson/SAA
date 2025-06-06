@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import SideBar from "../../components/sideBar";
 import "./profile.css";
 import SimpleCourseCard from "../../components/simpleCourseCard/simpleCourseCard";
@@ -34,6 +34,26 @@ function Profile() {
             location: "Copenhagen, DK"
         }
     ];
+
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        fetch("http://localhost:8080/user/favorites/grouped")
+            .then((res) => {
+                if (!res.ok) throw new Error("Failed to fetch courses");
+                console.log("Grouped stuff " + res.json())
+                return res.json();
+            })
+            .then((data) => {
+                //setCourses(data);
+                setLoading(false);
+            })
+            .catch((err) => {
+                setError(err.message);
+                setLoading(false);
+            });
+    }, []);
 
     // Data for recently viewed courses
     const recentCourses = ['CS3500', 'CS3000', 'CS3800'];
