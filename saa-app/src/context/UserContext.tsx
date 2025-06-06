@@ -1,19 +1,57 @@
+// UserContext.tsx
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+
+interface UserProfile {
+  email: string;
+  name: string;
+  major: string;
+}
 
 interface UserContextType {
   email: string;
   setEmail: (email: string) => void;
+  user: UserProfile | null;
+  setUser: (user: UserProfile | null) => void;
+  logout: () => void;
+  fetchUser: (email: string) => Promise<void>;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
 
 export const UserProvider = ({ children }: { children: ReactNode }) => {
+  const [user, setUser] = useState<UserProfile | null>(null);
   const [email, setEmail] = useState('');
 
+  const fetchUser = async (email: string): Promise<void> => {
+    try {
+      const response = await fetch(`http://localhost:8080/user?email=${encodeURIComponent(email)}`);
+
+      if (!response.ok) {
+        if (response.status === 404) {
+          throw new Error('User not found');
+        }
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+
+      const userData: UserProfile = await response.json();
+      setUser(userData);
+    } catch (error) {
+      console.error('Error fetching user:', error);
+      setUser(null);
+      throw error;
+    }
+  };
+
+
+  const logout = () => {
+    localStorage.removeItem('authToken');
+    setUser(null);
+  };
+
   return (
-    <UserContext.Provider value={{ email, setEmail }}>
-      {children}
-    </UserContext.Provider>
+      <UserContext.Provider value={{ email, setEmail, user, setUser, logout, fetchUser}}>
+        {children}
+      </UserContext.Provider>
   );
 };
 

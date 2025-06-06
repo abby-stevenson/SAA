@@ -144,10 +144,7 @@ function Search() {
     return (
         <div className="side-by-side">
             <div className="side-bar">
-                <SideBar
-                    accountName="John Doe"
-                    accountMajor="Computer Science"
-                />
+                <SideBar />
             </div>
 
             <div className="rest-of-page">

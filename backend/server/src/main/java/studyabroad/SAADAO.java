@@ -565,8 +565,9 @@ public class SAADAO {
 
     User user = new User();
     user.setEmail(userDoc.getString("email"));
-    user.setPassword(userDoc.getString("password"));  // hashed
-    // You can set other fields if needed
+    user.setName(userDoc.getString("name"));
+    user.setMajor(userDoc.getString("major"));
+    user.setPassword(userDoc.getString("password"));
     return user;
   }
 

@@ -140,9 +140,8 @@ function Register({ onClose }: RegisterProps) {
             const userData = {
                 name: firstName + " " + lastName,
                 password: password,
-                //major: major,
+                major: major,
                 email: email
-                //password,
             };
 
             try {

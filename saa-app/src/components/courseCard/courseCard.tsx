@@ -13,8 +13,8 @@ interface CourseCardPopupProps {
 }
 
 const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumber, onClose}: CourseCardPopupProps) => {
-
-    const { email } = useUser(); 
+    const { user } = useUser();
+    const email = user?.email;
     const [isFavorited, setIsFavorited] = useState(false);
 
      useEffect(() => {

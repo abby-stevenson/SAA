@@ -10,6 +10,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import org.bson.Document;
 
 import java.io.Console;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -256,6 +257,20 @@ public class SAController {
     } else {
       System.out.println("No user found in session.");
       ctx.status(401).result("No user is currently logged in.");
+    }
+  }
+
+  public void getUserByEmail(Context ctx, String email) {
+    User user = dao.findUserByEmail(email);
+    if (user == null) {
+      ctx.status(404).result("User not found");
+    } else {
+      Map<String, Object> response = new LinkedHashMap<>();
+      response.put("email", user.getEmail() != null ? user.getEmail() : "");
+      response.put("name", user.getName() != null ? user.getName() : "");
+      response.put("major", user.getMajor() != null ? user.getMajor() : "");
+
+      ctx.json(response);
     }
   }
 

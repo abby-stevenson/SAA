@@ -4,6 +4,7 @@ import "./profile.css";
 import SimpleCourseCard from "../../components/simpleCourseCard/simpleCourseCard";
 import SavedUniversity from "../../components/savedUniversity/savedUniversity";
 import {StudyAbroadCourse} from "../search/search";
+import {useUser} from "../../context/UserContext";
 
 function Profile() {
     // Data for saved universities
@@ -61,10 +62,7 @@ function Profile() {
     return (
         <div className="side-by-side">
             <div className="side-bar">
-                <SideBar
-                    accountName="John Doe"
-                    accountMajor="Computer Science"
-                />
+                <SideBar />
             </div>
             <div className="rest-of-page">
                 <div>

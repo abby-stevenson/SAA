@@ -9,6 +9,7 @@ import io.javalin.http.Context;
 import io.javalin.plugin.bundled.CorsPluginConfig;
 import io.javalin.plugin.bundled.CorsPlugin;
 
+import org.w3c.dom.ls.LSOutput;
 import studyabroad.SAADAO;
 import studyabroad.SAController;
 
@@ -32,6 +33,7 @@ public class SAAServer {
 
         app.before(ctx -> {
                 ctx.header("Access-Control-Allow-Origin", "http://localhost:3000");
+                ctx.header("Access-Control-Allow-Credentials", "true");
                 ctx.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS");
                 ctx.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
                 ctx.contentType("application/json; charset=UTF-16");
@@ -39,6 +41,7 @@ public class SAAServer {
        });
         app.options("/*", ctx -> {
           ctx.status(200);
+
         });
        
 
@@ -122,6 +125,10 @@ public class SAAServer {
       studyAbroadHandler.getUserFavoritesByUniversity(ctx);
     });
 
+    app.get("/user", ctx -> {
+      String email = ctx.queryParam("email");
+      studyAbroadHandler.getUserByEmail(ctx, email);
+    });
 
   }
 }

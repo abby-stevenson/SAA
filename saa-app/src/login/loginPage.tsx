@@ -6,6 +6,12 @@ import Register from "../components/register/register";
 import IncorrectPasswordPopup from "../components/incorrectPasswordPopup/incorrectPassword";
 import { useUser } from '../context/UserContext';
 
+interface UserProfile {
+    email: string;
+    name: string;
+    major: string;
+}
+
 function LoginPage() {
     const [showForgotPassword, setShowForgotPassword] = useState(false);
     const [showRegister, setShowRegister] = useState(false);
@@ -15,6 +21,7 @@ function LoginPage() {
     const [showIncorrectPassword, setShowIncorrectPassword] = useState(false);
     const navigate = useNavigate();
     const {setEmail: setUserEmail } = useUser();
+    const { setUser } = useUser();
 
     // Dummy user data
     const dummyUsers = [
@@ -23,37 +30,44 @@ function LoginPage() {
     ];
 
     const handleLogin = () => {
-    setError(''); // Reset error message
-    setShowIncorrectPassword(false);
+        setError(''); // Reset error message
+        setShowIncorrectPassword(false);
 
-    console.log("Sending login request with:", { email, password });
+        console.log("Sending login request with:", { email, password });
 
-    fetch('http://localhost:8080/login', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, password }),
-    })
-    .then(response => {
-        if (!response.ok) {
-            if (response.status === 401) {
-                setShowIncorrectPassword(true); // incorrect password or user not found
-            } else {
-                setError('Login failed. Please try again.');
-            }
-            throw new Error('Login failed');
-        }
-        return response.json(); // or `response.text()` depending on backend
-    })
-    .then(data => {
-        setUserEmail(email); // Save logged-in user's email to context/state
-        navigate('/SAA/Home');
-    })
-    .catch(error => {
-        console.error('Error during login:', error);
-    });
-};
+        fetch('http://localhost:8080/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, password }),
+        })
+            .then(response => {
+                if (!response.ok) {
+                    if (response.status === 401) {
+                        setShowIncorrectPassword(true); // incorrect password or user not found
+                    } else {
+                        setError('Login failed. Please try again.');
+                    }
+                    throw new Error('Login failed');
+                }
+                return response.json(); // or `response.text()` depending on backend
+            })
+            .then(data => {
+                const userProfile: UserProfile = {
+                    email: data.email,
+                    name: data.name || '', // Adjust based on your backend response
+                    major: data.major || '' // Adjust based on your backend response
+                };
+
+                setUserEmail(email); // Save logged-in user's email to context/state
+                setUser(userProfile);
+                navigate('/SAA/Home');
+            })
+            .catch(error => {
+                console.error('Error during login:', error);
+            });
+    };
 
     return (
         <div className="login-side-by-side">

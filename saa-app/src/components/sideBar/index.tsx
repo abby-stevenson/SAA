@@ -1,14 +1,18 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import "./index.css";
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router";
+import {useUser} from "../../context/UserContext";
 
-interface AccountHolderInfo {
-    accountName: string;
-    accountMajor: string;
+
+interface UserProfile {
+    email: string;
+    name: string;
+    major: string;
 }
 
-function SideBar({ accountName, accountMajor }: AccountHolderInfo) {
+
+function SideBar() {
     const links = [
         {
             label: "Profile",
@@ -33,11 +37,25 @@ function SideBar({ accountName, accountMajor }: AccountHolderInfo) {
     ];
 
     const { pathname } = useLocation();
+    const { user, email, fetchUser } = useUser();
+
+    // Fetch user data when component mounts or email changes
+    useEffect(() => {
+        if (email) {
+            fetchUser(email).catch(error => {
+                console.error('Failed to fetch user in sidebar:', error);
+            });
+            console.log(email);
+            console.log(user);
+        }
+    }, [email, user, fetchUser]);
+
     function handleReset(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
         event.preventDefault();
         localStorage.clear();
         window.location.href = "/login";
     }
+
 
     return (
         <ul className="sidebar-base">
@@ -54,13 +72,15 @@ function SideBar({ accountName, accountMajor }: AccountHolderInfo) {
                             <div>
                                 {link.label === "Profile" ?
                                     (<div className="sidebar-account-info">
-                                        {accountName} <div>{accountMajor}</div>
-                                    </div>) : (link.label)}
+                                        {user?.name || "Loading..."}
+                                        <div>{user?.major || "Loading..."}</div>
+                                    </div>) :
+                                    (link.label)}
                             </div>
                         </Link>
                         <div className="sidebar-base-hr"><hr/></div>
                     </li>
-    
+
                 );
             })}
             <button className="logout-button" onClick={handleReset}>Log Out</button>
