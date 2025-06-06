@@ -4,6 +4,7 @@ import SideBar from '../../../components/sideBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
+import ServerError from '../../../components/serverError/serverError';
 
 export type Course = {
     courseNumber: string;
@@ -84,7 +85,7 @@ function Seoul() {
                      <span className = "section-title">Available Courses</span>
                      <div className="course-grid">
                         {loading && <p>Loading courses...</p>}
-                        {error && <p>Error: {error}</p>}
+                        {error && <ServerError />}
                         {!loading && !error &&
                             Array.from(
                                 new Map(courses.map((course) => [course.courseNumber, course])).values()).map((course) => (
