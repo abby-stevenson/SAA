@@ -1,4 +1,3 @@
-import React from 'react';
 import './universityThumbnail.css';
 import { Link } from "react-router-dom";
 
@@ -34,4 +33,3 @@ function UniversityThumbnail({ name, location, description, image, size}: Univer
 }
 
 export default UniversityThumbnail;
-

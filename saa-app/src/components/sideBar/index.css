@@ -3,7 +3,6 @@
     list-style: none;
     padding: 0px;  margin: 0px;
     width: 150px;
-
     height: 100%;
     left: 0px;
     top: 0px;
@@ -47,4 +46,17 @@
     .sidebar-base {
         display: none;
     }
+}
+
+.logout-button {
+  background-color: #c9102e;
+  color: white;
+  flex: 1;
+  margin-left: 40px;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 }

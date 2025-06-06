@@ -48,7 +48,6 @@
     cursor: pointer;
 }
 
-
 .search-dropdown a {
     float: none;
     color: black;
@@ -62,7 +61,6 @@
 .search-dropdown a:hover {
     background-color: #ddd;
 }
-
 
 .search-dropdown {
     overflow: hidden;

@@ -65,7 +65,3 @@ function SavedUniversity({ loc, universityName, numCoursesSaved, coursesSaved }:
 }
 
 export default SavedUniversity;
-
-
-
-

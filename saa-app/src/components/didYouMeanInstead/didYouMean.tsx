@@ -1,8 +1,4 @@
-
-import React from 'react';
 import './didYouMean.css';
-
-
 
 const DidYouMeanInstead = () => {
     return (

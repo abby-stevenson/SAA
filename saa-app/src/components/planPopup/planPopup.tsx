@@ -32,7 +32,6 @@ function PlanPopup({ credits, universityName, savedCourses, onClose }: SavedCour
         }
     };
 
-
     const openEmail = () => {
     const recipient = "pascarelli.l@northeastern.edu";
     const subject = encodeURIComponent("User's plan for study abroad");

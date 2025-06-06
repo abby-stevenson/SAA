@@ -25,8 +25,6 @@ function Discover() {
     const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
 
-
-
     useEffect(() => {
         fetch("http://localhost:8080/university")
             .then((res) => {

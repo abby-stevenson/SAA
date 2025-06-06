@@ -12,7 +12,6 @@ interface CourseCardPopupProps {
     onClose: () => void;
 }
 
-
 const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumber, onClose}: CourseCardPopupProps) => {
 
     const { email } = useUser(); 
@@ -103,4 +102,3 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
 };
 
 export default CourseCardPopup;
-

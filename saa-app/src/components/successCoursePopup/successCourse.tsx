@@ -1,8 +1,4 @@
-
-import React from 'react';
 import './successCourse.css';
-
-
 
 const SuccessCoursePopup = () => {
     return (

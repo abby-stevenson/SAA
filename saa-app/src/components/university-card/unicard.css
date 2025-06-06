@@ -20,11 +20,9 @@
     height: 64px !important;
     max-width: 64px !important;
     max-height: 64px !important;
-
     object-fit: cover;
     border-radius: 8px;
 }
-
 
 .uni-card-row {
     display: flex;

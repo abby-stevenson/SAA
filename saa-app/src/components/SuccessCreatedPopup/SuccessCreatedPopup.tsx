@@ -1,8 +1,4 @@
-
-import React from 'react';
 import './SuccessCreatedPopup.css';
-
-
 
 const SuccessCreatedPopup = () => {
     return (

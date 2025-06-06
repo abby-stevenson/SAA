@@ -12,8 +12,8 @@ function SideBar({ accountName, accountMajor }: AccountHolderInfo) {
     const links = [
         {
             label: "Profile",
-            icon: "/Generic%20avatar.png",
-            activeIcon: "/Generic%20avatar-active.png"
+            icon: "/Ian avatar.png",
+            activeIcon: "/Ian avatar.png"
         },
         {
             label: "Home",
@@ -31,7 +31,14 @@ function SideBar({ accountName, accountMajor }: AccountHolderInfo) {
             activeIcon: "/language-active.png"
         }
     ];
+
     const { pathname } = useLocation();
+    function handleReset(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
+        event.preventDefault();
+        localStorage.clear();
+        window.location.href = "/login";
+    }
+
     return (
         <ul className="sidebar-base">
             {links.map((link, index) => {
@@ -53,8 +60,10 @@ function SideBar({ accountName, accountMajor }: AccountHolderInfo) {
                         </Link>
                         <div className="sidebar-base-hr"><hr/></div>
                     </li>
+    
                 );
             })}
+            <button className="logout-button" onClick={handleReset}>Log Out</button>
         </ul>
     );
 }

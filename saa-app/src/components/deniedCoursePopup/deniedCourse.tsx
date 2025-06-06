@@ -1,8 +1,4 @@
-
-import React from 'react';
 import './deniedCourse.css';
-
-
 
 const DeniedCoursePopup = () => {
     return (

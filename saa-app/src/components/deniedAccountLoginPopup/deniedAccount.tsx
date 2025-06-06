@@ -1,8 +1,4 @@
-
-import React from 'react';
 import './deniedAccount.css';
-
-
 
 const DeniedLoginPopup = () => {
     return (

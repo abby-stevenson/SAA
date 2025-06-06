@@ -1,6 +1,5 @@
 import './popupUniSelect.css';
 import React, {useState} from 'react';
-import PlanPopup from "../planPopup/planPopup";
 
 interface UniPopupProps {
     courseName: string;

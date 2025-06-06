@@ -11,7 +11,6 @@ export type Course = {
     courseName: string;
 };
 
-
 function Sydney() {
 
     const [courses, setCourses] = useState<Course[]>([]);

@@ -1,4 +1,3 @@
-import React from 'react';
 import './simpleCourseCard.css'; 
 
 interface SimpleCourseCardProps {
@@ -14,4 +13,3 @@ const SimpleCourseCardPopup = ({ courseNumber }: SimpleCourseCardProps) => {
 };
 
 export default SimpleCourseCardPopup;
-

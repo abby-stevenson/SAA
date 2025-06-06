@@ -30,6 +30,7 @@ function Nav() {
                     <Route path="/SAA/Search/*"  element={<Search/>}/>
                     <Route path="/SAA/Login/*"  element={<LoginPage/>}/>
                     <Route path="/SAA/USydney" element={<Sydney/>}/>
+                    <Route path="/SAA/UniversityofSydney" element={<Sydney/>}/>
                     <Route path="/SAA/Newcastle" element={<Newcastle/>}/>
                     <Route path="/SAA/AITBudapest" element={<Budapest/>}/>
                     <Route path="/SAA/CIEEMadrid" element={<Madrid/>}/>
