@@ -18,7 +18,17 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
     const { email } = useUser(); 
     const [isFavorited, setIsFavorited] = useState(false);
 
-    console.log(email);
+     useEffect(() => {
+        // Check if the course is already favorited
+        fetch(`http://localhost:8080/user/isFavorite?email=${email}&hostCourseNumber=${courseNumber}`)
+        .then(res => res.json())
+        .then(data => {
+            setIsFavorited(data.isFavorited);
+        })
+        .catch(error => {
+            console.error('Failed to fetch favorite status:', error);
+        });
+    }, [email, courseNumber]);
 
     const handleFavorite = () => {
         fetch("http://localhost:8080/user/favorite", {
@@ -55,7 +65,7 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
                 },
                 body: JSON.stringify({
                     email,
-                    hostCourseNumber: courseNumber,
+                    courseNumber: hostCourseNumber,
                 }),
             });
 
@@ -71,11 +81,19 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
         }
     };
 
+    const handleToggleFavorite = () => {
+        if (isFavorited) {
+            handleUnfavorite();
+        } else {
+            handleFavorite();
+        }
+    };
+
     return (
         <div className="course-card">
             <span className="course-title">Course - {courseNumber}</span>
             <p className="course-description">{courseDescription}</p>
-            <button className="button-course" onClick={handleFavorite}>
+            <button className="button-course" onClick={handleToggleFavorite}>
                 <FontAwesomeIcon icon={faStar} />
                  {isFavorited ? "Unfavorite Course" : "Favorite Course"}
             </button>

@@ -92,6 +92,10 @@ public class SAAServer {
       studyAbroadHandler.addCourseToUserFavorites(ctx);
     });
 
+    app.put("/user/unfavorite", ctx -> {
+      studyAbroadHandler.addCourseToUserUnfavorites(ctx);
+    });
+
     app.get("/university/courses/{universityId}", ctx -> {
       studyAbroadHandler.getCoursesByUniversityId(ctx, ctx.pathParam("universityId"));
     });
@@ -108,6 +112,10 @@ public class SAAServer {
 
     app.get("/user/loggedin", ctx -> {
       studyAbroadHandler.getLoggedInUser(ctx);
+    });
+
+    app.get("/user/isFavorite", ctx -> {
+      studyAbroadHandler.isCourseFavorited(ctx);
     });
 
     app.get("/user/favorites/grouped", ctx -> {

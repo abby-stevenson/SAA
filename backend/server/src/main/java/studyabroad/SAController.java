@@ -174,6 +174,22 @@ public class SAController {
     }
   }
 
+  public void addCourseToUserUnfavorites(Context ctx) {
+    try {
+      Map<String, String> body = ctx.bodyAsClass(Map.class);
+      String email = body.get("email");
+      String hostCourseNumber = body.get("courseNumber"); 
+      dao.addCourseToUserUnfavorites(email, hostCourseNumber);
+      ctx.status(201).json(Map.of("message", "Course unfavorites."));
+    } catch (IllegalArgumentException e) {
+      ctx.status(400).json(Map.of("message", "Bad request: " + e.getMessage()));
+    } catch (IllegalStateException e) {
+      ctx.status(409).json(Map.of("message", "Conflict: " + e.getMessage()));
+    } catch (Exception e) {
+      ctx.status(500).json(Map.of("message", "Internal server error."));
+    }
+  }
+
   public void getCoursesByUniversityId(Context ctx, String universityId) {
     List<SACourse> courses = dao.getCoursesByUniversityId(universityId);
     if (courses.isEmpty()) {
@@ -242,6 +258,28 @@ public class SAController {
       ctx.status(401).result("No user is currently logged in.");
     }
   }
+
+
+  public void isCourseFavorited(Context ctx) {
+  try {
+      String email = ctx.queryParam("email");
+      String hostCourseNumber = ctx.queryParam("hostCourseNumber");
+
+
+    if (email == null || hostCourseNumber == null) {
+      ctx.status(400).json(Map.of("message", "Missing email or hostCourseNumber"));
+      return;
+    }
+
+    boolean isFavorited = dao.isCourseFavorited(email, hostCourseNumber);
+    ctx.status(200).json(Map.of("isFavorited", isFavorited));
+  } catch (IllegalArgumentException e) {
+    ctx.status(400).json(Map.of("message", "Bad request: " + e.getMessage()));
+  } catch (Exception e) {
+    e.printStackTrace();
+    ctx.status(500).json(Map.of("message", "Internal server error." + e.getMessage()));
+  }
+}
 
   public void getUserFavoritesByUniversity(Context ctx) {
     String email = ctx.cookie("userEmail");

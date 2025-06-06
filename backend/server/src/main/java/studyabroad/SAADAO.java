@@ -425,6 +425,43 @@ public class SAADAO {
     System.out.println("Course \"" + hostCourseNumber + "\" added to favorites for user: " + userEmail);
   }
 
+
+  public void addCourseToUserUnfavorites(String userEmail, String hostCourseNumber) {
+    // 1. Find the user
+    Document userDoc = users.find(eq("email", userEmail)).first();
+    if (userDoc == null) {
+        throw new IllegalArgumentException("No user found with email: " + userEmail);
+    }
+
+    // 2. Get the savedCourses list
+    List<Document> savedCourses = userDoc.getList("savedCourses", Document.class);
+    if (savedCourses == null || savedCourses.isEmpty()) {
+        throw new IllegalStateException("User has no saved courses.");
+    }
+
+    // 3. Check if the course exists in savedCourses
+    boolean courseExists = false;
+    for (Document savedCourse : savedCourses) {
+        String savedHostCourseNumber = savedCourse.getString("Host Course Number");
+        if (hostCourseNumber.equals(savedHostCourseNumber)) {
+            courseExists = true;
+            break;
+        }
+    }
+
+    if (!courseExists) {
+        throw new IllegalStateException("Course not found in user's favorites: " + hostCourseNumber);
+    }
+
+    // 4. Remove the course from savedCourses
+    users.updateOne(
+        eq("email", userEmail),
+        Updates.pull("savedCourses", new Document("Host Course Number", hostCourseNumber))
+    );
+
+    System.out.println("Course \"" + hostCourseNumber + "\" removed from favorites for user: " + userEmail);
+}
+
   public List<SACourse> getCoursesByUniversityId(String universityId) {
     List<SACourse> courses = new ArrayList<>();
     FindIterable<Document> docs = saCourses.find(eq("University ID", castStringToInt(universityId)));
@@ -532,6 +569,25 @@ public class SAADAO {
     // You can set other fields if needed
     return user;
   }
+
+public boolean isCourseFavorited(String email, String hostCourseNumber) {
+  Document userDoc = users.find(eq("email", email)).first();
+  if (userDoc == null) {
+    throw new IllegalArgumentException("No user found with email: " + email);
+  }
+
+  List<Document> savedCourses = userDoc.getList("savedCourses", Document.class);
+  if (savedCourses == null) return false;
+
+  for (Document course : savedCourses) {
+    if (hostCourseNumber.equals(course.getString("Host Course Number"))) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 
 }
 
