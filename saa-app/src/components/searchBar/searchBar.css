@@ -3,14 +3,13 @@
     font-size: 20px;
 }
 
-.search-container {
+.search-container-main {
     border-radius: 24px;
-    padding: 8px 16px;
+    padding: 16px 16px;
     transition: all 0.3s ease;
     margin: 0 auto;
     border: 1px solid #e0e0e0;
     flex: 1;
-    height: 30px;
 }
 
 .search-container.focused {
@@ -44,7 +43,7 @@
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-    border: 1px solid #e5e7eb;
+    border: 0px solid #e5e7eb;
     border-radius: 12px;
     cursor: pointer;
 }

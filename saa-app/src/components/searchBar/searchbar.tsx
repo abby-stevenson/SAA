@@ -18,13 +18,12 @@ interface SearchBarArgs {
 
 }
 
-
 function SearchBar({   countries,
                        cities,
                        query,
                        handleSearchChange,
                        handleRegionSelect,
-                       handleCountrySelect, handleDepartmentSelect
+                       handleCountrySelect, handleDepartmentSelect, handleSearchTypeSelect
                    }: SearchBarArgs) {
 
     interface OptionType {
@@ -37,10 +36,38 @@ function SearchBar({   countries,
     const [selectedCity, setSelectedCity] = useState<string>('');
     const [selectedCountry, setSelectedCountry] = useState<string>('');
     const [selectedDepartments, setSelectedDepartments] = useState<OptionType[]>([]);
-    const [selectedSearchType, setSelectedSearchType] = useState<string>('Course Code')
-    const colleges = [  { value: 'CS', label: 'CS' },
-                        { value: 'ARCH', label: 'ARCH' },
-                        { value: 'BIOL', label: 'BIOL' }]
+    const [selectedSearchType, setSelectedSearchType] = useState<string>('NU Course Code')
+    const colleges = [  { value: 'CS', label: 'CS' }, { value: 'ARCH', label: 'ARCH' }, { value: 'BIOL', label: 'BIOL' },
+                        { value: 'ARTH', label: 'ARTH' }, { value: 'BIOE', label: 'BIOE' }, { value: 'BUSN', label: 'BUSN' },
+                        { value: 'CRIM', label: 'CRIM' }, { value: 'BIOL', label: 'BIOL' }, { value: 'ACCT', label: 'ACCT' },
+                        { value: 'AFAM', label: 'AFAM' }, { value: 'ANTH', label: 'ANTH' }, { value: 'ARAB', label: 'ARAB' },
+                        { value: 'ARTD', label: 'ARTD' }, { value: 'ARTE', label: 'ARTE' }, { value: 'ARTF', label: 'ARTF' },
+                        { value: 'ARTG', label: 'ARTG' }, { value: 'ARTS', label: 'ARTS' }, { value: 'ASNS', label: 'ASNS' },
+                        { value: 'CHEM', label: 'CHEM' }, { value: 'CHME', label: 'CHME' }, { value: 'CHNS', label: 'CHNS' },
+                        { value: 'CINE', label: 'CINE' }, { value: 'CIVE', label: 'CIVE' }, { value: 'CLTR', label: 'CLTR' },
+                        { value: 'COMM', label: 'COMM' }, { value: 'CRIM', label: 'CRIM' }, { value: 'CY', label: 'CY' },
+                        { value: 'DS', label: 'DS' }, { value: 'ECON', label: 'ECON' }, { value: 'EDUC', label: 'EDUC' },
+                        { value: 'EECE', label: 'EECE' }, { value: 'EEMB', label: 'EEMB' }, { value: 'EMGT', label: 'EMGT' },
+                        { value: 'ENGL', label: 'ENGL' }, { value: 'ENGW', label: 'ENGW' }, { value: 'ENTR', label: 'ENTR' },
+                        { value: 'ENVR', label: 'ENVR' }, { value: 'ENVS', label: 'ENVS' }, { value: 'EXCS', label: 'EXCS' },
+                        { value: 'FINA', label: 'FINA' }, { value: 'FLNG', label: 'FLNG' }, { value: 'FRNH', label: 'FRNH' },
+                        { value: 'GAME', label: 'GAME' }, { value: 'GE', label: 'GE' }, { value: 'GREK', label: 'GREK' },
+                        { value: 'GRMN', label: 'GRMN' }, { value: 'HBRW', label: 'HBRW' }, { value: 'HIST', label: 'HIST' },
+                        { value: 'HLTH', label: 'HLTH' }, { value: 'HSCI', label: 'HSCI' }, { value: 'HUSV', label: 'HUSV' },
+                        { value: 'IE', label: 'IE' }, { value: 'INAM', label: 'INAM' }, { value: 'INSC', label: 'INSC' },
+                        { value: 'INSH', label: 'INSH' }, { value: 'INTB', label: 'INTB' }, { value: 'INTL', label: 'INTL' },
+                        { value: 'IS', label: 'IS' }, { value: 'ITLN', label: 'ITLN' }, { value: 'JPNS', label: 'JPNS' },
+                        { value: 'JRNL', label: 'JRNL' }, { value: 'JWSS', label: 'JWSS' }, { value: 'LACS', label: 'LACS' },
+                        { value: 'LANG', label: 'LANG' }, { value: 'LING', label: 'LING' }, { value: 'LITR', label: 'LITR' },
+                        { value: 'LPSC', label: 'LPSC' }, { value: 'MATH', label: 'MATH' }, { value: 'ME', label: 'ME' },
+                        { value: 'MGMT', label: 'MGMT' }, { value: 'MGSC', label: 'MGSC' }, { value: 'MISM', label: 'MISM' },
+                        { value: 'MKTG', label: 'MKTG' }, { value: 'MSCR', label: 'MSCR' }, { value: 'MUSC', label: 'MUSC' },
+                        { value: 'MUSI', label: 'MUSI' }, { value: 'MUST', label: 'MUST' }, { value: 'NETS', label: 'NETS' },
+                        { value: 'NRSG', label: 'NRSG' }, { value: 'PHIL', label: 'PHIL' }, { value: 'PHMD', label: 'PHMD' },
+                        { value: 'PHSC', label: 'PHSC' }, { value: 'PHTH', label: 'PHTH' }, { value: 'PHYS', label: 'PHYS' },
+                        { value: 'PT', label: 'PT' }, { value: 'RELS', label: 'RELS' }, { value: 'SCHM', label: 'SCHM' },
+                        { value: 'SOCL', label: 'SOCL' }, { value: 'SPNS', label: 'SPNS' }, { value: 'THTR', label: 'THR' },
+                        { value: 'URBS', label: 'URBS' }, { value: 'WMNS', label: 'WMNS' }].sort()
 
     const queryCallback = (e: React.ChangeEvent<HTMLInputElement>) => {
         handleSearchChange(e.target.value);
@@ -110,7 +137,8 @@ function SearchBar({   countries,
 
     const handleSearchTypeSelected = (selected: any) => {
         setSelectedSearchType(selected);
-        handleSearchTypeSelected(selected);
+        setActiveDropdown(null)
+        handleSearchTypeSelect(selected);
     };
 
     return (
@@ -133,29 +161,24 @@ function SearchBar({   countries,
                     <div
                         className={`dropdown-content ${activeDropdown === 'search' ? 'show' : ''}`}>
                         <div>
-                            <React.Fragment key={1}>
-                                <a href="#" onClick={(e) => {
-                                    e.preventDefault();
-                                    handleCountryClick("Course Code");
-                                }}>{"Course Code"}</a>
-                            </React.Fragment>
-                            <React.Fragment key={2}>
-                                <a href="#" onClick={(e) => {
-                                    e.preventDefault();
-                                    handleCountryClick("University");
-                                }}>{"University"}</a>
-                            </React.Fragment>
-                            <React.Fragment key={3}>
-                                <a href="#" onClick={(e) => {
-                                    e.preventDefault();
-                                    handleCountryClick("NU Course");
-                                }}>{"NU Course Name"}</a>
-                            </React.Fragment>
+                            {['NU Course Code', 'University', 'Host Course Name'].map((option, index) => (
+                                <a
+                                    key={index}
+                                    href="#"
+                                    className={selectedSearchType === option ? 'selected' : ''}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        handleSearchTypeSelected(option);
+                                    }}
+                                >
+                                    {option === 'NU Course Code' ? 'NU Course Name' : option}
+                                </a>
+                            ))}
                         </div>
                     </div>
                 </div>
                 <input
-                    className="search-container"
+                    className="search-container-main"
                     type="text"
                     placeholder="Search"
                     value={query}
