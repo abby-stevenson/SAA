@@ -7,7 +7,7 @@ import {University} from "../discover/discover";
 import CourseCardPopup from "../../components/courseCard/courseCard";
 import {Console} from "inspector";
 
-type StudyAbroadCourse = {
+export type StudyAbroadCourse = {
     universityId: string;
     hostCourseNumber: string;
     hostCourseDescription: string;

@@ -3,6 +3,7 @@ import SideBar from "../../components/sideBar";
 import "./profile.css";
 import SimpleCourseCard from "../../components/simpleCourseCard/simpleCourseCard";
 import SavedUniversity from "../../components/savedUniversity/savedUniversity";
+import {StudyAbroadCourse} from "../search/search";
 
 function Profile() {
     // Data for saved universities
@@ -53,9 +54,9 @@ function Profile() {
                             <SavedUniversity
                                 key={index}
                                 universityName={uni.universityName}
-                                coursesSaved={uni.coursesSaved}
+                                numCoursesSaved={uni.coursesSaved}
                                 loc={uni.location}
-                            />
+                             coursesSaved={[]}/>
                         ))}
                     </div>
                 </div>

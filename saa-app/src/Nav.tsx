@@ -41,7 +41,6 @@ function Nav() {
                     <Route path="/SAA/IESBarcelona" element={<Barcelona/>}/>
                     <Route path="/SAA/CIEECapetown" element={<Capetown/>}/>\
                     <Route path="/SAA/DISCopenhagen" element={<Copenhagen/>}/>
-                    <Route path="/SAA/SavedUniversity/*"  element={<SavedUniversity loc = {"Sydney, AU"} coursesSaved={4} universityName={"University of Technology Sydney"}/>}/>
                 </Routes>
             </div>
         </HashRouter>

@@ -4,7 +4,7 @@ import './planPopup.css';
 import PopupUniSelect from "../popupUniSelect/popupUniSelect";
 import React, {useState} from "react";
 
-interface Course {
+export interface Course {
     courseName: string;
     creditAmount: string;
     location: string;

@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import './searchBar.css';
 import {useState} from 'react';
 import Select from 'react-select'
-import UniCardPopup from "../university-card/unicard";
+
 
 interface SearchBarArgs {
     countries: string[],

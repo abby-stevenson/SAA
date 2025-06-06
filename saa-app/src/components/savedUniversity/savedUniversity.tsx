@@ -2,14 +2,17 @@ import { useState } from 'react';
 import Popup from 'reactjs-popup';
 import PlanPopup from "../planPopup/planPopup";
 import './savedUniversity.css';
+import {StudyAbroadCourse} from "../../home/search/search";
+import {Course} from "../planPopup/planPopup";
 
 interface UniversityInfo {
     universityName: string;
-    coursesSaved: number;
+    numCoursesSaved: number;
     loc: string;
+    coursesSaved: StudyAbroadCourse[];
 }
 
-function SavedUniversity({ loc, universityName, coursesSaved }: UniversityInfo) {
+function SavedUniversity({ loc, universityName, numCoursesSaved, coursesSaved }: UniversityInfo) {
     const [isOpen, setIsOpen] = useState(false);
     const urlPath = universityName.replace(/ /g, "") + ".png";
 
@@ -29,7 +32,7 @@ function SavedUniversity({ loc, universityName, coursesSaved }: UniversityInfo) 
                     <img src="Leading icon.png" alt="Location" />
                     <span>{loc}</span>
                 </div>
-                <p className="courses-saved-text">{coursesSaved} Courses Saved</p>
+                <p className="courses-saved-text">{numCoursesSaved} Courses Saved</p>
             </div>
 
             <Popup
@@ -45,51 +48,15 @@ function SavedUniversity({ loc, universityName, coursesSaved }: UniversityInfo) 
                 <PlanPopup
                     credits={20}
                     universityName={universityName}
-                    savedCourses={[
-                        {
-                            courseName: "Object Oriented Design",
-                            creditAmount: "4",
-                            location: "yes",
-                            nuCourse: "so true",
-                            uniName: "uni"
-                        },
-
-                        {
-                            courseName: "Object Oriented Programming",
-                            creditAmount: "4",
-                            location: "yes",
-                            nuCourse: "so true",
-                            uniName: "uni"
-                        },
-                        {
-                            courseName: "Algo",
-                            creditAmount: "4",
-                            location: "yes",
-                            nuCourse: "so true",
-                            uniName: "uni"
-                        },
-                        {
-                            courseName: "Algo",
-                            creditAmount: "4",
-                            location: "yes",
-                            nuCourse: "so true",
-                            uniName: "uni"
-                        },
-                        {
-                            courseName: "Algo",
-                            creditAmount: "4",
-                            location: "yes",
-                            nuCourse: "so true",
-                            uniName: "uni"
-                        },
-                        {
-                            courseName: "Algo",
-                            creditAmount: "4",
-                            location: "yes",
-                            nuCourse: "so true",
-                            uniName: "uni"
-                        }
-                    ]}
+                    savedCourses={coursesSaved.map(
+                        (course): Course => ({
+                            nuCourse: course.courseNumber,
+                            courseName: course.courseTitle,
+                            creditAmount: course.credits,
+                            location: course.universityCity + ", " + course.universityCountry,
+                            uniName: course.universityName
+                        })
+                    )}
                     onClose={closeModal}
                 />
             </Popup>
