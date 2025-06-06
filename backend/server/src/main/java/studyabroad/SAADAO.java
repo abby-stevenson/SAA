@@ -571,22 +571,43 @@ public class SAADAO {
   }
 
 public boolean isCourseFavorited(String email, String hostCourseNumber) {
-  Document userDoc = users.find(eq("email", email)).first();
-  if (userDoc == null) {
-    throw new IllegalArgumentException("No user found with email: " + email);
-  }
+    System.out.println("EMAIL: " + email);
+    System.out.println("Looking for hostCourseNumber: " + hostCourseNumber);
 
-  List<Document> savedCourses = userDoc.getList("savedCourses", Document.class);
-  if (savedCourses == null) return false;
-
-  for (Document course : savedCourses) {
-    if (hostCourseNumber.equals(course.getString("Host Course Number"))) {
-      return true;
+    Document userDoc = users.find(eq("email", email)).first();
+    if (userDoc == null) {
+        System.out.println("No user found with that email");
+        return false;
     }
-  }
 
-  return false;
+    List<Document> savedCourses = userDoc.getList("savedCourses", Document.class);
+    if (savedCourses == null || savedCourses.isEmpty()) {
+        System.out.println("No savedCourses found for user");
+        return false;
+    }
+
+    for (Document course : savedCourses) {
+        System.out.println("Course entry: " + course.toJson());
+
+        String saved = course.getString("NU Course Number"); 
+
+        if (saved == null) {
+            System.out.println("Field 'Host Course Number' not found in course");
+            continue;
+        }
+
+        System.out.println("Comparing: " + hostCourseNumber + " vs " + saved);
+
+        if (hostCourseNumber.equals(saved)) {
+            System.out.println("Match found!");
+            return true;
+        }
+    }
+
+    System.out.println("No matching course found.");
+    return false;
 }
+
 
 
 }

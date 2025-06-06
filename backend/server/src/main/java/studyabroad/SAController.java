@@ -251,7 +251,7 @@ public class SAController {
     System.out.println(userEmail);
 
     if (userEmail != null) {
-      System.out.println("Session contains user: " + userEmail); // ✅ Console debug
+      System.out.println("Session contains user: " + userEmail); 
       ctx.status(200).result("Logged in user: " + userEmail);
     } else {
       System.out.println("No user found in session.");
