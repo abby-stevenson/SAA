@@ -1,4 +1,4 @@
-import './serverError.css'; 
+import './serverErrror.css'; 
 
 function ServerError() {
     return (

@@ -243,6 +243,20 @@ public class SAController {
     }
   }
 
+  public void getUserFavoritesByUniversity(Context ctx) {
+    String email = ctx.cookie("userEmail");
+    if (email == null) {
+      ctx.status(401).result("User not logged in.");
+      return;
+    }
 
+    try {
+      Map<University, List<SACourse>> groupedCourses = dao.getFavoriteCoursesGroupedByUniversity(email);
+      ctx.status(200).json(groupedCourses);
+    } catch (Exception e) {
+      e.printStackTrace(); // helpful for debugging
+      ctx.status(500).result("Failed to fetch favorites.");
+    }
+  }
 
 }

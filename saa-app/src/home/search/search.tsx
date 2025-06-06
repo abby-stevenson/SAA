@@ -32,19 +32,19 @@ function Search() {
     const [selectedCity, setSelectedCity] = useState<string>('');
     const [selectedCountry, setSelectedCountry] = useState<string>('');
     const [selectedDepartments, setSelectedDepartments] = useState<String[]>([]);
-    const [searchType, setSearchType] = useState<string>("NU Course Code");
+    //const [searchType, setSearchType]
     const [cities, setCities] = useState<string[]>([]);
     const [countries, setCountries] = useState<string[]>([]);
     const countryCity = new Set<string>();
 
 
     const filterCourses = (courses: StudyAbroadCourse[], query: string) => {
+        console.log("City length" + selectedCity.length);
+        console.log("City is empty: " + selectedCity === ' ')
+
         return courses.filter((course) => {
-            const courseCode = course.courseNumber.toLowerCase().replace(" ", '');
-            const searchTermMatches = (query == '') || (searchType == "NU Course Code" && courseCode.startsWith(query.toLowerCase()))
-                || (searchType == "University" && course.universityName.toLowerCase().includes(query.toLowerCase())) ||
-                (searchType == "Host Course Name" && course.courseTitle.toLowerCase().includes(query.toLowerCase()))
-            return searchTermMatches
+            const courseCode = course.courseNumber.toLowerCase();
+            return courseCode.startsWith(query.toLowerCase())
                 && (selectedCity === course.universityCity || selectedCity === '')
                 && (selectedCountry === course.universityCountry || selectedCountry === '')
                 && (selectedDepartments.length == 0 || selectedDepartments.some(d => courseCode.startsWith(d.toLowerCase())));
@@ -58,28 +58,20 @@ function Search() {
 
     // Handle region selection
     const handleCitySelect = (city: string) => {
-        setSelectedCity(city)
-        setActiveDropdown(null)
+        setSelectedCity(city);
+        setActiveDropdown(null);
     };
 
     // Handle country selection
     const handleCountrySelect = (country: string) => {
-        setSelectedCountry(country)
-        setActiveDropdown(null)
+        setSelectedCountry(country);
+        setActiveDropdown(null);
     };
 
     const handleDepartmentSelect = (departments: String[]) => {
         setSelectedDepartments(departments)
-        console.log("Department selected " + departments)
-        setActiveDropdown(null)
+        console.log("Department selected " + departments);
     }
-
-    // Handle what kind of search it is
-    const handleSearchTypeSelect = (searchType: string) => {
-        setSearchType(searchType)
-        setActiveDropdown(null)
-    };
-
 
     useEffect(() => {
         fetch("http://localhost:8080/course/sa/all")
@@ -157,7 +149,7 @@ function Search() {
                                 handleCountrySelect={handleCountrySelect}
                                 handleRegionSelect={handleCitySelect}
                                 handleDepartmentSelect={handleDepartmentSelect}
-                    handleSearchTypeSelect={handleSearchTypeSelect}/>
+                    handleSearchTypeSelect={(string) => {}}/>
                 </div>
                 <div className="university-rows">
                     {filteredCourses.map((course, index) => (

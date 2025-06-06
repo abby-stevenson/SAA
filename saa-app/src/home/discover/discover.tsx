@@ -4,8 +4,7 @@ import "./discover.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCaretDown} from "@fortawesome/free-solid-svg-icons";
 import UniversityThumbnail from "../../components/universityThumbnail/universityThumbnail";
-import ServerError from "../../components/serverError/serverError";
-import NoMatchesFound from "../../components/noMatchesFound/noMatches";
+
 
 export type University = {
     universityId: string;
@@ -160,8 +159,11 @@ function Discover() {
                         />
                     ))}
 
-                    {filteredUniversities.length === 0 && <NoMatchesFound /> }
-
+                    {filteredUniversities.length === 0 && (
+                        <div className="no-results">
+                            No universities match your filters.
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
