@@ -4,7 +4,8 @@ import "./discover.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCaretDown} from "@fortawesome/free-solid-svg-icons";
 import UniversityThumbnail from "../../components/universityThumbnail/universityThumbnail";
-
+import NoMatchesFound from "../../components/noMatchesFound/noMatches";
+import ServerError from '../../components/serverError/serverError';
 
 export type University = {
     universityId: string;
@@ -20,7 +21,6 @@ function Discover() {
     const [universities, setUniversities] = useState<University[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
     const [activeDropdown, setActiveDropdown] = useState<"region" | "country" | null>(null);
     const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
     const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
@@ -148,7 +148,16 @@ function Discover() {
                 </div>
 
                 <div className="universities-grid">
-                    {filteredUniversities.map((uni, index) => (
+
+                {/* Show server error if fetch failed */}
+                {error && <ServerError/>}
+
+                {/* Show loading message if still loading */}
+                {!error && loading && <p>Loading universities...</p>}
+
+                {/* Show universities if loaded and no error */}
+                {!error && !loading && filteredUniversities.length > 0 && (
+                    filteredUniversities.map((uni, index) => (
                         <UniversityThumbnail
                             key={index}
                             name={uni.name}
@@ -157,14 +166,12 @@ function Discover() {
                             image={uni.name.replace(/ /g, "") + ".png"}
                             size="large"
                         />
-                    ))}
+                    ))
+                )}
+            </div>
 
-                    {filteredUniversities.length === 0 && (
-                        <div className="no-results">
-                            No universities match your filters.
-                        </div>
-                    )}
-                </div>
+                {/* Show no matches found if loaded, no error, but no filtered results */}
+                {!error && !loading && filteredUniversities.length === 0 && <NoMatchesFound />}
             </div>
         </div>
     );

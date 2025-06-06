@@ -1,4 +1,5 @@
 .course-card {
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -6,7 +7,6 @@
   border: 1px solid #e5e7eb;
   background-color: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  max-width: 400px;
 }
 
 .course-title {

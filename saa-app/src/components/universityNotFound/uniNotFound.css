@@ -16,7 +16,8 @@
 }
 
 .course-message-popup img {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   width: 35px;  
   object-fit: contain;
+  margin-left: 1rem
 }

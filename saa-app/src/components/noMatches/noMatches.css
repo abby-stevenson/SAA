@@ -1,8 +1,7 @@
 .course-message-popup {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  padding: 1.5rem;
+  padding: .5rem;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   background-color: #ffffff;
@@ -16,7 +15,8 @@
 }
 
 .course-message-popup img {
-  margin-right: 1.5rem;
+  margin-right: 1rem;
   width: 35px;  
   object-fit: contain;
+  margin-left: 1rem;
 }

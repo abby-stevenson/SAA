@@ -2,17 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.5rem;
+  padding: .5rem;
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #af2424;
+  box-shadow: 0 0 8px rgba(175, 36, 36, 1);
   max-width: 400px;
 }
 
 .simple-course-title {
 font-size: 1.5rem;
   font-weight: 550;
-  color: black;
+  color: #ffffff;
   margin-bottom: 0.5rem;
 }
