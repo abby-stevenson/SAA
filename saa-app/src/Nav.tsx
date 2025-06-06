@@ -17,9 +17,6 @@ import Copenhagen from './home/discover/universitypage/discopenhagen';
 import Sydney from './home/discover/universitypage/unipage';
 import Search from "./home/search/search";
 import LoginPage from "./login/loginPage";
-import ForgotPassword from "./components/forgotPassword/forgotPassword";
-
-
 
 function Nav() {
     return (
@@ -32,7 +29,7 @@ function Nav() {
                     <Route path="/SAA/Discover/*"  element={<Discover/>}/>
                     <Route path="/SAA/Search/*"  element={<Search/>}/>
                     <Route path="/SAA/Login/*"  element={<LoginPage/>}/>
-                    <Route path="/SAA/UniversityofSydney" element={<Sydney/>}/>
+                    <Route path="/SAA/USydney" element={<Sydney/>}/>
                     <Route path="/SAA/Newcastle" element={<Newcastle/>}/>
                     <Route path="/SAA/AITBudapest" element={<Budapest/>}/>
                     <Route path="/SAA/CIEEMadrid" element={<Madrid/>}/>

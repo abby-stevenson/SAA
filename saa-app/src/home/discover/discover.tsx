@@ -4,8 +4,8 @@ import "./discover.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCaretDown} from "@fortawesome/free-solid-svg-icons";
 import UniversityThumbnail from "../../components/universityThumbnail/universityThumbnail";
-import NoMatchesFound from "../../components/noMatchesFound/noMatches";
-import ServerError from '../../components/serverError/serverError';
+import NoMatchesFound from "../../components/noMatches/noMatches";
+import ServerError from "../../components/serverError/serverError";
 
 export type University = {
     universityId: string;

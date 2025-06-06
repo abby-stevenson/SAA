@@ -29,11 +29,6 @@ function SideBar({ accountName, accountMajor }: AccountHolderInfo) {
             label: "Discover",
             icon: "/World%20Icon.png",
             activeIcon: "/language-active.png"
-        },
-        {
-            label: "Plan",
-            icon: "/Plan%20Icon.png",
-            activeIcon: "/tab-active.png"
         }
     ];
     const { pathname } = useLocation();
