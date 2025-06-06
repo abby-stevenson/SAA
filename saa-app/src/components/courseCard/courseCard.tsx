@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import './courseCard.css'; 
 import { useUser } from "../../context/UserContext"; 
+import DeniedCoursePopup from "../deniedCoursePopup/deniedCourse";
 
 interface CourseCardPopupProps {
     courseNumber: string;
@@ -12,10 +13,14 @@ interface CourseCardPopupProps {
     onClose: () => void;
 }
 
+
+
 const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumber, onClose}: CourseCardPopupProps) => {
 
     const { email } = useUser(); 
     const [isFavorited, setIsFavorited] = useState(false);
+    const [showDeniedPopup, setShowDeniedPopup] = useState(false);
+
 
      useEffect(() => {
         // Check if the course is already favorited
@@ -43,15 +48,15 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
                 nuCourseNumber: courseNumber}),
         })
         .then((res) => {
+            setShowDeniedPopup(true);
             if (!res.ok) throw new Error("Failed to favorite course");
             return res.json(); 
         })
         .then((data) => {
-            alert("Course has been added to favorites!");
             setIsFavorited(true);
         })
         .catch((error) => {
-            alert("Failed to favorite course.");
+            setShowDeniedPopup(true);
         });
     };
 
@@ -69,6 +74,7 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
             });
 
             if (!response.ok) {
+                setShowDeniedPopup(true);
                 const errorData = await response.text();
                 throw new Error(errorData || "Failed to unfavorite the course");
             }
@@ -77,6 +83,7 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
             console.log("Course unfavorited successfully!");
         } catch (error) {
             console.error("Error unfavoriting course:", error);
+            setShowDeniedPopup(true);
         }
     };
 
@@ -97,6 +104,7 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
                  {isFavorited ? "Unfavorite Course" : "Favorite Course"}
             </button>
             <button className="button-course close-button" onClick={onClose}>Close</button>
+            {showDeniedPopup && <DeniedCoursePopup onClose={() => setShowDeniedPopup(false)} />}
         </div>
     );
 };
