@@ -26,6 +26,7 @@ Location: /backend/data-loader, /backend/database-files -> csvs to import
 1. Clone the repo: git clone https://github.com/abby-stevenson/SAA.git
 2. cd SAA/backend
 3. docker-compose up --build
+// go to another page
 4. cd server
 5. mvn clean install
 6. mvn exec:java -Dexec.mainClass="app.SAAServer"
