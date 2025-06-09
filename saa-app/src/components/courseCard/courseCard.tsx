@@ -50,7 +50,6 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
             return res.json(); 
         })
         .then((data) => {
-            alert("Course has been added to favorites!");
             setIsFavorited(true);
         })
         .catch((error) => {

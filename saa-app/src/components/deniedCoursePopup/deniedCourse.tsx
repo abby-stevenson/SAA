@@ -19,7 +19,7 @@ const DeniedCoursePopup = ({ onClose }: DeniedCoursePopupProps) => {
                 </div>
 
                 <div className='deniedcoursetext'>
-                Course could not be added
+                Action could not be completed
                 </div>
             </div>
     );
