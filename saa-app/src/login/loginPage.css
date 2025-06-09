@@ -6,8 +6,8 @@
 
 .full-height-img {
     height: 100vh;
-    width: auto;           /* Maintain aspect ratio */
-    object-fit: cover;     /* Prevent distortion */
+    width: auto;           
+    object-fit: cover;     
 }
 
 .login-rest-of-page {
@@ -16,8 +16,8 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     box-sizing: border-box;
-    justify-content: center; /* Horizontal centering */
-    align-items: center;     /* Vertical centering */
+    justify-content: center; 
+    align-items: center;     
 }
 
 .title-login {
@@ -35,11 +35,11 @@
 
 .centered-container {
     width: 100%;
-    text-align: center; /* Center text content */
+    text-align: center; 
 }
 
 .text-container {
-    text-align: left; /* Center text content */
+    text-align: left; 
     margin-left: 9rem;
     margin-top: 1.3rem;
 }

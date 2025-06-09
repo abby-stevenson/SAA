@@ -1,4 +1,3 @@
-
 import React, {useEffect, useState} from 'react';
 import SideBar from "../../components/sideBar";
 import UniCardPopup from "../../../src/components/university-card/unicard";
@@ -110,9 +109,6 @@ function Search() {
                 // Update state with the parsed arrays
                 setCountries(countriesArray.sort());
                 setCities(citiesArray.sort());
-
-                console.log("Cities length:", citiesArray.length);
-                console.log("Countries length:", countriesArray.length);
                 setLoading(false);
             })
             .catch((err) => {

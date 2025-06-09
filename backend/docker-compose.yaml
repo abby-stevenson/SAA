@@ -8,7 +8,7 @@ services:
     ports:
       - 27018:27017
     volumes:
-      - mongo-data:/data/db                  # ✅ Persist MongoDB data here
+      - mongo-data:/data/db                  
       - ./database-files:/docker-entrypoint-initdb.d/:ro
       - ./database-files:/csvs
       - ./data-loader:/data-loader
@@ -20,13 +20,13 @@ services:
       bash -c "
         /usr/local/bin/docker-entrypoint.sh mongod & 
         until mongosh --eval 'db.stats()' -u $DB_USER -p $DB_PASSWORD --authenticationDatabase admin > /dev/null 2>&1; do
-          echo '⏳ Waiting for MongoDB to start...';
+          echo 'Waiting for MongoDB to start...';
           sleep 2;
         done;
-        echo '🚀 MongoDB is ready. Importing data...';
+        echo 'MongoDB is ready. Importing data...';
         ./docker-entrypoint-initdb.d/import-csvs.sh;
         wait
       "
 
 volumes:
-  mongo-data:  # 👈 This declares the named volume to persist data
+  mongo-data:  

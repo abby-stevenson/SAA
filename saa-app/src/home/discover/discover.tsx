@@ -37,7 +37,6 @@ function Discover() {
                 );
                 setUniversities(filteredData);
                 setLoading(false);
-                console.log("Received data:", data);
             })
             .catch((err) => {
                 setError(err.message);
