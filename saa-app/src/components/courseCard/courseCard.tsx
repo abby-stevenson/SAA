@@ -74,7 +74,6 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
             }
 
             setIsFavorited(false);
-            console.log("Course unfavorited successfully!");
         } catch (error) {
             console.error("Error unfavoriting course:", error);
         }
