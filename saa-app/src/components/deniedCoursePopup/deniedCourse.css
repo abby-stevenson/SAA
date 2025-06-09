@@ -7,13 +7,15 @@
     flex-direction: row;
     display: flex;
     align-items: center;
+    margin-left:2.5rem;
+    margin-top: 1.5rem;
 }
 
 .deniedcourseimage {
    margin-right: 1.5rem; 
    width: 35px;
    object-fit: contain;
-   margin-left: 1rem
+   margin-left: 1rem;
 }
 
 .deniedcoursetext {
