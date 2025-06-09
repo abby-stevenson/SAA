@@ -101,13 +101,13 @@ public class SAADAO {
    * @return a list of universities on that continent.
    */
   public List<University> getUniByContinent(String continent) {
-    System.out.println("Continent string" + continent);
+
     List<University> results = new ArrayList<>();
 
     FindIterable<Document> docs = universities
         .find(eq("Continent", continent)); // Assumes 'location' is the city field
 
-    System.out.println("Tried to find docs");
+
     for (Document doc : docs) {
       results.add(documentToUniversity(doc));
     }
@@ -233,9 +233,7 @@ public class SAADAO {
 
   private SACourse documentToSACourse(Document doc) {
     int ID = doc.getInteger("University ID");
-    System.out.println("ID" + doc.getInteger("University ID"));
     University correspondingUni = getUniByID(Integer.toString(ID)).get(0);
-    System.out.println("Corresponding uni " + correspondingUni.getName());
     return new SACourse(
         Integer.toString(ID),
         castIntToString(doc),
@@ -350,19 +348,16 @@ public class SAADAO {
   }
 
   public void addCourseToUserFavorites(String userEmail, String hostCourseNumber) {
-    // 1. Find the course
     Document courseDoc = saCourses.find(eq("Host Course Number", hostCourseNumber)).first();
     if (courseDoc == null) {
       throw new IllegalArgumentException("No course found with host course number: " + hostCourseNumber);
     }
 
-    // 2. Find the user
     Document userDoc = users.find(eq("email", userEmail)).first();
     if (userDoc == null) {
       throw new IllegalArgumentException("No user found with email: " + userEmail);
     }
 
-    // 3. Check if the user already has this course in their savedCourses
     List<Document> savedCourses = userDoc.getList("savedCourses", Document.class);
     for (Document savedCourse : savedCourses) {
       String savedHostCourseNumber = savedCourse.getString("Host Course Number");
@@ -371,9 +366,7 @@ public class SAADAO {
       }
     }
 
-    // 4. Check if the courses are under the university's courseload limit
-    // Get the university name from the course
-    System.out.println(courseDoc);
+
     String universityName = courseDoc.getString("University");
     //if (universityName == null) {
       //throw new IllegalArgumentException("Course does not have an associated university");
@@ -416,14 +409,11 @@ public class SAADAO {
     //           ", University limit: " + courseLoadLimit);
     // }
 
-    // 5. Add the course to savedCourses
     users.updateOne(
         eq("email", userEmail),
         Updates.push("savedCourses", courseDoc)
     );
-
-    System.out.println("Course \"" + hostCourseNumber + "\" added to favorites for user: " + userEmail);
-  }
+ }
 
 
   public void addCourseToUserUnfavorites(String userEmail, String hostCourseNumber) {
@@ -459,7 +449,6 @@ public class SAADAO {
         Updates.pull("savedCourses", new Document("Host Course Number", hostCourseNumber))
     );
 
-    System.out.println("Course \"" + hostCourseNumber + "\" removed from favorites for user: " + userEmail);
 }
 
   public List<SACourse> getCoursesByUniversityId(String universityId) {
@@ -572,44 +561,32 @@ public class SAADAO {
   }
 
 public boolean isCourseFavorited(String email, String hostCourseNumber) {
-    System.out.println("EMAIL: " + email);
-    System.out.println("Looking for hostCourseNumber: " + hostCourseNumber);
 
     Document userDoc = users.find(eq("email", email)).first();
     if (userDoc == null) {
-        System.out.println("No user found with that email");
         return false;
     }
 
     List<Document> savedCourses = userDoc.getList("savedCourses", Document.class);
     if (savedCourses == null || savedCourses.isEmpty()) {
-        System.out.println("No savedCourses found for user");
         return false;
     }
 
     for (Document course : savedCourses) {
-        System.out.println("Course entry: " + course.toJson());
 
         String saved = course.getString("NU Course Number"); 
 
         if (saved == null) {
-            System.out.println("Field 'Host Course Number' not found in course");
             continue;
         }
 
-        System.out.println("Comparing: " + hostCourseNumber + " vs " + saved);
-
         if (hostCourseNumber.equals(saved)) {
-            System.out.println("Match found!");
             return true;
         }
     }
 
-    System.out.println("No matching course found.");
     return false;
 }
-
-
 
 }
 
