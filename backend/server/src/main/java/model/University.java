@@ -1,4 +1,5 @@
 package model;
+import java.util.Objects;
 
 public class University {
   private String universityId;
@@ -35,5 +36,22 @@ public class University {
         ", country='" + country + '\'' +
         ", continent='" + continent + '\'' +
         '}';
+  }
+
+  @Override
+  public boolean equals(Object obj) {
+    if (obj == this) {
+      return true;
+    }
+    if (obj.getClass() != this.getClass()) {
+      return false;
+    }
+    University u = (University) obj;
+    return u.universityId.equals(this.universityId);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(universityId);
   }
 }
