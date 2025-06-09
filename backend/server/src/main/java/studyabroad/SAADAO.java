@@ -276,7 +276,7 @@ public class SAADAO {
               courseDoc.getString("Term"),
               castCreditsToDouble(courseDoc),
               courseDoc.getInteger("Taken"),
-              "", "", "" // if needed, or load from university lookup
+              "", "", "" 
           );
           savedCourses.add(course);
         }
@@ -287,24 +287,7 @@ public class SAADAO {
     }
     return users;
   }
-/*
-  public boolean verifyUser(String username, String password) {
-    if (username == null || password == null || username.trim().isEmpty() || password.trim().isEmpty()) {
-      return false;
-    }
-    // find user
-    MongoCollection<Document> usersCollection = database.getCollection("users");
-    Document user = usersCollection.find(eq("username", username)).first();
-    if (user == null)
-      return false;
-    else {
-      if (user.getString((String) user.get("password")).equals(password))
-        return true;
-      else
-        return false;
-    }
-  }
-*/
+
   public void insertUser(User user) {
     // Validate email format using a regex
     if (!user.getEmail().matches("^[^@\\s]+@[a-zA-Z0-9]+\\.(com|edu)$")) {
@@ -333,8 +316,6 @@ public class SAADAO {
 
     usersCollection.insertOne(doc);
   }
-
-
 
   private User documentToUser(Document doc) {
     User user = new User(
@@ -368,46 +349,12 @@ public class SAADAO {
 
 
     String universityName = courseDoc.getString("University");
-    //if (universityName == null) {
-      //throw new IllegalArgumentException("Course does not have an associated university");
-    //}
 
     // Find the university document
     Document universityDoc = universities.find(eq("name", universityName)).first();
     if (universityDoc == null) {
       throw new IllegalArgumentException("No university found with name: " + universityName);
     }
-
-    // Get the course load limit from the university
-    //Integer courseLoadLimit = universityDoc.getInteger("CourseLoadLimit");
-    //if (courseLoadLimit == null) {
-      //throw new IllegalArgumentException("University does not have a CourseLoadLimit defined");
-    //}
-
-    // Calculate current total credits for the user
-    // int currentTotalCredits = 0;
-    // if (savedCourses != null) {
-    //   for (Document savedCourse : savedCourses) {
-    //     Integer credits = savedCourse.getInteger("Credits");
-    //     if (credits != null) {
-    //       currentTotalCredits += credits;
-    //     }
-    //   }
-    // }
-
-    // // Get credits for the course being added
-    // Integer newCourseCredits = courseDoc.getInteger("Credits");
-    // if (newCourseCredits == null) {
-    //   throw new IllegalArgumentException("Course does not have credits defined");
-    // }
-
-    // // Check if adding this course would exceed the limit
-    // if (currentTotalCredits + newCourseCredits > courseLoadLimit) {
-    //   throw new IllegalStateException("Adding this course would exceed the university's course load limit. " +
-    //           "Current credits: " + currentTotalCredits +
-    //           ", Course credits: " + newCourseCredits +
-    //           ", University limit: " + courseLoadLimit);
-    // }
 
     users.updateOne(
         eq("email", userEmail),
@@ -417,19 +364,19 @@ public class SAADAO {
 
 
   public void addCourseToUserUnfavorites(String userEmail, String hostCourseNumber) {
-    // 1. Find the user
+    // Find the user
     Document userDoc = users.find(eq("email", userEmail)).first();
     if (userDoc == null) {
         throw new IllegalArgumentException("No user found with email: " + userEmail);
     }
 
-    // 2. Get the savedCourses list
+    // Get the savedCourses list
     List<Document> savedCourses = userDoc.getList("savedCourses", Document.class);
     if (savedCourses == null || savedCourses.isEmpty()) {
         throw new IllegalStateException("User has no saved courses.");
     }
 
-    // 3. Check if the course exists in savedCourses
+    // Check if the course exists in savedCourses
     boolean courseExists = false;
     for (Document savedCourse : savedCourses) {
         String savedHostCourseNumber = savedCourse.getString("Host Course Number");
@@ -443,7 +390,7 @@ public class SAADAO {
         throw new IllegalStateException("Course not found in user's favorites: " + hostCourseNumber);
     }
 
-    // 4. Remove the course from savedCourses
+    // Remove the course from savedCourses
     users.updateOne(
         eq("email", userEmail),
         Updates.pull("savedCourses", new Document("Host Course Number", hostCourseNumber))
