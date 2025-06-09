@@ -1,12 +1,9 @@
-
 import React, {useEffect, useState} from 'react';
 import SideBar from "../../components/sideBar";
 import UniCardPopup from "../../../src/components/university-card/unicard";
 import './search.css';
 import SearchBar from '../../components/searchBar/searchbar';
-import {University} from "../discover/discover";
 import CourseCardPopup from "../../components/courseCard/courseCard";
-import {Console} from "inspector";
 
 export type StudyAbroadCourse = {
     universityId: string;
@@ -28,7 +25,6 @@ function Search() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    const [universities, setUniversities] = useState<Record<string, University>>({});
     const [activeDropdown, setActiveDropdown] = useState<"city" | "country" | null>(null);
     const [selectedCity, setSelectedCity] = useState<string>('');
     const [selectedCountry, setSelectedCountry] = useState<string>('');
@@ -36,7 +32,6 @@ function Search() {
     const [searchType, setSearchType] = useState<string>("NU Course Code");
     const [cities, setCities] = useState<string[]>([]);
     const [countries, setCountries] = useState<string[]>([]);
-    const countryCity = new Set<string>();
 
 
     const filterCourses = (courses: StudyAbroadCourse[], query: string) => {
@@ -71,7 +66,6 @@ function Search() {
 
     const handleDepartmentSelect = (departments: String[]) => {
         setSelectedDepartments(departments)
-        console.log("Department selected " + departments)
         setActiveDropdown(null)
     }
 
@@ -102,27 +96,19 @@ function Search() {
                 // Parse the combinations correctly
                 Array.from(countryCity).forEach((s) => {
                     const delimiterIndex = s.indexOf("|");
-                    const country = s.substring(0, delimiterIndex); // Country comes first
-                    const city = s.substring(delimiterIndex + 1); // City comes after, skip the "|"
-
+                    const country = s.substring(0, delimiterIndex); 
+                    const city = s.substring(delimiterIndex + 1); 
                     if (!countriesArray.includes(country)) {
                         countriesArray.push(country);
                     }
                     if (!citiesArray.includes(city)) {
                         citiesArray.push(city);
                     }
-
-                    console.log("Country:", country);
-                    console.log("City:", city);
-                    console.log("\n");
                 });
 
                 // Update state with the parsed arrays
                 setCountries(countriesArray.sort());
                 setCities(citiesArray.sort());
-
-                console.log("Cities length:", citiesArray.length);
-                console.log("Countries length:", countriesArray.length);
                 setLoading(false);
             })
             .catch((err) => {

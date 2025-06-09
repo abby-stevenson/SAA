@@ -43,7 +43,6 @@ function Profile() {
                 return res.json();
             })
             .then((data) => {
-                console.log("Data" + data.toString());
                 setSavedCoursesMap(data);
                 setLoading(false);
             })
@@ -105,23 +104,3 @@ function Profile() {
 }
 
 export default Profile;
-/*
-                        {savedUniversities.map((uni, index) => (
-                            <SavedUniversity
-                                key={index}
-                                universityName={uni.universityName}
-                                numCoursesSaved={uni.coursesSaved}
-                                loc={uni.location}
-                             coursesSaved={[]}/>
-                        ))}
-
-                                                {Object.entries(savedCoursesMap as { [key: string]: StudyAbroadCourse[]})
-                            .flatMap(([universityKey, courses]) =>
-                            courses.map((course, index) => (
-                                <SimpleCourseCard
-                                    key={`${universityKey}-${index}`} // ensure unique key
-                                    courseNumber={course.courseNumber}
-                                />
-                            ))
-                        )}
- */

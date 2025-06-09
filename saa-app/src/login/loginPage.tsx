@@ -33,7 +33,6 @@ function LoginPage() {
         setError(''); // Reset error message
         setShowIncorrectPassword(false);
 
-        console.log("Sending login request with:", { email, password });
 
         fetch('http://localhost:8080/login', {
             method: 'POST',
@@ -45,22 +44,22 @@ function LoginPage() {
             .then(response => {
                 if (!response.ok) {
                     if (response.status === 401) {
-                        setShowIncorrectPassword(true); // incorrect password or user not found
+                        setShowIncorrectPassword(true); 
                     } else {
                         setError('Login failed. Please try again.');
                     }
                     throw new Error('Login failed');
                 }
-                return response.json(); // or `response.text()` depending on backend
+                return response.json(); 
             })
             .then(data => {
                 const userProfile: UserProfile = {
                     email: data.email,
-                    name: data.name || '', // Adjust based on your backend response
-                    major: data.major || '' // Adjust based on your backend response
+                    name: data.name || '', 
+                    major: data.major || '' 
                 };
 
-                setUserEmail(email); // Save logged-in user's email to context/state
+                setUserEmail(email); 
                 setUser(userProfile);
                 navigate('/SAA/Home');
             })
@@ -95,7 +94,7 @@ function LoginPage() {
                             <div>Password</div>
                             <input
                                 className="text-box-login"
-                                type="password" // Changed to password type for security
+                                type="password" 
                                 placeholder="Enter your password..."
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
@@ -105,7 +104,7 @@ function LoginPage() {
                         <div>
                             <button
                                 className="login-button"
-                                onClick={handleLogin} // Updated to use handleLogin
+                                onClick={handleLogin} 
                             >
                                 Sign in
                             </button>

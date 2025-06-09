@@ -6,12 +6,12 @@
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   background-color: #af2424;
-  box-shadow: 0 0 8px rgba(175, 36, 36, 1);
+  box-shadow: 0 0 3px rgba(175, 36, 36, 1);
   max-width: 400px;
 }
 
 .simple-course-title {
-font-size: 1.5rem;
+  font-size: 1.5rem;
   font-weight: 550;
   color: #ffffff;
   margin-bottom: 0.5rem;

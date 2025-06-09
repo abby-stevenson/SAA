@@ -33,8 +33,8 @@
 .photo-slideshow {
     position: relative;
     width: 100%;
-    height: auto; /* Changed from fixed height */
-    min-height: 800px; /* Minimum height */
+    height: auto; 
+    min-height: 800px;
     overflow: hidden;
 }
 
@@ -78,10 +78,10 @@
   padding: 2rem;
   border-radius: 0.5rem;
   box-sizing: border-box;
-  min-height: auto; /* Let content determine height */
+  min-height: auto; 
   gap: 2rem;
-  overflow: visible; /* Changed from hidden */
-  flex-wrap: wrap; /* Allow items to wrap */
+  overflow: visible; 
+  flex-wrap: wrap; 
 }
 
 
@@ -90,8 +90,8 @@
   flex-direction: column;
   justify-content: center;
   color: white;
-  flex: 1; /* Take available space */
-  min-width: 300px /* Ensure text doesn't get too narrow */
+  flex: 1; 
+  min-width: 300px 
 }
 .banner-image {
   border-radius: 5px;

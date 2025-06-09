@@ -1,27 +1,16 @@
 package studyabroad;
 
-import com.mongodb.client.FindIterable;
-import com.mongodb.client.MongoCursor;
-
 import model.SACourse;
 import model.User;
 import org.mindrot.jbcrypt.BCrypt;
 
-import org.bson.Document;
-
-import java.io.Console;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 import io.javalin.http.Context;
 import model.University;
-import model.NEUCourse;
-import java.util.Map;
 
-/**
- * Blah
- */
 public class SAController {
 
   private final SAADAO dao;
@@ -151,10 +140,8 @@ public class SAController {
       dao.insertUser(user);
       ctx.status(201).result("User created successfully");
     } catch (IllegalArgumentException e) {
-      System.out.println("User creation failed: " + e.getMessage());
       ctx.status(409).result("Error: " + e.getMessage()); // Conflict or bad input
     } catch (Exception e) {
-      e.printStackTrace();
       ctx.status(500).result("Internal server error");
     }
   }
@@ -217,11 +204,10 @@ public class SAController {
         return;
       }
 
-      // ✅ Store user email (or ID) in session
+      // Store user email (or ID) in session
       ctx.sessionAttribute("userEmail", user.getEmail());
       ctx.cookie("userEmail", user.getEmail(), 3600); // expires in 1 hour
       ctx.result("Login successful");
-      System.out.println("Logged in " + ctx.sessionAttribute("userEmail"));
 
 
       ctx.status(200).json(Map.of(
@@ -249,13 +235,10 @@ public class SAController {
 
   public void getLoggedInUser(Context ctx) {
     String userEmail = ctx.sessionAttribute("userEmail");
-    System.out.println(userEmail);
 
     if (userEmail != null) {
-      System.out.println("Session contains user: " + userEmail); 
       ctx.status(200).result("Logged in user: " + userEmail);
     } else {
-      System.out.println("No user found in session.");
       ctx.status(401).result("No user is currently logged in.");
     }
   }
@@ -291,7 +274,6 @@ public class SAController {
   } catch (IllegalArgumentException e) {
     ctx.status(400).json(Map.of("message", "Bad request: " + e.getMessage()));
   } catch (Exception e) {
-    e.printStackTrace();
     ctx.status(500).json(Map.of("message", "Internal server error." + e.getMessage()));
   }
 }
@@ -307,7 +289,6 @@ public class SAController {
       Map<University, List<SACourse>> groupedCourses = dao.getFavoriteCoursesGroupedByUniversity(email);
       ctx.status(200).json(groupedCourses);
     } catch (Exception e) {
-      e.printStackTrace(); // helpful for debugging
       ctx.status(500).result("Failed to fetch favorites.");
     }
   }

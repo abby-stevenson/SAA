@@ -16,10 +16,10 @@
 }
 
 .uni-image {
-    width: 64px !important;
-    height: 64px !important;
-    max-width: 64px !important;
-    max-height: 64px !important;
+    width: 64px;
+    height: 64px;
+    max-width: 64px;
+    max-height: 64px;
     object-fit: cover;
     border-radius: 8px;
 }

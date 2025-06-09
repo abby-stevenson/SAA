@@ -18,7 +18,6 @@ function SavedUniversity({ loc, universityName, numCoursesSaved, coursesSaved }:
 
     const openModal = () => setIsOpen(true);
     const closeModal = () => {
-        console.log('Closing modal');
         setIsOpen(false);
     };
 
@@ -42,7 +41,7 @@ function SavedUniversity({ loc, universityName, numCoursesSaved, coursesSaved }:
                 nested
                 overlayStyle={{
                     background: 'rgba(0,0,0,0.5)',
-                    backdropFilter: 'blur(2px)' // Optional: adds a slight blur to the background
+                    backdropFilter: 'blur(2px)'
                 }}
             >
                 <PlanPopup

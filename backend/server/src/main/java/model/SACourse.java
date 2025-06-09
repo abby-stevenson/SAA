@@ -45,7 +45,7 @@ public class SACourse implements ICourse {
     return credits;
   }
 
-  // Getters (you can add setters if needed)
+  
   public String getUniversityId() { return universityId; }
   public String getHostCourseNumber() { return hostCourseNumber; }
   public String getHostCourseDescription() { return hostCourseDescription; }

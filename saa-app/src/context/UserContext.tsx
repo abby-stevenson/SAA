@@ -1,5 +1,4 @@
-// UserContext.tsx
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, {createContext, useContext, useState, ReactNode, useCallback} from 'react';
 
 interface UserProfile {
   email: string;
@@ -22,7 +21,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [email, setEmail] = useState('');
 
-  const fetchUser = async (email: string): Promise<void> => {
+  const fetchUser = useCallback(async (email: string): Promise<void> => {
     try {
       const response = await fetch(`http://localhost:8080/user?email=${encodeURIComponent(email)}`);
 
@@ -40,7 +39,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
       setUser(null);
       throw error;
     }
-  };
+  }, []); // Empty dependency array means this function is created once
 
 
   const logout = () => {
