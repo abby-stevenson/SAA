@@ -4,14 +4,6 @@ import {Link} from "react-router-dom";
 import {useLocation} from "react-router";
 import {useUser} from "../../context/UserContext";
 
-
-interface UserProfile {
-    email: string;
-    name: string;
-    major: string;
-}
-
-
 function SideBar() {
     const links = [
         {
@@ -46,7 +38,7 @@ function SideBar() {
                 console.error('Failed to fetch user in sidebar:', error);
             });
         }
-    }, [email, user, fetchUser]);
+    }, [email]);
 
     function handleReset(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): void {
         event.preventDefault();
