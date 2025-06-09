@@ -1,15 +1,16 @@
-import './simpleCourseCard.css'; 
+import './simpleCourseCard.css';
 
 interface SimpleCourseCardProps {
-  courseNumber: string;
+    courseNumber: string;
+    onClick?: () => void;
 }
 
-const SimpleCourseCardPopup = ({ courseNumber }: SimpleCourseCardProps) => {
-  return (
-    <div className="simple-course-card">
-      <span className="simple-course-title">Course - {courseNumber}</span>
-    </div>
-  );
-};
+function SimpleCourseCardPopup({ courseNumber, onClick }: SimpleCourseCardProps) {
+    return (
+        <div className="simple-course-card" onClick={onClick}>
+            <span className="simple-course-title">{courseNumber}</span>
+        </div>
+    );
+}
 
 export default SimpleCourseCardPopup;

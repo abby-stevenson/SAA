@@ -5,10 +5,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
 import ServerError from '../../../components/serverError/serverError';
+import CourseCardPopup from "../../../components/courseCard/courseCard";
 
 export type Course = {
     courseNumber: string;
-    courseName: string;
+    courseTitle: string;
+    credits: string;
 };
 
 function Barcelona() {
@@ -16,6 +18,9 @@ function Barcelona() {
     const [courses, setCourses] = useState<Course[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+    const [showPopup, setShowPopup] = useState(false);
+
 
     useEffect(() => {
             fetch("http://localhost:8080/university/courses/005")
@@ -32,7 +37,16 @@ function Barcelona() {
                     setLoading(false);
                 });
         }, []);
-            
+
+    const handleCourseClick = (course: Course) => {
+        setSelectedCourse(course);
+        setShowPopup(true);
+    };
+
+    const handleClosePopup = () => {
+        setShowPopup(false);
+        setSelectedCourse(null);
+    };
 
 
     return (
@@ -77,9 +91,30 @@ function Barcelona() {
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS4300' />
-                        <SimpleCourseCard courseNumber='CS1990' />
-                        <SimpleCourseCard courseNumber='CS4400' />
+                         <SimpleCourseCard
+                             courseNumber='CS4300'
+                             onClick={() => handleCourseClick({
+                                 courseNumber: 'CS4300',
+                                 courseTitle: '3D Computer Graphics',
+                                 credits: '3'
+                             })}
+                         />
+                         <SimpleCourseCard
+                             courseNumber='CS1990'
+                             onClick={() => handleCourseClick({
+                                 courseNumber: 'CS1990',
+                                 courseTitle: 'Computer Programming',
+                                 credits: '3'
+                             })}
+                         />
+                         <SimpleCourseCard
+                             courseNumber='CS4400'
+                             onClick={() => handleCourseClick({
+                                 courseNumber: 'CS4400',
+                                 courseTitle: 'Programming Languages',
+                                 credits: '3'
+                             })}
+                         />
                     </div>
                 </div>
                  <div className = "all-courses">
@@ -87,15 +122,28 @@ function Barcelona() {
                      <div className="course-grid">
                         {loading && <p>Loading courses...</p>}
                         {error && <ServerError />}
-                        {!loading && !error &&
-                            Array.from(
-                                new Map(courses.map((course) => [course.courseNumber, course])).values()).map((course) => (
-                                    <SimpleCourseCard
-                                        key={course.courseNumber}
-                                        courseNumber={course.courseNumber}/>
-                                    ))}
+                         {!loading && !error &&
+                             Array.from(
+                                 new Map(courses.map((course) => [course.courseNumber, course])).values()
+                             ).map((course) => (
+                                 <SimpleCourseCard
+                                     key={course.courseNumber}
+                                     courseNumber={course.courseNumber}
+                                     onClick={() => handleCourseClick(course)}
+                                 />
+                             ))}
                     </div>
                 </div>
+
+                {showPopup && selectedCourse && (
+                    <CourseCardPopup
+                        courseNumber={selectedCourse.courseNumber}
+                        courseDescription={`${selectedCourse.courseTitle} - ${selectedCourse.credits} credits`}
+                        uniId="005"
+                        hostCourseNumber={selectedCourse.courseNumber}
+                        onClose={handleClosePopup}
+                    />
+                )}
             </div>
         </div>
     );

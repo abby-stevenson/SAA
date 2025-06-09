@@ -4,18 +4,21 @@ import SideBar from '../../../components/sideBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';
-import ServerError from '../../../components/serverError/serverError'; 
+import ServerError from '../../../components/serverError/serverError';
+import CourseCardPopup from "../../../components/courseCard/courseCard";
 
 export type Course = {
     courseNumber: string;
-    courseName: string;
+    courseTitle: string;
+    credits: string;
 };
-
 function Seoul() {
 
     const [courses, setCourses] = useState<Course[]>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+    const [showPopup, setShowPopup] = useState(false);
 
     useEffect(() => {
             fetch("http://localhost:8080/university/courses/004")
@@ -32,7 +35,18 @@ function Seoul() {
                     setLoading(false);
                 });
         }, []);
-        
+
+    const handleCourseClick = (course: Course) => {
+        setSelectedCourse(course);
+        setShowPopup(true);
+    };
+
+    const handleClosePopup = () => {
+        setShowPopup(false);
+        setSelectedCourse(null);
+    };
+
+
 
     return (
         <div className = "side-by-side">
@@ -75,9 +89,30 @@ function Seoul() {
                 <div className = "popular-courses">
                      <span className = "section-title">Popular Courses</span>
                      <div className="course-grid">
-                        <SimpleCourseCard courseNumber='CS3990' />
-                        <SimpleCourseCard courseNumber='CS1800' />
-                        <SimpleCourseCard courseNumber='CS4973' />
+                         <SimpleCourseCard
+                             courseNumber='CS3990'
+                             onClick={() => handleCourseClick({
+                                 courseNumber: 'CS3990',
+                                 courseTitle: 'COMPUTER ARCHITECTURE(English)',
+                                 credits: '3'
+                             })}
+                         />
+                         <SimpleCourseCard
+                             courseNumber='CS1800'
+                             onClick={() => handleCourseClick({
+                                 courseNumber: 'CS1800',
+                                 courseTitle: 'DISCRETE MATHEMATICS(English)',
+                                 credits: '3'
+                             })}
+                         />
+                         <SimpleCourseCard
+                             courseNumber='CS4973'
+                             onClick={() => handleCourseClick({
+                                 courseNumber: 'CS4973',
+                                 courseTitle: 'COMPUTER SCIENCE COLLOQUIUM(English)',
+                                 credits: '3'
+                             })}
+                         />
                     </div>
                 </div>
                  <div className = "all-courses">
@@ -85,16 +120,27 @@ function Seoul() {
                      <div className="course-grid">
                         {loading && <p>Loading courses...</p>}
                         {error && <ServerError />}
-                        {!loading && !error &&
-                            Array.from(
-                                new Map(courses.map((course) => [course.courseNumber, course])).values()).map((course) => (
-                                    <SimpleCourseCard
-                                        key={course.courseNumber}
-                                        courseNumber={course.courseNumber}/>
-                                    ))}
+                         {!loading && !error &&
+                             Array.from(
+                                 new Map(courses.map((course) => [course.courseNumber, course])).values()
+                             ).map((course) => (
+                                 <SimpleCourseCard
+                                     key={course.courseNumber}
+                                     courseNumber={course.courseNumber}
+                                     onClick={() => handleCourseClick(course)}
+                                 />
+                             ))}
                     </div>
                 </div>
-
+                {showPopup && selectedCourse && (
+                    <CourseCardPopup
+                        courseNumber={selectedCourse.courseNumber}
+                        courseDescription={`${selectedCourse.courseTitle} - ${selectedCourse.credits} credits`}
+                        uniId="005"
+                        hostCourseNumber={selectedCourse.courseNumber}
+                        onClose={handleClosePopup}
+                    />
+                )}
             </div>
         </div>
     );
