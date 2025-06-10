@@ -11,8 +11,8 @@ function Home() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentSlide(prev => (prev + 1) % 2); // 2 slides
-        }, 20000); // 5 sec interval
+            setCurrentSlide(prev => (prev + 1) % 3); // 3 slides
+        }, 30000); // 30 sec interval
 
         return () => clearInterval(interval);
     }, []);
@@ -65,8 +65,8 @@ function Home() {
                 <div className = "photo-slideshow">
                     <div className={`slide ${currentSlide === 0 ? "active" : ""}`}>
                         <StudentTestimonials
-                            name = "Maddy"
-                            story = "For Maddy Engle, a semester abroad in Sydney became a turning point in both her academic journey and personal growth. Originally drawn to the city for its tech innovation and vibrant culture, she found unexpected inspiration in the global perspectives shared by classmates from around the world. Majoring in computer science and business, Maddy used her time in Sydney to explore international entrepreneurship and user-centered design. Now back on campus, she's channeling her expanded worldview into new collaborative projects and future co-op plans."
+                            name = "Maddie"
+                            story = "For Maddie Engle, a semester abroad in Sydney became a turning point in both her academic journey and personal growth. Originally drawn to the city for its tech innovation and vibrant culture, she found unexpected inspiration in the global perspectives shared by classmates from around the world. Majoring in computer science and business, Maddie used her time in Sydney to explore international entrepreneurship and user-centered design. Now back on campus, she's channeling her expanded worldview into new collaborative projects and future co-op plans."
                             mainImage = "maddy.jpg"
                             image1='opera.jpg'
                             image2='Sydney2Photo.JPG'
@@ -75,7 +75,7 @@ function Home() {
                             image6='Sydney5Photo.jpeg'
                             image5='aqua.JPG'/>
                     </div>
-                     <div className={`slide ${currentSlide === 1 ? "active" : ""}`}>
+                     <div className={`slide ${currentSlide === 2 ? "active" : ""}`}>
                         <StudentTestimonials 
                         name = "Max"
                             story = "For Max Coleman, London felt like a natural extension of his curiosity about media, AI, and human connection. A computer science and media studies major, Max spent a semester immersed in the city’s fast-paced creative scene—studying at a world-renowned university and interning with a local PR firm. Whether navigating YouTube or attending live productions on the West End, he found herself constantly inspired by the stories around him. His time in London didn’t just broaden his résumé—it expanded his worldview."
@@ -86,6 +86,18 @@ function Home() {
                             image4='scotland.jpg'
                             image5='building.jpg'
                             image6='Sydney1Photo.jpg'/>
+                    </div>
+                    <div className={`slide ${currentSlide === 1 ? "active" : ""}`}>
+                        <StudentTestimonials 
+                        name = "Leah"
+                            story = "For Leah Pascerelli, studying abroad in Sydney was a chance to fully immerse herself in the natural world. Initially captivated by the city's stunning coastal landscapes and diverse ecosystems, Leah—an environmental studies major—spent her time snorkeling in crystal-clear bays, hiking through lush national parks, and witnessing the awe-inspiring migration of humpback whales. Her days were filled with exploration and hands-on learning, from marine conservation efforts to sustainability practices woven into Sydney’s culture. The experience deepened her passion for protecting the environment and reshaped her academic path. Now back on campus, Leah is driving new sustainability projects, inspired by the lessons and natural beauty she found in Sydney."
+                            mainImage = "leah.jpeg"
+                            image1='SydneyMainPhoto.jpeg'
+                            image2='koala.jpeg'
+                            image3='cliff.JPG'
+                            image4='operapeople.jpeg'
+                            image5='dianeandleah.jpeg'
+                            image6='group.JPG'/>
                     </div>
                 </div>    
             </div>
