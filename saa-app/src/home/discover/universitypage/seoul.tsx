@@ -135,6 +135,7 @@ function Seoul() {
                 {showPopup && selectedCourse && (
                     <CourseCardPopup
                         courseNumber={selectedCourse.courseNumber}
+                        courseTitle={selectedCourse.courseTitle}
                         courseDescription={`${selectedCourse.courseTitle} - ${selectedCourse.credits} credits`}
                         uniId="005"
                         hostCourseNumber={selectedCourse.courseNumber}

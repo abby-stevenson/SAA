@@ -7,13 +7,14 @@ import DeniedCoursePopup from '../deniedCoursePopup/deniedCourse';
 
 interface CourseCardPopupProps {
     courseNumber: string;
+    courseTitle: string;
     courseDescription: string;
     uniId: string;
     hostCourseNumber: string
     onClose: () => void;
 }
 
-const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumber, onClose}: CourseCardPopupProps) => {
+const CourseCardPopup = ({courseNumber, courseTitle, courseDescription, uniId, hostCourseNumber, onClose}: CourseCardPopupProps) => {
     const { user } = useUser();
     const email = user?.email;
     const [isFavorited, setIsFavorited] = useState(false);
@@ -21,7 +22,7 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
 
      useEffect(() => {
         // Check if the course is already favorited
-        fetch(`http://localhost:8080/user/isFavorite?email=${email}&hostCourseNumber=${courseNumber}`)
+        fetch(`http://localhost:8080/user/isFavorite?email=${email}&hostCourseNumber=${courseTitle}`)
         .then(res => res.json())
         .then(data => {
             setIsFavorited(data.isFavorited);
@@ -29,7 +30,7 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
         .catch(error => {
             console.error('Failed to fetch favorite status:', error);
         });
-    }, [email, courseNumber]);
+    }, [email, courseTitle]);
 
     const handleFavorite = () => {
         fetch("http://localhost:8080/user/favorite", {

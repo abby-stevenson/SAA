@@ -129,6 +129,7 @@ function Budapest() {
                 {showPopup && selectedCourse && (
                     <CourseCardPopup
                         courseNumber={selectedCourse.courseNumber}
+                        courseTitle={selectedCourse.courseTitle}
                         courseDescription={`${selectedCourse.courseTitle} - ${selectedCourse.credits} credits`}
                         uniId="009" // Assuming Budapest's ID is 009
                         hostCourseNumber={selectedCourse.courseNumber}

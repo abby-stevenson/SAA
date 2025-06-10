@@ -521,27 +521,31 @@ public class SAADAO {
     return user;
   }
 
-public boolean isCourseFavorited(String email, String hostCourseNumber) {
+public boolean isCourseFavorited(String email, String hostCourseTitle) {
 
     Document userDoc = users.find(eq("email", email)).first();
     if (userDoc == null) {
         return false;
     }
 
+
     List<Document> savedCourses = userDoc.getList("savedCourses", Document.class);
+
+
     if (savedCourses == null || savedCourses.isEmpty()) {
         return false;
     }
 
     for (Document course : savedCourses) {
 
-        String saved = course.getString("NU Course Number"); 
+        //String saved = course.getString("NU Course Number");
+        String saved = course.getString("Host Course Name");
 
         if (saved == null) {
             continue;
         }
 
-        if (hostCourseNumber.equals(saved)) {
+        if (hostCourseTitle.equals(saved)) {
             return true;
         }
     }

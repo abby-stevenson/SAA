@@ -128,6 +128,7 @@ function Stockholm() {
                 {showPopup && selectedCourse && (
                     <CourseCardPopup
                         courseNumber={selectedCourse.courseNumber}
+                        courseTitle={selectedCourse.courseTitle}
                         courseDescription={`${selectedCourse.courseTitle} - ${selectedCourse.credits} credits`}
                         uniId="002" // Assuming Stockholm's ID is 002
                         hostCourseNumber={selectedCourse.courseNumber}

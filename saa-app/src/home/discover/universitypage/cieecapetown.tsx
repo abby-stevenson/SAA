@@ -133,6 +133,7 @@ function Capetown() {
                 {showPopup && selectedCourse && (
                     <CourseCardPopup
                         courseNumber={selectedCourse.courseNumber}
+                        courseTitle={selectedCourse.courseTitle}
                         courseDescription={`${selectedCourse.courseTitle} - ${selectedCourse.credits} credits`}
                         uniId="006" // Assuming Cape Town's ID is 006
                         hostCourseNumber={selectedCourse.courseNumber}

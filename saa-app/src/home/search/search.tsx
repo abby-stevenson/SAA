@@ -165,6 +165,7 @@ function Search() {
             {selectedCourse && (
                 <CourseCardPopup
                     courseNumber={selectedCourse.courseNumber}
+                    courseTitle={selectedCourse.courseTitle}
                     courseDescription={`${selectedCourse.courseTitle} at ${selectedCourse.universityName} (${selectedCourse.universityCountry}) - ${selectedCourse.credits} credits`}
                     onClose={handleClosePopup}
                     uniId = {selectedCourse.universityId}
