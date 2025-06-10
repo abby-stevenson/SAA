@@ -7,40 +7,38 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 
-import com.mongodb.client.model.Projections;
 import com.mongodb.client.model.Sorts;
 import com.mongodb.client.model.Updates;
 import model.User;
 import org.bson.Document;
-import org.bson.types.ObjectId;
 import org.mindrot.jbcrypt.BCrypt;
-
-
 import java.util.*;
-
 import model.SACourse;
 import model.University;
 
 import static com.mongodb.client.model.Filters.eq;
 
 /**
- * SAADAO is a Data Access Object (DAO)
- * for managing study abroad resources in a MongoDB database.
+ * SAADAO is a Data Access Object (DAO) for managing study abroad-related data
+ * including universities, study abroad courses, NEU equivalents, and user favorites.
  *
+ * It connects to a MongoDB instance and provides methods to query, insert, and update data.
  */
 public class SAADAO {
-  // Note: NEEDS TO BE CHANGED
 
+  // Connection URI to MongoDB. This should ideally be stored in a config file or environment variable for security.
   private static final String DB_URI = "mongodb://root:123@localhost:27018/?authSource=admin";
 
+  // Name of the MongoDB database used for Study Abroad data.
   private static final String DB_NAME = "StudyAbroadDB";
 
 
+  // MongoDB collections representing different data categories
   private MongoCollection<Document> universities;
   private MongoCollection<Document> saCourses;
-  private MongoCollection<Document> neuCourses;
   private MongoCollection<Document> users;
 
+  // Database and client instances for managing MongoDB connection
   private MongoDatabase database;
   private MongoClient client;
 
@@ -56,9 +54,7 @@ public class SAADAO {
     this.saCourses = database.getCollection("sacourses", Document.class);
     this.neuCourses = database.getCollection("neucourses", Document.class);
     this.users = database.getCollection("users");
-
   }
-
 
   /**
    * Returns a university by name.
@@ -97,7 +93,6 @@ public class SAADAO {
 
 
   /**
-   *
    * @param continent represents the continent a student is searching through.
    * @return a list of universities on that continent.
    */
@@ -116,8 +111,12 @@ public class SAADAO {
     return results;
   }
 
-
-
+  /**
+   * Retrieves a list of universities located in the specified country.
+   *
+   * @param country The name of the country to filter universities by.
+   * @return A list of University objects that are located in the given country.
+   */
   public List<University> getUniByCountry(String country) {
 
     List<University> results = new ArrayList<>();
@@ -130,9 +129,12 @@ public class SAADAO {
     }
 
     return results;
-
   }
 
+  /**
+   * Gets all universities from the database, limited to the first 20 for efficiency.
+   * @return A list of University objects.
+   */
   public List<University> getUniByCity(String city) {
     List<University> results = new ArrayList<>();
 
@@ -145,6 +147,7 @@ public class SAADAO {
 
     return results;
   }
+
 
   public List<University> getUniByNEUCourse(String course) {
     List<University> results = new ArrayList<>();
@@ -162,6 +165,14 @@ public class SAADAO {
     return results;
   }
 
+
+  /**
+   * Retrieves a list of universities that offer a study abroad course
+   * equivalent to the specified NU course.
+   *
+   * @param course The NU course number.
+   * @return A list of universities offering the specified NU-equivalent course.
+   */
   public List<University> getUniBySACourse(String course) {
     List<University> results = new ArrayList<>();
 
@@ -175,6 +186,11 @@ public class SAADAO {
     return results;
   }
 
+  /**
+   * Retrieves the first 20 universities from the database.
+   *
+   * @return A list of up to 20 University objects.
+   */
   public List<University> getAllUni() {
     List<University> results = new ArrayList<>();
     FindIterable<Document> first20 = universities
@@ -187,6 +203,12 @@ public class SAADAO {
     return results;
   }
 
+  /**
+   * Sorts a list of university IDs based on their "Courseload Credit" field in ascending order.
+   *
+   * @param universityIds A list of university document IDs to sort.
+   * @return A list of university IDs sorted by credit limit.
+   */
   public List<String> sortUniByCreditLimit(List<String> universityIds) {
     ArrayList<String> results = new ArrayList<>();
     FindIterable<Document> matchingUnis = universities
@@ -199,6 +221,11 @@ public class SAADAO {
     return results;
   }
 
+  /**
+   * Retrieves all study abroad courses from the database.
+   *
+   * @return A list of SACourse objects.
+   */
   public List<SACourse> getAllSACourses() {
     List<SACourse> results = new ArrayList<>();
     FindIterable<Document> docs = saCourses
@@ -210,6 +237,12 @@ public class SAADAO {
     return results;
   }
 
+  /**
+   * Finds all study abroad courses that are mapped to a specific NU course.
+   *
+   * @param neuCourseNumber The NU course number.
+   * @return A list of matching SACourse objects.
+   */
   public List<SACourse> findSACoursesByNEUCourse(String neuCourseNumber) {
     List<SACourse> results = new ArrayList<>();
     FindIterable<Document> docs = saCourses.find(eq("NU Course Number", neuCourseNumber));
@@ -221,6 +254,13 @@ public class SAADAO {
     return results;
   }
 
+
+  /**
+   * Converts a MongoDB document into a University object.
+   *
+   * @param doc The MongoDB document representing a university.
+   * @return A University object.
+   */
   private University documentToUniversity(Document doc) {
     String id = doc.getInteger("University ID Code").toString(); // Correct handling for ObjectId
     String name = doc.getString("Name");
@@ -232,6 +272,12 @@ public class SAADAO {
     return new University(id, name, city, country, continent, description);
   }
 
+  /**
+   * Converts a MongoDB document into a SACourse object, including university info.
+   *
+   * @param doc The MongoDB document representing a study abroad course.
+   * @return A SACourse object.
+   */
   private SACourse documentToSACourse(Document doc) {
     int ID = doc.getInteger("University ID");
     University correspondingUni = getUniByID(Integer.toString(ID)).get(0);
@@ -252,6 +298,11 @@ public class SAADAO {
             correspondingUni.getCountry());
   }
 
+  /**
+   * Retrieves all users stored in the database along with their saved courses.
+   *
+   * @return A list of User objects.
+   */
   public List<User> getAllUsers() {
     List<User> users = new ArrayList<>();
     MongoCollection<Document> usersCollection = database.getCollection("users");
@@ -289,6 +340,12 @@ public class SAADAO {
     return users;
   }
 
+  /**
+   * Inserts a new user into the database after validating their email and hashing the password.
+   *
+   * @param user The User object to insert.
+   * @throws IllegalArgumentException If email is invalid or already exists.
+   */
   public void insertUser(User user) {
     // Validate email format using a regex
     if (!user.getEmail().matches("^[^@\\s]+@[a-zA-Z0-9]+\\.(com|edu)$")) {
@@ -318,6 +375,12 @@ public class SAADAO {
     usersCollection.insertOne(doc);
   }
 
+  /**
+   * Converts a MongoDB document into a User object.
+   *
+   * @param doc The MongoDB document representing a user.
+   * @return A User object.
+   */
   private User documentToUser(Document doc) {
     User user = new User(
         doc.getString("name"),
@@ -329,6 +392,12 @@ public class SAADAO {
     return user;
   }
 
+  /**
+   * Adds a course to a user's list of favorites if it's not already added.
+   *
+   * @param userEmail The email of the user.
+   * @param hostCourseNumber The host course number to favorite.
+   */
   public void addCourseToUserFavorites(String userEmail, String hostCourseNumber) {
     Document courseDoc = saCourses.find(eq("Host Course Number", hostCourseNumber)).first();
     if (courseDoc == null) {
@@ -364,6 +433,12 @@ public class SAADAO {
  }
 
 
+  /**
+   * Removes a course from a user's list of favorites.
+   *
+   * @param userEmail The email of the user.
+   * @param hostCourseNumber The host course number to remove.
+   */
   public void addCourseToUserUnfavorites(String userEmail, String hostCourseNumber) {
     // Find the user
     Document userDoc = users.find(eq("email", userEmail)).first();
@@ -399,6 +474,12 @@ public class SAADAO {
 
 }
 
+  /**
+   * Retrieves all study abroad courses offered by a given university.
+   *
+   * @param universityId The ID of the university.
+   * @return A list of SACourse objects associated with that university.
+   */
   public List<SACourse> getCoursesByUniversityId(String universityId) {
     List<SACourse> courses = new ArrayList<>();
     FindIterable<Document> docs = saCourses.find(eq("University ID", castStringToInt(universityId)));
@@ -424,6 +505,12 @@ public class SAADAO {
     return courses;
   }
 
+  /**
+   * Groups a user's favorited courses by university.
+   *
+   * @param email The user's email address.
+   * @return A map of University to a list of SACourses.
+   */
   public Map<University, List<SACourse>> getFavoriteCoursesGroupedByUniversity(String email) {
     Document userDoc = users.find(eq("email", email)).first();
 
@@ -475,6 +562,12 @@ public class SAADAO {
   }
 
 
+  /**
+   * Safely retrieves a course number from a document, handling both String and Integer cases.
+   *
+   * @param doc The MongoDB document containing the course number.
+   * @return The course number as a string.
+   */
   private String castIntToString(Document doc) {
     String result;
     try  {
@@ -485,6 +578,12 @@ public class SAADAO {
     return result;
   }
 
+  /**
+   * Safely casts a "Credits" field from a document to a double.
+   *
+   * @param doc The MongoDB document containing the credits field.
+   * @return The credits as a double.
+   */
   private double castCreditsToDouble(Document doc) {
     Object creditsObj = doc.get("Credits");
 
@@ -497,6 +596,12 @@ public class SAADAO {
     }
   }
 
+  /**
+   * Converts a numeric string to an integer, ensuring it's within a valid range.
+   *
+   * @param value The string to convert.
+   * @return The integer value.
+   */
   public int castStringToInt(String value) {
     try {
       int num = Integer.parseInt(value);
@@ -509,6 +614,13 @@ public class SAADAO {
     }
   }
 
+
+  /**
+   * Finds and returns a User object based on the user's email.
+   *
+   * @param email The user's email.
+   * @return The User object, or null if not found.
+   */
   public User findUserByEmail(String email) {
     Document userDoc = users.find(eq("email", email)).first();
     if (userDoc == null) return null;
@@ -521,6 +633,13 @@ public class SAADAO {
     return user;
   }
 
+  /**
+   * Checks if a specific course is already favorited by the user.
+   *
+   * @param email The user's email.
+   * @param hostCourseTitle The host course title to check.
+   * @return True if the course is already in favorites, false otherwise.
+   */
 public boolean isCourseFavorited(String email, String hostCourseTitle) {
 
     Document userDoc = users.find(eq("email", email)).first();

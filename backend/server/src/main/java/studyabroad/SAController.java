@@ -3,20 +3,24 @@ package studyabroad;
 import model.SACourse;
 import model.User;
 import org.mindrot.jbcrypt.BCrypt;
-
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-
 import io.javalin.http.Context;
 import model.University;
 
+/**
+ * Controller for handling Study Abroad application API logic
+ */
 public class SAController {
 
+  // Reference to the Data Access Object for database operations
   private final SAADAO dao;
 
+  // Constructor initializes the controller with a DAO
   public SAController(SAADAO dao) { this.dao = dao; }
 
+  // Endpoint: Get universities by continent
   public void getUniByContinent(Context ctx, String continent) {
     List<University> universities = dao.getUniByContinent(continent);
     if (universities.isEmpty()) {
@@ -28,6 +32,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get universities by country
   public void getUniByCountry(Context ctx, String country) {
     List<University> universities = dao.getUniByCountry(country);
     if (universities.isEmpty()) {
@@ -39,6 +44,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get universities by city
   public void getUniByCity(Context ctx, String city) {
     List<University> universities = dao.getUniByCity(city);
     if (universities.isEmpty()) {
@@ -50,6 +56,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get universities that match a given NEU course number
   public void getUniByNEUCourse(Context ctx, String course) {
     List<University> universities = dao.getUniByNEUCourse(course);
     if (universities.isEmpty()) {
@@ -61,6 +68,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get universities that match a given host (study abroad) course
   public void getUniBySACourse(Context ctx, String course) {
     List<University> universities = dao.getUniByNEUCourse(course);
     if (universities.isEmpty()) {
@@ -72,6 +80,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get universities by name
   public void getUniByName(Context ctx, String university) {
     List<University> universities = dao.getUniByName(university);
     if (universities.isEmpty()) {
@@ -83,6 +92,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get university by its database ID
   public void getUniByID(Context ctx, String id) {
     List<University> universities = dao.getUniByID(id);
     if (universities.isEmpty()) {
@@ -94,6 +104,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get all universities
   public void getAllUni(Context ctx) {
 
     List<University> universities = this.dao.getAllUni();
@@ -106,6 +117,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get all study abroad courses
   public void getAllSACourses(Context ctx) {
     List<SACourse> courses = dao.getAllSACourses();
 
@@ -118,6 +130,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get study abroad course equivalents for a given NEU course
   public void getNEUEquivalent(Context ctx, String neuCourseNumber) {
     List<SACourse> equivalents = dao.findSACoursesByNEUCourse(neuCourseNumber);
     if (equivalents.isEmpty()) {
@@ -129,11 +142,13 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get all registered users
   public void getAllUsers(Context ctx) {
     List<User> users = dao.getAllUsers();
     ctx.json(users);
   }
 
+  // Endpoint: Register a new user
   public void addUser(Context ctx) {
     try {
       User user = ctx.bodyAsClass(User.class);
@@ -146,6 +161,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Add a course to the user's favorites
   public void addCourseToUserFavorites(Context ctx) {
     try {
       Map<String, String> body = ctx.bodyAsClass(Map.class);
@@ -162,6 +178,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Remove a course from the user's favorites
   public void addCourseToUserUnfavorites(Context ctx) {
     try {
       Map<String, String> body = ctx.bodyAsClass(Map.class);
@@ -178,6 +195,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get all courses offered by a specific university
   public void getCoursesByUniversityId(Context ctx, String universityId) {
     List<SACourse> courses = dao.getCoursesByUniversityId(universityId);
     if (courses.isEmpty()) {
@@ -187,11 +205,16 @@ public class SAController {
     }
   }
 
+
+  //Login is now handled in the frontend, no need for class below.
+
+  // Helper class for login payload
   public static class LoginRequest {
     public String email;
     public String password;
 }
 
+  // Endpoint: Log a user in and store their email in the session and cookie
   public void login(Context ctx) {
     LoginRequest loginReq = ctx.bodyAsClass(LoginRequest.class);
     String email = loginReq.email;
@@ -219,6 +242,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get the currently logged in user using cookie
   public void getCurrentUser(Context ctx) {
     String email = ctx.cookie("userEmail");
     if (email != null) {
@@ -228,11 +252,13 @@ public class SAController {
     }
   }
 
+  // Endpoint: Log the user out (clears the cookie)
   public void logout(Context ctx) {
     ctx.removeCookie("userEmail");
     ctx.result("Logged out");
   }
 
+  // Endpoint: Get the logged-in user's email from the session
   public void getLoggedInUser(Context ctx) {
     String userEmail = ctx.sessionAttribute("userEmail");
 
@@ -243,6 +269,7 @@ public class SAController {
     }
   }
 
+  // Endpoint: Get user details by email (used for profile page)
   public void getUserByEmail(Context ctx, String email) {
     User user = dao.findUserByEmail(email);
     if (user == null) {
@@ -258,6 +285,7 @@ public class SAController {
   }
 
 
+  // Endpoint: Check if a given course is in the user's favorites
   public void isCourseFavorited(Context ctx) {
   try {
       String email = ctx.queryParam("email");
@@ -278,6 +306,7 @@ public class SAController {
   }
 }
 
+  // Endpoint: Get the user's favorite courses grouped by university
   public void getUserFavoritesByUniversity(Context ctx) {
     String email = ctx.queryParam("email");
     if (email == null) {
