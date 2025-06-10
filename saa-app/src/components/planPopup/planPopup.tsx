@@ -37,7 +37,7 @@ function PlanPopup({ credits, universityName, savedCourses, onClose }: SavedCour
     const subject = encodeURIComponent("User's plan for study abroad");
 
     const courseDetails = selectedCourses.map(course =>
-        `• ${course.nuCourse} (${course.creditAmount} credits) - NU Equivalent: ${course.nuCourse}, Location: ${course.location}`
+        `• ${course.courseName} (${course.creditAmount} credits) - NU Equivalent: ${course.nuCourse}, Location: ${course.location}`
     ).join('\n');
 
     const body = encodeURIComponent(
