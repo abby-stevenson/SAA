@@ -3,6 +3,7 @@ import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import './planPopup.css';
 import PopupUniSelect from "../popupUniSelect/popupUniSelect";
 import React, {useState} from "react";
+import {useUser} from "../../context/UserContext";
 
 export interface Course {
     courseName: string;
@@ -20,6 +21,7 @@ interface SavedCoursesInfo {
 }
 
 function PlanPopup({ credits, universityName, savedCourses, onClose }: SavedCoursesInfo) {
+    const { user } = useUser();
     const [selectedCourses, setSelectedCourses] = useState<Course[]>([]);
 
 
@@ -34,7 +36,7 @@ function PlanPopup({ credits, universityName, savedCourses, onClose }: SavedCour
 
     const openEmail = () => {
     const recipient = "geo@northeastern.edu";
-    const subject = encodeURIComponent("User's plan for study abroad");
+    const subject = encodeURIComponent(`${user?.name}'s  plan for study abroad`);
 
     const courseDetails = selectedCourses.map(course =>
         `• ${course.courseName} (${course.creditAmount} credits) - NU Equivalent: ${course.nuCourse}, Location: ${course.location}`
