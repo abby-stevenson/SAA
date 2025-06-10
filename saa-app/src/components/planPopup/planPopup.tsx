@@ -36,7 +36,7 @@ function PlanPopup({ credits, universityName, savedCourses, onClose }: SavedCour
 
     const openEmail = () => {
     const recipient = "geo@northeastern.edu";
-    const subject = encodeURIComponent(`${user?.name}'s  plan for study abroad`);
+    const subject = encodeURIComponent(`${user?.name}'s plan for study abroad`);
 
     const courseDetails = selectedCourses.map(course =>
         `• ${course.courseName} (${course.creditAmount} credits) - NU Equivalent: ${course.nuCourse}, Location: ${course.location}`
