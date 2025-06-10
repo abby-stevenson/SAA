@@ -7,6 +7,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
 
+import com.mongodb.client.model.Projections;
 import com.mongodb.client.model.Sorts;
 import com.mongodb.client.model.Updates;
 import model.User;
@@ -431,30 +432,43 @@ public class SAADAO {
     }
 
     List<Document> savedCoursesDocs = userDoc.getList("savedCourses", Document.class);
+    System.out.println("Course length" + savedCoursesDocs.size());
+    for (Document d : savedCoursesDocs) {
+      System.out.println("Course details" + d.toString());
+    }
     Map<University, List<SACourse>> groupedByUniversity = new HashMap<>();
+
 
     for (Document doc : savedCoursesDocs) {
       int universityId = doc.getInteger("University ID");
       List<University> uniList = getUniByID(String.valueOf(universityId));
       University uni = uniList.isEmpty() ? null : uniList.get(0);
+      System.out.println("\n");
+      System.out.println("University found for document is " + uni.getName());
 
       if (uni == null) continue; // Skip if university can't be found
 
       SACourse course = new SACourse(
-          String.valueOf(universityId),
-          castIntToString(doc),
-          doc.getString("Host Course Name"),
-          doc.getString("Host Course Description"),
-          doc.getString("NU Course Number"),
-          doc.getString("Term"),
-          castCreditsToDouble(doc),
-          doc.getInteger("Taken", 0),
-          uni.getName(),
-          uni.getCity(),
-          uni.getCountry()
+              String.valueOf(universityId),
+              castIntToString(doc),
+              doc.getString("Host Course Name"),
+              doc.getString("Host Course Description"),
+              doc.getString("NU Course Number"),
+              doc.getString("Term"),
+              castCreditsToDouble(doc),
+              doc.getInteger("Taken", 0),
+              uni.getName(),
+              uni.getCity(),
+              uni.getCountry()
       );
 
-      groupedByUniversity.computeIfAbsent(uni, k -> new ArrayList<>()).add(course);
+      ArrayList<SACourse> courses = new ArrayList<>();
+      List<SACourse> curCourses = groupedByUniversity.get(uni);
+      if (curCourses != null && curCourses.size() > 0) {
+        courses.addAll(groupedByUniversity.get(uni));
+      }
+      courses.add(course);
+      groupedByUniversity.put(uni, courses);
     }
 
     return groupedByUniversity;

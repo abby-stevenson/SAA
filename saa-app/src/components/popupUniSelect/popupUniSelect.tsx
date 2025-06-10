@@ -12,6 +12,7 @@ interface UniPopupProps {
 
 const PopupUniSelect = ({ courseName, uniName, location, creditAmount, nuCourse, checkedCallback }: UniPopupProps) => {
     const [isChecked, setIsChecked] = useState(false);
+    const urlPath = uniName.replace(/ /g, "") + ".png";
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const checked = e.target.checked;
@@ -22,7 +23,7 @@ const PopupUniSelect = ({ courseName, uniName, location, creditAmount, nuCourse,
     return (
         <div className="uni-card-select">
             <div className="uni-card-row-select">
-                <img src="uni.png" alt="University" className="uni-image-select" />
+                <img src={urlPath} alt="University" className="uni-image-select" />
 
                 {/* Text on the right */}
                 <div className="uni-card-text-select">

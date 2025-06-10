@@ -45,8 +45,10 @@ const CourseCardPopup = ({courseNumber, courseDescription, uniId, hostCourseNumb
                 nuCourseNumber: courseNumber}),
         })
         .then((res) => {
-            setShowDeniedPopup(true);
-            if (!res.ok) throw new Error("Failed to favorite course");
+            if (!res.ok) {
+                setShowDeniedPopup(true);
+                throw new Error("Failed to favorite course");
+            }
             return res.json(); 
         })
         .then((data) => {
