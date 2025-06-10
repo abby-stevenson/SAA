@@ -13,6 +13,8 @@ interface UserContextType {
   setUser: (user: UserProfile | null) => void;
   logout: () => void;
   fetchUser: (email: string) => Promise<void>;
+  logoutMessage: boolean;
+  setLogoutMessage: (flag: boolean) => void;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -20,6 +22,8 @@ const UserContext = createContext<UserContextType | undefined>(undefined);
 export const UserProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [email, setEmail] = useState('');
+  const [logoutMessage, setLogoutMessage] = useState(false);
+
 
   const fetchUser = useCallback(async (email: string): Promise<void> => {
     try {
@@ -39,16 +43,17 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
       setUser(null);
       throw error;
     }
-  }, []); // Empty dependency array means this function is created once
+  }, []);
 
 
   const logout = () => {
     localStorage.removeItem('authToken');
     setUser(null);
+    setLogoutMessage(true);
   };
 
   return (
-      <UserContext.Provider value={{ email, setEmail, user, setUser, logout, fetchUser}}>
+      <UserContext.Provider value={{ email, setEmail, user, setUser, logout, fetchUser, logoutMessage, setLogoutMessage}}>
         {children}
       </UserContext.Provider>
   );

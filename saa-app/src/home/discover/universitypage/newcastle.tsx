@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './unipage.css'; 
-import SideBar from '../../../components/sideBar'
+import SideBar from '../../../components/sideBar/sideBar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 import SimpleCourseCard from '../../../components/simpleCourseCard/simpleCourseCard';

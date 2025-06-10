@@ -1,4 +1,4 @@
-import 'loggedOut.css';
+import './loggedOut.css';
 
 function loggedOut() {
     return (

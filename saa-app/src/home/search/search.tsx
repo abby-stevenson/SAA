@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import SideBar from "../../components/sideBar";
+import SideBar from "../../components/sideBar/sideBar";
 import UniCardPopup from "../../../src/components/university-card/unicard";
 import './search.css';
 import SearchBar from '../../components/searchBar/searchbar';

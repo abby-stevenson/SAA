@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
-import SideBar from '../components/sideBar';
+import SideBar from '../components/sideBar/sideBar';
 import StudentTestimonials from '../components/studentTestimonials/studentTestimonials';
 import './homePage.css'
 import UniCard from '../components/universityThumbnail/universityThumbnail';

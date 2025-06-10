@@ -1,4 +1,5 @@
 import React from 'react';
+import {useUser} from './context/UserContext'
 import {HashRouter} from "react-router-dom";
 import {Routes, Route, Navigate} from "react-router";
 import './Nav.css';
@@ -6,7 +7,6 @@ import Home from "./home/homePage"
 import Profile from "./home/profile/profile";
 import Discover from "./home/discover/discover";
 import Newcastle from './home/discover/universitypage/newcastle';
-import SavedUniversity from "./components/savedUniversity/savedUniversity";
 import Budapest from './home/discover/universitypage/aitbudapest';
 import Madrid from './home/discover/universitypage/cieemadrid';
 import Seoul from './home/discover/universitypage/seoul';
@@ -17,11 +17,20 @@ import Copenhagen from './home/discover/universitypage/discopenhagen';
 import Sydney from './home/discover/universitypage/unipage';
 import Search from "./home/search/search";
 import LoginPage from "./login/loginPage";
+import LoggedOut from './components/loggedOut/loggedOut';
 
 function Nav() {
+
+    const { logoutMessage, setLogoutMessage } = useUser();
+
     return (
         <HashRouter>
             <div>
+                {logoutMessage && (
+                    <div onClick={() => setLogoutMessage(false)}>
+                        <LoggedOut />
+                    </div>
+                )}
                 <Routes>
                     <Route path="/"         element={<Navigate to="/SAA/Login"/>}/>
                     <Route path="/SAA/Home/*"   element={<Home/>}/>

@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import "./index.css";
+import "./sideBar.css";
 import {Link} from "react-router-dom";
 import {useLocation} from "react-router";
 import {useUser} from "../../context/UserContext";
@@ -29,12 +29,13 @@ function SideBar() {
     ];
 
     const { pathname } = useLocation();
-    const { user, email, fetchUser } = useUser();
+    const { user, email, fetchUser, setLogoutMessage, logoutMessage } = useUser();
 
     // Fetch user data when component mounts or email changes
     useEffect(() => {
         if (email) {
             fetchUser(email).catch(error => {
+                setLogoutMessage(true); 
                 console.error('Failed to fetch user in sidebar:', error);
             });
         }
@@ -49,6 +50,11 @@ function SideBar() {
 
     return (
         <ul className="sidebar-base">
+             {logoutMessage && (
+                <div className="logout-message">
+                    Logging out...
+                </div>
+            )}
             {links.map((link, index) => {
                 const isActive = pathname.includes(link.label);
                 return (

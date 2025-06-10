@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import SideBar from "../../components/sideBar";
+import SideBar from "../../components/sideBar/sideBar";
 import "./profile.css";
 import SimpleCourseCard from "../../components/simpleCourseCard/simpleCourseCard";
 import SavedUniversity from "../../components/savedUniversity/savedUniversity";

@@ -20,8 +20,7 @@ function LoginPage() {
     const [error, setError] = useState('');
     const [showIncorrectPassword, setShowIncorrectPassword] = useState(false);
     const navigate = useNavigate();
-    const {setEmail: setUserEmail } = useUser();
-    const { setUser } = useUser();
+    const { user, setUser, setEmail: setUserEmail } = useUser();
 
     // Dummy user data
     const dummyUsers = [
